@@ -1,0 +1,19 @@
+html
+{
+	text-align: justify;
+}
+
+th
+{
+	text-align: center;
+}
+
+p
+{
+	text-indent: 1em;
+}
+
+textarea
+{
+	resize:none;
+}
