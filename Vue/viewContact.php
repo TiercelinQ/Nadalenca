@@ -11,6 +11,5 @@
 	<h2>Envoie du message réussie</h2>
 	<hr />
 	<p>Votre message a bien été transmis à l'dministrateur.</p>
-	<!--<?php header("Refresh: 3; URL=../index.php"); ?>-->
 		
 <?php include("../footer.php"); ?>	

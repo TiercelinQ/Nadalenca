@@ -43,26 +43,37 @@
         <form method="post" action="./controleur/'nomcontroleur'.php" >
             <fieldset>
                 <legend>Changement information </legend>
-                <label>Email </label> : <input type="text" name="email" value="<?php echo $profil->getEmail()?>"/>
-                  <input type="hidden" name="nom" value="<?php echo $profil->getNom()?>"/>
-                  <input type="hidden" name="prenom" value="<?php echo $profil->getPrenom()?>"/>
+                <label>Nom</label> :
+                  <input type="text" name="nom" value="<?php echo $profil->getNom()?>"/>
+                <label>Prénom</label> :
+                  <input type="text" name="prenom" value="<?php echo $profil->getPrenom()?>"/><br />
+                <label>Email</label> : 
+                  <input type="text" name="email" value="<?php echo $profil->getEmail()?>"/>
                   <input type="hidden" name="admin" value="<?php echo $profil->getAdmin()?>"/><br />
-                <label>Ancien mot de passe </label> : <input type="password" placeholder="Ex : licorne" name="mdpold"/>
-                <label>Nouveau mot de passe </label> : <input type="password" placeholder="Ex : licorne" name="mdpnew"/>
-                <label>Confirmaion mot de passe </label> : <input type="password" placeholder="Ex : licorne" name="mdpnewconf"/>
+                <label>Ancien mot de passe</label> : 
+                  <input type="password" placeholder="Ex : licorne" name="mdpold"/>
+                <label>Nouveau mot de passe</label> : 
+                  <input type="password" placeholder="Ex : licorne" name="mdpnew"/>
+                <label>Confirmaion mot de passe</label> : 
+                  <input type="password" placeholder="Ex : licorne" name="mdpnewconf"/>
                   <input type="hidden" name="statut" value="<?php echo $profil->getStatut()?>"/><br />
-                <Label>Adresse </label> : <input type="text" name="adresseP" value="<?php echo $profil->getAdresseP()?>" />
-                <label>Code Postal </label> : <input type="text" name="codeP" value="<?php echo $profil->getCodeP()?>" />
-                <label>Ville </label> : <input type="text" name="ville" value="<?php echo $profil->getVille()?>"/> <br />
-                <label>Numéro de téléphone fixe </label> : <input type="int" name="numtelF" value="<?php echo $profil->getNumtelF()?>"/>
-                <label>Numéro de téléphone portable </label> : <input type="int" name="numtelM" value="<?php echo $profil->getNumtelM()?>"/> <br />
+                <Label>Adresse</label> : 
+                  <input type="text" name="adresseP" value="<?php echo $profil->getAdresseP()?>" />
+                <label>Code Postal</label> : 
+                  <input type="text" name="codeP" value="<?php echo $profil->getCodeP()?>" />
+                <label>Ville </label> : 
+                  <input type="text" name="ville" value="<?php echo $profil->getVille()?>"/> <br />
+                <label>Numéro de téléphone fixe</label> : 
+                  <input type="int" name="numtelF" value="<?php echo $profil->getNumtelF()?>"/>
+                <label>Numéro de téléphone portable</label> : 
+                  <input type="int" name="numtelM" value="<?php echo $profil->getNumtelM()?>"/> <br />
                 <label>Type de voix </label> : <select name="voix">
                     <option value="voix1"> Voix 1 
                     <option value="voix2"> Voix 2
                     <option value="voix3"> Voix 3
                     <option value="voix4"> Voix 4
                 </select>  <br />
-                <input type="submit" value="Modifier" />
+                  <input type="submit" value="Modifier" />
             </fieldset>
         </form>
 

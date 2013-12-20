@@ -8,11 +8,12 @@ $prenomM = $_POST["prenomM"];
 $emailM = $_POST["emailM"];
 $sujetM = $_POST["sujetM"];
 $messageM = $_POST["messageM"];
-$dateM = date("d-m-Y");
+$dateM = date("d-m-y");
 
 
-$message = new Message($idM, $nomM, $prenomM, $emailM, $sujetM, $messageM, $dateM);
-$message->create();
+$contact = new Message($idM, $nomM, $prenomM, $emailM, $sujetM, $messageM, $dateM);
+//print_r($contact);
+$contact->create();
 
 $to='q.tiercelin@gmail.com';
 $sujet=$sujetM;

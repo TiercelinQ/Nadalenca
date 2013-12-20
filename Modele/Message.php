@@ -25,7 +25,7 @@ class Message
 	
 	public function getPrenomM() 
 	{ //un getter
-		return $this->jourC;
+		return $this->prenomM;
 	}
 	
 	public function getEmailM() 
@@ -45,7 +45,7 @@ class Message
 	
 	public function getDateM() 
 	{ //un getter
-		return $this->heureC;
+		return $this->dateM;
 	}
 	
 	//Un constructeur
@@ -63,25 +63,16 @@ class Message
 	//création d'un nouveau message dans la base de données message
 	public function create()
 	{
-		$req = "SELECT * FROM message";
-		$res = mysql_query($req) or die ("Erreur insertion : Classe Message / Fonction create");
-		
-		if (mysql_num_rows($res) == 0)
-		{ // l'utilisateur n'existe pas.
+			$idM = $this->idM;
 			$nomM = $this->nomM;
 			$prenomM = $this->prenomM;
 			$emailM = $this->emailM;
 			$sujetM = $this->sujetM;
 			$messageM = $this->messageM;
-			$datem = $this->dateM;
+			$dateM = $this->dateM;
 
-			$req = "INSERT INTO message (nomM, prenomM, emailM, sujetM, messageM, dateM) VALUES ('$nomM','$prenomM','$emailM','$sujetM','$messageM','$dateM')";
+			$req = "INSERT INTO message (idM, nomM, prenomM, emailM, sujetM, messageM, dateM) VALUES ('$idM','$nomM','$prenomM','$emailM','$sujetM','$messageM','$dateM')";
 			$res = mysql_query($req) or die ("Erreur insertion :  Classe Message / Fonction insertion message");
-		}
-		else
-		{
-			return null/*'Cet email est déjà utilisé'*/;
-		}
 	}
 	
 	//suppression d'un message dans la base de donnée message

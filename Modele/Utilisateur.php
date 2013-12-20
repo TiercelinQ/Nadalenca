@@ -183,6 +183,17 @@ class Utilisateur
 		//$util->id = $id;
 	}
 
+	public static function getUtilisateur()
+	{
+		$req="SELECT * from utilisateur";
+		$res =mysql_query($req) or die ("Erreur insertion : Classe Utiisateur / Fonction getUtilisateur");
+		while($dnn = mysql_fetch_array($res))
+		{
+			$tuple = mysql_fetch_array($res);
+			return new Utilisateur($tuple['id'], $tuple['nom'], $tuple['prenom'], $tuple['email'], $tuple['mdp'], $tuple['statut'], $tuple['admin'], $tuple['adresseP'], $tuple['codeP'], $tuple['ville'], $tuple['numtelF'], $tuple['numtelM'], $tuple['voix']);
+		}
+	}
+
 	public static function changeMotdePasse($email, $ancienmdp, $nouveaumdp)
         {//Une fonction que change le mot de passe
             $req = "SELECT * FROM utilisateur WHERE email='$email'";
