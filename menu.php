@@ -2,7 +2,7 @@
 <?php
 	if(isset($_SESSION['login']))
 	{?>
-			<h1>NADALENCA</h1>
+			<h1>NADALENKA</h1>
 				<ul id="menu">
 					<li><a href="./index.php">ACCUEIL</a></li>
 					<li><a href="#">HISTOIRE</a></li>
