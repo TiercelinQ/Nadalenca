@@ -9,8 +9,8 @@
 <?php include("../menu.php"); ?>
 
 	<h2>Inscription Réussie</h2>
-	<p>Vous vous êtes bien inscrits. Vous allez recevoir un mail de votre inscription avec vos identifiants.</p>
+	<p>Vous vous êtes bien inscrit. Vous allez recevoir un mail de votre inscription avec vos identifiants.</p>
 	<p>Vous allez être redirigé vers la page de connexion.</p>
-	<?php header("Refresh: 3; URL=../connexion.php"); ?>
+	<?php header("Refresh: 5; URL=../connexion.php"); ?>
 		
 <?php include("../footer.php"); ?>	

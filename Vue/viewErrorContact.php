@@ -8,9 +8,9 @@
 	
 <?php include("../menu.php"); ?>
 
-	<h2>Echec de l'envoie du message</h2>
+	<h2>Echec de l'envoi du message</h2>
 	<hr />
-	<p>Une erreur est survenue lors de l'envoyer du message.</p>
+	<p>Une erreur est survenue lors de l'envoi du message.</p>
 	<!--<?php header("Refresh: 3; URL=../contact.php"); ?>-->
 		
 <?php include("../footer.php"); ?>	

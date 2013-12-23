@@ -39,10 +39,10 @@
    	 		</table>
 
         <hr />
-        <h2>Pour moifier vos informations :</h2>
+        <h2>Pour modifier vos informations :</h2>
         <form method="post" action="./controleur/'nomcontroleur'.php" >
             <fieldset>
-                <legend>Changement information </legend>
+                <legend>Changement d'informations </legend>
                 <label>Nom</label> :
                   <input type="text" name="nom" value="<?php echo $profil->getNom()?>"/>
                 <label>Prénom</label> :
@@ -54,14 +54,14 @@
                   <input type="password" placeholder="Ex : licorne" name="mdpold"/>
                 <label>Nouveau mot de passe</label> : 
                   <input type="password" placeholder="Ex : licorne" name="mdpnew"/>
-                <label>Confirmaion mot de passe</label> : 
+                <label>Confirmation du mot de passe</label> : 
                   <input type="password" placeholder="Ex : licorne" name="mdpnewconf"/>
                   <input type="hidden" name="statut" value="<?php echo $profil->getStatut()?>"/><br />
                 <Label>Adresse</label> : 
                   <input type="text" name="adresseP" value="<?php echo $profil->getAdresseP()?>" />
                 <label>Code Postal</label> : 
                   <input type="text" name="codeP" value="<?php echo $profil->getCodeP()?>" />
-                <label>Ville </label> : 
+                <label>Ville</label> : 
                   <input type="text" name="ville" value="<?php echo $profil->getVille()?>"/> <br />
                 <label>Numéro de téléphone fixe</label> : 
                   <input type="int" name="numtelF" value="<?php echo $profil->getNumtelF()?>"/>

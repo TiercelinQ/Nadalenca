@@ -10,7 +10,7 @@
 
 	<h2>Erreur dans la page</h2>
 	<hr />
-	<p>Il n'y a personnes dans cette base de données. </p>
+	<p>Il n'y a personne dans cette base de données. </p>
 
 	<a href="../index.php">Retour à la page d'accueil.</a>		
 <?php include("../footer.php"); ?>	

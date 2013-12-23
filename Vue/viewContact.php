@@ -8,8 +8,8 @@
 	
 <?php include("../menu.php"); ?>
 
-	<h2>Envoie du message réussie</h2>
+	<h2>Envoi du message réussie</h2>
 	<hr />
-	<p>Votre message a bien été transmis à l'dministrateur.</p>
+	<p>Votre message a bien été transmis à l'administrateur.</p>
 		
 <?php include("../footer.php"); ?>	

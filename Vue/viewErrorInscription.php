@@ -8,7 +8,7 @@
 	
 <?php include("../menu.php"); ?>
 
-	<p>Une erreur est survenue lors de votre inscription. <br/ > Vérifiez bien les points suivants: </p>
+	<p>Une erreur est survenue lors de votre inscription. <br/ > Vérifiez bien les points suivants : </p>
 	<ol>	
 		<li>L'adresse email ne doit pas être déjà utilisée.</li>
 		<li>Le mot de passe ainsi que le mot de passe de confirmation doivent être identiques.</li>
@@ -16,6 +16,6 @@
 	</ol>
 
 	<p>Vous allez être redirigé vers la page d'incription.</p>
-	<?php header("Refresh: 5; URL=../inscription.php"); ?>
+	<?php header("Refresh: 6; URL=../inscription.php"); ?>
 		
 <?php include("../footer.php"); ?>	
