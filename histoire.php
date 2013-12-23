@@ -29,14 +29,15 @@
 		
 		<p>
 		En 2003 la «CORALA  NADALENCA » a été invitée aux premières rencontres internationales de chorales de Tiana (Catalogne). 
-		Depuis le choeur participe régulièrement à des échanges avec d’autres chorales qui se traduisent par des déplacements (en France, à l’étranger) 
-		et à la réception de celles-ci à Montpellier. Des liens particulièrement étroits se sont tissés avec une choeur catalan de l’agglomération de Barcelone 
+		Depuis le chœur participe régulièrement à des échanges avec d’autres chorales qui se traduisent par des déplacements (en France, à l’étranger) 
+		et à la réception de celles-ci à Montpellier. Des liens particulièrement étroits se sont tissés avec un chœur catalan de l’agglomération de Barcelone 
 		: la « Joventut Tianenca » donnant lieu à un échange annuel.
 		</p>
 
 		<p>
-		Depuis 2005, le chœur Occitan est membre de l’Association des Choeurs de Montpellier (ACM) qui fédère plus de 30 chœurs et 
-		gère la Maison des Chœurs polyphoniques de la tradition occitane. Pour cela, l’association a développé un projet de recherche de chants en langue d’Oc - 
+		Depuis 2005, le chœur Occitan est membre de <a href="http://maisondeschoeurs.free.fr/association.htm" target="_blank">l’Association des Chœur de Montpellier</a> 
+		(ACM) qui fédère plus de 30 chœurs et gère la Maison des Chœurs polyphoniques de la tradition occitane. 
+		Pour cela, l’association a développé un projet de recherche de chants en langue d’Oc - 
 		certains n’existant que par la tradition orale - qu’elle a fait écrire et/ou harmoniser. 
 		Aujourd’hui le répertoire intègre aussi des œuvres classiques adaptées à l’Occitan. 
 		</p>
