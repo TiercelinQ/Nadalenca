@@ -10,7 +10,8 @@
 	<body>
 		
 		<?php include("menu.php"); ?>
-
+		<h1>Decouvrez notre histoire</h1>
+		<hr />
 		
 		<p>
 		« NADALENCA » trouve son origine dans le mot « Nadal » qui signifie Noël. 
