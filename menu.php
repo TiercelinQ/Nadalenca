@@ -10,7 +10,7 @@
 					<li><a href="#">REPERTOIRE</a></li>
 					<li><a href="#">PRODUCTIONS</a></li>
 					<li><a href="#">MEMBRES</a></li>
-					<li><a href="./Controleur/controlProfile.php">PROFIL</a></li>
+					<li><a href="./profil.php">PROFIL</a></li>
 					<li><a href="./deconnexion.php">DECONNEXION</a></li>
 				</ul>
 

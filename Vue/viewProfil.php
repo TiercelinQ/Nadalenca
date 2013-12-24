@@ -6,7 +6,7 @@
    	 	<link rel="stylesheet" type="text/css" href="../style.css" />
     </head>
 
-	<?php include("../menu.php"); ?>
+	<?php include("./menu.php"); ?>
 
 			<h3>Profil de <?php echo $profil->getPrenom();?></h3>
 			<hr />
@@ -77,4 +77,4 @@
             </fieldset>
         </form>
 
-<?php include("../footer.php"); ?>  
+<?php include("./footer.php"); ?>  
