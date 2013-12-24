@@ -22,7 +22,7 @@
 			
 			mail($email,$sujet,$corps,$headers);
 				
-
+			header('Location:../Vue/viewMdpoublie.php'); 
 	}	
 	
 	else
