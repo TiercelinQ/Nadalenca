@@ -305,10 +305,18 @@ class Utilisateur
         return new Utilisateur($tuple['id'], $tuple['nom'], $tuple['prenom'], $email, $tuple['mdp'], $tuple['statut'], $tuple['admin'], $tuple['adresseP'], $tuple['codeP'], $tuple['ville'], $tuple['numtelF'], $tuple['numtelM'], $tuple['voix']);
     }
             
+
+
+	public static function changeMdpoublie($email)
+	{
+        $req = "SELECT mdp FROM utilisateur WHERE email ='$email'";
+        $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeMotdePasse");
+		$tuple = mysql_fetch_array($res);
+		return($tuple['mdp']);
+    }
 }
-
-
-
 ?>
+
+
 
 
