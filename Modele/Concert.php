@@ -2,14 +2,16 @@
 
 include ("../config.php");
 
+
 class Concert
 {
 	private $id;
 	private $titreC;
 	private $jourC;
-	private $numJourC;
+	private $dateC;
+	/*private $numJourC;
 	private $moisC;
-	private $anneeC;
+	private $anneeC;*/
 	private $heureC;
 	private $minuteC;
 	private $lieuC;
@@ -45,6 +47,11 @@ class Concert
 	public function getAnneeC() 
 	{ //un getter
 		return $this->anneeC;
+	}
+	
+	public function getDateC() 
+	{ //un getter
+		return $this->dateC;
 	}
 	
 	public function getHeureC() 
