@@ -1,3 +1,3 @@
-<?php
-	header('Location: ./Controleur/controlConcert.php');  
+<?php  
+	include('./Controleur/controlConcert.php'); 
 ?>

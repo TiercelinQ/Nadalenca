@@ -1,7 +1,8 @@
 <?php
-include ("../config.php"); 
-include("../menu.php"); 
-include ("../Modele/Concert.php");
+
+include("./menu.php"); 
+include ("./config.php"); 
+include ("./Modele/Concert.php");
 
 echo 'Concert de Nadalenca :
 		<table border = "1">
@@ -34,4 +35,4 @@ echo 'Concert de Nadalenca :
 		echo "</table><br/>";
 		
 		
-		require("../footer.php");
+		require("./footer.php");
