@@ -1,3 +1,3 @@
 <?php
-	header('Location: ../config.php');  
+	include('../config.php');  
 ?>
