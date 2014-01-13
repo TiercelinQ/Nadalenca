@@ -9,7 +9,7 @@ $admin = $_POST['admin'];
 $mdpold = $_POST['mdpold'];
 $mdpnew = $_POST['mdpnew'];
 $mdpnewconf = $_POST['mdpnewconf'];
-$adresse = $_POST['adresseP'];
+$adresseP = $_POST['adresseP'];
 $codeP = $_POST['codeP'];
 $ville = $_POST['ville'];
 $numtelF = $_POST['numtelF'];
@@ -18,7 +18,12 @@ $voix = $_POST['voix'];
 $statut = $_POST['statut'];
 
 
-$profil = Utilisateur::changementInfo($email, $id, $mdp, $statut, $admin, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix);
-require ('../Vue/viewProfil.php'); //redirige vers la vue
+if($mdpold == $profil->getMdp() && $mdpnew == $mdpnewconf){
 
+	$profil = Utilisateur::changementInfo($email, $id, $mdpnew, $statut, $admin, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix);
+	require ('../Vue/viewProfil.php'); //redirige vers la vue
+}
+else {
+	require ('../Vue/viewErrorProfil.php');//redirige vers la vue erreur
+}
 ?>
