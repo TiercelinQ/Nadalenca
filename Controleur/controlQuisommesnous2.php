@@ -1,6 +1,6 @@
 <?php
-include ("../config.php");
-include("../menu.php"); 
+include ("./config.php");
+include("./menu.php"); 
 
 echo 'Membres de Nadalenca :
 		<table border = "1">
@@ -25,6 +25,6 @@ echo 'Membres de Nadalenca :
 		echo "</table><br/>";
 		
 		
-		require("../footer.php");
+		require("./footer.php");
 ?>
 
