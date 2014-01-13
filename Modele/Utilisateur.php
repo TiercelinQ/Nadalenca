@@ -272,7 +272,7 @@ class Utilisateur
         $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeVoix");
     }        
         
-    public static function changementInfo($email, $id, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix)
+    public static function changementInfo($email, $id,$nom, $prenom, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix)
     {//Une fonction qui change les informations de l'utilisateur
         /*$req = "SELECT id FROM utilisateur WHERE email='$email'";
         $res = mysql_query($req) or die ("Erreur insertion : Classe Utilisateur / Fonction changeInfo Debut ");
@@ -301,7 +301,18 @@ class Utilisateur
         {
             changeAdmin($id, $admin);
         }*/
-            
+		if($tuple['nom'] != $nom) 
+		{
+			$req1 = "UPDATE utilisateur SET nom='$nom' WHERE email ='$email'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeAdresse");
+		}
+		
+		if($tuple['prenom'] != $prenom)
+		{
+			$req1 = "UPDATE utilisateur SET prenom='$prenom' WHERE email ='$email'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeAdresse");
+		}
+		
         if($tuple['adresseP'] != $adresseP)
         {
             $req1 = "UPDATE utilisateur SET adresseP ='$adresseP', codeP ='$codeP', ville ='$ville' WHERE email ='$email'";

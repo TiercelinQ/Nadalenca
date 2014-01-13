@@ -17,7 +17,7 @@ $voix = $_POST['voix'];
 
 
 
-$profil = Utilisateur::changementInfo($email, $id, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix);
+$profil = Utilisateur::changementInfo($email, $id,$nom, $prenom, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix);
 
 if($mdpold != null &&($mdpold == $profil->getMdp() && $mdpnew == $mdpnewconf))
 {

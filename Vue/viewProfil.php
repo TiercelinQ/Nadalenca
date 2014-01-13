@@ -50,8 +50,7 @@
                   <input type="text" name="nom" value="<?php echo $profil->getNom()?>"/>
                 <label>Prénom</label> :
                   <input type="text" name="prenom" value="<?php echo $profil->getPrenom()?>"/><br />
-                <label>Email</label> : 
-                  <input type="text" name="email" value="<?php echo $profil->getEmail()?>"/>
+                  <input type="hidden" name="email" value="<?php echo $profil->getEmail()?>"/>
                 <label>Ancien mot de passe</label> : 
                   <input type="password" placeholder="Ex : licorne" name="mdpold"/>
                 <label>Nouveau mot de passe</label> : 
