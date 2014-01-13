@@ -1,6 +1,6 @@
 <?php
+include ("../config.php");
 include("../menu.php"); 
-include ("../Modele/Utilisateur.php");
 
 echo 'Membres de Nadalenca :
 		<table border = "1">
