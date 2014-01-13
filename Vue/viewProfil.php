@@ -16,33 +16,36 @@
 				<th>Nom</th>
 				<th>Prénom</th>
 				<th>Email</th>
-        <th>Mot de Passe</th>
-        <th>Adresse Postale</th>
-        <th>Code Postal</th>
-        <th>Ville</th>
-        <th>N° de téléphone fixe</th>
-        <th>N° de téléphone mobile</th>
-        <th>Type de voix</th>
+				<th>Mot de Passe</th>
+				<th>Adresse Postale</th>
+				<th>Code Postal</th>
+				<th>Ville</th>
+				<th>N° de téléphone fixe</th>
+				<th>N° de téléphone mobile</th>
+				<th>Type de voix</th>
+				<th>Statut</th>
 			</tr>
    	 		<tr>
-   	 			<th><?php echo $profil->getNom();?></th>
+				<th><?php echo $profil->getNom();?></th>
    	 			<th><?php echo $profil->getPrenom();?></th>
    	 			<th><?php echo $profil->getEmail();?></th>
-          <th><?php echo $profil->getMdp();?></th>
-          <th><?php echo $profil->getAdresseP();?></th>
-          <th><?php echo $profil->getCodeP();?></th>
-          <th><?php echo $profil->getVille();?></th>
-          <th><?php echo $profil->getnumtelF();?></th>
-          <th><?php echo $profil->getnumtelM();?></th>
-          <th><?php echo $profil->getVoix();?></th>
-   	 		</tr>
+				<th><?php echo $profil->getMdp();?></th>
+				<th><?php echo $profil->getAdresseP();?></th>
+				<th><?php echo $profil->getCodeP();?></th>
+				<th><?php echo $profil->getVille();?></th>
+				<th><?php echo $profil->getnumtelF();?></th>
+				<th><?php echo $profil->getnumtelM();?></th>
+				<th><?php echo $profil->getVoix();?></th>
+				<th><?php echo $profil->getStatut();?></th>
+			</tr>
    	 		</table>
 
         <hr />
         <h2>Pour modifier vos informations :</h2>
-        <form method="post" action="./controleur/'nomcontroleur'.php" >
+        <form method="post" action="./Controleur/controlChangement.php" >
             <fieldset>
                 <legend>Changement d'informations </legend>
+				<input type="hidden" name="id" value="<?php echo $profil->getId()?>"/>
                 <label>Nom</label> :
                   <input type="text" name="nom" value="<?php echo $profil->getNom()?>"/>
                 <label>Prénom</label> :
