@@ -2,12 +2,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>INSCRIPTION</title>
+		<title>Histoire</title>
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="style.css" />
 	</head>
 	
-	<body>
 		
 		<?php include("menu.php"); ?>
 		<h1>Decouvrez notre histoire</h1>
