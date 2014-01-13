@@ -6,7 +6,7 @@
 			<link rel="stylesheet" href="style.css" />
 	</head>
 	
-<?php include("menu.php"); ?>
+<?php include("./menu.php"); ?>
 
 			<form method="POST" action="./Controleur/controlConnexion.php">
 					<fieldset>
@@ -18,4 +18,4 @@
 					</fieldset>
 			</form>
 		
-	<?php include("footer.php"); ?>
+	<?php include("./footer.php"); ?>
