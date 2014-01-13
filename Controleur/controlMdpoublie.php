@@ -4,9 +4,9 @@
 	require("../Modele/Utilisateur.php");
 
 	$email = $_POST["email"];
-	$mdp = utilisateur::changeMdpoublie($email);
+	$mdp = Utilisateur::changeMdpoublie($email);
 
-	if(utilisateur::Exist($email))
+	if(Utilisateur::Exist($email))
 	{				
 			$sujet='Votre mot de passe Nadalenca';
 			
