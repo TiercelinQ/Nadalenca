@@ -174,14 +174,28 @@ class Utilisateur
 		$res = mysql_query($req) or die ("Erreur insertion : Classe Utilisateur / Fonction getUtilisateurByEmail ");
 		
 		if (mysql_num_rows($res) == 0)
-		{ //le produit n'existe pas
+		{ //l'utilisateur n'existe pas
 			return null;
 		}
 
 		$tuple = mysql_fetch_array($res);
 		return new Utilisateur($tuple['id'], $tuple['nom'], $tuple['prenom'], $email, $tuple['mdp'], $tuple['statut'], $tuple['admin'], $tuple['adresseP'], $tuple['codeP'], $tuple['ville'], $tuple['numtelF'], $tuple['numtelM'], $tuple['voix']);
-		//$util->id = $id;
 	}
+	
+	public static function getUtilisateurByID($id)
+	{//une fonction statique
+		$req ="SELECT * FROM utilisateur WHERE id='$id'";
+		$res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction getUtilisateurByID ");
+		
+		if(mysql_num_rows($res) == 0)
+		{//l'utilisateur n'existe pas
+			return null;
+		}
+		
+		$tuple = mysql_fetch_array($res);
+		return new Utilisateur($id, $tuple['nom'], $tuple['prenom'], $tuple['email'], $tuple['mdp'], $tuple['statut'], $tuple['admin'], $tuple['adresseP'], $tuple['codeP'], $tuple['ville'], $tuple['numtelF'], $tuple['numtelM'], $tuple['voix']);		
+	}
+
 
 	public static function getUtilisateur()
 	{
@@ -194,7 +208,7 @@ class Utilisateur
 		}
 	}
 
-	public static function changeMotdePasse($email, $ancienmdp, $nouveaumdp)
+	/*public static function changeMotdePasse($email, $ancienmdp, $nouveaumdp)
         {//Une fonction que change le mot de passe
             $req = "SELECT * FROM utilisateur WHERE email='$email'";
             $res = mysql_query($req) or die ("Erreur insertion : Classe Utilisateur / Fonction changeMotdePasse ");
@@ -210,7 +224,7 @@ class Utilisateur
             
             return null;
         }
-        
+        */
     public static function changeMdp($id, $mdp)
     {
         $req = "UPDATE utilisateur SET mdp = '$mdp' WHERE id ='$id'";
@@ -253,7 +267,7 @@ class Utilisateur
         $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeVoix");
     }        
         
-    public static function changementInfo($email, $id, $mdp, $statut, $admin, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix)
+    public static function changementInfo($email, $id, $statut, $admin, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix)
     {//Une fonction qui change les informations de l'utilisateur
         /*$req = "SELECT id FROM utilisateur WHERE email='$email'";
         $res = mysql_query($req) or die ("Erreur insertion : Classe Utilisateur / Fonction changeInfo Debut ");
@@ -267,10 +281,10 @@ class Utilisateur
         $res = mysql_query($req) or die ("Erreur insertion : Classe Utilisateur / Fonction changeInfo Debut ");
         $tuple = mysql_fetch_array($res);
             
-        if($tuple['mdp'] != $mdp)
+        /*if($tuple['mdp'] != $mdp)
         {
             $this->changeMdp($id, $mdp);
-        }
+        }*/
             
         if($tuple['statut'] != $statut)
         {

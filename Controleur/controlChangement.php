@@ -18,12 +18,15 @@ $voix = $_POST['voix'];
 $statut = $_POST['statut'];
 
 
-if($mdpold == $profil->getMdp() && $mdpnew == $mdpnewconf){
+$profil = Utilisateur::changementInfo($email, $id, $statut, $admin, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix);
 
-	$profil = Utilisateur::changementInfo($email, $id, $mdpnew, $statut, $admin, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix);
+if($mdpold != null &&($mdpold == $profil->getMdp() && $mdpnew == $mdpnewconf))
+{
+	$profil = Utilisateur::changeMdp($id, $mdpnew);
 	require ('../Vue/viewProfil.php'); //redirige vers la vue
 }
-else {
-	require ('../Vue/viewErrorProfil.php');//redirige vers la vue erreur
+else 
+{
+	require ('../Vue/viewProfil.php');//redirige vers la vue
 }
 ?>
