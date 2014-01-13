@@ -1,4 +1,4 @@
-<?php include("config.php")?>;
+<?php include("./Modele/config.php")?>;
 
 <?php
 session_unset();  
