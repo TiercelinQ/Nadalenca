@@ -45,7 +45,7 @@
         <form method="post" action="./Controleur/controlChangement.php" >
             <fieldset>
                 <legend>Changement d'informations </legend>
-				<input type="text" name="id" value="<?php echo $profil->getId()?>"/>//hidden
+				<input type="int" name="id" value="<?php echo $profil->getId()?>"/>//hidden
                 <label>Nom</label> :
                   <input type="text" name="nom" value="<?php echo $profil->getNom()?>"/>
                 <label>Prénom</label> :
