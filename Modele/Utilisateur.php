@@ -66,7 +66,7 @@ class Utilisateur
 	
 	public function getNumtelF() 
 	{ //un getter
-		return $this->numtelM;
+		return $this->numtelF;
 	}
 	
 	public function getNumtelM() 
