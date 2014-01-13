@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 if (!isset($_POST['mdp']) OR !isset($_POST['email']))
 {
