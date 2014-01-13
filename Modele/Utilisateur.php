@@ -225,43 +225,48 @@ class Utilisateur
             return null;
         }
         */
-    public static function changeMdp($id, $mdp)
+    public static function changeMdp($email, $mdp)
     {
-        $req = "UPDATE utilisateur SET mdp = '$mdp' WHERE id ='$id'";
+        $req = "UPDATE utilisateur SET mdp = '$mdp' WHERE email ='$email'";
         $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeMotdePasse");
+		$req = "SELECT * FROM utilisateur WHERE email='$email'";
+		$res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeMotdePasse");
+		$tuple = mysql_fetch_array($res);
+		return new Utilisateur($tuple['id'], $tuple['nom'], $tuple['prenom'], $email, $tuple['mdp'], $tuple['statut'], $tuple['admin'], $tuple['adresseP'], $tuple['codeP'], $tuple['ville'], $tuple['numtelF'], $tuple['numtelM'], $tuple['voix']);
+		
     }
         
-    public static function changeStatut($id, $statut)
+    public function changeStatut($id, $statut)
     {
         $req = "UPDATE utilisateur SET statut = '$statut' WHERE id ='$id'";
         $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeStatut ");
     }
         
-    public static function changeAdmin($id, $admin)
+    public function changeAdmin($id, $admin)
     {
     $req = "UPDATE utilisateur SET admin = '$admin' WHERE id ='$id'";
     $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeAdmin");
     }
         
-    public static function changeAdresse($id, $adresseP, $codeP, $ville)
+    public function changeAdresse($id, $adresseP, $codeP, $ville)
     {
         $req = "UPDATE utilisateur SET adresseP ='$adresseP', codeP ='$codeP', ville ='$ville' WHERE id ='$id'";
         $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeAdresse");
     }
        
-    public static function changeNumF($id, $numtelF)
+    public function changeNumF($id, $numtelF)
     {
         $req = "UPDATE utilisateur SET numtelF = '$numtelF' WHERE id ='$id'";
         $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changenumtelF");
     }
         
-    public static function changenumtelP($id, $numtelP)
+    public function changenumtelP($id, $numtelP)
     {
         $req = "UPDATE utilisateur SET nuntelP = '$numtelP' WHERE id ='$id'";
         $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changenumtelP");
     }
         
-    public static function changeVoix($id, $voix)
+    public function changeVoix($id, $voix)
     {
         $req = "UPDATE utilisateur SET voix = '$voix' WHERE id ='$id'";
         $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeVoix");
@@ -275,18 +280,19 @@ class Utilisateur
         if(mysql_nums_rows($res) == 0) 
         {//L'utilisateur n'existe pas
             return null;
-        }*/
-            
-        $req = "SELECT * FROM utilisateur WHERE id='$id'";
+        }*/    
+        $req = "SELECT * FROM utilisateur WHERE email='$email'";
         $res = mysql_query($req) or die ("Erreur insertion : Classe Utilisateur / Fonction changeInfo Debut ");
         $tuple = mysql_fetch_array($res);
             
         /*if($tuple['mdp'] != $mdp)
         {
-            $this->changeMdp($id, $mdp);
+            $req = "UPDATE utilisateur SET mdp = '$mdp' WHERE id ='$id'";
+			$res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeMotdePasse");
         }
             
-        if($tuple['statut'] != $statut)
+        
+		if($tuple['statut'] != $statut)
         {
             $this->changeStatut($id, $statut);
         }
@@ -298,22 +304,26 @@ class Utilisateur
             
         if($tuple['adresseP'] != $adresseP)
         {
-            $this->changeAdresse($id, $adresseP, $codeP, $ville);
+            $req1 = "UPDATE utilisateur SET adresseP ='$adresseP', codeP ='$codeP', ville ='$ville' WHERE email ='$email'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeAdresse");
         }
             
         if($tuple['numtelF'] != $numtelF)
         {
-            $this->changeNumF($id, $numtleF);
+            $req1 = "UPDATE utilisateur SET numtelF = '$numtelF' WHERE email ='$email'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changenumtelF");
         }
             
-        if($tuple['numtelP'] != $numtelP)
+        if($tuple['numtelM'] != $numtelM)
         {
-            $this->changeNumP($id, $numtleP);
+            $req1 = "UPDATE utilisateur SET numtelM = '$numtelM' WHERE email ='$email'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changenumtelP");
         }
             
         if($tuple['voix'] != $voix)
         {
-            $this->changeVoix($id, $voix);
+            $req1 = "UPDATE utilisateur SET voix = '$voix' WHERE email ='$email'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeVoix");
         }
             
         return new Utilisateur($tuple['id'], $tuple['nom'], $tuple['prenom'], $email, $tuple['mdp'], $tuple['statut'], $tuple['admin'], $tuple['adresseP'], $tuple['codeP'], $tuple['ville'], $tuple['numtelF'], $tuple['numtelM'], $tuple['voix']);
