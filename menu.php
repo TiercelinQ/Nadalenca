@@ -6,7 +6,7 @@
 				<ul id="menu">
 					<li><a href="./index.php">ACCUEIL</a></li>
 					<li><a href="#">HISTOIRE</a></li>
-					<li><a href="#">CONCERT</a></li>
+					<li><a href="./concert.php">CONCERT</a></li>
 					<li><a href="#">REPERTOIRE</a></li>
 					<li><a href="#">PRODUCTIONS</a></li>
 					<li><a href="#">MEMBRES</a></li>
