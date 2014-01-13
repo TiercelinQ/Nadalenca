@@ -45,21 +45,21 @@
         <form method="post" action="./Controleur/controlChangement.php" >
             <fieldset>
                 <legend>Changement d'informations </legend>
-				<input type="hidden" name="id" value="<?php echo $profil->getId()?>"/>
+				<input type="text" name="id" value="<?php echo $profil->getId()?>"/>//hidden
                 <label>Nom</label> :
                   <input type="text" name="nom" value="<?php echo $profil->getNom()?>"/>
                 <label>Prénom</label> :
                   <input type="text" name="prenom" value="<?php echo $profil->getPrenom()?>"/><br />
                 <label>Email</label> : 
                   <input type="text" name="email" value="<?php echo $profil->getEmail()?>"/>
-                  <input type="hidden" name="admin" value="<?php echo $profil->getAdmin()?>"/><br />
+                  <input type="text" name="admin" value="<?php echo $profil->getAdmin()?>"/><br />//hidden
                 <label>Ancien mot de passe</label> : 
                   <input type="password" placeholder="Ex : licorne" name="mdpold"/>
                 <label>Nouveau mot de passe</label> : 
                   <input type="password" placeholder="Ex : licorne" name="mdpnew"/>
                 <label>Confirmation du mot de passe</label> : 
                   <input type="password" placeholder="Ex : licorne" name="mdpnewconf"/>
-                  <input type="hidden" name="statut" value="<?php echo $profil->getStatut()?>"/><br />
+                  <input type="text" name="statut" value="<?php echo $profil->getStatut()?>"/><br />//hidden
                 <Label>Adresse</label> : 
                   <input type="text" name="adresseP" value="<?php echo $profil->getAdresseP()?>" />
                 <label>Code Postal</label> : 
