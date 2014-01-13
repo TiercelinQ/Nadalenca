@@ -56,7 +56,7 @@
                 <label>Nouveau mot de passe</label> : 
                   <input type="password" placeholder="Ex : licorne" name="mdpnew"/>
                 <label>Confirmation du mot de passe</label> : 
-                  <input type="password" placeholder="Ex : licorne" name="mdpnewconf"/>
+                  <input type="password" placeholder="Ex : licorne" name="mdpnewconf"/> <br />
                 <Label>Adresse</label> : 
                   <input type="text" name="adresseP" value="<?php echo $profil->getAdresseP()?>" />
                 <label>Code Postal</label> : 
@@ -73,7 +73,17 @@
                     <option value="voix3" <?php if ($profil->getVoix() =="voix3") {echo "selected";} ?> > Voix 3
                     <option value="voix4" <?php if ($profil->getVoix() =="voix4") {echo "selected";} ?> > Voix 4
                 </select>  <br />
-                  <input type="submit" value="Modifier" />
+				<select name="statut" type ="hidden">
+					<option value="Adhérent" <?php if ($profil->getStatut() =="Adhérent") {echo "selected";} ?> > Adhérent
+					<option value="Membre du conseil d'administration" <?php if ($profil->getStatut() =="Membre du conseil d'administration") {echo "selected";} ?> > Membre du conseil d'administration
+					<option value="Secrétaire" <?php if ($profil->getStatut() =="Secrétaire") {echo "selected";} ?> > Secrétaire
+					<option value="Secrétaire adjoint" <?php if ($profil->getStatut() =="Secrétaire adjoint") {echo "selected";} ?> > Secrétaire adjoint
+					<option value="Trésorier" <?php if ($profil->getStatut() =="Trésorier") {echo "selected";} ?> > Trésorier
+					<option value="Trésorier adjoint" <?php if ($profil->getStatut() =="Trésorier adjoint") {echo "selected";} ?> > Trésorier adjoint
+					<option value="Président" <?php if ($profil->getStatut() =="Président") {echo "selected";} ?> > Président
+					<option value="Vice-Président" <?php if ($profil->getStatut() =="Vice-Président") {echo "selected";} ?> > Vice-Président	
+				</select>  <br />
+                <input type="submit" value="Modifier" />
             </fieldset>
         </form>
 

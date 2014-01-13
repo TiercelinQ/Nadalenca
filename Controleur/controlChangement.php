@@ -14,10 +14,11 @@ $ville = $_POST['ville'];
 $numtelF = $_POST['numtelF'];
 $numtelM = $_POST['numtelM'];
 $voix = $_POST['voix'];
+$statut =$_POST['statut'];
 
 
 
-$profil = Utilisateur::changementInfo($email, $id,$nom, $prenom, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix);
+$profil = Utilisateur::changementInfo($email, $id,$nom, $prenom, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix, $statut);
 
 if($mdpold != null &&($mdpold == $profil->getMdp() && $mdpnew == $mdpnewconf))
 {

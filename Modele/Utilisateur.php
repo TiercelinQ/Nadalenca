@@ -219,7 +219,7 @@ class Utilisateur
 		
     }        
         
-    public static function changementInfo($email, $id,$nom, $prenom, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix)
+    public static function changementInfo($email, $id,$nom, $prenom, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix, $statut)
     {//Une fonction qui change les informations de l'utilisateur    
         $req = "SELECT * FROM utilisateur WHERE email='$email'";
         $res = mysql_query($req) or die ("Erreur insertion : Classe Utilisateur / Fonction changeInfo Debut ");
@@ -248,7 +248,19 @@ class Utilisateur
             $req1 = "UPDATE utilisateur SET adresseP ='$adresseP', codeP ='$codeP', ville ='$ville' WHERE email ='$email'";
 			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeAdresse");
         }
-            
+        
+		if($tuple['codeP'] != $codeP)
+		{
+			$req1 = "UPDATE utilisateur SET codeP ='$codeP' WHERE email ='$email'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeCodeP");
+		}
+		
+		if($tuple['ville'] != $ville)
+		{
+			$req1 = "UPDATE utilisateur SET ville ='$ville' WHERE email ='$email'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeVille");
+		}
+		
         if($tuple['numtelF'] != $numtelF)
         {
             $req1 = "UPDATE utilisateur SET numtelF = '$numtelF' WHERE email ='$email'";
