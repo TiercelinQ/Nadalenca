@@ -68,10 +68,10 @@
                 <label>Numéro de téléphone portable</label> : 
                   <input type="int" name="numtelM" value="<?php echo $profil->getNumtelM()?>"/> <br />
                 <label>Type de voix </label> : <select name="voix">
-                    <option value="voix1"> Voix 1 
-                    <option value="voix2"> Voix 2
-                    <option value="voix3"> Voix 3
-                    <option value="voix4"> Voix 4
+                    <option value="voix1" <?php if ($profil->getVoix() =="voix1") {echo "selected";} ?> > Voix 1 
+                    <option value="voix2" <?php if ($profil->getVoix() =="voix2") {echo "selected";} ?> > Voix 2
+                    <option value="voix3" <?php if ($profil->getVoix() =="voix3") {echo "selected";} ?> > Voix 3
+                    <option value="voix4" <?php if ($profil->getVoix() =="voix4") {echo "selected";} ?> > Voix 4
                 </select>  <br />
                   <input type="submit" value="Modifier" />
             </fieldset>
