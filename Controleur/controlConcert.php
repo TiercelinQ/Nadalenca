@@ -12,7 +12,7 @@ echo 'Concerts de Nadalenca :
 				<td>Adresse</td>
 				<td>Ville</td>';
 
-	$req="SELECT * from concert where dateC>now() order by dateC ASC "; // requete
+	$req="SELECT * from concert where dateC>now() order by dateC ASC "; // requête 
 	$res =mysql_query($req); // envoi de la requete
 
 	while ($tuple = mysql_fetch_array($res))
