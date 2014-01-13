@@ -293,7 +293,7 @@ class Utilisateur
             
         if($tuple['admin'] != $admin)
         {
-            $this->changeAdmin($id, $admin);
+            changeAdmin($id, $admin);
         }
             
         if($tuple['adresseP'] != $adresseP)
