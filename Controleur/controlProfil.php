@@ -1,9 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+   	 	<meta charset="utf-8" />
+   	 	<title>Profil de <?php echo ($profil->getPrenom());?></title>
+   	 	<link rel="stylesheet" type="text/css" href="../style.css" />
+    </head>
 <?php 
 include("config.php");
-
 include("../Modele/Utilisateur.php");
+?>
 
 
+<?php 
 include("./menu.php");
 
 

@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-   	 	<meta charset="utf-8" />
-   	 	<title>Profil de <?php echo ($profil->getPrenom());?></title>
-   	 	<link rel="stylesheet" type="text/css" href="../style.css" />
-    </head>
-
 
 			<h3>Profil de <?php echo $profil->getPrenom();?></h3>
 			<hr />
