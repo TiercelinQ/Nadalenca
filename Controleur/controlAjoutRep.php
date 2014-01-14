@@ -14,21 +14,7 @@ $voix4 = $_FILES['voix4']['name'];
 $rep = Repertoire::create($nomR, $audio, $texte, $voix1, $voix2, $voix3, $voix4);
 
 
-echo $_POST['nom'];
-$nomaudio =$_FILES['audio']['name'];
-echo $nomaudio;
-$target_path = "../audio/";
-
-$target_path = $target_path . basename( $_FILES['audio']['name']); 
-
-echo $_FILES['audio']['tmp_name'];
-echo $target_path;
-if(move_uploaded_file($_FILES['audio']['tmp_name'], $target_path)) {
-    echo "The file ".  basename( $_FILES['audio']['name']). 
-    " has been uploaded";
-} else{
-    echo "There was an error uploading the file, please try again!";
-}
+$target_path
 
 include ("./footer.php");
 ?>
