@@ -1,3 +1,4 @@
+		</div>
 			<ul id="footer">
 				<li><a href="#">Qui sommes nous ?</a></li> | 
 				<li><a href="./controlContact.php">Nous contacter</a></li> | 

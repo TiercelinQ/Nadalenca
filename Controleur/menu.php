@@ -29,8 +29,8 @@
 					}?>
 					<li><a href="./deconnexion.php">DECONNEXION</a></li>
 				</ul>
-
-		
+			<div id="contenu">
+						
 	<?php
 	}
 	else
@@ -43,7 +43,7 @@
 					<li><a href="./controlInscription.php">INSCRIPTION</a></li>
 					<li><a href="./controlConnexion.php">CONNEXION</a></li>
 				</ul>
-		
+			<div id="contenu">
 <?php
 }
 ?>

@@ -88,10 +88,27 @@ html
 	padding-top:5em;
 }
 
+#contenu
+{
+	background-color: #f6f4ca;
+	margin-right: 1em;
+	margin-left: 1em;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 1em;
+}
+
+#contenu p
+{
+	text-indent: 2em;
+}
+
+
 h1
 {
 	text-align: center;
-	margin-top:2em;
+	margin-top: 2em;
+	padding-top: 1em;
 }
 
 hr
