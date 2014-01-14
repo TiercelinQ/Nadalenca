@@ -46,7 +46,6 @@ html
 	margin: 0;
 	margin-top: -3em;
 	padding: 0;
-	border: 0;
 	text-align: center;
 }
 
@@ -92,9 +91,26 @@ html
 h1
 {
 	text-align: center;
+	margin-top:2em;
 }
 
 hr
 {
 	width: 50%;
+}
+
+#footer
+{
+	width: 100%;
+	list-style-type: none;
+	text-align: center;
+	margin:0;
+	padding:0;
+}
+
+#footer li
+{
+	display: inline;
+	width: 150px;
+	
 }
