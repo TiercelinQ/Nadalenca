@@ -25,12 +25,12 @@
 	{?>	
 			<h1>NADALENCA</h1>
 				<ul id="menu">
-					<li><a href="./index.php">ACCUEIL</a></li>
-					<li><a href="./histoire.php">HISTOIRE</a></li>
+					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
+					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 					<li><a href="./concert.php">CONCERT</a></li>
 					<li><a href="">PRODUCTIONS</a></li>
 					<li><a href="./inscription.php">INSCRIPTION</a></li>
-					<li><a href="./connexion.php">CONNEXION</a></li>
+					<li><a href="./controlConnexion.php">CONNEXION</a></li>
 				</ul>
 		
 <?php

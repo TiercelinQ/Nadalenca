@@ -6,7 +6,7 @@
 			<link rel="stylesheet" href="style.css" />
 	</head>
 	
-<?php include("../menu.php"); ?>
+<?php include("./menu.php"); ?>
 
 	<h2>Erreur de connexion</h2>
 	<hr />
@@ -19,4 +19,4 @@
 	<p>Vous allez être redirigé vers la page de connexion.</p>
 	<?php header("Refresh: 6; URL=../connexion.php"); ?>
 		
-<?php include("../footer.php"); ?>	
+<?php include("./footer.php"); ?>	
