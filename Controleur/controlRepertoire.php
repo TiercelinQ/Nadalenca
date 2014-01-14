@@ -1,5 +1,6 @@
+<!DOCTYPE html>
 <?php
-
+include ("./menu.php");
 include ("../Modele/Repertoire.php");
 
 
@@ -12,30 +13,30 @@ if($nb_resultats != 0)
 {
 ?>
 	<h3>Résultats de votre recherche.</h3>
-	<p>Il y a <? echo $nb_resultats; // on affiche le nombre de résultats 
+	<p>Il y a <?php echo $nb_resultats; // on affiche le nombre de résultats 
 	if($nb_resultats > 1) { echo ' morceaux'; } else { echo ' morceau'; } // on vérifie le nombre de résultats pour orthographier correctement. 
 	?>
 		correspondant a votre critère :<br/>
 		<br/>
-<?
+<?php
 			while ($tuple = mysql_fetch_array($res))
 			{
 		?>	
-			<a href="../Vue/viewRepertoire.php?nomR=<? echo $tuple['nomR']; ?>"><? echo $tuple['nomR']; ?></a></br>
-		<?
+			<a href="../Vue/viewRepertoire.php?nomR=<?php echo $tuple['nomR']; ?>"><?php echo $tuple['nomR']; ?></a></br>
+		<?php
 			}
 ?>
 
-		<a href="../repertoire.php">Faire une nouvelle recherche </a></br>
+		<a href="repertoire.php">Faire une nouvelle recherche </a></br>
 	
-<?
+<?php
 }
 else
 {
 ?>
 		<h3>Pas de résultats</h3> </br>
 		<a href="repertoire.php">Réessayez</a> avec autre chose.</p>
-<?
+<?php
 
 }
 include("./footer.php");
