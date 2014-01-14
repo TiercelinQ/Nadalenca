@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>ERREUR</title>
+		<title>Erreur inscription</title>
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="style.css" />
 	</head>
 	
-<?php include("../menu.php"); ?>
 
 	<p>Une erreur est survenue lors de votre inscription. <br/ > Vérifiez bien les points suivants : </p>
 	<ol>	
@@ -16,6 +15,8 @@
 	</ol>
 
 	<p>Vous allez être redirigé vers la page d'incription.</p>
-	<?php header("Refresh: 6; URL=../inscription.php"); ?>
+	<?php
+	header("Refresh: 6; URL=./controlInscription.php"); 
+	?>
 		
-<?php include("../footer.php"); ?>	
+

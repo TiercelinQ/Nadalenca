@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>INSCRIPTION</title>
-			<meta charset="utf-8" />
-			<link rel="stylesheet" href="style.css" />
-	</head>
-	
-<?php include("../menu.php"); ?>
 
-	<h2>Inscription Réussie</h2>
-	<p>Vous vous êtes bien inscrit. Vous allez recevoir un mail de votre inscription avec vos identifiants.</p>
-	<p>Vous allez être redirigé vers la page de connexion.</p>
-	<?php header("Refresh: 5; URL=../connexion.php"); ?>
+				<form method="POST" action="./controlValidInscription.php">
+					<fieldset>
+						<legend>Formulaire d'inscription</legend>
+							<label>Nom : </label><input type="text" name="nom" placeholder="Nom" required>
+							<label>Prénom : </label><input type="text" name="prenom" placeholder="Prénom" required><br />
+							<label>Email : </label><input type="email" name="email" placeholder="Email" required><br />
+							<label>Mot de passe : </label><input type="password" name="mdp" required>
+							<label>Confirmation du mot de passe : </label><input type="password" name="mdpc" required><br />
+							<label>Mot de passe Nadalenca : </label><input type="password" name="mdpn" required>
+								<input type="submit" value="Envoyer">
+					</fieldset>
+				</form>
+
 		
-<?php include("../footer.php"); ?>	
