@@ -1,7 +1,7 @@
 Concerts futurs :
 		<table border = "1">
 			<tr>
-				<td>Titre_Concert</td>
+				<td>Titre Concert</td>
 				<td>Date</td>
 				<td>Heure</td>
 				<td>Lieu</td>
@@ -26,7 +26,7 @@ Concerts futurs :
 		Concerts passés de Nadalenca :
 		<table border = "1">
 			<tr>
-				<td>Titre_Concert</td>
+				<td>Titre Concert</td>
 				<td>Date</td>
 				<td>Heure</td>
 				<td>Lieu</td>
