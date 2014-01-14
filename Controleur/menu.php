@@ -38,7 +38,7 @@
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a></li>
 					<li><a href="">PRODUCTIONS</a></li>
-					<li><a href="./inscription.php">INSCRIPTION</a></li>
+					<li><a href="./controlInscription.php">INSCRIPTION</a></li>
 					<li><a href="./controlConnexion.php">CONNEXION</a></li>
 				</ul>
 		
