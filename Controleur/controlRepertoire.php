@@ -1,6 +1,6 @@
 <?php
 
-include ("./Repertoire.php");
+include ("../Modele/Repertoire.php");
 
 
 $nom = htmlspecialchars($_POST['recherche']);
@@ -21,12 +21,12 @@ if($nb_resultats != 0)
 			while ($tuple = mysql_fetch_array($res))
 			{
 		?>	
-			<a href="../Vue/viewRepertoire.php?nomR=<? echo $tuple['nomR'];?>"><? echo $tuple['nomR'];?></a></br>
+			<a href="../Vue/viewRepertoire.php?nomR=<? echo $tuple['nomR']; ?>"><? echo $tuple['nomR']; ?></a></br>
 		<?
 			}
 ?>
 
-		<a href="repertoire.php">Faire une nouvelle recherche </a></br>
+		<a href="../repertoire.php">Faire une nouvelle recherche </a></br>
 	
 <?
 }
