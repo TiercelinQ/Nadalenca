@@ -5,7 +5,7 @@
 	{?>
 			<h1>NADALENCA</h1>
 				<ul id="menu">
-					<li><a href="./index.php">ACCUEIL</a></li>
+					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 					<li><a href="./histoire.php">HISTOIRE</a></li>
 					<li><a href="./concert.php">CONCERT</a></li>
 					<li><a href="./repertoire.php">REPERTOIRE</a></li>
