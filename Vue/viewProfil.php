@@ -57,7 +57,7 @@
                   <input type="password" placeholder="Ex : licorne" name="mdpnew"/>
                 <label>Confirmation du mot de passe</label> : 
                   <input type="password" placeholder="Ex : licorne" name="mdpnewconf"/> <br />
-                <Label>Adresse</label> : 
+                <label>Adresse</label> : 
                   <input type="text" name="adresseP" value="<?php echo $profil->getAdresseP()?>" />
                 <label>Code Postal</label> : 
                   <input type="text" name="codeP" value="<?php echo $profil->getCodeP()?>" />
@@ -72,7 +72,8 @@
                     <option value="voix2" <?php if ($profil->getVoix() =="voix2") {echo "selected";} ?> > Voix 2
                     <option value="voix3" <?php if ($profil->getVoix() =="voix3") {echo "selected";} ?> > Voix 3
                     <option value="voix4" <?php if ($profil->getVoix() =="voix4") {echo "selected";} ?> > Voix 4
-                </select>  <br />
+                </select>  <br /> 
+                <label>Statut</label> :
 				<select name="statut" type ="hidden">
 					<option value="Adhérent" <?php if ($profil->getStatut() =="Adhérent") {echo "selected";} ?> > Adhérent
 					<option value="Membre du conseil d'administration" <?php if ($profil->getStatut() =="Membre du conseil d'administration") {echo "selected";} ?> > Membre du conseil d'administration

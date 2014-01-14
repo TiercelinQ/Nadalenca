@@ -23,10 +23,12 @@ $profil = Utilisateur::changementInfo($email, $id,$nom, $prenom, $adresseP, $cod
 if($mdpold != null &&($mdpold == $profil->getMdp() && $mdpnew == $mdpnewconf))
 {
 	$profil = Utilisateur::changeMdp($email, $mdpnew);
-	require ('../Vue/viewProfil.php'); //redirige vers la vue
+
+	header('Location: ../profil.php'); //redirige vers la vue
 }
 else 
 {
-	require ('../Vue/viewProfil.php');//redirige vers la vue
+
+	header('Location: ../profil.php');//redirige vers la vue
 }
 ?>
