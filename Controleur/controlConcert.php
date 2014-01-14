@@ -2,7 +2,7 @@
 include ("./config.php");
 include("./menu.php"); 
 
-echo 'Concerts future de Nadalenca :
+echo 'Concerts futurs de Nadalenca :
 		<table border = "1">
 			<tr>
 				<td>Titre_Concert</td>
@@ -28,7 +28,7 @@ echo 'Concerts future de Nadalenca :
 	}
 		echo "</table><br/>";
 		
-		echo 'Concerts passé de Nadalenca :
+		echo 'Concerts passés de Nadalenca :
 		<table border = "1">
 			<tr>
 				<td>Titre_Concert</td>
