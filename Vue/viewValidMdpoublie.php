@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Mail envoyé</title>
+		
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
+			<title>Mail envoyé</title>
 	</head>
 
 	<p>Mot de passe envoyé, veuillez consulter vos mails.</p>

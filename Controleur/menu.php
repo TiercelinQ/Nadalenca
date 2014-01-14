@@ -11,7 +11,7 @@
 					<li><a href="./controleurMainRep.php">REPERTOIRE</a></li>
 					<li><a href="">PRODUCTIONS</a></li>
 					<li><a href="./controlMembres.php">MEMBRES</a></li>
-					<li><a href="./profil.php">PROFIL</a></li>
+					<li><a href="./controlProfil.php">PROFIL</a></li>
 					<?php if(isset($_SESSION['admin']) && $_SESSION['admin'] != 0) {
 						echo '<li><a href="./admin">ADMINISTRATION</a></li>';
 					}?>

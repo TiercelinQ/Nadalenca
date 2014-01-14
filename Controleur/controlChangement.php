@@ -24,11 +24,11 @@ if($mdpold != null &&($mdpold == $profil->getMdp() && $mdpnew == $mdpnewconf))
 {
 	$profil = Utilisateur::changeMdp($email, $mdpnew);
 
-	header('Location: ../profil.php'); //redirige vers la vue
+	header("Location: ./controlProfil.php"); //redirige vers la vue
 }
 else 
 {
 
-	header('Location: ../profil.php');//redirige vers la vue
+	header("Location: ./controlProfil.php");//redirige vers la vue
 }
 ?>

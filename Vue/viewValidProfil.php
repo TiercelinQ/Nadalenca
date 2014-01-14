@@ -6,7 +6,6 @@
    	 	<link rel="stylesheet" type="text/css" href="../style.css" />
     </head>
 
-	<?php include("./menu.php"); ?>
 
 			<h3>Profil de <?php echo $profil->getPrenom();?></h3>
 			<hr />
@@ -42,7 +41,7 @@
 
         <hr />
         <h2>Pour modifier vos informations :</h2>
-        <form method="post" action="./Controleur/controlChangement.php" >
+        <form method="post" action="./controlChangement.php" >
             <fieldset>
                 <legend>Changement d'informations </legend>
 				<input type="hidden" name="id" value="<?php echo $profil->getId()?>"/>
@@ -87,5 +86,3 @@
                 <input type="submit" value="Modifier" />
             </fieldset>
         </form>
-
-<?php include("./footer.php"); ?>  
