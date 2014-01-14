@@ -7,7 +7,7 @@
 				<ul id="menu">
 					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
-					<li><a href="./concert.php">CONCERT</a></li>
+					<li><a href="./controlConcert.php">CONCERT</a></li>
 					<li><a href="./controleurMainRep.php">REPERTOIRE</a></li>
 					<li><a href="">PRODUCTIONS</a></li>
 					<li><a href="./membres.php">MEMBRES</a></li>
@@ -27,7 +27,7 @@
 				<ul id="menu">
 					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
-					<li><a href="./concert.php">CONCERT</a></li>
+					<li><a href="./controlConcert.php">CONCERT</a></li>
 					<li><a href="">PRODUCTIONS</a></li>
 					<li><a href="./inscription.php">INSCRIPTION</a></li>
 					<li><a href="./controlConnexion.php">CONNEXION</a></li>
