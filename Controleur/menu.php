@@ -5,10 +5,12 @@
 			<img src="../Images/banniere.png" alt="banniere"/>
 
 			<ul id="drapeau">
-				<li><a href="./controlAccueil.php"><img src="../Images/drapfr.png" title="Drapeau Fr" alt="drapeau_fr"/></a></li>
-				<li><a href="#"><img src="../Images/drapoc.png" alt="occitan_fr"/></a></li>
+				<li><a href="./controlAccueil.php"><img src="../Images/drapfr.png" title="Drapeau Français" alt="drapeau_fr"/></a></li>
+				<li><a href="#"><img src="../Images/drapoc.png" title="Drapeau Occitan"alt="occitan_fr"/></a></li>
 			</ul>
 		</div>
+
+		<div id="corps">
 
 <?php
 	@session_start();

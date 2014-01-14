@@ -4,7 +4,7 @@
 	<head>
 		<title>Histoire</title>
 			<meta charset="utf-8" />
-			<link rel="stylesheet" href="style.css" />
+			<link rel="stylesheet" href="../style.css" />
 	</head>
 	
 <?php 

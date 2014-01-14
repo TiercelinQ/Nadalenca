@@ -4,7 +4,7 @@
 	<head>
 		<title>Mot de passe oublié</title>
 			<meta charset="utf-8" />
-			<link rel="stylesheet" href="style.css" />
+			<link rel="stylesheet" href="../style.css" />
 	</head>
 	
 <?php 
