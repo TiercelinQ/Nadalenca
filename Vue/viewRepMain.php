@@ -21,7 +21,7 @@ $res = mysql_query("SELECT * FROM repertoire") or die ("Erreur insertion, repert
 while ($tuple = mysql_fetch_array($res))
 	{
 ?>	
-	<a href="./Vue/viewRepertoire.php?nomR=<?php echo $tuple['nomR']; ?>"> <?php echo $tuple['nomR']; ?></a></br>
+	<a href="../Vue/viewRepertoire.php?nomR=<?php echo $tuple['nomR']; ?>"> <?php echo $tuple['nomR']; ?></a></br>
 <?php
 	}
 ?>

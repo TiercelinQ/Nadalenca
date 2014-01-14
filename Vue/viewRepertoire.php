@@ -6,8 +6,8 @@
    	 	<link rel="stylesheet" type="text/css" href="../style.css" />
     </head>
 
-	<?php include("../Controleur/menu.php");
-	include("../config.php");
+	<?php
+	include ("../config.php");
 	$nom = $_GET['nomR'];
 	$res = mysql_query("SELECT * FROM repertoire WHERE nomR = '$nom'") or die ("Erreur insertion, viewRepertoire, res");
 	
@@ -15,5 +15,4 @@
 	
 	echo $tuple['idR'].$tuple['nomR'].$tuple['texteR'];
 	
-	include("../Controleur/footer.php");
 	?>
