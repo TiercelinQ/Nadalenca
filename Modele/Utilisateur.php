@@ -301,6 +301,21 @@ class Utilisateur
 		$tuple = mysql_fetch_array($res);
 		return($tuple['mdp']);
     }
+	
+	public static function getAdminByEmail ($email)
+	{
+	$req = "Select admin From utilisateur where email='$email'";
+	$res = mysql_query($req);
+	$tuple = mysql_fetch_array($res);
+	return($tuple['admin']);
+	}
+	
+	public static function changerAdmin($email)
+	{
+	$a=1-Utilisateur::getAdminByEmail($email);
+	$req = "UPDATE utilisateur SET admin = '$a' WHERE email ='$email'";
+    $res = mysql_query($req);
+	}
 }
 ?>
 
