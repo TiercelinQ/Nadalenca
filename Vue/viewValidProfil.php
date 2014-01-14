@@ -1,5 +1,6 @@
 
-			<h3>Profil de <?php echo $profil->getPrenom();?></h3>
+			 <title>Profil de <?php echo ($profil->getPrenom());?></title>
+      <h3>Profil de <?php echo $profil->getPrenom();?></h3>
 			<hr />
            
 		   <table border="1">
