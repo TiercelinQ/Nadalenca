@@ -236,7 +236,8 @@ class Utilisateur
             
 		if($tuple['statut'] != $statut)
         {
-            $req = "UPDATE utilisateur SET statut = '$statut' WHERE email ='$email'";
+        	$str = addslashes($statut);
+            $req = "UPDATE utilisateur SET statut = '$str' WHERE email ='$email'";
 			$res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction changeStatut ");
         }
             
