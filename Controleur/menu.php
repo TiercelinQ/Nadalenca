@@ -6,7 +6,7 @@
 
 			<ul id="drapeau">
 				<li><a href="./controlAccueil.php"><img src="../Images/drapfr.png" title="Drapeau Français" alt="drapeau_fr"/></a></li>
-				<li><a href="#"><img src="../Images/drapoc.png" title="Drapeau Occitan"alt="occitan_fr"/></a></li>
+				<li><a href="#"><img src="../Images/drapoc.png" title="Drapeau Occitan" alt="occitan_fr"/></a></li>
 			</ul>
 		</div>
 
