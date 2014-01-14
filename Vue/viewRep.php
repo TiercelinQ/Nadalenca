@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-   	 	<meta charset="utf-8" />
-   	 	<title>Répertoire</title>
-   	 	<link rel="stylesheet" type="text/css" href="../style.css" />
-    </head>
-	
-	
 	
 	<h3>Résultats de votre recherche.</h3>
 	<p>Il y a <?php echo $nb_resultats; // on affiche le nombre de résultats 
@@ -18,7 +9,7 @@
 			while ($tuple = mysql_fetch_array($res))
 			{
 		?>	
-			<a href="../Vue/viewRepertoire.php?nomR=<?php echo $tuple['nomR']; ?>"><?php echo $tuple['nomR']; ?></a></br>
+			<a href="../Controleur/controlRepvue.php?nomR=<?php echo $tuple['nomR']; ?>"><?php echo $tuple['nomR']; ?></a></br>
 		<?php
 			}
 ?>
