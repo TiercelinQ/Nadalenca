@@ -1,9 +1,19 @@
 	<body>
+	<div id="page">
+		
+		<div id="banniere">
+			<img src="../Images/banniere.png" alt="banniere"/>
+
+			<ul id="drapeau">
+				<li><a href="./controlAccueil.php"><img src="../Images/drapfr.png" title="Drapeau Fr" alt="drapeau_fr"/></a></li>
+				<li><a href="#"><img src="../Images/drapoc.png" alt="occitan_fr"/></a></li>
+			</ul>
+		</div>
+
 <?php
 	@session_start();
 	if(isset($_SESSION['login']))
 	{?>
-			<h1>NADALENCA</h1>
 				<ul id="menu">
 					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
@@ -23,8 +33,7 @@
 	}
 	else
 	{?>	
-			<h1>NADALENCA</h1>
-				<ul id="menu">
+				<ul id="menu_vis">
 					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a></li>
