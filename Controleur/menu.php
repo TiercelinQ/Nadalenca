@@ -10,7 +10,7 @@
 					<li><a href="./controlConcert.php">CONCERT</a></li>
 					<li><a href="./controleurMainRep.php">REPERTOIRE</a></li>
 					<li><a href="">PRODUCTIONS</a></li>
-					<li><a href="./membres.php">MEMBRES</a></li>
+					<li><a href="./controlMembres.php">MEMBRES</a></li>
 					<li><a href="./profil.php">PROFIL</a></li>
 					<?php if(isset($_SESSION['admin']) && $_SESSION['admin'] != 0) {
 						echo '<li><a href="./admin">ADMINISTRATION</a></li>';
