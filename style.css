@@ -77,6 +77,44 @@ html
  	text-decoration:none;
 }
 
+#menu_mem
+{
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	margin-top: -3em;
+	padding: 0;
+	text-align: center;
+}
+
+#menu_mem li
+{
+	float: left;
+	width: 112.5px;
+}
+
+#menu_mem li a:link, #menu_mem li a:visited 
+{
+ 	display:block;
+ 	color:#f4f5c8;
+ 	background-color:#cd1b1b;
+	margin:0;
+ 	padding:5px 5px;
+ 	border:0;
+ 	text-decoration:none;
+}
+
+#menu_mem li a:hover
+{
+ 	display:block;
+ 	color:#cd1b1b;
+ 	background-color:#f5dfc8;
+	margin:0;
+ 	padding:5px 5px;
+ 	border:0;
+ 	text-decoration:none;
+}
+
 #corps
 {
 	width:100%;

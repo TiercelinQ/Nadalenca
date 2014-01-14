@@ -16,7 +16,7 @@
 	@session_start();
 	if(isset($_SESSION['login']))
 	{?>
-				<ul id="menu">
+				<ul id="menu_mem">
 					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a></li>
