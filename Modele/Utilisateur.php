@@ -167,6 +167,15 @@ class Utilisateur
 			return $tuple['id'];
 		}		
 	}
+
+	public static function isAdmin($email)
+	{
+		$req = "SELECT admin FROM utilisateur WHERE email ='$email'";
+        $res = mysql_query($req) or die("Erreur insertion : Classe Utilisateur / Fonction isAdmin");
+		$tuple = mysql_fetch_array($res);
+		return($tuple['admin']);
+	}
+	
 	
 	public static function getUtilisateurByEmail($email) 
 	{ //une fonction statique

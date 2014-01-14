@@ -12,6 +12,9 @@
 					<li><a href="">PRODUCTIONS</a></li>
 					<li><a href="">MEMBRES</a></li>
 					<li><a href="./profil.php">PROFIL</a></li>
+					<?php if(isset($_SESSION['admin']) && $_SESSION['admin'] != 0) {
+						echo '<li><a href="./admin">ADMINISTRATION</a></li>';
+					}?>
 					<li><a href="./deconnexion.php">DECONNEXION</a></li>
 				</ul>
 
@@ -29,7 +32,7 @@
 					<li><a href="./inscription.php">INSCRIPTION</a></li>
 					<li><a href="./connexion.php">CONNEXION</a></li>
 				</ul>
-		</div>
+		
 <?php
 }
 ?>

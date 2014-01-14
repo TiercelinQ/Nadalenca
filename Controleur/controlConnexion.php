@@ -16,12 +16,15 @@ else
 	$mdp = $_POST["mdp"];
 	
 	$id = Utilisateur::connect($email, $mdp);
+
 	if($id == null)
 	{
 		header('Location:../Vue/viewErrorConnexion.php'); 
 	}
 	else{
 		$_SESSION['login'] = $email;
+		$admin = Utilisateur::isAdmin($email);
+		$_SESSION['admin'] = $admin;
 		header('Location:../Vue/viewConnexion.php'); 
 	}
 }
