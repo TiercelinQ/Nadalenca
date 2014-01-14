@@ -55,7 +55,7 @@ class Repertoire
 	}
 	
 	//Un constructeur
-	public function __construct ($idR, $nomR, $audioR, $texteR, $voix1R, $voix2R, $voix3R, $voix4R) 
+	public function __construct ($nomR, $audioR, $texteR, $voix1R, $voix2R, $voix3R, $voix4R) 
 	{
 		$this->idR = null;
 		$this->nomR = $nomR;
@@ -68,18 +68,18 @@ class Repertoire
 	}
 	
 	//création d'un nouveau morceau dans la base de données repertoire
-	public function create()
+	public static function create($nom, $audio, $texte, $voix1, $voix2, $voix3, $voix4)
 	{
-		$idR = $this->idR;
-		$nomR = $this->nomR;
-		$audioR = $this->audioR;
-		$texteR = $this->texteR;
-		$voix1R = $this->voix1R;
-		$voix2R = $this->voix2R;
-		$voix3R = $this->voix3R;
-		$voix4R = $this->voix4R;
+		
+		$nomR = $nom;
+		$audioR = $audio;
+		$texteR = $texte;
+		$voix1R = $voix1;
+		$voix2R = $voix2;
+		$voix3R = $voix3;
+		$voix4R = $voix4;
 
-		$req = "INSERT INTO repertoire (idR, nomR,audioR, texteR, voix1R, voix2R, voix3R, voix4R) VALUES ('$idR','$nomR','$audioR','$texteR','$voix1R','$voix2R','$voix3R','$voix4R')";
+		$req = "INSERT INTO repertoire (nomR,audioR, texteR, voix1R, voix2R, voix3R, voix4R) VALUES ('$nomR','$audioR','$texteR','$voix1R','$voix2R','$voix3R','$voix4R')";
 		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
 	}
 	
