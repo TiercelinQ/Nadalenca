@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>CONNEXION</title>
-			<meta charset="utf-8" />
-			<link rel="stylesheet" href="../style.css" />
-	</head>
-	
-<?php include("../menu.php"); ?>
 
-	<p>Mot de passe envoyé, veuillez consulter vos mails.</p>
-
-	<input type="button" value="Retour" onclick="location.href='../connexion.php';"> 
-		
-<?php include("../footer.php"); ?>	
+<form method="POST" action="./controlVerifMdpoublie.php">
+	<fieldset>
+	<legend>Mot de passe oublié ?</legend>
+		<label>Email : </label>
+			<input type="email" name="email" placeholder="email" required>
+			<input type="submit" value="Valider">
+	</fieldset>
+</form>
+					
