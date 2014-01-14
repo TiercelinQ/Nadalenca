@@ -1,14 +1,3 @@
-<?php include("config.php") ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Histoire</title>
-			<meta charset="utf-8" />
-			<link rel="stylesheet" href="style.css" />
-	</head>
-	
-		
-		<?php include("menu.php"); ?>
 		<h1>Decouvrez notre histoire</h1>
 		<hr />
 		
@@ -45,5 +34,4 @@
 		Par décision de l’assemblée générale de Février 2006, la « Corala Nadalenca », est devenue « NADALENCA » Chœur polyphonique Occitan de Montpellier.
 		</p>
 
-		
-		<?php include("footer.php"); ?>	
+	
