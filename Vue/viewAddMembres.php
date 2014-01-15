@@ -1,4 +1,4 @@
-				<form method="POST" action="../Controleur/controlValidAddMembres.php">
+				<form method="POST" action="./controlValidAddMembres.php">
 					<fieldset>
 						<legend>Formulaire d'inscription</legend>
 							<label>Nom : </label><input type="text" name="nom" placeholder="Nom" required>

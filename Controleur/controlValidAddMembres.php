@@ -1,4 +1,10 @@
-<?php
+<!DOCTYPE html>
+<html>
+	<head>
+			<meta charset="utf-8" />
+			<link rel="stylesheet" href="../style.css" />
+	</head>
+	<?php
 
 require("../config.php");
 require("../Modele/Utilisateur.php");
