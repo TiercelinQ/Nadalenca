@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>ERREUR</title>
-			<meta charset="utf-8" />
-			<link rel="stylesheet" href="style.css" />
-	</head>
 	
-<?php include("./menu.php"); ?>
+<title>Erreur de connexion</title>
 
 	<h2>Erreur de connexion</h2>
 	<hr />
@@ -17,6 +10,5 @@
 	</ol>
 
 	<p>Vous allez être redirigé vers la page de connexion.</p>
-	<?php header("Refresh: 6; URL=../connexion.php"); ?>
+	<?php header("Refresh: 6; URL=./controlConnexion.php"); ?>
 		
-<?php include("./footer.php"); ?>	

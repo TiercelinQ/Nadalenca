@@ -1,4 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+			<meta charset="utf-8" />
+			<link rel="stylesheet" href="../style.css" />
+	</head>
+
 <?php
+include("./menu.php");
+require("../config.php");
 
 if (!isset($_POST['mdp']) OR !isset($_POST['email']))
 {
@@ -28,4 +38,6 @@ else
 		include('../Vue/viewValidConnexion.php'); 
 	}
 }
+
+	require("./footer.php");
 ?>
