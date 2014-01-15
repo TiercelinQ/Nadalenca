@@ -1,7 +1,4 @@
-<?php 
-include("config.php");
-include("../Modele/Utilisateur.php");
-?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +11,8 @@ include("../Modele/Utilisateur.php");
 
 <?php 
 include("./menu.php");
-
+include("config.php");
+include("../Modele/Utilisateur.php");
 
 
 

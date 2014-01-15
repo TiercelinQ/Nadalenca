@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
+
 		<title>Erreur inscription</title>
-			<meta charset="utf-8" />
-			<link rel="stylesheet" href="style.css" />
-	</head>
-	
+		
 
 	<p>Une erreur est survenue lors de votre inscription. <br/ > Vérifiez bien les points suivants : </p>
 	<ol>	

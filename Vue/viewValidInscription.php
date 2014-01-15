@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
+
 		<title>Inscription validée</title>
-			<meta charset="utf-8" />
-			<link rel="stylesheet" href="style.css" />
-	</head>
+			
 	
 
 	<h2>Inscription Réussie</h2>

@@ -1,5 +1,4 @@
-
-			 <title>Profil de <?php echo ($profil->getPrenom());?></title>
+<title>Profil de <?php echo ($profil->getPrenom());?></title>
       <h3>Profil de <?php echo $profil->getPrenom();?></h3>
 			<hr />
            
