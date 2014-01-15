@@ -90,7 +90,7 @@ class Repertoire
 		mysql_query($req);
 	}
 	
-	public function getRepertoireByNom($nomR)
+	public function changementRep($nomR,$audio, $texte, $voix1, $voix2, $voix3, $voix4)
 	{
 	}
 }
