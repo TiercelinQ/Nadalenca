@@ -7,6 +7,7 @@ Membres de Nadalenca :
 				<td>Adresse Email</td>
 				<td>Admin</td>
 				<td>ChangerStatut</td>
+				<td>Supprimer membre</td>
 	<form action='controlMembresAdmin.php' method='post'>	
 	<?php
 	while ($tuple = mysql_fetch_array($res))
@@ -18,6 +19,7 @@ Membres de Nadalenca :
 				."<td>".$tuple['email']."</td>"
 				."<td>".$tuple['admin']."</td>"
 				."<td>"."<input type='checkbox' name='email[]' value='$tuple[email]'/>"."</td>"
+				."<td>"."<input type='checkbox' name='idDelete[]' value='$tuple[id]'/>"."</td>"
 			."</tr>";
 			
 	}
