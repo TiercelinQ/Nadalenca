@@ -9,10 +9,10 @@
 	<p> Parole du morceau (au format PDF) :</p>
 	<a href="../Texte/<?php echo $tuple['texteR']; ?>" target="_blank">Texte</a>
 	<p> Differents types de Voix : </p>
-	<a href="../Voix/Voix1/<?php echo $tuple['voix1R']; ?>" target="_blank">Voix1</a></br>
-	<a href="../Voix/Voix2/<?php echo $tuple['voix2R']; ?>" target="_blank">Voix2</a></br>
-	<a href="../Voix/Voix3/<?php echo $tuple['voix3R']; ?>" target="_blank">Voix3</a></br>
-	<a href="../Voix/Voix4/<?php echo $tuple['voix4R']; ?>" target="_blank">Voix4</a>
+	<a href="../Voix/alto/<?php echo $tuple['altoR']; ?>" target="_blank">alto</a></br>
+	<a href="../Voix/basse/<?php echo $tuple['basseR']; ?>" target="_blank">basse</a></br>
+	<a href="../Voix/soprano/<?php echo $tuple['sopranoR']; ?>" target="_blank">soprano</a></br>
+	<a href="../Voix/tenor/<?php echo $tuple['tenorR']; ?>" target="_blank">tenor</a>
 	
 	
 	

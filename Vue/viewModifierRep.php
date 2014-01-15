@@ -7,14 +7,14 @@
 		<input type="file" name="audio">Nom du fichier existant : <?php echo $rep->getAudio(); ?></br>
 		<label>Texte : </label>(Fichier en PDF)
 		<input type="file" name="texte">Nom du fichier existant : <?php echo $rep->getTexte(); ?></br>
-		<label>Voix1 :</label>
-		<input type="file" name="voix1">Nom du fichier existant : <?php echo $rep->getVoix1(); ?></br>
-		<label>Voix2 :</label>
-		<input type="file" name="voix2">Nom du fichier existant : <?php echo $rep->getVoix2(); ?></br>
-		<label>Voix3 :</label>
-		<input type="file" name="voix3">Nom du fichier existant : <?php echo $rep->getVoix3(); ?></br>
-		<label>Voix4 :</label>
-		<input type="file" name="voix4">Nom du fichier existant : <?php echo $rep->getVoix4(); ?></br>
+		<label>alto :</label>
+		<input type="file" name="alto">Nom du fichier existant : <?php echo $rep->getalto(); ?></br>
+		<label>basse :</label>
+		<input type="file" name="basse">Nom du fichier existant : <?php echo $rep->getbasse(); ?></br>
+		<label>soprano :</label>
+		<input type="file" name="soprano">Nom du fichier existant : <?php echo $rep->getsoprano(); ?></br>
+		<label>tenor :</label>
+		<input type="file" name="tenor">Nom du fichier existant : <?php echo $rep->gettenor(); ?></br>
 		<input type="submit" value="Modifier" />
 		</fieldset>
 	</form>

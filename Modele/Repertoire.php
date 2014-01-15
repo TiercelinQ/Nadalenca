@@ -8,10 +8,10 @@ class Repertoire
 	private $nomR;
 	private $audioR;
 	private $texteR;
-	private $voix1R;
-	private $voix2R;
-	private $voix3R;
-	private $voix4R;
+	private $altoR;
+	private $basseR;
+	private $sopranoR;
+	private $tenorR;
 	
 	//Les fonctions :
 	public function getId()
@@ -34,56 +34,56 @@ class Repertoire
 		return $this->texteR;
 	}
 	
-	public function getVoix1()
+	public function getalto()
 	{
-		return $this->voix1R;
+		return $this->altoR;
 	}
 	
-	public function getVoix2()
+	public function getbasse()
 	{
-		return $this->voix2R;
+		return $this->basseR;
 	}
 	
-	public function getVoix3()
+	public function getsoprano()
 	{
-		return $this->voix3R;
+		return $this->sopranoR;
 	}
 	
-	public function getVoix4()
+	public function gettenor()
 	{
-		return $this->voix4R;
+		return $this->tenorR;
 	}
 	
 	//Un constructeur
-	public function __construct ($nomR, $audioR, $texteR, $voix1R, $voix2R, $voix3R, $voix4R) 
+	public function __construct ($nomR, $audioR, $texteR, $altoR, $basseR, $sopranoR, $tenorR) 
 	{
 		$this->idR = null;
 		$this->nomR = $nomR;
 		$this->audioR = $audioR;
 		$this->texteR = $texteR;
-		$this->voix1R = $voix1R;
-		$this->voix2R = $voix2R;
-		$this->voix3R = $voix3R;
-		$this->voix4R = $voix4R;	
+		$this->altoR = $altoR;
+		$this->basseR = $basseR;
+		$this->sopranoR = $sopranoR;
+		$this->tenorR = $tenorR;	
 	}
 	
 	//création d'un nouveau morceau dans la base de données repertoire
-	public static function create($nom, $audio, $texte, $voix1, $voix2, $voix3, $voix4)
+	public static function create($nom, $audio, $texte, $alto, $basse, $soprano, $tenor)
 	{
 		
 		$nomR = $nom;
 		$audioR = $audio;
 		$texteR = $texte;
-		$voix1R = $voix1;
-		$voix2R = $voix2;
-		$voix3R = $voix3;
-		$voix4R = $voix4;
+		$altoR = $alto;
+		$basseR = $basse;
+		$sopranoR = $soprano;
+		$tenorR = $tenor;
 
-		$req = "INSERT INTO repertoire (nomR,audioR, texteR, voix1R, voix2R, voix3R, voix4R) VALUES ('$nomR','$audioR','$texteR','$voix1R','$voix2R','$voix3R','$voix4R')";
+		$req = "INSERT INTO repertoire (nomR,audioR, texteR, altoR, basseR, sopranoR, tenorR) VALUES ('$nomR','$audioR','$texteR','$altoR','$basseR','$sopranoR','$tenorR')";
 		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
 	}
 	
-	public static function moveFile($audio, $audiotmp, $texte, $textetmp, $voix1, $voix1tmp, $voix2, $voix2tmp, $voix3, $voix3tmp, $voix4, $voix4tmp)
+	public static function moveFile($audio, $audiotmp, $texte, $textetmp, $alto, $altotmp, $basse, $bassetmp, $soprano, $sopranotmp, $tenor, $tenortmp)
 	{
 		$target_pathaudio = "../Audio/";
 		$target_pathaudio = $target_pathaudio . basename( $audio);
@@ -91,29 +91,29 @@ class Repertoire
 		$target_pathtexte = "../Texte/";
 		$target_pathtexte = $target_pathtexte . basename( $texte);
 		move_uploaded_file($textetmp, $target_pathtexte);
-		$target_pathvoix1 = "../Voix/Voix1/";
-		$target_pathvoix1 = $target_pathvoix1 . basename( $voix1);
-		move_uploaded_file($voix1tmp, $target_pathvoix1);
-		$target_pathvoix2 = "../Voix/Voix2/";
-		$target_pathvoix2 = $target_pathvoix2 . basename( $voix2);
-		move_uploaded_file($voix2tmp, $target_pathvoix2);
-		$target_pathvoix3 = "../Voix/Voix3/";
-		$target_pathvoix3 = $target_pathvoix3 . basename($voix3);
-		move_uploaded_file($voix3tmp, $target_pathvoix3);
-		$target_pathvoix4 = "../Voix/Voix4/";
-		$target_pathvoix4 = $target_pathvoix4 . basename( $voix4);
-		move_uploaded_file($voix4tmp, $target_pathvoix4);
+		$target_pathalto = "../Voix/alto/";
+		$target_pathalto = $target_pathalto . basename( $alto);
+		move_uploaded_file($altotmp, $target_pathalto);
+		$target_pathbasse = "../Voix/basse/";
+		$target_pathbasse = $target_pathbasse . basename( $basse);
+		move_uploaded_file($bassetmp, $target_pathbasse);
+		$target_pathsoprano = "../Voix/soprano/";
+		$target_pathsoprano = $target_pathsoprano . basename($soprano);
+		move_uploaded_file($sopranotmp, $target_pathsoprano);
+		$target_pathtenor = "../Voix/tenor/";
+		$target_pathtenor = $target_pathtenor . basename( $tenor);
+		move_uploaded_file($tenortmp, $target_pathtenor);
 	}
 	
 	public static function getRepById($id)
 	{
 		$res = mysql_query("SELECT * FROM repertoire WHERE idR = '$id'") or die("Erreur insertion / classe repertoire / fonction getRepById");
 		$tuple = mysql_fetch_array($res);
-		return new Repertoire($id, $tuple['audioR'],$tuple['texteR'],$tuple['voix1R'],$tuple['voix2R'],$tuple['voix3R'],$tuple['voix4R']);
+		return new Repertoire($id, $tuple['audioR'],$tuple['texteR'],$tuple['altoR'],$tuple['basseR'],$tuple['sopranoR'],$tuple['tenorR']);
 	}
 	
 	
-	//suppression d'un morceau dans la base de donnée repertoire
+	//suppression d'un morceau du repertoire
 	public static function delete($id)
 	{
 		$res = mysql_query("SELECT * FROM repertoire WHERE idR = '$id'") or die ("Erreur insertion / Classe répertoire/Fonction delete");
@@ -124,18 +124,18 @@ class Repertoire
 		$target_pathtexte = "../Texte/";
 		$target_pathtexte = $target_pathtexte . $tuple['texteR'];
 		unlink($target_pathtexte);
-		$target_pathvoix1 = "../Voix/Voix1/";
-		$target_pathvoix1 = $target_pathvoix1 . $tuple['voix1R'];
-		unlink($target_pathvoix1);
-		$target_pathvoix2 = "../Voix/Voix2/";
-		$target_pathvoix2 = $target_pathvoix2 . $tuple['voix2R'];
-		unlink($target_pathvoix2);
-		$target_pathvoix3 = "../Voix/Voix3/";
-		$target_pathvoix3 = $target_pathvoix3 . $tuple['voix3R'];
-		unlink($target_pathvoix3);
-		$target_pathvoix4 = "../Voix/Voix4/";
-		$target_pathvoix4 = $target_pathvoix4 . $tuple['voix4R'];
-		unlink($target_pathvoix4);
+		$target_pathalto = "../Voix/alto/";
+		$target_pathalto = $target_pathalto . $tuple['altoR'];
+		unlink($target_pathalto);
+		$target_pathbasse = "../Voix/basse/";
+		$target_pathbasse = $target_pathbasse . $tuple['basseR'];
+		unlink($target_pathbasse);
+		$target_pathsoprano = "../Voix/soprano/";
+		$target_pathsoprano = $target_pathsoprano . $tuple['sopranoR'];
+		unlink($target_pathsoprano);
+		$target_pathtenor = "../Voix/tenor/";
+		$target_pathtenor = $target_pathtenor . $tuple['tenorR'];
+		unlink($target_pathtenor);
 		
 	}
 	
@@ -146,7 +146,7 @@ class Repertoire
 	}
 	
 	
-	public static function changementRep($audio, $audiotmp, $texte, $textetmp, $voix1, $voix1tmp, $voix2, $voix2tmp, $voix3, $voix3tmp, $voix4, $voix4tmp)
+	public static function changementRep($audio, $audiotmp, $texte, $textetmp, $alto, $altotmp, $basse, $bassetmp, $soprano, $sopranotmp, $tenor, $tenortmp)
 	{
 		if($audio != null)
 		{
@@ -160,29 +160,29 @@ class Repertoire
 			$target_pathtexte = $target_pathtexte . basename( $texte);
 			move_uploaded_file($textetmp, $target_pathtexte);
 		}
-		if($voix1 != null)
+		if($alto != null)
 		{
-			$target_pathvoix1 = "../Voix/Voix1/";
-			$target_pathvoix1 = $target_pathvoix1 . basename( $voix1);
-			move_uploaded_file($voix1tmp, $target_pathvoix1);
+			$target_pathalto = "../Voix/alto/";
+			$target_pathalto = $target_pathalto . basename( $alto);
+			move_uploaded_file($altotmp, $target_pathalto);
 		}
-		if($voix2 != null)
+		if($basse != null)
 		{
-			$target_pathvoix2 = "../Voix/Voix2/";
-			$target_pathvoix2 = $target_pathvoix2 . basename( $voix2);
-			move_uploaded_file($voix2tmp, $target_pathvoix2);
+			$target_pathbasse = "../Voix/basse/";
+			$target_pathbasse = $target_pathbasse . basename( $basse);
+			move_uploaded_file($bassetmp, $target_pathbasse);
 		}
-		if($voix3 != null)
+		if($soprano != null)
 		{
-			$target_pathvoix3 = "../Voix/Voix3/";
-			$target_pathvoix3 = $target_pathvoix3 . basename($voix3);
-			move_uploaded_file($voix3tmp, $target_pathvoix3);
+			$target_pathsoprano = "../Voix/soprano/";
+			$target_pathsoprano = $target_pathsoprano . basename($soprano);
+			move_uploaded_file($sopranotmp, $target_pathsoprano);
 		}
-		if($voix4 != null)
+		if($tenor != null)
 		{
-			$target_pathvoix4 = "../Voix/Voix4/";
-			$target_pathvoix4 = $target_pathvoix4 . basename( $voix4);
-			move_uploaded_file($voix4tmp, $target_pathvoix4);
+			$target_pathtenor = "../Voix/tenor/";
+			$target_pathtenor = $target_pathtenor . basename( $tenor);
+			move_uploaded_file($tenortmp, $target_pathtenor);
 		}	
 		
 	}

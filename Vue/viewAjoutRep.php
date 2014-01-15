@@ -8,14 +8,14 @@
 		<input type="file" name="audio"></br>
 		<label>Texte :</label>(Fichier en PDF)
 		<input type="file" name="texte"></br>
-		<label>Voix1 :</label>
-		<input type="file" name="voix1"></br>
-		<label>Voix2 :</label>
-		<input type="file" name="voix2"></br>
-		<label>Voix3 :</label>
-		<input type="file" name="voix3"></br>
-		<label>Voix4 :</label>
-		<input type="file" name="voix4"></br>
+		<label>alto :</label>
+		<input type="file" name="alto"></br>
+		<label>basse :</label>
+		<input type="file" name="basse"></br>
+		<label>soprano :</label>
+		<input type="file" name="soprano"></br>
+		<label>tenor :</label>
+		<input type="file" name="tenor"></br>
 		<input type="submit" value="Ajouter" />
 		</fieldset>
 	</form>

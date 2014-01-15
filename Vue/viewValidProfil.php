@@ -47,10 +47,10 @@
           <label>Numéro de téléphone fixe :</label><input type="int" name="numtelF" value="<?php echo $profil->getNumtelF()?>"/><br />
           <label>Numéro de téléphone portable :</label><input type="int" name="numtelM" value="<?php echo $profil->getNumtelM()?>"/> <br />
           <label>Type de voix :</label><select name="voix">
-              <option value="voix1" <?php if ($profil->getVoix() =="voix1") {echo "selected";} ?> > Voix 1 
-              <option value="voix2" <?php if ($profil->getVoix() =="voix2") {echo "selected";} ?> > Voix 2
-              <option value="voix3" <?php if ($profil->getVoix() =="voix3") {echo "selected";} ?> > Voix 3
-              <option value="voix4" <?php if ($profil->getVoix() =="voix4") {echo "selected";} ?> > Voix 4
+              <option value="alto" <?php if ($profil->getVoix() =="alto") {echo "selected";} ?> > Voix 1 
+              <option value="basse" <?php if ($profil->getVoix() =="basse") {echo "selected";} ?> > Voix 2
+              <option value="soprano" <?php if ($profil->getVoix() =="soprano") {echo "selected";} ?> > Voix 3
+              <option value="tenor" <?php if ($profil->getVoix() =="tenor") {echo "selected";} ?> > Voix 4
               </select><br /> 
           <label>Statut :</label><select name="statut" type ="hidden">
               <option value="Adhérent" <?php if ($profil->getStatut() =="Adhérent") {echo "selected";} ?> > Adhérent
