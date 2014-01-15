@@ -21,12 +21,9 @@
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a></li>
 					<li><a href="./controleurMainRep.php">REPERTOIRE</a></li>
-					<li><a href="">PRODUCTIONS</a></li>
+					<li><a href="#">PRODUCTIONS</a></li>
 					<li><a href="./controlMembres.php">MEMBRES</a></li>
 					<li><a href="./controlProfil.php">PROFIL</a></li>
-					<?php if(isset($_SESSION['admin']) && $_SESSION['admin'] != 0) {
-						echo '<li><a href="./admin">ADMINISTRATION</a></li>';
-					}?>
 					<li><a href="./deconnexion.php">DECONNEXION</a></li>
 				</ul>
 			<div id="contenu">
@@ -39,7 +36,7 @@
 					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a></li>
-					<li><a href="">PRODUCTIONS</a></li>
+					<li><a href="#">PRODUCTIONS</a></li>
 					<li><a href="./controlInscription.php">INSCRIPTION</a></li>
 					<li><a href="./controlConnexion.php">CONNEXION</a></li>
 				</ul>
