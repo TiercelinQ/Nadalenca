@@ -45,3 +45,4 @@ while ($tuple = mysql_fetch_array($res))
 	echo "</tbody>
 	</table>";
 ?>
+	<a href="../Controleur/controlAjoutReper.php">Ajouter un morceau au répertoire</a>
