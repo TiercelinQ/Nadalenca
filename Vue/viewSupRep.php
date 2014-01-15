@@ -1,0 +1,1 @@
+	<p>Le morceau <?php echo $id; ?> à bien été supprimé de la base de données.</p>

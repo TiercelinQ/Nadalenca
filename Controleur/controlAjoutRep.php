@@ -1,44 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ajout d'un morceau</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../style.css" />
+</head>
+
 <?php
 include("./menu.php");
 include("../Modele/Repertoire.php");
 
 
-$nomR = $_POST['nom'];
+$nom = $_POST['nom'];
 $audio = $_FILES['audio']['name'];
-$target_pathaudio = "../Audio/";
-$target_pathaudio = $target_pathaudio . basename( $_FILES['audio']['name']); 
-echo $target_path;
-move_uploaded_file($_FILES['audio']['tmp_name'], $target_pathaudio);
+$audiotmp = $_FILES['audio']['tmp_name'];
 $texte = $_FILES['texte']['name'];
-$target_pathtexte = "../Texte/";
-$target_pathtexte = $target_pathtexte . basename( $_FILES['audio']['name']); 
-echo $target_path;
-move_uploaded_file($_FILES['audio']['tmp_name'], $target_pathaudio);
+$textetmp = $_FILES['texte']['tmp_name'];
 $voix1 = $_FILES['voix1']['name'];
-$target_pathvoix1 = "../Voix/Voix1";
-$target_pathvoix1 = $target_pathvoix1 . basename( $_FILES['audio']['name']); 
-echo $target_path;
-move_uploaded_file($_FILES['audio']['tmp_name'], $target_pathaudio);
+$voix1tmp = $_FILES['voix1']['tmp_name'];
 $voix2 = $_FILES['voix2']['name'];
-$target_pathvoix2 = "../Voix/Voix2";
-$target_pathvoix2 = $target_pathvoix2 . basename( $_FILES['audio']['name']); 
-echo $target_path;
-move_uploaded_file($_FILES['audio']['tmp_name'], $target_pathaudio);
+$voix2tmp = $_FILES['voix2']['tmp_name'];
 $voix3 = $_FILES['voix3']['name'];
-$target_pathvoix3 = "../Voix/Voix3";
-$target_pathvoix3 = $target_pathvoix3 . basename( $_FILES['audio']['name']); 
-echo $target_path;
-move_uploaded_file($_FILES['audio']['tmp_name'], $target_pathaudio);
+$voix3tmp = $_FILES['voix3']['tmp_name'];
 $voix4 = $_FILES['voix4']['name'];
-$target_pathvoix4 = "../Voix/Voix4";
-$target_pathvoix4 = $target_pathvoix4 . basename( $_FILES['audio']['name']); 
-echo $target_path;
-move_uploaded_file($_FILES['audio']['tmp_name'], $target_pathaudio);
+$voix4tmp = $_FILES['voix4']['tmp_name'];
 
-$rep = Repertoire::create($nomR, $audio, $texte, $voix1, $voix2, $voix3, $voix4);
+$rep = Repertoire::create($nom, $audio, $texte, $voix1, $voix2, $voix3, $voix4);
+$rep = Repertoire::moveFile($audio, $audiotmp, $texte, $textetmp, $voix1, $voix1tmp, $voix2, $voix2tmp, $voix3, $voix3tmp, $voix4, $voix4tmp);
 
-
-
-
+include("../Vue/viewRepertoire.php");
 include ("./footer.php");
 ?>

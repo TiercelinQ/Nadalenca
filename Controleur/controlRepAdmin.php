@@ -9,6 +9,6 @@
 	
 	include("./menu.php");
 	include("./config.php");
-	include("../Vue/viewRepMain.php");
+	include("../Vue/viewAdminRep.php");
 	include("./footer.php");
 ?>

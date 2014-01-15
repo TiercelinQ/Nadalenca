@@ -83,12 +83,61 @@ class Repertoire
 		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
 	}
 	
-	//suppression d'un morceau dans la base de donnée repertoire
-	public function delete($id)
+	public static function moveFile($audio, $audiotmp, $texte, $textetmp, $voix1, $voix1tmp, $voix2, $voix2tmp, $voix3, $voix3tmp, $voix4, $voix4tmp)
 	{
-		$req = mysql_query("DELETE FROM repertoire WHERE idR = '$idR'");
-		mysql_query($req);
+		$target_pathaudio = "../Audio/";
+		$target_pathaudio = $target_pathaudio . basename( $audio);
+		move_uploaded_file($audiotmp, $target_pathaudio);
+		$target_pathtexte = "../Texte/";
+		$target_pathtexte = $target_pathtexte . basename( $texte);
+		move_uploaded_file($textetmp, $target_pathtexte);
+		$target_pathvoix1 = "../Voix/Voix1/";
+		$target_pathvoix1 = $target_pathvoix1 . basename( $voix1);
+		move_uploaded_file($voix1tmp, $target_pathvoix1);
+		$target_pathvoix2 = "../Voix/Voix2/";
+		$target_pathvoix2 = $target_pathvoix2 . basename( $voix2);
+		move_uploaded_file($voix2tmp, $target_pathvoix2);
+		$target_pathvoix3 = "../Voix/Voix3/";
+		$target_pathvoix3 = $target_pathvoix3 . basename($voix3);
+		move_uploaded_file($voix3tmp, $target_pathvoix3);
+		$target_pathvoix4 = "../Voix/Voix4/";
+		$target_pathvoix4 = $target_pathvoix4 . basename( $voix4);
+		move_uploaded_file($voix4tmp, $target_pathvoix4);
 	}
+
+	
+	//suppression d'un morceau dans la base de donnée repertoire
+	public static function delete($id)
+	{
+		$res = mysql_query("SELECT * FROM repertoire WHERE idR = '$id'") or die ("Erreur insertion / Classe répertoire/Fonction delete");
+		$tuple = mysql_fetch_array($res);
+		$target_pathaudio = "../Audio/";
+		$target_pathaudio = $target_pathaudio . $tuple['audioR'];
+		unlink($target_pathaudio);
+		$target_pathtexte = "../Texte/";
+		$target_pathtexte = $target_pathtexte . $tuple['texteR'];
+		unlink($target_pathtexte);
+		$target_pathvoix1 = "../Voix/Voix1/";
+		$target_pathvoix1 = $target_pathvoix1 . $tuple['voix1R'];
+		unlink($target_pathvoix1);
+		$target_pathvoix2 = "../Voix/Voix2/";
+		$target_pathvoix2 = $target_pathvoix2 . $tuple['voix2R'];
+		unlink($target_pathvoix2);
+		$target_pathvoix3 = "../Voix/Voix3/";
+		$target_pathvoix3 = $target_pathvoix3 . $tuple['voix3R'];
+		unlink($target_pathvoix3);
+		$target_pathvoix4 = "../Voix/Voix4/";
+		$target_pathvoix4 = $target_pathvoix4 . $tuple['voix4R'];
+		unlink($target_pathvoix4);
+		
+	}
+	
+	public static function deletebdd($id)
+	{
+		$req = mysql_query("DELETE FROM repertoire WHERE idR = '$id'") or die("Erreur insertion / Classez Repertoire / Fonction delete");
+		return true;
+	}
+	
 	
 	public function changementRep($nomR,$audio, $texte, $voix1, $voix2, $voix3, $voix4)
 	{
