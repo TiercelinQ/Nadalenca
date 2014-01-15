@@ -67,9 +67,10 @@ class Message
 			$nomM = $this->nomM;
 			$prenomM = $this->prenomM;
 			$emailM = $this->emailM;
-			$sujetM = $this->sujetM;
-			$messageM = $this->messageM;
+			$sujetM = addslashes($this->sujetM);
+			$messageM = addslashes($this->messageM);
 			$dateM = $this->dateM;
+
 
 			$req = "INSERT INTO message (idM, nomM, prenomM, emailM, sujetM, messageM, dateM) VALUES ('$idM','$nomM','$prenomM','$emailM','$sujetM','$messageM','$dateM')";
 			$res = mysql_query($req) or die ("Erreur insertion :  Classe Message / Fonction insertion message");
