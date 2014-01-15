@@ -26,3 +26,4 @@ Membres de Nadalenca :
 		echo "</table><br/>";
 	?>
 	<input type ='submit'  value ='Submit' > </form>
+	<a href="./controlAddMembres.php"> Ajouter Membre </a>

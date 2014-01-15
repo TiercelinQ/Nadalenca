@@ -111,6 +111,7 @@ class Utilisateur
 		
 		if (mysql_num_rows($res) == 0)
 		{ // l'utilisateur n'existe pas.
+			$id = NULL;
 			$nom = $this->nom;
 			$prenom = $this->prenom;
 			$mdp = $this->mdp;
@@ -123,17 +124,19 @@ class Utilisateur
 			$numtelM = $this->numtelM;
 			$voix = $this->voix;
 
-			$dn2 = mysql_num_rows(mysql_query('SELECT id FROM utilisateur'));
-			$id=$dn2+1;
+			/*$dn2 = mysql_num_rows(mysql_query('SELECT id FROM utilisateur'));
+			$id=$dn2+1;*/
 
 			$req = "INSERT INTO utilisateur VALUES ('$id','$nom','$prenom','$email','$mdp','$statut','$admin','$adresseP','$codeP','$ville','$numtelF','$numtelM','voix')";
-			$res = mysql_query($req) or die ("Erreur insertion :  Classe Utilisateur / Fonction Insertion nouveau membre");
+			$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Utilisateur / Fonction Insertion nouveau membre")
 		}
 		else
 		{
 			return null/*'Cet email est déjà utilisé'*/;
 		}
 	}
+	
+		
 
 	//vérification si un utilisateur existe déjà ou non dans la base de donnée
 	public static function Exist($email)
@@ -145,7 +148,7 @@ class Utilisateur
 	}
 	
 	//suppression d'un utilisateur dans la base de donnée
-	public function delete($id)
+	public static function delete($id)
 	{
 		$req = mysql_query("DELETE FROM utilisateur WHERE id = '$id'");
 		mysql_query($req);
