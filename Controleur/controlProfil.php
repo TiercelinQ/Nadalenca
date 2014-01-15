@@ -12,7 +12,7 @@
 <?php 
 include("./menu.php");
 include("config.php");
-include("../Modele/Utilisateur.php");
+//include("../Modele/Utilisateur.php");
 
 
 

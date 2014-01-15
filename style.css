@@ -78,7 +78,7 @@ img
 {
  	display:block;
  	color:#cd1b1b;
- 	background-color:#e5f24a;
+ 	background-color:#edef9c;
 	margin:0;
  	padding:5px 5px;
  	border:0;
@@ -227,15 +227,12 @@ a:hover
 	color:#cd1b1b;
 }
 
-table
+h4
 {
 	margin: 0;
-	padding: 0;
-	margin-right: auto;
-	margin-right: auto;
-
+	margin-bottom:-3em;
+	color: #cd1b1b;
 }
-
 
 #footer
 {
