@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 14 Janvier 2014 à 13:41
+-- Généré le: Mer 15 Janvier 2014 à 13:58
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -53,6 +53,28 @@ INSERT INTO `concert` (`id`, `titreC`, `heureC`, `minuteC`, `lieuC`, `adresseC`,
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `lien`
+--
+
+CREATE TABLE IF NOT EXISTS `lien` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `lien` text NOT NULL,
+  `description` text NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Contenu de la table `lien`
+--
+
+INSERT INTO `lien` (`id`, `lien`, `description`) VALUES
+(1, 'http://google.com', 'Google'),
+(2, 'http://maisondeschoeurs.free.fr/association.htm', 'Association des Chœur de Montpellier');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `message`
 --
 
@@ -65,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   `messageM` varchar(255) NOT NULL,
   `dateM` varchar(30) NOT NULL,
   PRIMARY KEY (`idM`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Contenu de la table `message`
@@ -75,7 +97,10 @@ INSERT INTO `message` (`idM`, `nomM`, `prenomM`, `emailM`, `sujetM`, `messageM`,
 (1, 'pochon', 'quentin', 'q.tiercelin@gmail.com', 'test', 'test', '19-12-13'),
 (2, 'tiercelin', 'quentin', 'q.tiercelin@gmail.com', 'test2', 'test2', '19-12-13'),
 (3, 'bexchauvet', 'olivier', 'q.tiercelin@gmail.com', 'test3', 'test', '19-12-13'),
-(4, 'tiercelin', 'quentin', 'q.tiercelin@gmail.com', 'test3', 'test', '19-12-13');
+(4, 'tiercelin', 'quentin', 'q.tiercelin@gmail.com', 'test3', 'test', '19-12-13'),
+(5, 'A', 'D', 'mo@fdfz.fr', 'Test', 'Test', '14-01-14'),
+(6, 'A', 'D', 'mo@fdfz.fr', 'Test', 'test', '14-01-14'),
+(7, 'A', 'D', 'mo@fdfz.fr', 'Test', 'test', '15-01-14');
 
 -- --------------------------------------------------------
 
@@ -126,16 +151,23 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `voix` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `email`, `mdp`, `statut`, `admin`, `adresseP`, `codeP`, `ville`, `numtelF`, `numtelM`, `voix`) VALUES
-(1, 'Tiercelin', 'Quentin', 'q.tiercelin@gmail.com', 'licorne', '', 0, '20, avenue du Docteur Pezet', '34090', 'Montpellier', '04.99.23.93.98', '06.50.80.66.77', 'voix'),
-(2, 'Beule', 'JÃ©rÃ©my', 'androalphas@hotmail.fr', 'licorne', '', 0, '', '', '', '', '', 'voix'),
-(3, 'Bex-Chauvet', 'Olivier', 'fullofwrath@hotmail.fr', 'lilo', 'PrÃ©sident', 0, '114 rue lol', '34090', 'Montpellier', '04.22.33.44.55', '06.22.33.44.55', 'voix2');
+(1, 'Tiercelin', 'Quentin', 'q.tiercelin@gmail.com', 'licorne', 'Membre du conseil d''administration', 0, '20, avenue du Docteur Pezet', '35620', 'Montpellier', '04.99.23.93.98', '06.50.80.66.77', 'voix3'),
+(2, 'Beule', 'JÃ©rÃ©my', 'androalphas@hotmail.fr', 'licorne', '', 1, '', '', '', '', '', 'voix'),
+(3, 'Bex-Chauvet', 'Olivier', 'fullofwrath@hotmail.fr', 'lilo', 'PrÃ©sident', 1, '114 rue lol', '34090', 'Montpellier', '04.22.33.44.55', '06.22.33.44.55', 'voix2'),
+(4, 'Pochon', 'Amaury', 'momoamo@hotmail.fr', 'test', '', 1, '', '', '', '', '', 'voix'),
+(5, 'Pochona', '1', 'celestine.pochon@hotmail.fr', 'test', '', 0, '', '', '', '', '', 'voix'),
+(6, 'Pochon', 'Amaury', 'momoam@hotmail.fr', 'test', '', 0, '', '', '', '', '', 'voix'),
+(7, 'Amauy', 'Pochon', 'momoa@hotmail.fr', 'test', '', 0, '', '', '', '', '', 'voix'),
+(8, '1', '2', 'test@gmail.com', 'test', '', 0, '', '', '', '', '', 'voix'),
+(9, 'test', 'ettd', 'lolilol@yopmail.com', 'test', '', 0, '', '', '', '', '', 'voix'),
+(10, 'test', 'test', 'de@de.fr', 'lol', '', 0, '', '', '', '', '', 'voix');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
