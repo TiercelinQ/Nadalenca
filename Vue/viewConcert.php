@@ -1,14 +1,16 @@
-Concerts futurs :
-		<table border = "1">
-			<tr>
-				<td>Titre Concert</td>
-				<td>Date</td>
-				<td>Heure</td>
-				<td>Lieu</td>
-				<td>Adresse</td>
-				<td>Ville</td>
-				
-	<?php
+<h1>Concerts</h1>
+<hr />
+
+<h3>Concerts futurs :</h3>
+	<table border = "1">
+		<tr>
+			<td>Titre Concert</td>
+			<td>Date</td>
+			<td>Heure</td>
+			<td>Lieu</td>
+			<td>Adresse</td>
+			<td>Ville</td>				
+<?php
 	while ($tuple1 = mysql_fetch_array($res1))
 	{ 
 		echo "<tr>"
@@ -22,8 +24,7 @@ Concerts futurs :
 	}
 		echo "</table><br/>";
 	?>
-		
-		Concerts passés de Nadalenca :
+<h3>Concerts passés de Nadalenca :</h3>
 		<table border = "1">
 			<tr>
 				<td>Titre Concert</td>

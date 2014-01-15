@@ -2,7 +2,7 @@
 	<div id="page">
 		
 		<div id="banniere">
-			<img src="../Images/banniere.png" alt="banniere"/>
+			<img src="../Images/banniere_nada.png" alt="banniere"/>
 
 			<ul id="drapeau">
 				<li><a href="./controlAccueil.php"><img src="../Images/drapfr.png" title="Drapeau Français" alt="drapeau_fr"/></a></li>

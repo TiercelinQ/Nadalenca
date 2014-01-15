@@ -1,4 +1,7 @@
-Liens utiles :
+<h1>Liens</h1>
+<hr />
+
+<h3>Liens utiles :</h3>
 		<ul>
 					
 	<?php
