@@ -104,7 +104,14 @@ class Repertoire
 		$target_pathvoix4 = $target_pathvoix4 . basename( $voix4);
 		move_uploaded_file($voix4tmp, $target_pathvoix4);
 	}
-
+	
+	public static function getRepById($id)
+	{
+		$res = mysql_query("SELECT * FROM repertoire WHERE idR = '$id'") or die("Erreur insertion / classe repertoire / fonction getRepById");
+		$tuple = mysql_fetch_array($res);
+		return new Repertoire($id, $tuple['audioR'],$tuple['texteR'],$tuple['voix1R'],$tuple['voix2R'],$tuple['voix3R'],$tuple['voix4R']);
+	}
+	
 	
 	//suppression d'un morceau dans la base de donnée repertoire
 	public static function delete($id)
@@ -139,8 +146,45 @@ class Repertoire
 	}
 	
 	
-	public function changementRep($nomR,$audio, $texte, $voix1, $voix2, $voix3, $voix4)
+	public static function changementRep($audio, $audiotmp, $texte, $textetmp, $voix1, $voix1tmp, $voix2, $voix2tmp, $voix3, $voix3tmp, $voix4, $voix4tmp)
 	{
+		if($audio != null)
+		{
+			$target_pathaudio = "../Audio/";
+			$target_pathaudio = $target_pathaudio . basename( $audio);
+			move_uploaded_file($audiotmp, $target_pathaudio);
+		}
+		if($texte != null)
+		{
+			$target_pathtexte = "../Texte/";
+			$target_pathtexte = $target_pathtexte . basename( $texte);
+			move_uploaded_file($textetmp, $target_pathtexte);
+		}
+		if($voix1 != null)
+		{
+			$target_pathvoix1 = "../Voix/Voix1/";
+			$target_pathvoix1 = $target_pathvoix1 . basename( $voix1);
+			move_uploaded_file($voix1tmp, $target_pathvoix1);
+		}
+		if($voix2 != null)
+		{
+			$target_pathvoix2 = "../Voix/Voix2/";
+			$target_pathvoix2 = $target_pathvoix2 . basename( $voix2);
+			move_uploaded_file($voix2tmp, $target_pathvoix2);
+		}
+		if($voix3 != null)
+		{
+			$target_pathvoix3 = "../Voix/Voix3/";
+			$target_pathvoix3 = $target_pathvoix3 . basename($voix3);
+			move_uploaded_file($voix3tmp, $target_pathvoix3);
+		}
+		if($voix4 != null)
+		{
+			$target_pathvoix4 = "../Voix/Voix4/";
+			$target_pathvoix4 = $target_pathvoix4 . basename( $voix4);
+			move_uploaded_file($voix4tmp, $target_pathvoix4);
+		}	
+		
 	}
 }
 ?>

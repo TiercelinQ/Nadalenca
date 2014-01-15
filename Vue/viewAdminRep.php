@@ -37,7 +37,7 @@ while ($tuple = mysql_fetch_array($res))
 				<td>". $tuple['voix2R']." </td>
 				<td>". $tuple['voix3R']." </td>
 				<td>". $tuple['voix4R']." </td>
-				<td>"; echo "<a href="."../Controleur/controlRepMod.php?id=".$tuple['idR']."> Modifier</a></td>
+				<td>"; echo "<a href="."../Controleur/controlModRep.php?id=".$tuple['idR']."> Modifier</a></td>
 				<td>"; echo "<a href="."../Controleur/controlSupRep.php?id=".$tuple['idR']."> Supprimer</a></td>
 			<tr>";
 
