@@ -98,13 +98,13 @@ img
 #menu_mem li
 {
 	float: left;
-	width: 112.5px;
+	width: 100px;
 }
 
 #menu_mem li a:link, #menu_mem li a:visited 
 {
  	display:block;
- 	color:#f4f5c8;
+ 	color:#e5f24a;
  	background-color:#cd1b1b;
 	margin:0;
  	padding:5px 5px;
@@ -116,12 +116,39 @@ img
 {
  	display:block;
  	color:#cd1b1b;
- 	background-color:#f5dfc8;
+ 	background-color:#edef9c;
 	margin:0;
  	padding:5px 5px;
  	border:0;
  	text-decoration:none;
 }
+
+#menu_mem #sousMenu
+{
+ 	list-style-type:none; 
+ 	margin:0;
+	padding:0;
+	display:none;
+	position: absolute;
+}
+
+#menu_mem #sousMenu li a:link, #menu_mem #sousMenu li a:visited
+{
+ 	color:#e5f24a;
+ 	margin:0;
+ 	border:0;
+ 	text-decoration:none;
+	background-color:#cd1b1b;
+}
+
+#menu_mem #sousMenu li a:hover
+{
+	background-color:#edef9c;
+	color:#cd1b1b;
+	text-decoration:none;
+}
+
+#menu_mem li:hover #sousMenu {display:block;}
 
 #corps
 {

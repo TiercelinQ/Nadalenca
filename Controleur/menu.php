@@ -2,7 +2,7 @@
 	<div id="page">
 		
 		<div id="banniere">
-			<img src="../Images/banniere_nada.png" alt="banniere"/>
+			<img src="../Images/banniere_nada.png" alt="banniere" title="Association Polyphonique Nadalenca de Montpellier"/>
 
 			<ul id="drapeau">
 				<li><a href="./controlAccueil.php"><img src="../Images/drapfr.png" title="Drapeau Français" alt="drapeau_fr"/></a></li>
@@ -21,6 +21,12 @@
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a></li>
 					<li><a href="./controleurMainRep.php">REPERTOIRE</a></li>
+					<li><a href="#">MULTIMEDIA</a>
+						<ul id="sousMenu">
+							<li><a href="#">IMAGES</a></li>
+							<li><a href="#">MUSIQUES</a></li>
+							<li><a href="#">VIDEOS</a></li>
+						</ul></li>
 					<li><a href="#">PRODUCTIONS</a></li>
 					<li><a href="./controlMembres.php">MEMBRES</a></li>
 					<li><a href="./controlProfil.php">PROFIL</a></li>

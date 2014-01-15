@@ -1,8 +1,10 @@
+<h1>Recherche d'un répertoire</h1>
+<hr />
+
 	<form method="post" action="./controlRepertoire.php">
 		<fieldset>
-		<label>Recherche :</label>
-		<input type="text" placeholder="Ex : Nadalet" name="recherche">
-		<input type="submit" value="Ok" />
+			<label>Recherche :</label><input type="text" placeholder="Ex : Nadalet" name="recherche"><br />
+			<input type="submit" value="Ok" /><br />
 		</fieldset>
 	</form>
 <?php
