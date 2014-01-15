@@ -1,7 +1,7 @@
-
-		<title>Erreur inscription</title>
-		
-
+<title>Erreur inscription</title>
+	
+<h1>Erreur lors de l'inscription</h1>
+<hr />
 	<p>Une erreur est survenue lors de votre inscription. <br/ > Vérifiez bien les points suivants : </p>
 	<ol>	
 		<li>L'adresse email ne doit pas être déjà utilisée.</li>

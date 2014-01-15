@@ -1,7 +1,9 @@
+<h1>Gestion des répertoires</h1>
+<hr />
+
 <form method="post" action="./controlAdminRep.php">
-		<fieldset>
-		<label>Recherche :</label>
-		<input type="text" placeholder="Ex : Nadalet" name="recherche">
+	<fieldset>
+		<label>Recherche :</label><input type="text" placeholder="Ex : Nadalet" name="recherche"><br />
 		<input type="submit" value="Ok" />
 		</fieldset>
 	</form>

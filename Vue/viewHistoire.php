@@ -1,4 +1,4 @@
-		<h1>Decouvrez notre histoire</h1>
+		<h1>Découvrez notre histoire</h1>
 		<hr />
 		
 		<p>
@@ -23,7 +23,7 @@
 		</p>
 
 		<p>
-		Depuis 2005, le chœur Occitan est membre de <a href="http://maisondeschoeurs.free.fr/association.htm" target="_blank">l’Association des Chœur de Montpellier</a> 
+		Depuis 2005, le chœur Occitan est membre de l'<a href="http://maisondeschoeurs.free.fr/association.htm" target="_blank">Association des Chœur de Montpellier</a> 
 		(ACM) qui fédère plus de 30 chœurs et gère la Maison des Chœurs polyphoniques de la tradition occitane. 
 		Pour cela, l’association a développé un projet de recherche de chants en langue d’Oc - 
 		certains n’existant que par la tradition orale - qu’elle a fait écrire et/ou harmoniser. 

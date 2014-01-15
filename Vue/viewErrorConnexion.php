@@ -1,7 +1,6 @@
-	
 <title>Erreur de connexion</title>
 
-	<h2>Erreur de connexion</h2>
+<h1>Erreur lors de la connexion</h1>
 	<hr />
 	<p>Une erreur est survenue lors de votre connexion. <br/ > Vérifiez bien les points suivants : </p>
 	<ol>	
