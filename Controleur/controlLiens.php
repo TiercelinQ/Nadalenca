@@ -13,7 +13,20 @@ include("./menu.php");
 $req="SELECT * from lien"; // requete
 $res =mysql_query($req); // envoi de la requete
 
-include("../Vue/viewLiens.php");
+
+	if(isset($_SESSION['login']) && isset($_SESSION['admin']) && $_SESSION['admin'] != 0)
+	{
+	include("../Vue/viewLiens.php");
+	include("../Vue/viewLiensAdmin.php");
+	}
+	else 
+	include("../Vue/viewLiens.php");
+	
+	
+
+
+
+
 
 include("./footer.php");
 ?>

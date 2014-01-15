@@ -6,8 +6,8 @@ class Lien
 {
 
 	private $idL;
-	private $descriL;
-	private $lienL;
+	private $description;
+	private $lien;
 
 	//les methodes:
 	public function getIdL() 
@@ -17,34 +17,33 @@ class Lien
 	
 	public function getDescriL() 
 	{ //un getter
-		return $this->descriL;
+		return $this->description;
 	}
 	
 	public function getLienL() 
 	{ //un getter
-		return $this->lienL;
+		return $this->lien;
 	}
 
 
 
 	//Un constructeur
-	public function __construct ($idL, $descriL, $lienL) 
+	public function __construct ($idL, $description, $lien) 
 	{
 		$this->idL = null;
-		$this->descriL = $descriL;
-		$this->lienL = $lienL;
+		$this->description = $description;
+		$this->lien = $lien;
 	}
 
 
 	//création d'un nouveau lien dans la base de données lien
-	public function create()
+	public function create($description, $lien)
 	{
+		$idL = null;
+		$this->description = $description;
+		$this->lien = $lien;
 
-		$this->idL = null;
-		$this->descriL = $descriL;
-		$this->lienL = $lienL;
-
-			$req = "INSERT INTO lien (idL, descriL, lienL) VALUES ('$idL','$descriL','$lienL')";
+			$req = "INSERT INTO lien (id, description, lien) VALUES ('$idL','$description','$lien')";
 			$res = mysql_query($req) or die ("Erreur insertion :  Classe Lien / Fonction insertion lien");
 	}
 
@@ -55,4 +54,4 @@ class Lien
 		mysql_query($req);
 	}
 
-	
+}
