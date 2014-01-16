@@ -1,3 +1,18 @@
+<script>
+function verif(i)
+{
+
+var x;
+var r=confirm("Confirmez vous la suppression ?");
+if (r==true)
+  {
+  location.href = './controlSupLiens.php?idL=' + i;
+  }
+ 
+}
+</script>
+
+
 <h1>Liens</h1>
 <hr />
 <table border = "1">
@@ -7,12 +22,18 @@
 			<?php
 	while ($tuple = mysql_fetch_array($res))
 	{ 	
-
+		$i = $tuple['id'];
+		$d = $tuple['description'];
 		echo "<tr><td><a href="; 
 		echo $tuple['lien'] . ">" .  $tuple['description']. "</a></td>";
+		echo "<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Lien'/>
+        </button></td></tr>";
+      
+
+		/*bouton sans utilisation du javascript
 		echo "<td><button type=". "\"button\" " . "onclick=\"location.href='./controlSupLiens.php?idL=" 
 		. $tuple['id']. "'\"><img src='../Images/remove.png'  alt='Image Suppression Lien'/>
-        </button></td></tr>";
+        </button></td></tr>";*/
 		
 	}
 
