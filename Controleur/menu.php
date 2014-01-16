@@ -11,7 +11,6 @@
 		</div>
 
 		<div id="corps">
-
 <?php
 	@session_start();
 	include("../Modele/Utilisateur.php");
@@ -20,7 +19,8 @@
 		$email = $_SESSION['login']; 
 		$profil = Utilisateur::getUtilisateurByEmail($email);
 		?>
-	
+			<h4>Bonjour <?php echo ($profil->getPrenom());?></h4>
+
 				<ul id="menu_mem">
 					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
@@ -37,7 +37,6 @@
 					<li><a href="./controlProfil.php">PROFIL</a></li>
 					<li><a href="./deconnexion.php">DECONNEXION</a></li>
 				</ul>
-				<h4>Bonjour <?php echo ($profil->getPrenom());?>.</h4>
 			<div id="contenu">
 						
 	<?php
