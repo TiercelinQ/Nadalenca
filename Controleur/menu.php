@@ -31,7 +31,7 @@
 							<li><a href="#">MUSIQUES</a></li>
 							<li><a href="#">VIDEOS</a></li>
 						</ul></li>
-					<li><a href="#">PRODUCTIONS</a></li>
+					<li><a href="./controlProduction.php">PRODUCTIONS</a></li>
 					<li><a href="./controlAnnuaire.php">ANNUAIRE</a></li>
 					<li><a href="./controlProfil.php">PROFIL</a></li>
 					<li><a href="./deconnexion.php">DECONNEXION</a></li>
