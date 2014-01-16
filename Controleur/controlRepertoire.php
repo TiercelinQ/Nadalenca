@@ -6,7 +6,6 @@
 		<link rel="stylesheet" href="../style.css" />
 </head>
 <?php
-	
 	include("./menu.php");
 	include("./config.php");
 	include("../Vue/viewRepertoire.php");

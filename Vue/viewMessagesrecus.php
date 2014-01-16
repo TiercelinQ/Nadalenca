@@ -28,3 +28,5 @@ include("../Modele/Message.php");
 	}
 		echo "</table><br/>";
 	?>
+
+	<a href="../Controleur/controlAdministrateur.php">Retour au panneau d'administration</a>
