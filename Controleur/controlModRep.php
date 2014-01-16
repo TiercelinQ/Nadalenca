@@ -9,7 +9,8 @@
 	include("./menu.php");
 	include("../Modele/Repertoire.php");
 	$id = $_GET['id'];
-	$rep = Repertoire::getRepById($id);
+	$rep = mysql_query("SELECT * FROM repertoire WHERE idr = '$id'") or die ("Erreur insertion / controlModRep / tuple"); 
+	$tuple = mysql_fetch_array($rep);
 	include("../Vue/viewModifierRep.php");
 	include("./footer.php");
 ?>

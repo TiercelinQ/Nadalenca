@@ -14,4 +14,3 @@
 	include("../Vue/viewRepertoireMorceau.php");
 	include("./footer.php");
 ?>
-	

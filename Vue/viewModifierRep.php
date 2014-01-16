@@ -1,20 +1,48 @@
 	<form enctype="multipart/form-data" method="post" action="../Controleur/controlModifierRep.php" >
 		<legend> Modifier un morceau :</legend>
 		<fieldset>
-		<input type="hidden" value="<?php echo $rep->getNom(); ?>" name="nom">
-		<label>Audio : </label>(Fichier en MP3)
-		<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
-		<input type="file" name="audio">Nom du fichier existant : <?php echo $rep->getAudio(); ?></br>
-		<label>Texte : </label>(Fichier en PDF)
-		<input type="file" name="texte">Nom du fichier existant : <?php echo $rep->getTexte(); ?></br>
-		<label>alto :</label>
-		<input type="file" name="alto">Nom du fichier existant : <?php echo $rep->getalto(); ?></br>
-		<label>basse :</label>
-		<input type="file" name="basse">Nom du fichier existant : <?php echo $rep->getbasse(); ?></br>
-		<label>soprano :</label>
-		<input type="file" name="soprano">Nom du fichier existant : <?php echo $rep->getsoprano(); ?></br>
-		<label>tenor :</label>
-		<input type="file" name="tenor">Nom du fichier existant : <?php echo $rep->gettenor(); ?></br>
+		<input type="hidden" value="<?php echo $tuple['nom']; ?>" name="nom">
+		<label>Fichiers Audios :</label></br>
+		<?php 
+		
+		$idA = $tuple['idA'];
+		$repaudio = mysql_query("SELECT * FROM audio WHERE ida = '$idA'") or die ("Erreur insertion / viewModifierRep.php / repaudio");
+		$tupleaudio = mysql_fetch_array($repaudio);
+		$nbfa = $tupleaudio['nbfichier'];
+		$i=1;
+		while($i < $nbfa+1){
+			$audioi = "audio".$i;
+			$taudioi = "taudio".$i;
+			$file = "file";
+			$input = "<input type="."$file"." name="."$audioi"." /></br>";
+			echo "$input";
+			echo "types de destinaires(voix/genre) :";
+			echo "<input type="."texte"." name="."$taudioi"." /></br>";
+			$i = $i +1;
+		} 
+		?> 
+		<label>Fichiers textes : </label></br>
+		<?php
+		
+		$idT = $tuple['idT'];
+		$reptexte = mysql_query("SELECT * FROM texte WHERE idt = '$idT'") or die ("Erreur insertion / viewModifierRep.php / repatexte");
+		$tupletexte = mysql_fetch_array($reptexte);
+		$nbft = $tupletexte['nbfich'];
+		$j=1;
+		while($j < $nbft+1)
+		{
+			$textej = "texte".$j;
+			$ttextej = "ttexte".$j;
+			$file = "file";
+			$input = "<input type="."$file"." name="."$textej"." /></br>";
+			echo "$input";
+			echo "types de fichiers(Partitions/Paroles)</br>";
+			echo "<input type="."texte"." name="."$ttextej"." /></br>";
+			$j = $j +1;
+		}
+		?>
+		<input type="int" value="<?php echo $tupleaudio['nbfichier']; ?>" name="nbfa" />
+		<input type="int" value="<?php echo $tupletexte['nbfich']; ?>" name="nbft" />
 		<input type="submit" value="Modifier" />
 		</fieldset>
 	</form>
