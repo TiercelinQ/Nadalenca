@@ -40,11 +40,11 @@ class Lien
 	public function create($description, $lien)
 	{
 		$idL = null;
-		$this->description = $description;
+		$this->description = addslashes($description);
 		$this->lien = $lien;
 
-			$req = "INSERT INTO lien (id, description, lien) VALUES ('$idL','$description','$lien')";
-			$res = mysql_query($req) or die ("Erreur insertion :  Classe Lien / Fonction insertion lien");
+			$req = "INSERT INTO lien (id, description, lien) VALUES ('$idL','$this->description','$this->lien')";
+			$res = mysql_query($req) or die ("Erreur insertion :  Classe Lien / Fonction create lien");
 	}
 
 	//suppression d'un lien dans la base de donnée lien
