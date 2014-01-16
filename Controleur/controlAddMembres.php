@@ -8,7 +8,5 @@
 	</head>
 	
 <?php 
-include("./menu.php");
-include("../Vue/viewAddMembres.php");
-include("./footer.php");
+	include("../Vue/viewAddMembres.php");
 ?>

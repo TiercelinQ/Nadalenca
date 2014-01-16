@@ -7,7 +7,7 @@
 	<?php
 
 require("../config.php");
-require("../Modele/Utilisateur.php");
+//require("../Modele/Utilisateur.php");
 include("./menu.php");
 
 
@@ -29,23 +29,23 @@ $voix = null;
 
 if(empty($nom))
 {
-	include('../Vue/viewErrorInscription.php'); 
+	include('../Vue/viewErreurAddMembres.php'); 
 }
 else if(empty($prenom))
 {
-	include('../Vue/viewErrorInscription.php'); 
+	include('../Vue/viewErreurAddMembres.php'); 
 }
 else if(empty($email))
 {
-	include('../Vue/viewErrorInscription.php'); 
+	include('../Vue/viewErreurAddMembres.php'); 
 }
 else if(empty($mdp))
 {
-	include('../Vue/viewErrorInscription.php'); 
+	include('../Vue/viewErreurAddMembres.php');  
 }
 else if ($mdp != $mdpc)
 {
-	include('../Vue/viewErrorInscription.php');  
+	include('../Vue/viewErreurAddMembres.php');   
 }
 
 else
@@ -75,7 +75,7 @@ else
 	{
 	
 
-		include('../Vue/viewErrorInscription.php');  
+		include('../Vue/viewErreurAddMembres.php');   
 	}
 }
 

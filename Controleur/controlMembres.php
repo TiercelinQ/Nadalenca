@@ -7,7 +7,7 @@
 </head>
 <?php
 include ("./config.php");
-//include("./menu.php"); 
+include("./menu.php"); 
 
 
 	$req="SELECT * from utilisateur"; // requete

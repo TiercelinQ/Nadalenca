@@ -185,6 +185,20 @@ h1
 	color: #cd1b1b;
 }
 
+h2
+{
+	text-align: center;
+	color: #cd1b1b;
+}
+
+h4
+{
+	margin: 0;
+	margin-left: 1em;
+	margin-bottom:-3em;
+	color: #cd1b1b;
+}
+
 hr
 {
 	width: 50%;

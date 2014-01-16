@@ -1,10 +1,8 @@
+<title>Ajout Membre</title>
 
-		<title>Inscription validée</title>
-			
-	
-
-	<h2>Inscription Réussie</h2>
-	<p>Vous vous êtes bien inscrit. Vous allez recevoir un mail de votre inscription avec vos identifiants.</p>
-	<p>Vous allez être redirigé vers la page de connexion.</p>
-	<?php header("Refresh: 6; URL=./controlConnexion.php"); ?>
+<h1>Ajout d'un membre réussie</h1>
+<hr />
+	<p>Vous avez réussie à ajouter un nouveau membre.</p>
+	<p>Vous allez être rediriger vers la page de gestion des membres.</p>
+	<?php header("Refresh: 3; URL=../Controleur/controlMembresAdmin.php"); ?>
 		
