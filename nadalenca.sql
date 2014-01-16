@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 16 Janvier 2014 à 13:33
+-- Généré le: Jeu 16 Janvier 2014 à 13:41
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `concert` (
   `minuteC` int(2) NOT NULL,
   `lieuC` varchar(255) NOT NULL,
   `adresseC` varchar(255) NOT NULL,
-  `ville` varchar(255) NOT NULL,
+  `villeC` varchar(255) NOT NULL,
   `dateC` date NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
@@ -95,11 +95,32 @@ CREATE TABLE IF NOT EXISTS `concert` (
 -- Contenu de la table `concert`
 --
 
-INSERT INTO `concert` (`id`, `titreC`, `heureC`, `minuteC`, `lieuC`, `adresseC`, `ville`, `dateC`) VALUES
+INSERT INTO `concert` (`id`, `titreC`, `heureC`, `minuteC`, `lieuC`, `adresseC`, `villeC`, `dateC`) VALUES
 (1, 'Joyeux Noel', 20, 30, 'Mairie de Montpellier', '55 avenue des choux blancs', 'Montpellier', '2014-02-26'),
 (2, 'Pâque', 20, 50, 'ponayville', '3 rue de la picorne', 'MontPicorne', '2014-02-25'),
 (3, 'nadalenca', 20, 10, 'montpellier ', 'montpellier perou', 'montpellier le rocher saint', '2014-03-04'),
 (4, 'concert passe', 20, 20, 'on s''en fou', 'on s''en fou 2', 'montpellier', '2013-05-02');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `lien`
+--
+
+CREATE TABLE IF NOT EXISTS `lien` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `lien` text NOT NULL,
+  `description` text NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `lien`
+--
+
+INSERT INTO `lien` (`id`, `lien`, `description`) VALUES
+(1, 'http://google.com', 'Google');
 
 -- --------------------------------------------------------
 
