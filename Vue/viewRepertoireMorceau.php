@@ -1,4 +1,5 @@
-
+<h1>Morceau</h1>
+<hr />
 	<?php
 	$res = mysql_query("SELECT * FROM repertoire WHERE idr = '$id'") or die ("Erreur insertion, viewRepertoireMorceau, res");
 	$tuple = mysql_fetch_array($res);
@@ -90,3 +91,6 @@
 			break;
 	}
 	?>
+	<br /><br />
+
+	<a href="../Controleur/controlAdministrateur.php">Retour au panneau d'administration</a>
