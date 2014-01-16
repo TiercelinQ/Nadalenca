@@ -10,8 +10,8 @@
 <?php
 	include("./menu.php");
 	include("./config.php");
-	$nom = $_GET['nomR'];
-	include("../Vue/viewRepertoire.php");
+	$id = $_GET['idr'];
+	include("../Vue/viewRepertoireMorceau.php");
 	include("./footer.php");
 ?>
 	

@@ -1,18 +1,34 @@
+<h1>Recherche d'un répertoire</h1>
+<hr />
 
-	<?php
-	$res = mysql_query("SELECT * FROM repertoire WHERE nomR = '$nom'") or die ("Erreur insertion, viewRepertoire, res");
-	$tuple = mysql_fetch_array($res);
-	?>
-	<p> Nom du morceau : <?php echo $tuple['nomR']; ?> </p>
-	<p> Piste audio : </p>
-	<audio src="../Audio/<?php echo $tuple['audioR']; ?>" controls >Veuillez mettre à jour votre navigateur !</audio>
-	<p> Parole du morceau (au format PDF) :</p>
-	<a href="../Texte/<?php echo $tuple['texteR']; ?>" target="_blank">Texte</a>
-	<p> Differents types de Voix : </p>
-	<a href="../Voix/alto/<?php echo $tuple['altoR']; ?>" target="_blank">alto</a></br>
-	<a href="../Voix/basse/<?php echo $tuple['basseR']; ?>" target="_blank">basse</a></br>
-	<a href="../Voix/soprano/<?php echo $tuple['sopranoR']; ?>" target="_blank">soprano</a></br>
-	<a href="../Voix/tenor/<?php echo $tuple['tenorR']; ?>" target="_blank">tenor</a>
-	
-	
-	
+	<form method="post" action="./controlRepertoireRecherche.php">
+		<fieldset>
+			<label>Recherche :</label><input type="text" placeholder="Ex : Nadalet" name="recherche"><br />
+			<input type="submit" value="Ok" /><br />
+		</fieldset>
+	</form>
+<?php
+$res = mysql_query("SELECT * FROM repertoire") or die ("Erreur insertion, repertoire.php, affichage de tout" );
+
+echo "<table>
+			<caption>Liste des morceaux :</caption>
+			
+			<thead>
+				<tr>
+					<th>Nom </th>
+				</tr>
+			</thead>
+			
+			<tbody> ";
+
+while ($tuple = mysql_fetch_array($res))
+	{
+	echo " <tr> 
+				<td>"; echo "<a href="."../Controleur/controlRepertoireMorceau.php?idr=".$tuple['idr']. ">".$tuple['nom']."</a></td>
+			<tr>";
+
+	}
+	echo "</tbody>
+	</table>";
+
+?>

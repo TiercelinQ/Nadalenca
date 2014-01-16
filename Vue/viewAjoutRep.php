@@ -1,3 +1,6 @@
+<h1>Ajout</h1>
+<hr />
+	
 	<form enctype="multipart/form-data" method="post" action="../Controleur/controlAjoutRep.php" >
 		<legend> Ajouter un morceau :</legend>
 		<fieldset>

@@ -23,7 +23,7 @@
 					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a></li>
-					<li><a href="./controleurMainRep.php">REPERTOIRE</a></li>
+					<li><a href="./controlRepertoire.php">REPERTOIRE</a></li>
 					<li><a href="#">MULTIMEDIA</a>
 						<ul id="sousMenu">
 							<li><a href="#">IMAGES</a></li>
