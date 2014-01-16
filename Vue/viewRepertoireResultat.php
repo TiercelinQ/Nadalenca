@@ -9,7 +9,7 @@
 			while ($tuple = mysql_fetch_array($res))
 			{
 		?>	
-			<a href="../Controleur/controlRepertoireMorceau.php?nomR=<?php echo $tuple['nomR']; ?>"><?php echo $tuple['nomR']; ?></a></br>
+			<a href="../Controleur/controlRepertoireMorceau.php?idr=<?php echo $tuple['idr']; ?>"><?php echo $tuple['nom']; ?></a></br>
 		<?php
 			}
 ?>

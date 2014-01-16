@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><?php echo $_GET['nomR']; ?></title>
+		<title>Répertoire</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../style.css" />
 </head>
