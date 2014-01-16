@@ -23,7 +23,6 @@ if (r==true)
 	while ($tuple = mysql_fetch_array($res))
 	{ 	
 		$i = $tuple['id'];
-		$d = $tuple['description'];
 		echo "<tr><td><a href="; 
 		echo $tuple['lien'] . ">" .  $tuple['description']. "</a></td>";
 		echo "<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Lien'/>
