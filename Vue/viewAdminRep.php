@@ -35,4 +35,5 @@ while ($tuple = mysql_fetch_array($res))
 	echo "</tbody>
 	</table>";
 ?>
-	<a href="../Controleur/controlAjoutReper.php">Ajouter un morceau au répertoire</a>
+	<a href="../Controleur/controlAjoutReper.php">Ajouter un morceau au répertoire</a><br /><br />
+	<a href="../Controleur/controlAdministrateur.php">Retour au panneau d'administration</a>
