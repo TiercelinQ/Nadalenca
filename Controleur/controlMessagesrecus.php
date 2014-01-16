@@ -14,6 +14,6 @@
 	$res =mysql_query($req); // envoi de la requete
 	
 		
-	include("../Vue/viewMessagesrecus.php");
+	include("../Vue/viewMessagesrecus2.php");
 	include("./footer.php");
 ?>
