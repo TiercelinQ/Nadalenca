@@ -127,7 +127,7 @@ class Utilisateur
 			/*$dn2 = mysql_num_rows(mysql_query('SELECT id FROM utilisateur'));
 			$id=$dn2+1;*/
 
-			$req = "INSERT INTO utilisateur VALUES ('$id','$nom','$prenom','$email','$mdp','$statut','$admin','$adresseP','$codeP','$ville','$numtelF','$numtelM','voix')";
+			$req = "INSERT INTO utilisateur VALUES ('$id','$nom','$prenom','$email','$mdp','$statut','$admin','$adresseP','$codeP','$ville','$numtelF','$numtelM','$voix')";
 			$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Utilisateur / Fonction Insertion nouveau membre")
 		}
 		else

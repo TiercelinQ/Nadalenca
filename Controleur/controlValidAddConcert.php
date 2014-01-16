@@ -13,7 +13,6 @@ include("./menu.php");
 
 $id=null;
 $titre = $_POST["titre"];
-$jour = $_POST["jour"];
 $date = $_POST["date"];
 $heure = $_POST["heure"];
 $minute = $_POST["minute"];
@@ -22,10 +21,6 @@ $adresse = $_POST["adresse"];
 $ville = $_POST["ville"];
 
 if(empty($titre))
-{
-	include('../Vue/viewErrorAddImage.php'); 
-}
-else if(empty($jour))
 {
 	include('../Vue/viewErrorAddImage.php'); 
 }
@@ -59,8 +54,8 @@ else if(empty($ville))
 }
 else
 {
-	$concert = new concert($id, $titre, $jour, $date, $heure, $minute, $lieu, $adresse, $ville);
-	concert->create();
+	$concert = new concert($id, $titre, $date, $heure, $minute, $lieu, $adresse, $ville);
+	$concert->create();
 	include('../Vue/viewValidInscription.php');
 }
 

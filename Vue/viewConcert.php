@@ -19,7 +19,7 @@
 				."<td>".$tuple1['heureC'].'h'.$tuple1['minuteC']."</td>"
 				."<td>".$tuple1['lieuC']."</td>"
 				."<td>".$tuple1['adresseC']."</td>"
-				."<td>".$tuple1['ville']."</td>"	 
+				."<td>".$tuple1['villeC']."</td>"	 
 			."</tr>";
 	}
 		echo "</table><br/>";
@@ -43,7 +43,7 @@
 				."<td>".$tuple2['heureC'].'h'.$tuple2['minuteC']."</td>"
 				."<td>".$tuple2['lieuC']."</td>"
 				."<td>".$tuple2['adresseC']."</td>"
-				."<td>".$tuple2['ville']."</td>"	 
+				."<td>".$tuple2['villeC']."</td>"	 
 			."</tr>";
 	}
 		echo "</table><br/>";
