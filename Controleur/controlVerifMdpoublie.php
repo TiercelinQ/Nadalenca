@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<meta charset="utf-8" />
+			<link rel="stylesheet" href="../style.css" />
+	</head>
+
+
 <?php
 include("./menu.php");
 	require("../config.php");
