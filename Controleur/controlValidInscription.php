@@ -8,7 +8,7 @@
 <?php
 
 require("../config.php");
-require("../Modele/Utilisateur.php");
+//require("../Modele/Utilisateur.php");
 include("./menu.php");
 
 

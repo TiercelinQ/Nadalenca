@@ -20,7 +20,7 @@ else if(empty($_POST['mdp']) OR empty($_POST['email']))
 }
 else
 {
-	require("../Modele/Utilisateur.php");
+	//require("../Modele/Utilisateur.php");
 	
 	$email = $_POST["email"];
 	$mdp = $_POST["mdp"];

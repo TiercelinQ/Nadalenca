@@ -1,7 +1,7 @@
 <?php
 include("./menu.php");
 	require("../config.php");
-	require("../Modele/Utilisateur.php");
+	//require("../Modele/Utilisateur.php");
 
 	$email = $_POST["email"];
 	$mdp = Utilisateur::changeMdpoublie($email);
