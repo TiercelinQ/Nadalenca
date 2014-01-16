@@ -31,7 +31,7 @@
 							<li><a href="#">VIDEOS</a></li>
 						</ul></li>
 					<li><a href="#">PRODUCTIONS</a></li>
-					<li><a href="./controlMembres.php">MEMBRES</a></li>
+					<li><a href="./controlAnnuaire.php">ANNUAIRE</a></li>
 					<li><a href="./controlProfil.php">PROFIL</a></li>
 					<li><a href="./deconnexion.php">DECONNEXION</a></li>
 				</ul>
