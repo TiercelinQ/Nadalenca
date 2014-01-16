@@ -28,5 +28,5 @@
 	}
 		echo "</table><br/>";
 	?>
-	<input type ='submit'  value ='Submit' > <br /></form>
+	<input type ='submit'  value ='Supression' > <br /></form>
 	<a href="./controlAddMembres.php">Ajouter Membre</a><br />
