@@ -1,8 +1,6 @@
 <h1>Liens</h1>
 <hr />
-
-<h3>Liens utiles :</h3>
-		<ul>
+<ul>
 	<?php
 	while ($tuple = mysql_fetch_array($res))
 	{ 	
@@ -15,15 +13,18 @@
 		echo $tuple['lien'] . ">" .  $tuple['description']. "</a></li>";
 	}
 
-		
 	?>
 	</ul>
 
+<h2>Ajout d'un nouveau lien</h2>
+<hr />
+
 <form method="POST" action="./controlAddLiens.php">
-					<fieldset>
-						<legend>Ajouter un lien</legend>
-							<label>Adresse : </label><input type="url" name="lien" value="http://" required><br />
-							<label>Description : </label><input type="text" name="description" placeholder="Description" required><br />
-								<input type="submit" value="Ajouter">	<br />
-					</fieldset>
+	<fieldset>
+			<label>Adresse : </label><input type="url" name="lien" value="http://" required><br />
+			<label>Description : </label><input type="text" name="description" placeholder="Description" required><br />
+			<input type="submit" value="Ajouter">	<br />
+	</fieldset>
 </form>
+
+<a href="../Controleur/controlAdministrateur.php">Retour au panneau d'administration</a>

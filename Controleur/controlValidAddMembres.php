@@ -53,7 +53,7 @@ else
 	if(!utilisateur::Exist($email))
 	{	
 
-		/*$headers = 'From: q.tiercelin@gmail.com' . "\r\n" .
+		$headers = 'From: q.tiercelin@gmail.com' . "\r\n" .
 				   'Reply-To: q.tiercelin@gmail.com' . "\r\n" .
 				   'X-Mailer: PHP/' . phpversion();
 					   
@@ -64,12 +64,12 @@ else
 				Merci de votre inscription.\n
 				Nadalenca";
 						   
-		mail($email, 'Validation Inscription Nadalenca', $corp, $headers);*/
+		mail($email, 'Validation Inscription Nadalenca', $corp, $headers);
 		
 		$utilisateur = new utilisateur($id, $nom, $prenom, $email, $mdp, $statut, $admin, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix);
 		$utilisateur->create();
 
-		include('../Vue/viewValidInscription.php');  
+		include('../Vue/viewValidAddMembres.php');  
 	}
 	else
 	{
