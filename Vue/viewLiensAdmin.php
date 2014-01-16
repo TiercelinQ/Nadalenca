@@ -1,20 +1,23 @@
 <h1>Liens</h1>
 <hr />
-<ul>
-	<?php
+<table border = "1">
+		<tr>
+		<td>Description</td>
+			<td>Supprimer</td>
+			<?php
 	while ($tuple = mysql_fetch_array($res))
 	{ 	
 
-	
-		echo "<li><button type=". "\"button\" " . "onclick=\"location.href='./controlSupLiens.php?idL=" 
+		echo "<tr><td><a href="; 
+		echo $tuple['lien'] . ">" .  $tuple['description']. "</a></td>";
+		echo "<td><button type=". "\"button\" " . "onclick=\"location.href='./controlSupLiens.php?idL=" 
 		. $tuple['id']. "'\"><img src='../Images/remove.png'  alt='Image Suppression Lien'/>
-        </button>";
-		echo "<a href="; 
-		echo $tuple['lien'] . ">" .  $tuple['description']. "</a></li>";
+        </button></td></tr>";
+		
 	}
 
 	?>
-	</ul>
+	</table><br/>
 
 <h2>Ajout d'un nouveau lien</h2>
 <hr />

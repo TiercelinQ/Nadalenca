@@ -77,7 +77,7 @@ class Message
 	}
 	
 	//suppression d'un message dans la base de donnée message
-	public function delete($id)
+	public static function delete($idM)
 	{
 		$req = mysql_query("DELETE FROM message WHERE idM = '$idM'");
 		mysql_query($req);
@@ -99,6 +99,13 @@ class Message
 		//$util->id = $id;
 	}
 
+
+	public static function exist($idM)
+	{
+		$req = mysql_query("SELECT count(*) FROM message WHERE idM = '$idM'");
+		$itsOk=mysql_fetch_row ($req);
+		return($itsOk[0] !=0);
+		}
 }
 
 
