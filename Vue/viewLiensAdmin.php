@@ -1,3 +1,24 @@
+<h1>Liens</h1>
+<hr />
+
+<h3>Liens utiles :</h3>
+		<ul>
+	<?php
+	while ($tuple = mysql_fetch_array($res))
+	{ 	
+
+	
+		echo "<li><button type=". "\"button\" " . "onclick=\"location.href='./controlSupLiens.php?idL=" 
+		. $tuple['id']. "'\"><img src='../Images/remove.png'  alt='Image Suppression Lien'/>
+        </button>";
+		echo "<a href="; 
+		echo $tuple['lien'] . ">" .  $tuple['description']. "</a></li>";
+	}
+
+		
+	?>
+	</ul>
+
 <form method="POST" action="./controlAddLiens.php">
 					<fieldset>
 						<legend>Ajouter un lien</legend>

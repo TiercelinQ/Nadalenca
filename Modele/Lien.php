@@ -54,4 +54,11 @@ class Lien
 		mysql_query($req);
 	}
 
+	public function exist($idL)
+	{
+		$req = mysql_query("SELECT count(*) FROM lien WHERE id = '$idL'");
+		$itsOk=mysql_fetch_row ($req);
+		return($itsOk[0] !=0);
+		}
+	
 }

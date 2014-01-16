@@ -22,6 +22,6 @@ else
 	$liens = new lien($id, $description, $lien);
 	$liens->create($description, $lien);
 
-	header('Location: ./controlLiens.php');
+	header('Location: ./controlLiensAdmin.php');
 }
 ?>
