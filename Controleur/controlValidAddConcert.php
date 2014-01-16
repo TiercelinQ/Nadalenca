@@ -19,45 +19,12 @@ $minute = $_POST["minute"];
 $lieu = $_POST["lieu"];
 $adresse = $_POST["adresse"];
 $ville = $_POST["ville"];
+$prix = $_POST["prix"];
 
-if(empty($titre))
-{
-	include('../Vue/viewErrorAddImage.php'); 
-}
-else if(empty($date))
-{
-	include('../Vue/viewErrorAddImage.php'); 
-}
-else if(empty($heure))
-{
-	include('../Vue/viewErrorAddImage.php'); 
-}
-
-else if(empty($minute))
-{
-	include('../Vue/viewErrorAddImage.php'); 
-}
-
-else if(empty($lieu))
-{
-	include('../Vue/viewErrorAddImage.php'); 
-}
-
-else if(empty($adresse))
-{
-	include('../Vue/viewErrorAddImage.php'); 
-}
-
-else if(empty($ville))
-{
-	include('../Vue/viewErrorAddImage.php'); 
-}
-else
-{
-	$concert = new concert($id, $titre, $date, $heure, $minute, $lieu, $adresse, $ville);
+	$concert = new concert($id, $titre, $date, $heure, $minute, $lieu, $adresse, $ville, $prix);
 	$concert->create();
-	include('../Vue/viewValidInscription.php');
-}
+	header("Location:./controlAddConcert.php");
+
 
 include("./footer.php");
 ?>

@@ -7,5 +7,5 @@ if(isset($_GET['idL'])){
 		header("Location:./controlLiensAdmin.php");
 	}
 }
-else header("Location:./controlLiensAdmin.php");
+else  header("Location:./controlLiensAdmin.php");
 ?>

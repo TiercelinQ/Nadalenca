@@ -13,6 +13,7 @@ class Concert
 	private $lieuC;
 	private $adresseC;
 	private $villeC; 
+	private $prixC;
 	
 	//les methodes:
 	public function getId() 
@@ -54,9 +55,14 @@ class Concert
 	{ //un getter
 		return $this->villeC;
 	}
+
+	public function getPrixC() 
+	{ //un getter
+		return $this->prixC;
+	}
 	
 	//Un constructeur
-	public function __construct ($id, $titreC, $dateC, $heureC, $minuteC, $lieuC, $adresseC, $villeC) 
+	public function __construct ($id, $titreC, $dateC, $heureC, $minuteC, $lieuC, $adresseC, $villeC, $prixC) 
 	{
 		$this->id = null;
 		$this->titreC = $titreC;
@@ -66,6 +72,7 @@ class Concert
 		$this->lieuC = $lieuC;
 		$this->adresseC = $adresseC;
 		$this->villeC = $villeC;
+		$this->prixC =$prixC;
 	}
 	
 	//création d'un nouveau concert dans la base de données concert
@@ -79,7 +86,8 @@ class Concert
 			$lieuC = $this->lieuC;
 			$adresseC = $this->adresseC;
 			$villeC = $this->villeC;
-			$req = "INSERT INTO concert (id, titreC, dateC, heureC, minuteC, lieuC, adresseC, villeC) VALUES ('$id','$titreC','$dateC','$heureC','$minuteC','$lieuC','$adresseC','$villeC')";
+			$prixC = $this->prixC;
+			$req = "INSERT INTO concert (id, titreC, dateC, heureC, minuteC, lieuC, adresseC, villeC, prixC) VALUES ('$id','$titreC','$dateC','$heureC','$minuteC','$lieuC','$adresseC','$villeC', '$prixC')";
 			$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Concert / Fonction insertion concert")
 	}
 
@@ -97,6 +105,13 @@ class Concert
 	{
 		$req = mysql_query("DELETE FROM concert WHERE id = '$id'");
 		mysql_query($req);
+	}
+
+	public static function existId($id)
+	{
+		$req = mysql_query("SELECT count(*) FROM concert WHERE id = '$id'");
+		$itsOk=mysql_fetch_row ($req);
+		return($itsOk[0] !=0);
 	}
 	
 	/*public static function getConcertByTitre($titreC) 

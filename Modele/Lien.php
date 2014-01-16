@@ -48,15 +48,15 @@ class Lien
 	}
 
 	//suppression d'un lien dans la base de donnée lien
-	public function delete($idL)
+	public static function delete($id)
 	{
-		$req = mysql_query("DELETE FROM lien WHERE id = '$idL'");
+		$req = mysql_query("DELETE FROM lien WHERE id = '$id'");
 		mysql_query($req);
 	}
 
-	public function exist($idL)
+	public static function exist($id)
 	{
-		$req = mysql_query("SELECT count(*) FROM lien WHERE id = '$idL'");
+		$req = mysql_query("SELECT count(*) FROM lien WHERE id = '$id'");
 		$itsOk=mysql_fetch_row ($req);
 		return($itsOk[0] !=0);
 		}
