@@ -42,7 +42,9 @@ include("../Modele/Production.php");
 			<label>Nom :</label><input type="text" name="nomP" required><br />
 			<label>Description :</label><input type="text" name="descriptionP" required><br />
 			<label>Prix :</label><input type="text" name="prix" required><br />
-			<label>Image :</label><input type="password" name="mdp" required><br />
+			<label for="image">Image (JPG, PNG ou GIF) :</label><br />
+			<input type="file" name="icone" id="icone" required/><br />
+			<input type="hidden" name="MAX_FILE_SIZE" value="104857600" />
 			<input type="submit" value="Ajouter"><br />
 		</fieldset>
 	</form>
