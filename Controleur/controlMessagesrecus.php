@@ -6,6 +6,18 @@
 		<link rel="stylesheet" href="../style.css" />
 </head>
 
+<script>
+function verif(i)
+{
+var x;
+var r=confirm("Confirmez vous la suppression du produit ?");
+if (r==true)
+  {
+  location.href = './controlSupMessagerecu.php?idM=' + i;
+  }
+}
+</script>
+
 <?php
 	include("./menu.php");
 	include("./config.php");

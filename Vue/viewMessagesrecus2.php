@@ -4,7 +4,9 @@
 <?php
 include("../Modele/Message.php");
 	while ($tuple = mysql_fetch_array($res))
-	{ ?>	
+	{ 	
+$i = $tuple['idM'];?>
+
 		<div class="container_message">
 			<div class="gauche_message">
 				<p>SUJET : <?php echo "$tuple[sujetM]"; ?></p>
@@ -19,9 +21,8 @@ include("../Modele/Message.php");
 				<p>MESSAGE : <?php echo "$tuple[messageM]"; ?></p>
 			</div>
 			<div class="suppr_message">
-			<?php echo"<button type= \"button\" " . "onclick=\"location.href='./controlSupMessage.php?idM=" 
-		. $tuple['idM']. "'\"><img src='../Images/remove.png'  title='Suppression' alt='Image Suppression Message'/>
-        </button>";?>
+			<?php echo "<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Message'/>
+        </button></td></tr>";?>
 			</div>
 		</div>
 

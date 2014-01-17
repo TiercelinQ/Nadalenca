@@ -1,13 +1,19 @@
 	<h1>Productions</h1>
 	<hr />
+<?php
+include("../Modele/Production.php");
+	while ($tuple = mysql_fetch_array($res))
+	{
+	$i = $tuple['idP'];
+	 ?>	
 
 	<div id="container">
 		<div class="gauche">
-			<p>Produit<p>
+			<p>Produit : <?php echo "$tuple[nomP]"; ?><p>
 		</div>
 
 		<div class="milieu">
-			<p>Prix</p>
+			<p>Prix : <?php echo "$tuple[prixP]"; ?></p>
 		</div>
 
 		<div class="image"> <!--nom temporaire pour citer l'incrustation de l'image dans la description -->
@@ -15,10 +21,29 @@
 		</div>
 
 		<div class="dessous">
-			<p>Description</p>
+			<p>Description : <?php echo "$tuple[descriptionP]"; ?></p>
 		</div>
 
 		<div class="suppr">
-			<p>Bouton Supprimer</p>
+			<p> <?php echo"<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Produit'/>
+        </button></td></tr>"; ?></p>
 		</div>	
 	</div>
+<?php
+	} 
+		?>
+<br />
+
+<h2>Ajout d'une production</h2>
+<hr />
+	
+	<form method="POST" action="./controlAddProduits.php">
+		<fieldset>
+			<label>Nom :</label><input type="text" name="nomP" required><br />
+			<label>Description :</label><input type="text" name="descriptionP" required><br />
+			<label>Prix :</label><input type="text" name="prix" required><br />
+			<label>Image :</label><input type="password" name="mdp" required><br />
+			<input type="submit" value="Ajouter"><br />
+		</fieldset>
+	</form>
+	<a href="../Controleur/controlAdministrateur.php">Retour au panneau d'administration</a>

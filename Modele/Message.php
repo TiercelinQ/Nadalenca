@@ -100,7 +100,7 @@ class Message
 	}
 
 
-	public static function exist($idM)
+	public static function existId($idM)
 	{
 		$req = mysql_query("SELECT count(*) FROM message WHERE idM = '$idM'");
 		$itsOk=mysql_fetch_row ($req);
