@@ -35,7 +35,7 @@ class Production
 	
 
 
-	public function __construct ($idP, $nomP, $imageP, $descriptionP, $prixP) 
+	public function __construct ($idP, $nomP, $descriptionP, $prixP, $imageP) 
 	{
 		$this->idP = null;
 		$this->nomP = $nomP;
@@ -48,10 +48,10 @@ class Production
 	{
 		$idP = NULL;
 		$nomP = $this->nomP;
-		$imageP = $this->imageP;
 		$descriptionP = $this->descriptionP;
 		$prixP = $this->prixP;
-		$req = "INSERT INTO production (idP, nomP, imageP, descriptionP, prixP) VALUES ('$idP', '$nomP', '$imageP', '$descriptionP', '$prixP')";
+		$imageP = $this->imageP;
+		$req = "INSERT INTO production (idP, nomP, descriptionP, prixP, imageP) VALUES ('$idP', '$nomP', '$descriptionP', '$prixP', '$imageP')";
 		$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Production / Fonction insertion production")
 	}
 	
