@@ -41,15 +41,14 @@ include("../Modele/Production.php");
 		<fieldset>
 			<label>Nom :</label><input type="text" name="nomP" required><br />
 			<label>Description :</label><input type="text" name="descriptionP" required><br />
-<<<<<<< HEAD
-			<label>Prix :</label><input type="text" name="prix" required><br />
+
 			<label for="image">Image (JPG, PNG ou GIF) :</label><br />
-			<input type="file" name="icone" id="icone" required/><br />
+			<input type="file" name="imageP" id="icone" required/><br />
 			<input type="hidden" name="MAX_FILE_SIZE" value="104857600" />
-=======
+
 			<label>Prix :</label><input type="text" name="prixP" required><br />
 			<label>Image :</label><input type="text" name="imageP" required><br />
->>>>>>> Avec controlAdd c'est mieux
+
 			<input type="submit" value="Ajouter"><br />
 		</fieldset>
 	</form>
