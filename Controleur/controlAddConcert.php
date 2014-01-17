@@ -5,8 +5,7 @@
 		<title>Concerts Administrateur</title>
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
-	</head>
-<script>
+	<script>
 function verif(i)
 {
 
@@ -19,6 +18,8 @@ if (r==true)
  
 }
 </script>
+</head>
+
 
 <?php 
 include("./menu.php");

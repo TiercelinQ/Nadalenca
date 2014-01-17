@@ -5,7 +5,6 @@
 		<title>Images administrateur</title>
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
-	</head>
 <script>
 function verif(i)
 {
@@ -19,6 +18,8 @@ if (r==true)
  
 }
 </script>
+	</head>
+
 
 
 <?php 
