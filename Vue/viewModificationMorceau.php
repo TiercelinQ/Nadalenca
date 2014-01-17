@@ -133,7 +133,7 @@
 		case 1:
 			echo "<tr>
 					<td>".$tupletexte['nomfich1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
@@ -145,12 +145,12 @@
 		case 2:
 			echo "<tr>
 					<td>".$tupletexte['nomfich1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Supprimer </a></td>
 				</tr>";			
 			echo "<tr>
 					<td>".$tupletexte['nomfich2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=2 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
@@ -162,17 +162,17 @@
 		case 3:
 			echo "<tr>
 					<td>".$tupletexte['nomfich1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Supprimer </a></td>
 				</tr>";			
 			echo "<tr>
 					<td>".$tupletexte['nomfich2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=2 > Modifier</a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Modifier</a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['nomfich3']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=3 > Modifier</a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 > Modifier</a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
@@ -184,22 +184,22 @@
 		case 4:
 			echo "<tr>
 					<td>".$tupletexte['nomfich1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Supprimer </a></td>
 				</tr>";			
 			echo "<tr>
 					<td>".$tupletexte['nomfich2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=2 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['nomfich2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=3 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['nomfich4']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=4 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
@@ -211,27 +211,27 @@
 		case 5:
 			echo "<tr>
 					<td>".$tupletexte['nomfich1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['nomfich2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=2 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['nomfich3']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=3 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['nomfich4']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=4 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['nomfich5']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idA=".$tupletexte['idt']."&nb=5 > Modifier </a></td>
+					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=5 > Modifier </a></td>
 					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=5 > Supprimer </a></td>
 				</tr>";
 			break;

@@ -60,7 +60,7 @@
 	$idT = $tuple['idT'];
 	$restexte = mysql_query("SELECT * FROM texte WHERE idt = '$idT'") or die ("Erreur insertion, viewRepertoireMorceau, restexte");
 	$tupletexte = mysql_fetch_array($restexte);
-	$i = $tupletexte['nbfich'];
+	$i = $tupletexte['nbfichier'];
 	$blank = "_blank";
 	switch($i)
 	{
@@ -93,4 +93,4 @@
 	?>
 	<br /><br />
 
-	<a href="../Controleur/controlAdministrateur.php">Retour au panneau d'administration</a>
+	<a href="../Controleur/controlRepertoire.php">Retour au répertoire</a>

@@ -1,0 +1,1 @@
+<?php echo "Modifiaction réussi, <a href="."../Controleur/controlRepAdmin.php"."> Retourner à gestion des morceaux </a>"; ?>

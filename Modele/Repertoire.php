@@ -239,5 +239,389 @@ class Repertoire
 		}
 		return $retour;
 	}
+	
+	public static function changementtextenb($id, $nb, $texte, $textetmp, $textedest)
+	{
+		$res = mysql_query("SELECT * FROM texte WHERE idt = '$id'") or die ("Erreur / changementtextenb / res");
+		$tuple = mysql_fetch_array($res);
+		$target_pathtexte = "../Texte/";
+		
+		switch($nb)
+		{
+			case 1:
+				$target_path = $target_pathtexte . basename($tuple['nomfich1']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($texte);
+				move_uploaded_file($textetmp, $target_path);
+				$req = mysql_query("UPDATE texte SET nomfich1='$texte', dest1='$textedest' WHERE idt='$id'") or die ("Erreur / changementtextenb / req 1");
+				$retour = true;
+				break;
+			case 2:
+				$target_path = $target_pathtexte . basename($tuple['nomfich2']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($texte);
+				move_uploaded_file($textetmp, $target_path);
+				$req = mysql_query("UPDATE texte SET nomfich2 = '$texte', dest2 = '$textedest' WHERE idt = '$id'") or die ("Erreur / changementtextenb / req 2");
+				$retour = true;
+				break;
+			case 3:
+				$target_path = $target_pathtexte . basename($tuple['nomfich3']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($texte);
+				move_uploaded_file($textetmp, $target_path);
+				$req = mysql_query("UPDATE texte SET nomfich3 = '$texte', dest3 = '$textedest' WHERE idt = '$id'") or die ("Erreur / changementtextenb / req 3");
+				$retour = true;
+				break;
+			case 4:
+				$target_path = $target_pathtexte . basename($tuple['nomfich4']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($texte);
+				move_uploaded_file($textetmp, $target_path);
+				$req = mysql_query("UPDATE texte SET nomfich4 = '$texte', dest4 = '$textedest' WHERE idt = '$id'") or die ("Erreur / changementtextenb / req 4");
+				$retour = true;
+				break;
+			case 5:
+				$target_path = $target_pathtexte . basename($tuple['nomfich5']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($texte);
+				move_uploaded_file($textetmp, $target_path);
+				$req = mysql_query("UPDATE texte SET nomfich5 = '$texte', dest5 = '$textedest' WHERE idt = '$id'") or die ("Erreur / changementtextenb / req 5");
+				$retour = true;
+				break;
+		}
+		return $retour;
+	}
+	
+	public static function supprimeraudionb($id, $nb)
+	{
+		$res = mysql_query("SELECT * FROM audio WHERE ida = '$id'") or die ("Erreur / changementaudionb / res");
+		$tuple = mysql_fetch_array($res);
+		$target_pathaudio = "../Audio/";
+		$retour = false;
+		
+		switch($nb)
+		{
+			case 1:
+				switch($tuple['nbfichier'])
+				{
+					case 1:
+						echo "Vous ne pouvez pas supprimer ce fichier, car c'est le seul";
+						break;
+					case 2:
+						$target_path = $target_pathaudio . basename($tuple['nomfich1']);
+						unlink($target_path);
+						$fich1 = $tuple['nomfich2'];
+						$dest1 = $tuple['dest2'];
+						$req = mysql_query("UPDATE audio SET nbfichier = '1', nomfich1='$fich1', dest1 ='$dest1', nomfich2='null', dest2='null' WHERE ida='$id'") or die ("Erreur /suppression nb/ 2");
+						$retour = true;
+						break;
+					case 3:
+						$target_path = $target_pathaudio . basename($tuple['nomfich1']);
+						unlink($target_path);
+						$fich1 = $tuple['nomfich2'];
+						$dest1 = $tuple['dest2'];
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$req = mysql_query("UPDATE audio SET  nbfichier = '2' ,nomfich1='$fich1', dest1='$dest1', nomfich2='$fich2', dest2='$dest2', nomfich3='null', dest3='null' WHERE ida ='$id'") or die("Erreur");
+						$retour = true;
+						break;
+					case 4:
+						$target_path = $target_pathaudio . basename($tuple['nomfich1']);
+						unlink($target_path);
+						$fich1 = $tuple['nomfich2'];
+						$dest1 = $tuple['dest2'];
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$req = mysql_query("UPDATE audio SET nbfichier = '3', nomfich1='$fich1', dest1='$dest1', nomfich2='$fich2', dest2='$dest2', nomfich3='$fich3', dest3='$dest3', nomfich4='null', dest4='null' WHERE ida ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+					case 5:
+						$target_path = $target_pathaudio . basename($tuple['nomfich1']);
+						unlink($target_path);
+						$fich1 = $tuple['nomfich2'];
+						$dest1 = $tuple['dest2'];
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$fich4 = $tuple['nomfich5'];
+						$dest4 = $tuple['dest5'];
+						$req = mysql_query("UPDATE audio SET nbfichier = '4', nomfich1='$fich1', dest1='$dest1', nomfich2='$fich2', dest2='$dest2', nomfich3='$fich3', dest3='$dest3', nomfich4='$fich4', dest4='$dest4', nomfich5='null', dest5='null' WHERE ida ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+				}
+				break;
+			case 2:
+				switch($tuple['nbfichier'])
+				{
+					case 2:
+						$target_path = $target_pathaudio . basename($tuple['nomfich2']);
+						unlink($target_path);
+						$req = mysql_query("UPDATE audio SET nbfichier = '1', nomfich2='null', dest2='null' WHERE ida='$id'") or die ("Erreur /suppression nb/ 2");
+						$retour = true;
+						break;
+					case 3:
+						$target_path = $target_pathaudio . basename($tuple['nomfich2']);
+						unlink($target_path);
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$req = mysql_query("UPDATE audio SET  nbfichier = '2' , nomfich2='$fich2', dest2='$dest2', nomfich3='null', dest3='null' WHERE ida ='$id'") or die("Erreur");
+						$retour = true;
+						break;
+					case 4:
+						$target_path = $target_pathaudio . basename($tuple['nomfich2']);
+						unlink($target_path);
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$req = mysql_query("UPDATE audio SET nbfichier = '3', nomfich2='$fich2', dest2='$dest2', nomfich3='$fich3', dest3='$dest3', nomfich4='null', dest4='null' WHERE ida ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+					case 5:
+						$target_path = $target_pathaudio . basename($tuple['nomfich2']);
+						unlink($target_path);
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$fich4 = $tuple['nomfich5'];
+						$dest4 = $tuple['dest5'];
+						$req = mysql_query("UPDATE audio SET nbfichier = '4' nomfich2='$fich2', dest2='$dest2', nomfich3='$fich3', dest3='$dest3', nomfich4='$fich4', dest4='$dest4', nomfich5='null', dest5='null' WHERE ida ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+				}
+				break;
+			case 3:
+				switch($tuple['nbfichier'])
+				{
+					case 3:
+						$target_path = $target_pathaudio . basename($tuple['nomfich3']);
+						unlink($target_path);
+						$req = mysql_query("UPDATE audio SET  nbfichier = '2' , nomfich3='null', dest3='null' WHERE ida ='$id'") or die("Erreur");
+						$retour = true;
+						break;
+					case 4:
+						$target_path = $target_pathaudio . basename($tuple['nomfich3']);
+						unlink($target_path);
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$req = mysql_query("UPDATE audio SET nbfichier = '3', nomfich3='$fich3', dest3='$dest3', nomfich4='null', dest4='null' WHERE ida ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+					case 5:
+						$target_path = $target_pathaudio . basename($tuple['nomfich3']);
+						unlink($target_path);
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$fich4 = $tuple['nomfich5'];
+						$dest4 = $tuple['dest5'];
+						$req = mysql_query("UPDATE audio SET nbfichier = '4', nomfich3='$fich3', dest3='$dest3', nomfich4='$fich4', dest4='$dest4', nomfich5='null', dest5='null' WHERE ida ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+				}
+				break;
+			case 4:
+				switch($tuple['nbfichier'])
+				{
+					case 4:
+						$target_path = $target_pathaudio . basename($tuple['nomfich4']);
+						unlink($target_path);
+						$req = mysql_query("UPDATE audio SET nbfichier = '3', nomfich4='null', dest4='null' WHERE ida ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+					case 5:
+						$target_path = $target_pathaudio . basename($tuple['nomfich4']);
+						unlink($target_path);
+						$fich4 = $tuple['nomfich5'];
+						$dest4 = $tuple['dest5'];
+						$req = mysql_query("UPDATE audio SET nbfichier = '4', nomfich4='$fich4', dest4='$dest4', nomfich5='null', dest5='null' WHERE ida ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+				}
+				break;
+			case 5:
+				switch($tuple['nbfichier'])
+				{
+					case 5:
+						$target_path = $target_pathaudio . basename($tuple['nomfich5']);
+						unlink($target_path);
+						$req = mysql_query("UPDATE audio SET nbfichier = '4', nomfich5='null', dest5='null' WHERE ida ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+				}
+				break;
+		return $retour;
+		}
+	}
+	
+	
+	public static function supprimertextenb($id, $nb)
+	{
+		$res = mysql_query("SELECT * FROM texte WHERE idt = '$id'") or die ("Erreur / changementtextenb / res");
+		$tuple = mysql_fetch_array($res);
+		$target_pathtexte = "../Texte/";
+		$retour = false;
+		
+		switch($nb)
+		{
+			case 1:
+				switch($tuple['nbfichier'])
+				{
+					case 1:
+						echo "Vous ne pouvez pas supprimer ce fichier, car c'est le seul";
+						break;
+					case 2:
+						$target_path = $target_pathtexte . basename($tuple['nomfich1']);
+						unlink($target_path);
+						$fich1 = $tuple['nomfich2'];
+						$dest1 = $tuple['dest2'];
+						$req = mysql_query("UPDATE texte SET nbfichier = '1', nomfich1='$fich1', dest1 ='$dest1', nomfich2='null', dest2='null' WHERE idt='$id'") or die ("Erreur /suppression nb/ 2");
+						$retour = true;
+						break;
+					case 3:
+						$target_path = $target_pathtexte . basename($tuple['nomfich1']);
+						unlink($target_path);
+						$fich1 = $tuple['nomfich2'];
+						$dest1 = $tuple['dest2'];
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$req = mysql_query("UPDATE texte SET  nbfichier = '2' ,nomfich1='$fich1', dest1='$dest1', nomfich2='$fich2', dest2='$dest2', nomfich3='null', dest3='null' WHERE idt ='$id'") or die("Erreur");
+						$retour = true;
+						break;
+					case 4:
+						$target_path = $target_pathtexte . basename($tuple['nomfich1']);
+						unlink($target_path);
+						$fich1 = $tuple['nomfich2'];
+						$dest1 = $tuple['dest2'];
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$req = mysql_query("UPDATE texte SET nbfichier = '3', nomfich1='$fich1', dest1='$dest1', nomfich2='$fich2', dest2='$dest2', nomfich3='$fich3', dest3='$dest3', nomfich4='null', dest4='null' WHERE idt ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+					case 5:
+						$target_path = $target_pathtexte . basename($tuple['nomfich1']);
+						unlink($target_path);
+						$fich1 = $tuple['nomfich2'];
+						$dest1 = $tuple['dest2'];
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$fich4 = $tuple['nomfich5'];
+						$dest4 = $tuple['dest5'];
+						$req = mysql_query("UPDATE texte SET nbfichier = '4', nomfich1='$fich1', dest1='$dest1', nomfich2='$fich2', dest2='$dest2', nomfich3='$fich3', dest3='$dest3', nomfich4='$fich4', dest4='$dest4', nomfich5='null', dest5='null' WHERE idt ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+				}
+				break;
+			case 2:
+				switch($tuple['nbfichier'])
+				{
+					case 2:
+						$target_path = $target_pathtexte . basename($tuple['nomfich2']);
+						unlink($target_path);
+						$req = mysql_query("UPDATE texte SET nbfichier = '1', nomfich2='null', dest2='null' WHERE idt='$id'") or die ("Erreur /suppression nb/ 2");
+						$retour = true;
+						break;
+					case 3:
+						$target_path = $target_pathtexte . basename($tuple['nomfich2']);
+						unlink($target_path);
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$req = mysql_query("UPDATE texte SET  nbfichier = '2' , nomfich2='$fich2', dest2='$dest2', nomfich3='null', dest3='null' WHERE idt ='$id'") or die("Erreur");
+						$retour = true;
+						break;
+					case 4:
+						$target_path = $target_pathtexte . basename($tuple['nomfich2']);
+						unlink($target_path);
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$req = mysql_query("UPDATE texte SET nbfichier = '3', nomfich2='$fich2', dest2='$dest2', nomfich3='$fich3', dest3='$dest3', nomfich4='null', dest4='null' WHERE idt ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+					case 5:
+						$target_path = $target_pathtexte . basename($tuple['nomfich2']);
+						unlink($target_path);
+						$fich2 = $tuple['nomfich3'];
+						$dest2 = $tuple['dest3'];
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$fich4 = $tuple['nomfich5'];
+						$dest4 = $tuple['dest5'];
+						$req = mysql_query("UPDATE texte SET nbfichier = '4' nomfich2='$fich2', dest2='$dest2', nomfich3='$fich3', dest3='$dest3', nomfich4='$fich4', dest4='$dest4', nomfich5='null', dest5='null' WHERE idt ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+				}
+				break;
+			case 3:
+				switch($tuple['nbfichier'])
+				{
+					case 3:
+						$target_path = $target_pathtexte . basename($tuple['nomfich3']);
+						unlink($target_path);
+						$req = mysql_query("UPDATE texte SET  nbfichier = '2' , nomfich3='null', dest3='null' WHERE idt ='$id'") or die("Erreur");
+						$retour = true;
+						break;
+					case 4:
+						$target_path = $target_pathtexte . basename($tuple['nomfich3']);
+						unlink($target_path);
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$req = mysql_query("UPDATE texte SET nbfichier = '3', nomfich3='$fich3', dest3='$dest3', nomfich4='null', dest4='null' WHERE idt ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+					case 5:
+						$target_path = $target_pathtexte . basename($tuple['nomfich3']);
+						unlink($target_path);
+						$fich3 = $tuple['nomfich4'];
+						$dest3 = $tuple['dest4'];
+						$fich4 = $tuple['nomfich5'];
+						$dest4 = $tuple['dest5'];
+						$req = mysql_query("UPDATE texte SET nbfichier = '4', nomfich3='$fich3', dest3='$dest3', nomfich4='$fich4', dest4='$dest4', nomfich5='null', dest5='null' WHERE idt ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+				}
+				break;
+			case 4:
+				switch($tuple['nbfichier'])
+				{
+					case 4:
+						$target_path = $target_pathtexte . basename($tuple['nomfich4']);
+						unlink($target_path);
+						$req = mysql_query("UPDATE texte SET nbfichier = '3', nomfich4='null', dest4='null' WHERE idt ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+					case 5:
+						$target_path = $target_pathtexte . basename($tuple['nomfich4']);
+						unlink($target_path);
+						$fich4 = $tuple['nomfich5'];
+						$dest4 = $tuple['dest5'];
+						$req = mysql_query("UPDATE texte SET nbfichier = '4', nomfich4='$fich4', dest4='$dest4', nomfich5='null', dest5='null' WHERE idt ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+				}
+				break;
+			case 5:
+				switch($tuple['nbfichier'])
+				{
+					case 5:
+						$target_path = $target_pathtexte . basename($tuple['nomfich5']);
+						unlink($target_path);
+						$req = mysql_query("UPDATE texte SET nbfichier = '4', nomfich5='null', dest5='null' WHERE idt ='$id'") or die("Erreur / suppressionaudinb");
+						$retour = true;
+						break;
+				}
+				break;
+		}
+	return $retour;	
+	}
+	
 }
 ?>	

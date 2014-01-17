@@ -1,0 +1,1 @@
+<?php echo "Le fichier a bien été supprimé, <a href="."../Controleur/controlRepAdmin.php"."> Retourner à gestion des morceaux </a>";?>
