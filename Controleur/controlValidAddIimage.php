@@ -1,9 +1,10 @@
 <?php
 require("../config.php");
 include("./menu.php");
+include("../Modele/Image.php");
 
 $dossier = '../Images/';
-$fichier = basename($_FILES['image']['name']);
+//$fichier = basename($_FILES['image']['name']);
 $taille_maxi = 1000000;
 $taille = filesize($_FILES['image']['tmp_name']);
 $extensions = array('.png', '.gif', '.jpg', '.jpeg');
@@ -37,6 +38,18 @@ else
      echo $erreur;
 }
 
-$titre = $_POST["titre"];
-$description = $_POST["description"];
+	$titre = $_POST["titre"];
+	$description = $_POST["description"];
+	$id=null;
+
+		
+	$image = new image($id, $titre, $nom .'.'.$extension_upload, $description);
+	echo"lol";
+	$image->create();
+	include('../Vue/viewValidAddMembres.php');  
+
+
+include("./footer.php");
+?>
+		
 ?>
