@@ -9,9 +9,8 @@
 
 		echo "<li>" . $tuple['titreI'] . $tuple['descriptionI'] . "<br />" . "</li>";
 		$repertoire_img = "../Images";
-		$mon_img = $tuple['nomI'];
-		echo $repertoire_img."/".$mon_img.".jpg";
-		echo"<img src=\"". $repertoire_img . "/\"" .$mon_img. ".jgp">;
+		$img = $tuple['nomI'];
+		echo"<img src=\"../Images/" . $img . ".jpg\"/>";
 	}
 
 		
