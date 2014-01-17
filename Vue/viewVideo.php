@@ -7,7 +7,7 @@
 	while ($tuple = mysql_fetch_array($res))
 	{ 
 
-		echo "<li>" . $tuple['titreV'] . $tuple['descriptionV']. "</li>";
+		echo "<li>" . $tuple['titreV'] . $tuple['descriptionV'] . "<br />" . $tuple['lienV'] . "</li>";
 	}
 
 		
