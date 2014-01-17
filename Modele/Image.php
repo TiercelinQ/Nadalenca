@@ -23,7 +23,7 @@ class Image
 
 	public function getNom() 
 	{ //un getter
-		return $this->lienI;
+		return $this->nomI;
 	}
 
 	public function getDescription() 
@@ -47,19 +47,19 @@ class Image
 		$nomI = $this->nomI;
 		$descriptionI = $this->descriptionI;
 		$req = "INSERT INTO image (idI, titreI, nomI, descriptionI) VALUES ('$idI','$titreI','$nomI','$descriptionI')";
-		$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Video / Fonction insertion video")
+		$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Image / Fonction insertion image")
 	}
 	
 
-	public function delete($idV)
+	public function delete($idI)
 	{
-		$req = mysql_query("DELETE FROM video WHERE idV = '$idV'");
+		$req = mysql_query("DELETE FROM image WHERE idI = '$idI'");
 		mysql_query($req);
 	}
 
-	public static function existId($idV)
+	public static function existId($idI)
 	{
-		$req = mysql_query("SELECT count(*) FROM video WHERE idV = '$idV'");
+		$req = mysql_query("SELECT count(*) FROM image WHERE idI = '$idI'");
 		$itsOk=mysql_fetch_row ($req);
 		return($itsOk[0] !=0);
 	}

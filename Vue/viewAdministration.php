@@ -6,6 +6,7 @@
 		<li><a href="../Controleur/controlAddConcert.php">Gestion des concerts</a></li>
 		<li><a href="../Controleur/controlVideosAdmin.php">Gestion des vidéos</a></li>
 		<li><a href="../Controleur/controlAddImage.php">Gestion des images</a></li>
+		<li><a href="../Controleur/controlProductionAdmin.php">Gestion de la production</a></li>
 		<li><a href="../Controleur/controlLiensAdmin.php">Gestion des liens</a></li>
 		<li><a href="../Controleur/controlMessagesrecus.php">Gestion des messages reçus</a></li>
 	</ul>

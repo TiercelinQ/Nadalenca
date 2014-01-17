@@ -42,7 +42,7 @@ class Video
 
 	public function create()
 	{
-		$id= NULL;
+		$idV = NULL;
 		$titreV = $this->titreV;
 		$lienV = $this->lienV;
 		$descriptionV = $this->descriptionV;

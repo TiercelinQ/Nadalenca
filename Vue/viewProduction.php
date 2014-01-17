@@ -20,9 +20,6 @@
 			<p>Message</p>
 		</div>
 
-		<div class="suppr">
-			<p>Bouton Supprimer</p>
-		</div>	
 	</div>
 
 
