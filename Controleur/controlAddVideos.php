@@ -18,7 +18,7 @@ else
 
 	$id = null;
 	$titreV = $_POST["titreV"];
-	$lienV = $_POST["lienV"];
+	$lienV = substr($_POST["lienV"], 31);
 	$descriptionV = $_POST["descriptionV"];
 	$video = new video($id, $titreV, $lienV, $descriptionV);
 	$video->create();
