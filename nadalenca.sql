@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Ven 17 Janvier 2014 à 11:50
+-- Généré le: Ven 17 Janvier 2014 à 14:05
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -167,14 +167,24 @@ CREATE TABLE IF NOT EXISTS `message` (
 --
 
 INSERT INTO `message` (`idM`, `nomM`, `prenomM`, `emailM`, `sujetM`, `messageM`, `dateM`) VALUES
-(3, 'bexchauvet', 'olivier', 'q.tiercelin@gmail.com', 'test3', 'test', '19-12-13'),
 (4, 'tiercelin', 'quentin', 'q.tiercelin@gmail.com', 'test3', 'test', '19-12-13'),
-(5, 'A', 'D', 'mo@fdfz.fr', 'Test', 'estetedede''feete', '16-01-14'),
-(6, 'A', 'D', 'mo@fdfz.fr', 'test''test', 'test''test''message''', '16-01-14'),
-(7, 'NOM', 'PRENOM', 'EMAIL@Mail.fr', 'SUJET TEST', 'Bllaaablabblalblablalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalb. Bllaaablabblalblablalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalb. Bllaaablabblalb', '17-01-14'),
 (8, 'A', 'D', 'mo@fdfz.fr', 'Test', 'test', '17-01-14'),
-(9, 'lol000Ã dÃ Ã zÃ d@@Ã &lt;&lt;&gt;&lt;', 'test', 'EMAIL@Mail.fr', '$i = &quot;coucou&quot;; echo $i;', '$i = &quot;coucou&quot;; echo $i;', '17-01-14'),
-(10, 'lol000Ã dÃ Ã zÃ d@@Ã &lt;&lt;&gt;&lt;', 'D', 'mo@fdfz.fr', 'Test', '&lt;?php $i = &quot;coucou&quot;; echo $i; ?&gt;', '17-01-14');
+(9, 'lol000Ã dÃ Ã zÃ d@@Ã &lt;&lt;&gt;&lt;', 'test', 'EMAIL@Mail.fr', '$i = &quot;coucou&quot;; echo $i;', '$i = &quot;coucou&quot;; echo $i;', '17-01-14');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `production`
+--
+
+CREATE TABLE IF NOT EXISTS `production` (
+  `idP` int(10) NOT NULL AUTO_INCREMENT,
+  `nomP` varchar(255) NOT NULL,
+  `imageP` varchar(255) NOT NULL,
+  `descriptionP` varchar(255) NOT NULL,
+  `prixP` varchar(255) NOT NULL,
+  PRIMARY KEY (`idP`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 -- --------------------------------------------------------
 
