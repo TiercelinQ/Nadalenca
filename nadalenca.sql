@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Ven 17 Janvier 2014 à 10:59
+-- Généré le: Ven 17 Janvier 2014 à 11:50
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -102,6 +102,27 @@ INSERT INTO `concert` (`id`, `titreC`, `heureC`, `minuteC`, `lieuC`, `adresseC`,
 (6, 'pÃ¢ques noÃªl noÃ«l', 19, 30, 'Test', 'Test adresse', 'Milhaud', '1987-12-03', '1000'),
 (7, 'pÃ¢ques noÃªl noÃ«l', 19, 30, 'coÃ§ou', 'Test adresse', 'Milhaud', '1987-12-03', '1000'),
 (8, 'pÃ¢ques noÃªl''noÃ«l', 19, 30, 'sal''ut', 'Test adresse', 'Milhaud', '1987-12-03', '1000');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `image`
+--
+
+CREATE TABLE IF NOT EXISTS `image` (
+  `idI` int(11) NOT NULL,
+  `titreI` varchar(10) NOT NULL,
+  `nomI` varchar(20) NOT NULL,
+  `descriptionI` varchar(10) NOT NULL,
+  PRIMARY KEY (`idI`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `image`
+--
+
+INSERT INTO `image` (`idI`, `titreI`, `nomI`, `descriptionI`) VALUES
+(0, 'a', '22a8637dff97a50c1a97', 'b');
 
 -- --------------------------------------------------------
 
