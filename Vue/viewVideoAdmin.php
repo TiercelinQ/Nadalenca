@@ -24,15 +24,7 @@ if (r==true)
 	{ 	
 		$i = $tuple['idV'];
 		echo "<tr><td>" . $tuple['titreV'] . "</td>";
-		echo "<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Video'/>
-        </button></td></tr>";
-      
-
-		/*bouton sans utilisation du javascript
-		echo "<td><button type=". "\"button\" " . "onclick=\"location.href='./controlSupLiens.php?idL=" 
-		. $tuple['id']. "'\"><img src='../Images/remove.png'  alt='Image Suppression Lien'/>
-        </button></td></tr>";*/
-		
+		echo "<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Video'/></button></td></tr>";
 	}
 
 	?>
@@ -43,8 +35,8 @@ if (r==true)
 
 <form method="POST" action="./controlAddVideos.php">
 	<fieldset>
-			<label>Titre : </label><input type="text" name="titreV" required><br />
-			<label>Lien : </label><input type="text" name="lienV" required><br />
+			<label>Titre : </label><input type="text" name="titreV" placeholder="Titre" required><br />
+			<label>Lien : </label><input type="url" name="lienV" placeholder="http://www.youtube.com" required><br />
 			<label>Description : </label><input type="text" name="descriptionV" placeholder="Description" required><br />
 			<input type="submit" value="Ajouter">	<br />
 	</fieldset>
