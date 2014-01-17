@@ -10,7 +10,7 @@
 		echo "<li>" . $tuple['titreI'] . $tuple['descriptionI'] . "<br />" . "</li>";
 		$repertoire_img = "../Images";
 		$img = $tuple['nomI'];
-		echo"<img src=\"../Images/" . $img . ".jpg\"/>";
+		echo"<img src=\"../Images/" . $img . "\"/>";
 	}
 
 		

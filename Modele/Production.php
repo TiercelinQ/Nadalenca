@@ -39,9 +39,9 @@ class Production
 	{
 		$this->idP = null;
 		$this->nomP = $nomP;
-		$this->imageP =$impageP;
 		$this->descriptionP = $descriptionP;
 		$this->prixP = $prixP;
+		$this->imageP =$imageP;
 	}
 
 	public function create()

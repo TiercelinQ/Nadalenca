@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Image ajoutée</title>
+               <meta charset="utf-8" />
+               <link rel="stylesheet" href="../style.css" />
+     </head>
+
 <?php
 require("../config.php");
 include("./menu.php");
@@ -5,7 +13,7 @@ include("../Modele/Image.php");
 
 $dossier = '../Images/';
 //$fichier = basename($_FILES['image']['name']);
-$taille_maxi = 1000000;
+$taille_maxi = 200000000;
 $taille = filesize($_FILES['image']['tmp_name']);
 $extensions = array('.png', '.gif', '.jpg', '.jpeg');
 $extension = strrchr($_FILES['image']['name'], '.'); 
@@ -45,10 +53,8 @@ else
 		
 	$image = new image($id, $titre, $nom .'.'.$extension_upload, $description);
 	$image->create();
-	include('../Vue/viewValidAddMembres.php');  
+	include('../Vue/viewValidAddImages.php');  
 
 
 include("./footer.php");
-?>
-		
 ?>
