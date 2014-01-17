@@ -16,7 +16,7 @@ include("../Modele/Production.php");
 		</div>
 
 		<div class="image"> <!--nom temporaire pour citer l'incrustation de l'image dans la description -->
-			<p>Image</p>
+			<p>Image : <?php  echo"<img src=\"../Images/" . $tuple['imageP'] . "\"/>"?>;</p>
 		</div>
 
 		<div class="dessous">
