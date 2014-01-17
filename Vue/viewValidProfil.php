@@ -16,7 +16,7 @@
 				<th>Type de voix</th>
 				<th>Statut</th>
 			</tr>
-   	 		<tr>
+   	 	<tr>
 				<th><?php echo $profil->getNom();?></th>
    	 		<th><?php echo $profil->getPrenom();?></th>
    	 		<th><?php echo $profil->getEmail();?></th>
@@ -29,7 +29,7 @@
 				<th><?php echo $profil->getVoix();?></th>
 				<th><?php echo $profil->getStatut();?></th>
 			</tr>
-   	 		</table>
+   	</table>
 
   <h2>Pour modifier vos informations :</h2>
     <form method="post" action="./controlChangement.php" >
