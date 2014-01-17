@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 16 Janvier 2014 à 13:41
+-- Généré le: Ven 17 Janvier 2014 à 10:59
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -88,18 +88,20 @@ CREATE TABLE IF NOT EXISTS `concert` (
   `adresseC` varchar(255) NOT NULL,
   `villeC` varchar(255) NOT NULL,
   `dateC` date NOT NULL,
+  `prixC` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `concert`
 --
 
-INSERT INTO `concert` (`id`, `titreC`, `heureC`, `minuteC`, `lieuC`, `adresseC`, `villeC`, `dateC`) VALUES
-(1, 'Joyeux Noel', 20, 30, 'Mairie de Montpellier', '55 avenue des choux blancs', 'Montpellier', '2014-02-26'),
-(2, 'Pâque', 20, 50, 'ponayville', '3 rue de la picorne', 'MontPicorne', '2014-02-25'),
-(3, 'nadalenca', 20, 10, 'montpellier ', 'montpellier perou', 'montpellier le rocher saint', '2014-03-04'),
-(4, 'concert passe', 20, 20, 'on s''en fou', 'on s''en fou 2', 'montpellier', '2013-05-02');
+INSERT INTO `concert` (`id`, `titreC`, `heureC`, `minuteC`, `lieuC`, `adresseC`, `villeC`, `dateC`, `prixC`) VALUES
+(1, 'Joyeux Noel', 20, 30, 'Mairie de Montpellier', '55 avenue des choux blancs', 'Montpellier', '2014-02-26', ''),
+(5, 'Test', 19, 30, 'Test', 'Test adresse', 'Test Ville', '1987-12-03', '15â‚¬'),
+(6, 'pÃ¢ques noÃªl noÃ«l', 19, 30, 'Test', 'Test adresse', 'Milhaud', '1987-12-03', '1000'),
+(7, 'pÃ¢ques noÃªl noÃ«l', 19, 30, 'coÃ§ou', 'Test adresse', 'Milhaud', '1987-12-03', '1000'),
+(8, 'pÃ¢ques noÃªl''noÃ«l', 19, 30, 'sal''ut', 'Test adresse', 'Milhaud', '1987-12-03', '1000');
 
 -- --------------------------------------------------------
 
@@ -113,14 +115,14 @@ CREATE TABLE IF NOT EXISTS `lien` (
   `description` text NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Contenu de la table `lien`
 --
 
 INSERT INTO `lien` (`id`, `lien`, `description`) VALUES
-(1, 'http://google.com', 'Google');
+(8, 'http://google.com', 'google');
 
 -- --------------------------------------------------------
 
@@ -137,17 +139,21 @@ CREATE TABLE IF NOT EXISTS `message` (
   `messageM` varchar(255) NOT NULL,
   `dateM` varchar(30) NOT NULL,
   PRIMARY KEY (`idM`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `message`
 --
 
 INSERT INTO `message` (`idM`, `nomM`, `prenomM`, `emailM`, `sujetM`, `messageM`, `dateM`) VALUES
-(1, 'pochon', 'quentin', 'q.tiercelin@gmail.com', 'test', 'test', '19-12-13'),
-(2, 'tiercelin', 'quentin', 'q.tiercelin@gmail.com', 'test2', 'test2', '19-12-13'),
 (3, 'bexchauvet', 'olivier', 'q.tiercelin@gmail.com', 'test3', 'test', '19-12-13'),
-(4, 'tiercelin', 'quentin', 'q.tiercelin@gmail.com', 'test3', 'test', '19-12-13');
+(4, 'tiercelin', 'quentin', 'q.tiercelin@gmail.com', 'test3', 'test', '19-12-13'),
+(5, 'A', 'D', 'mo@fdfz.fr', 'Test', 'estetedede''feete', '16-01-14'),
+(6, 'A', 'D', 'mo@fdfz.fr', 'test''test', 'test''test''message''', '16-01-14'),
+(7, 'NOM', 'PRENOM', 'EMAIL@Mail.fr', 'SUJET TEST', 'Bllaaablabblalblablalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalb. Bllaaablabblalblablalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalblalb. Bllaaablabblalb', '17-01-14'),
+(8, 'A', 'D', 'mo@fdfz.fr', 'Test', 'test', '17-01-14'),
+(9, 'lol000Ã dÃ Ã zÃ d@@Ã &lt;&lt;&gt;&lt;', 'test', 'EMAIL@Mail.fr', '$i = &quot;coucou&quot;; echo $i;', '$i = &quot;coucou&quot;; echo $i;', '17-01-14'),
+(10, 'lol000Ã dÃ Ã zÃ d@@Ã &lt;&lt;&gt;&lt;', 'D', 'mo@fdfz.fr', 'Test', '&lt;?php $i = &quot;coucou&quot;; echo $i; ?&gt;', '17-01-14');
 
 -- --------------------------------------------------------
 
@@ -234,16 +240,40 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `voix` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `email`, `mdp`, `statut`, `admin`, `adresseP`, `codeP`, `ville`, `numtelF`, `numtelM`, `voix`) VALUES
-(1, 'Tiercelin', 'Quentin', 'q.tiercelin@gmail.com', 'licorne', '', 1, '20, avenue du Docteur Pezet', '34090', 'Montpellier', '04.99.23.93.98', '06.50.80.66.77', 'voix'),
+(1, 'Tiercelin', 'Quentin', 'q.tiercelin@gmail.com', 'licorne', '', 0, '20, avenue du Docteur Pezet', '34090', 'Montpellier', '04.99.23.93.98', '06.50.80.66.77', 'voix'),
 (2, 'Beule', 'JÃ©rÃ©my', 'androalphas@hotmail.fr', 'licorne', '', 0, '', '', '', '', '', 'voix'),
-(3, 'Bex-Chauvet', 'Olivier', 'fullofwrath@hotmail.fr', 'lilo', 'PrÃ©sident', 1, '114 rue du ponay', '34090', 'Montpellier', '04.22.33.44.55', '06.22.33.44.55', 'voix2');
+(3, 'Bex-Chauvet', 'Olivier', 'fullofwrath@hotmail.fr', 'lilo', 'PrÃ©sident', 0, '114 rue du ponay', '34090', 'Montpellier', '04.22.33.44.55', '06.22.33.44.55', 'voix2'),
+(6, 'Pochon', 'Amaury', 'momoamo@hotmail.fr', 'test', '', 0, '', '', '', '', '', ''),
+(7, 'test', 'test', 'q.tiercelintest@gmail.com', 'test', '', 1, '', '', '', '', '', ''),
+(8, 'Amaury', 'test', 'canardout@yopmail.fr', 'test', '', 1, '', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `video`
+--
+
+CREATE TABLE IF NOT EXISTS `video` (
+  `idV` int(10) NOT NULL AUTO_INCREMENT,
+  `titreV` varchar(255) NOT NULL,
+  `lienV` varchar(255) NOT NULL,
+  `descriptionV` varchar(255) NOT NULL,
+  PRIMARY KEY (`idV`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `video`
+--
+
+INSERT INTO `video` (`idV`, `titreV`, `lienV`, `descriptionV`) VALUES
+(1, 'Video test', '<iframe width="560" height="315" src="//www.youtube.com/embed/SZeHcV7sts4" frameborder="0" allowfullscreen></iframe>', 'description');
 
 --
 -- Contraintes pour les tables exportées
