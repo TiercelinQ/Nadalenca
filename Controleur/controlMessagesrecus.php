@@ -6,15 +6,17 @@
 		<link rel="stylesheet" href="../style.css" />
 
 <script>
-function verif(i)
+function verif(i)// passage de l'identifiant du message cliqué
 {
-var x;
-var r=confirm("Confirmez vous la suppression du produit ?");
+// fonction JavaScript de confirmation de suppression d'un message reçu
+var r=confirm("Confirmez vous la suppression du produit ?");	// pop up de demande avec oui/non
 if (r==true)
   {
-  location.href = './controlSupMessagerecu.php?idM=' + i;
+  location.href = './controlSupMessagerecu.php?idM=' + i;	// si la personne valide, redirection vers le controleur avec passage en GET de l'identifiant
   }
+  // sinon rien ne se passe, la demande de suppression est annulée 
 }
+
 </script>
 </head>
 

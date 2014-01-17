@@ -5,16 +5,15 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../style.css" />
 <script>
-function verif(i)
+function verif(i)	// passage de l'identifiant de la video cliquée
 {
-
-var x;
-var r=confirm("Confirmez vous la suppression de la vidéo?");
+// fonction JavaScript de confirmation de suppression d'une video
+var r=confirm("Confirmez vous la suppression de la vidéo?");	// pop up de demande avec oui/non
 if (r==true)
   {
-  location.href = './controlSupVideos.php?idV=' + i;
+  location.href = './controlSupVideos.php?idV=' + i;	// si la personne valide, redirection vers le controleur avec passage en GET de l'identifiant
   }
- 
+ // sinon rien ne se passe, la demande de suppression est annulée 
 }
 </script>
 </head>

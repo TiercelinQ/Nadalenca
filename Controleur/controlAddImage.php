@@ -6,16 +6,15 @@
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
 <script>
-function verif(i)
+function verif(i)	// passage de l'identifiant de l'image cliquée
 {
-
-var x;
-var r=confirm("Confirmez vous la suppression de l'image ?");
+// fonction JavaScript de confirmation de suppression d'une image 
+var r=confirm("Confirmez vous la suppression de l'image ?");	// pop up de demande avec oui/non
 if (r==true)
   {
-  location.href = './controlSupImage.php?idI=' + i;
+  location.href = './controlSupImage.php?idI=' + i;	// si la personne valide, redirection vers le controleur avec passage en GET de l'identifiant
   }
- 
+ // sinon rien ne se passe, la demande de suppression est annulée 
 }
 </script>
 	</head>
