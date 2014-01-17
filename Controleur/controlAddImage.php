@@ -2,11 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-<<<<<<< HEAD
 		<title>Images administrateur</title>
-=======
-		<title>Image</title>
->>>>>>> Afficher mage beulej
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
 	</head>
@@ -28,7 +24,17 @@ if (r==true)
 <?php 
 include("./menu.php");
 
+$req="SELECT * from image"; // requete
+$res =mysql_query($req); // envoi de la requete
 
-include("../Vue/viewAddImage.php");
+
+	if(isset($_SESSION['login']) && isset($_SESSION['admin']) && $_SESSION['admin'] != 0)
+	{
+	include("../Vue/viewAddImage.php");
+	}
+	else
+	{ 
+		include("../Vue/viewImage.php");
+	}
 include("./footer.php");
 ?>

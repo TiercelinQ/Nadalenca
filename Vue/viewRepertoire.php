@@ -4,7 +4,7 @@
 	<form method="post" action="./controlRepertoireRecherche.php">
 		<fieldset>
 			<label>Recherche :</label><input type="text" placeholder="Ex : Nadalet" name="recherche"><br />
-			<input type="submit" value="Ok" /><br />
+				<input type="submit" value="Ok" /><br />
 		</fieldset>
 	</form>
 <?php

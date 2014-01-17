@@ -1,20 +1,6 @@
-<script>
-function verif(i)
-{
-
-var x;
-var r=confirm("Confirmez vous la suppression de la vidéo?");
-if (r==true)
-  {
-  location.href = './controlSupVideos.php?idV=' + i;
-  }
- 
-}
-</script>
-
-
 <h1>Gestion des vidéos</h1>
 <hr />
+
 <table border = "1">
 		<tr>
 		<td>Titre</td>
@@ -30,7 +16,7 @@ if (r==true)
 	?>
 	</table><br/>
 
-<h2>Ajout d'une nouvelle vidéo</h2>
+<h2>Ajout d'une vidéo</h2>
 <hr />
 
 <form method="POST" action="./controlAddVideos.php">

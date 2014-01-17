@@ -1,6 +1,26 @@
 <h1>Gestion des images</h1>
 <hr />
 
+<table border = "1">
+	<tr>
+		<td>Titre</td>
+		<td>Description</td>
+		<td>Supprimer</td>
+			<?php
+	while ($tuple = mysql_fetch_array($res))
+	{ 	
+		$i = $tuple['idI'];
+		echo "<tr><td>" . $tuple['titreI'] . "</td>";
+		echo "<td>" . $tuple['descriptionI'] . "</td>";
+		echo "<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Video'/></button></td></tr>";
+	}
+
+	?>
+	</table><br/>
+
+<h2>Ajout d'une image</h2>
+<hr />
+
 <form method="post" action="controlValidAddImage.php" enctype="multipart/form-data">
      <label for="image">Image (JPG, PNG ou GIF) :</label><br />
      <input type="file" name="image" id="image" /><br />

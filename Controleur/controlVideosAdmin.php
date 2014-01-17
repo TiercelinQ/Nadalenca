@@ -5,6 +5,21 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../style.css" />
 </head>
+<script>
+function verif(i)
+{
+
+var x;
+var r=confirm("Confirmez vous la suppression de la vidéo?");
+if (r==true)
+  {
+  location.href = './controlSupVideos.php?idV=' + i;
+  }
+ 
+}
+</script>
+
+
 
 <?php
 include ("./config.php");
