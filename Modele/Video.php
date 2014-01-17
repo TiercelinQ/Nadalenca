@@ -43,9 +43,9 @@ class Video
 	public function create()
 	{
 		$idV = NULL;
-		$titreV = $this->titreV;
+		$titreV = addslashes(htmlspecialchars($this->titreV));
 		$lienV = $this->lienV;
-		$descriptionV = $this->descriptionV;
+		$descriptionV = addslashes(htmlspecialchars($this->descriptionV));
 		$req = "INSERT INTO video (idV, titreV, lienV, descriptionV) VALUES ('$idV','$titreV','$lienV','$descriptionV')";
 		$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Video / Fonction insertion video")
 	}

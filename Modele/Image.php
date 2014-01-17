@@ -43,9 +43,9 @@ class Image
 	public function create()
 	{
 		$idI= NULL;
-		$titreI = $this->titreI;
-		$nomI = $this->nomI;
-		$descriptionI = $this->descriptionI;
+		$titreI = addslashes(htmlspecialchars($this->titreI));
+		$nomI = addslashes(htmlspecialchars($this->nomI));
+		$descriptionI = addslashes(htmlspecialchars($this->descriptionI));
 		$req = "INSERT INTO image (idI, titreI, nomI, descriptionI) VALUES ('$idI','$titreI','$nomI','$descriptionI')";
 		$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Image / Fonction insertion image")
 	}

@@ -79,13 +79,13 @@ class Concert
 	public function create()
 	{
 			$id= NULL;
-			$titreC = $this->titreC;
+			$titreC = addslashes(htmlspecialchars($this->titreC));
 			$dateC = $this->dateC;
 			$heureC = $this->heureC;
 			$minuteC = $this->minuteC;
 			$lieuC = $this->lieuC;
-			$adresseC = $this->adresseC;
-			$villeC = $this->villeC;
+			$adresseC = addslashes(htmlspecialchars($this->adresseC));
+			$villeC = addslashes(htmlspecialchars($this->villeC));
 			$prixC = $this->prixC;
 			$req = "INSERT INTO concert (id, titreC, dateC, heureC, minuteC, lieuC, adresseC, villeC, prixC) VALUES ('$id','$titreC','$dateC','$heureC','$minuteC','$lieuC','$adresseC','$villeC', '$prixC')";
 			$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Concert / Fonction insertion concert")

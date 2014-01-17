@@ -40,7 +40,7 @@ class Lien
 	public function create()
 	{
 		$idL = null;
-		$description = addslashes($this->description);
+		$description = addslashes(htmlspecialchars($this->description));
 		$lien = $this->lien;
 
 			$req = "INSERT INTO lien (id, description, lien) VALUES ('$idL','$description','$lien')";

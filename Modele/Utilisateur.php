@@ -112,14 +112,14 @@ class Utilisateur
 		if (mysql_num_rows($res) == 0)
 		{ // l'utilisateur n'existe pas.
 			$id = NULL;
-			$nom = $this->nom;
-			$prenom = $this->prenom;
+			$nom = addslashes(htmlspecialchars($this->nom));
+			$prenom = addslashes(htmlspecialchars($this->prenom));
 			$mdp = $this->mdp;
 			$statut = $this->statut;
 			$admin = $this->admin;
-			$adresseP = $this->adresseP;
+			$adresseP = addslashes(htmlspecialchars($this->adresseP));
 			$codeP = $this->codeP;
-			$ville = $this->ville;
+			$ville = addslashes(htmlspecialchars($this->ville));
 			$numtelF = $this->numtelF;
 			$numtelM = $this->numtelM;
 			$voix = $this->voix;

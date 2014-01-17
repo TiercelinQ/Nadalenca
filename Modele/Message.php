@@ -67,8 +67,8 @@ class Message
 			$nomM = $this->nomM;
 			$prenomM = $this->prenomM;
 			$emailM = $this->emailM;
-			$sujetM = addslashes($this->sujetM);
-			$messageM = addslashes($this->messageM);
+			$sujetM = addslashes(htmlspecialchars($this->sujetM));
+			$messageM = addslashes(htmlspecialchars($this->messageM));
 			$dateM = $this->dateM;
 
 
