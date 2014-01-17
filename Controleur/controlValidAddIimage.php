@@ -36,4 +36,7 @@ else
 {
      echo $erreur;
 }
+
+$titre = $_POST["titre"];
+$description = $_POST["description"];
 ?>
