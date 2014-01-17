@@ -10,17 +10,11 @@
 <?php
 $res = mysql_query("SELECT * FROM repertoire") or die ("Erreur insertion, repertoire.php, affichage de tout" );
 
-echo "<div = repertoire>
-		<table>
-			<caption>Liste des morceaux :</caption>
-			
-			<thead>
-				<tr>
-					<th>Nom </th>
-				</tr>
-			</thead>
-			
-			<tbody> ";
+echo "<h3>Liste des morceaux</h3>
+		<table>	
+			<tr>
+				<th>Nom </th>
+			</tr> ";
 
 while ($tuple = mysql_fetch_array($res))
 	{
@@ -29,8 +23,6 @@ while ($tuple = mysql_fetch_array($res))
 			<tr>";
 
 	}
-	echo "</tbody>
-	</table>
-	</div>";
+	echo "</table>";
 
 ?>
