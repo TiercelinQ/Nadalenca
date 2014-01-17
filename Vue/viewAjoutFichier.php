@@ -4,10 +4,12 @@
 	<form enctype="multipart/form-data" method="post" action="../Controleur/controlAjoutFichier.php" >
 		<legend> Ajouter un morceau :</legend>
 		<fieldset>
-		<input type="hidden" value="<?php echo $nbfa ?>" name="nbfa"/></br>
-		<input type="hidden" value="<?php echo $nbft ?>" name="nbft"/></br>
+		<label>Nombres de fichiers audios :</label>
+		<input type="int" value="<?php echo $nbfa ?>" name="nbfa" /></br>
+		<label>Nombres de fichiers textes :</label>
+		<input type="int" value="<?php echo $nbft ?>" name="nbft" /></br>
 		<label>Nom du morceau :</label>
-		<input type="text" name="nomR"/></br> 
+		<input type="text" name="nomR" /></br> 
 		
 		<label>Fichiers Audios :</label></br>
 		<?php 
@@ -15,11 +17,9 @@
 		while($i < $nbfa+1){
 			$audioi = "audio".$i;
 			$taudioi = "taudio".$i;
-			$file = "file";
-			$input = "<input type="."$file"." name="."$audioi"." /></br>";
-			echo "$input";
+			echo "<input type=\"file\" name=\"$audioi\" /></br>";
 			echo "types de destinaires(voix/genre) :";
-			echo "<input type="."texte"." name="."$taudioi"." /></br>";
+			echo "<input type=\"texte\" name=\"$taudioi\" /></br>";
 			$i = $i +1;
 		} 
 		?> 
@@ -30,11 +30,9 @@
 		{
 			$textej = "texte".$j;
 			$ttextej = "ttexte".$j;
-			$file = "file";
-			$input = "<input type="."$file"." name="."$textej"." /></br>";
-			echo "$input";
+			echo "<input type=\"file\" name=\"$textej\" /></br>";			
 			echo "types de fichiers(Partitions/Paroles)</br>";
-			echo "<input type="."texte"." name="."$ttextej"." /></br>";
+			echo "<input type=\"texte\" name=\"$ttextej\" /></br>";
 			$j = $j +1;
 		}
 		?>

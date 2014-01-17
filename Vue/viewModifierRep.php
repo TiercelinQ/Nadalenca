@@ -1,7 +1,8 @@
 	<form enctype="multipart/form-data" method="post" action="../Controleur/controlModifierRep.php" >
 		<legend> Modifier un morceau :</legend>
 		<fieldset>
-		<input type="hidden" value="<?php echo $tuple['nom']; ?>" name="nom">
+		<?php echo $tuple['nom']; ?>
+		<input type="hidden" value="<?php echo $tuple['nom']; ?>" name="nom"></br>
 		<label>Fichiers Audios :</label></br>
 		<?php 
 		

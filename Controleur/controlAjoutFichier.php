@@ -7,7 +7,7 @@
 </head>
 <?php
 include("./menu.php");
-include("../Modele/repertoire.php");
+include("../Modele/Repertoire.php");
 $nbfichau = $_POST['nbfa'];
 $nbfichtxt = $_POST['nbft'];
 $nom = $_POST['nomR'];
@@ -49,7 +49,7 @@ switch($nbfichtxt)
 		break;
 }
 $rep = Repertoire::createRep($nom);
-include("../Vue/viewRepertoireMorceau.php");
+include("../Vue/viewAjoutFichierReussi.php");
 include("./footer.php");
 ?>
 

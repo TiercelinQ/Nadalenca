@@ -258,7 +258,7 @@ class Utilisateur
 		
         if($tuple['adresseP'] != $adresseP)
         {
-            $req1 = "UPDATE utilisateur SET adresseP ='$adresseP', codeP ='$codeP', ville ='$ville' WHERE email ='$email'";
+            $req1 = "UPDATE utilisateur SET adresseP ='$adresseP' WHERE email ='$email'";
 			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeAdresse");
         }
         

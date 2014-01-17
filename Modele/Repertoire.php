@@ -39,109 +39,12 @@ class Repertoire
 		$this->idT = $idT;
 	}
 	
-	public static function moveFile($audio, $audiotmp, $texte, $textetmp, $alto, $altotmp, $basse, $bassetmp, $soprano, $sopranotmp, $tenor, $tenortmp)
-	{
-		$target_pathaudio = "../Audio/";
-		$target_pathaudio = $target_pathaudio . basename( $audio);
-		move_uploaded_file($audiotmp, $target_pathaudio);
-		$target_pathtexte = "../Texte/";
-		$target_pathtexte = $target_pathtexte . basename( $texte);
-		move_uploaded_file($textetmp, $target_pathtexte);
-		$target_pathalto = "../Voix/alto/";
-		$target_pathalto = $target_pathalto . basename( $alto);
-		move_uploaded_file($altotmp, $target_pathalto);
-		$target_pathbasse = "../Voix/basse/";
-		$target_pathbasse = $target_pathbasse . basename( $basse);
-		move_uploaded_file($bassetmp, $target_pathbasse);
-		$target_pathsoprano = "../Voix/soprano/";
-		$target_pathsoprano = $target_pathsoprano . basename($soprano);
-		move_uploaded_file($sopranotmp, $target_pathsoprano);
-		$target_pathtenor = "../Voix/tenor/";
-		$target_pathtenor = $target_pathtenor . basename( $tenor);
-		move_uploaded_file($tenortmp, $target_pathtenor);
-	}
-	
-	public static function getRepById($id)
-	{
-		$res = mysql_query("SELECT * FROM repertoire WHERE idR = '$id'") or die("Erreur insertion / classe repertoire / fonction getRepById");
-		$tuple = mysql_fetch_array($res);
-		return new Repertoire($id, $tuple['audioR'],$tuple['texteR'],$tuple['altoR'],$tuple['basseR'],$tuple['sopranoR'],$tuple['tenorR']);
-	}
-	
-	
-	//suppression d'un morceau du repertoire
-	public static function delete($id)
-	{
-		$res = mysql_query("SELECT * FROM repertoire WHERE idR = '$id'") or die ("Erreur insertion / Classe répertoire/Fonction delete");
-		$tuple = mysql_fetch_array($res);
-		$target_pathaudio = "../Audio/";
-		$target_pathaudio = $target_pathaudio . $tuple['audioR'];
-		unlink($target_pathaudio);
-		$target_pathtexte = "../Texte/";
-		$target_pathtexte = $target_pathtexte . $tuple['texteR'];
-		unlink($target_pathtexte);
-		$target_pathalto = "../Voix/alto/";
-		$target_pathalto = $target_pathalto . $tuple['altoR'];
-		unlink($target_pathalto);
-		$target_pathbasse = "../Voix/basse/";
-		$target_pathbasse = $target_pathbasse . $tuple['basseR'];
-		unlink($target_pathbasse);
-		$target_pathsoprano = "../Voix/soprano/";
-		$target_pathsoprano = $target_pathsoprano . $tuple['sopranoR'];
-		unlink($target_pathsoprano);
-		$target_pathtenor = "../Voix/tenor/";
-		$target_pathtenor = $target_pathtenor . $tuple['tenorR'];
-		unlink($target_pathtenor);
-		
-	}
-	
 	public static function deletebdd($id)
 	{
 		$req = mysql_query("DELETE FROM repertoire WHERE idR = '$id'") or die("Erreur insertion / Classez Repertoire / Fonction delete");
 		return true;
 	}
 	
-	
-	public static function changementRep($audio, $audiotmp, $texte, $textetmp, $alto, $altotmp, $basse, $bassetmp, $soprano, $sopranotmp, $tenor, $tenortmp)
-	{
-		if($audio != null)
-		{
-			$target_pathaudio = "../Audio/";
-			$target_pathaudio = $target_pathaudio . basename( $audio);
-			move_uploaded_file($audiotmp, $target_pathaudio);
-		}
-		if($texte != null)
-		{
-			$target_pathtexte = "../Texte/";
-			$target_pathtexte = $target_pathtexte . basename( $texte);
-			move_uploaded_file($textetmp, $target_pathtexte);
-		}
-		if($alto != null)
-		{
-			$target_pathalto = "../Voix/alto/";
-			$target_pathalto = $target_pathalto . basename( $alto);
-			move_uploaded_file($altotmp, $target_pathalto);
-		}
-		if($basse != null)
-		{
-			$target_pathbasse = "../Voix/basse/";
-			$target_pathbasse = $target_pathbasse . basename( $basse);
-			move_uploaded_file($bassetmp, $target_pathbasse);
-		}
-		if($soprano != null)
-		{
-			$target_pathsoprano = "../Voix/soprano/";
-			$target_pathsoprano = $target_pathsoprano . basename($soprano);
-			move_uploaded_file($sopranotmp, $target_pathsoprano);
-		}
-		if($tenor != null)
-		{
-			$target_pathtenor = "../Voix/tenor/";
-			$target_pathtenor = $target_pathtenor . basename( $tenor);
-			move_uploaded_file($tenortmp, $target_pathtenor);
-		}	
-		
-	}
 	
 	public static function createRep($nom)
 	{
@@ -284,9 +187,57 @@ class Repertoire
 		$target_path = $target_pathtexte . basename($texte5);
 		move_uploaded_file($texte5tmp, $target_path);
 	}
-}
-?>
 	
+	public static function changementaudionb($id, $nb, $audio, $audiotmp, $audiodest)
+	{
+		$res = mysql_query("SELECT * FROM audio WHERE ida = '$id'") or die ("Erreur / changementaudionb / res");
+		$tuple = mysql_fetch_array($res);
+		$target_pathaudio = "../Audio/";
+		
+		switch($nb)
+		{
+			case 1:
+				$target_path = $target_pathaudio . basename($tuple['nomfich1']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($audio);
+				move_uploaded_file($audiotmp, $target_path);
+				$req = mysql_query("UPDATE audio SET nomfich1='$audio', dest1='$audiodest' WHERE ida='$id'") or die ("Erreur / changementaudionb / req 1");
+				$retour = true;
+				break;
+			case 2:
+				$target_path = $target_pathaudio . basename($tuple['nomfich2']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($audio);
+				move_uploaded_file($audiotmp, $target_path);
+				$req = mysql_query("UPDATE audio SET nomfich2 = '$audio', dest2 = '$audiodest' WHERE ida = '$id'") or die ("Erreur / changementaudionb / req 2");
+				$retour = true;
+				break;
+			case 3:
+				$target_path = $target_pathaudio . basename($tuple['nomfich3']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($audio);
+				move_uploaded_file($audiotmp, $target_path);
+				$req = mysql_query("UPDATE audio SET nomfich3 = '$audio', dest3 = '$audiodest' WHERE ida = '$id'") or die ("Erreur / changementaudionb / req 3");
+				$retour = true;
+				break;
+			case 4:
+				$target_path = $target_pathaudio . basename($tuple['nomfich4']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($audio);
+				move_uploaded_file($audiotmp, $target_path);
+				$req = mysql_query("UPDATE audio SET nomfich4 = '$audio', dest4 = '$audiodest' WHERE ida = '$id'") or die ("Erreur / changementaudionb / req 4");
+				$retour = true;
+				break;
+			case 5:
+				$target_path = $target_pathaudio . basename($tuple['nomfich5']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($audio);
+				move_uploaded_file($audiotmp, $target_path);
+				$req = mysql_query("UPDATE audio SET nomfich5 = '$audio', dest5 = '$audiodest' WHERE ida = '$id'") or die ("Erreur / changementaudionb / req 5");
+				$retour = true;
+				break;
+		}
+		return $retour;
+	}
 }
-?>
-	
+?>	
