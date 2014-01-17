@@ -12,11 +12,11 @@ include("./menu.php");
 include("../Modele/Message.php");
 
 $idM = null;
-$nomM = $_POST["nomM"];
-$prenomM = $_POST["prenomM"];
-$emailM = $_POST["emailM"];
-$sujetM = $_POST["sujetM"];
-$messageM = $_POST["messageM"];
+$nomM = htmlspecialchars($_POST["nomM"]);
+$prenomM = htmlspecialchars($_POST["prenomM"]);
+$emailM = htmlspecialchars($_POST["emailM"]);
+$sujetM = htmlspecialchars($_POST["sujetM"]);
+$messageM = htmlspecialchars($_POST["messageM"]);
 $dateM = date("d-m-y");
 
 

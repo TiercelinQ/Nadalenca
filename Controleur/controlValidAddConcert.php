@@ -12,14 +12,14 @@ include("./menu.php");
 
 
 $id=null;
-$titre = $_POST["titre"];
-$date = $_POST["date"];
-$heure = $_POST["heure"];
-$minute = $_POST["minute"];
-$lieu = $_POST["lieu"];
-$adresse = $_POST["adresse"];
-$ville = $_POST["ville"];
-$prix = $_POST["prix"];
+$titre = addslashes(htmlspecialchars($_POST["titre"]));
+$date = htmlspecialchars($_POST["date"]);
+$heure = htmlspecialchars($_POST["heure"]);
+$minute = htmlspecialchars($_POST["minute"]);
+$lieu = addslashes(htmlspecialchars($_POST["lieu"]));
+$adresse = htmlspecialchars($_POST["adresse"]);
+$ville = htmlspecialchars($_POST["ville"]);
+$prix = htmlspecialchars($_POST["prix"]);
 
 	$concert = new concert($id, $titre, $date, $heure, $minute, $lieu, $adresse, $ville, $prix);
 	$concert->create();
