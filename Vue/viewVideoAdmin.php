@@ -13,7 +13,7 @@ if (r==true)
 </script>
 
 
-<h1>Vidéos</h1>
+<h1>Gestion des vidéos</h1>
 <hr />
 <table border = "1">
 		<tr>

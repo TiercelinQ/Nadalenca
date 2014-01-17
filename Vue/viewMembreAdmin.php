@@ -1,4 +1,4 @@
-<h1>Gestion des membres de l'association</h1>
+<h1>Gestion des membres</h1>
 <hr />
 
 	<table border = "1">

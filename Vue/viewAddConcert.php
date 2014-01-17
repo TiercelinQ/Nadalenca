@@ -1,4 +1,4 @@
-<h1>Ajout d'un concert</h1>
+<h2>Ajout d'un concert</h2>
 <hr />
 
 <form method="POST" action="./controlValidAddConcert.php">

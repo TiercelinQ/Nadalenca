@@ -1,3 +1,6 @@
+<h1>Gestion des images</h1>
+<hr />
+
 <form method="post" action="controlValidAddImage.php" enctype="multipart/form-data">
      <label for="image">Image (JPG, PNG ou GIF) :</label><br />
      <input type="file" name="image" id="image" /><br />
@@ -8,3 +11,7 @@
      <textarea name="description" id="description"></textarea><br />
      <input type="submit" name="submit" value="Envoyer" />  
 </form>
+
+<br />
+
+<a href="./controlAdministrateur.php">Retour au panneau d'administration</a>

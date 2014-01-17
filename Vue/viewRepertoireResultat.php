@@ -10,13 +10,13 @@ if($nb_resultats > 1) { echo ' morceaux'; } else { echo ' morceau'; } // on vér
 			while ($tuple = mysql_fetch_array($res))
 			{
 		?>	
-			<div id="morceau">
-			<a href="../Controleur/controlRepertoireMorceau.php?idr=<?php echo $tuple['idr']; ?>"><?php echo $tuple['nom']; ?></a>
-			</div>
+			<ul>
+				<li><a href="../Controleur/controlRepertoireMorceau.php?idr=<?php echo $tuple['idr']; ?>"><?php echo $tuple['nom']; ?></a></li>
 			</br>
 		<?php
 			}
-?>
+?>	
+			</ul>
 
 		<a href="../Controleur/controlRepertoire.php">Faire une nouvelle recherche </a></br>
 	

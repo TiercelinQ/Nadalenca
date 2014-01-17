@@ -1,6 +1,6 @@
-
-<h1>Visualisation et suppression des concerts</h1>
+<h1>Gestion des concerts</h1>
 <hr />
+
 	<table border = "1">
 		<tr>
 			<td>Titre Concert</td>
@@ -34,5 +34,5 @@ include("../Modele/Concert.php");
         </button>"."</td>"
 			."</tr>";*/
 	}
-		echo "</table><br/>";
+		echo "</table>";
 	?>

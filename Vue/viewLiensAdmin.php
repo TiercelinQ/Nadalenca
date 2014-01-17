@@ -1,4 +1,4 @@
-<h1>Liens</h1>
+<h1>Gestion des liens</h1>
 <hr />
 <table border = "1">
 		<tr>
@@ -24,7 +24,7 @@
 	?>
 	</table><br/>
 
-<h2>Ajout d'un nouveau lien</h2>
+<h2>Ajout d'un lien</h2>
 <hr />
 
 <form method="POST" action="./controlAddLiens.php">

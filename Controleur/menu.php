@@ -28,7 +28,6 @@
 					<li><a href="#">MULTIMEDIA</a>
 						<ul id="sousMenu">
 							<li><a href="#">IMAGES</a></li>
-							<li><a href="#">MUSIQUES</a></li>
 							<li><a href="./controlVideo.php">VIDEOS</a></li>
 						</ul></li>
 					<li><a href="./controlProduction.php">PRODUCTIONS</a></li>
