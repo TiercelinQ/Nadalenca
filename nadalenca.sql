@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Ven 17 Janvier 2014 à 14:05
+-- Généré le: Ven 17 Janvier 2014 à 15:43
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -110,19 +110,19 @@ INSERT INTO `concert` (`id`, `titreC`, `heureC`, `minuteC`, `lieuC`, `adresseC`,
 --
 
 CREATE TABLE IF NOT EXISTS `image` (
-  `idI` int(11) NOT NULL,
-  `titreI` varchar(10) NOT NULL,
-  `nomI` varchar(20) NOT NULL,
-  `descriptionI` varchar(10) NOT NULL,
+  `idI` int(11) NOT NULL AUTO_INCREMENT,
+  `titreI` varchar(50) NOT NULL,
+  `nomI` varchar(255) NOT NULL,
+  `descriptionI` varchar(255) NOT NULL,
   PRIMARY KEY (`idI`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Contenu de la table `image`
 --
 
 INSERT INTO `image` (`idI`, `titreI`, `nomI`, `descriptionI`) VALUES
-(0, 'a', '22a8637dff97a50c1a97', 'b');
+(15, 'Notre chorale', 'c2ae0986f7c35b9309d92e7b8bf9031a.jpg', 'Notre chorale lors de notre derniere rencontre');
 
 -- --------------------------------------------------------
 
@@ -184,7 +184,14 @@ CREATE TABLE IF NOT EXISTS `production` (
   `descriptionP` varchar(255) NOT NULL,
   `prixP` varchar(255) NOT NULL,
   PRIMARY KEY (`idP`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+
+--
+-- Contenu de la table `production`
+--
+
+INSERT INTO `production` (`idP`, `nomP`, `imageP`, `descriptionP`, `prixP`) VALUES
+(32, 'CD Nadalenca', 'e712dbd71305b3d8451ceae0b95b4786.jpg', 'CD de nos musiques', '20â‚¬');
 
 -- --------------------------------------------------------
 
@@ -278,12 +285,10 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `email`, `mdp`, `statut`, `admin`, `adresseP`, `codeP`, `ville`, `numtelF`, `numtelM`, `voix`) VALUES
-(1, 'Tiercelin', 'Quentin', 'q.tiercelin@gmail.com', 'licorne', '', 0, '20, avenue du Docteur Pezet', '34090', 'Montpellier', '04.99.23.93.98', '06.50.80.66.77', 'voix'),
-(2, 'Beule', 'JÃ©rÃ©my', 'androalphas@hotmail.fr', 'licorne', '', 0, '', '', '', '', '', 'voix'),
-(3, 'Bex-Chauvet', 'Olivier', 'fullofwrath@hotmail.fr', 'lilo', 'PrÃ©sident', 0, '114 rue du ponay', '34090', 'Montpellier', '04.22.33.44.55', '06.22.33.44.55', 'voix2'),
-(6, 'Pochon', 'Amaury', 'momoamo@hotmail.fr', 'test', '', 0, '', '', '', '', '', ''),
-(7, 'test', 'test', 'q.tiercelintest@gmail.com', 'test', '', 1, '', '', '', '', '', ''),
-(8, 'Amaury', 'test', 'canardout@yopmail.fr', 'test', '', 1, '', '', '', '', '', '');
+(1, 'Tiercelin', 'Quentin', 'q.tiercelin@gmail.com', 'licorne', '', 1, '20, avenue du Docteur Pezet', '34090', 'Montpellier', '04.99.23.93.98', '06.50.80.66.77', 'voix'),
+(2, 'Beule', 'JÃ©rÃ©my', 'androalphas@hotmail.fr', 'licorne', '', 1, '', '', '', '', '', 'voix'),
+(3, 'Bex-Chauvet', 'Olivier', 'fullofwrath@hotmail.fr', 'lilo', 'PrÃ©sident', 1, '114 rue du ponay', '34090', 'Montpellier', '04.22.33.44.55', '06.22.33.44.55', 'voix2'),
+(6, 'Pochon', 'Amaury', 'momoamo@hotmail.fr', 'test', '', 1, '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -297,14 +302,14 @@ CREATE TABLE IF NOT EXISTS `video` (
   `lienV` varchar(255) NOT NULL,
   `descriptionV` varchar(255) NOT NULL,
   PRIMARY KEY (`idV`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `video`
 --
 
 INSERT INTO `video` (`idV`, `titreV`, `lienV`, `descriptionV`) VALUES
-(1, 'Video test', '<iframe width="560" height="315" src="//www.youtube.com/embed/SZeHcV7sts4" frameborder="0" allowfullscreen></iframe>', 'description');
+(3, 'Natal', 'uly36ELJVDQ', 'Musique Natal par la chorale Nadalenca');
 
 --
 -- Contraintes pour les tables exportées
