@@ -1,4 +1,4 @@
-<form method="post" action="controlValidAddIimage.php" enctype="multipart/form-data">
+<form method="post" action="controlValidAddImage.php" enctype="multipart/form-data">
      <label for="image">Image (JPG, PNG ou GIF) :</label><br />
      <input type="file" name="image" id="image" /><br />
 	 <input type="hidden" name="maxsize" value="1048576000000" />
