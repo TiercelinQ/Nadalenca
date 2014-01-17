@@ -5,27 +5,26 @@
 		<title>Inscription</title>
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
-<script language="JavaScript">
-function verif_pass() {
 
-// on place les saisies dans des variables pour plus de commodité
-mot_de_passe1 = document.formulaire.password.value;
-mot_de_passe2 = document.formulaire.password2.value;
+<script>
+function verifMDP() {
 
-// si les deux saisies sont différentes :
-if ( mot_de_passe1 != mot_de_passe2 ) {
-window.alert('Vous n\'avez pas resaisi le meme mot de passe !');
+mdp1 = document.forminscrip.mdp.value;
+mdp2 = document.forminscrip.mdpc.value;
+
+// si différentes :
+if ( mdp1 != mdp2 ) {
+window.alert('Vos deux mots de passe ne sont pas identiques');
 return false;
 }
 
-// si elles ne sont pas différentes (si elles sont identiques en fait ;-)
+// si identiques
 else {
-window.alert('C\'est bon, les deux mots de passe sont identiques');
 return true;
 }
 }
 </script> 
-	</head>
+</head>
 	
 <?php 
 include("./menu.php");
