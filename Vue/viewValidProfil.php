@@ -7,7 +7,6 @@
 				<th>Nom</th>
 				<th>Prénom</th>
 				<th>Email</th>
-				<th>Mot de Passe</th>
 				<th>Adresse Postale</th>
 				<th>Code Postal</th>
 				<th>Ville</th>
@@ -20,7 +19,6 @@
 				<th><?php echo $profil->getNom();?></th>
    	 		<th><?php echo $profil->getPrenom();?></th>
    	 		<th><?php echo $profil->getEmail();?></th>
-				<th><?php echo $profil->getMdp();?></th>
 				<th><?php echo $profil->getAdresseP();?></th>
 				<th><?php echo $profil->getCodeP();?></th>
 				<th><?php echo $profil->getVille();?></th>
