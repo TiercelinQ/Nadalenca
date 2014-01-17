@@ -4,15 +4,7 @@ require("../config.php");
 require("../Modele/Production.php");
 include("./menu.php");
 
-	$idP = null;
-	$nomP = $_POST["nomP"];
-	$descriptionP = $_POST["descriptionP"];
-	$prixP = $_POST["prixP"];
-	$imageP = $_POST["imageP"];
-	$production = new production($idP, $nomP, $descriptionP, $prixP, $imageP);
-	$production->create();
-
-	$dossier = '../Images/';
+		$dossier = '../Images/';
 	//$fichier = basename($_FILES['image']['name']);
 	$taille_maxi = 1000000;
 	$taille = filesize($_FILES['image']['tmp_name']);
@@ -46,6 +38,18 @@ include("./menu.php");
 	{
 		 echo $erreur;
 	} 
+	
+	
+	
+	$idP = null;
+	$nomP = $_POST["nomP"];
+	$descriptionP = $_POST["descriptionP"];
+	$prixP = $_POST["prixP"];
+	$imageP = $nom .'.'.$extension_upload
+	$production = new production($idP, $nomP, $descriptionP, $prixP, $imageP);
+	$production->create();
+
+
 
 	include("./footer.php");
 
