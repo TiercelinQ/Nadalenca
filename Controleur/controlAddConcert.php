@@ -6,7 +6,20 @@
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
 	</head>
-	
+<script>
+function verif(i)
+{
+
+var x;
+var r=confirm("Confirmez vous la suppression du concert?");
+if (r==true)
+  {
+  location.href = './controlSupConcerts.php?id=' + i;
+  }
+ 
+}
+</script>
+
 <?php 
 include("./menu.php");
 

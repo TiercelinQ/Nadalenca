@@ -44,7 +44,6 @@ else
 
 		
 	$image = new image($id, $titre, $nom .'.'.$extension_upload, $description);
-	echo"lol";
 	$image->create();
 	include('../Vue/viewValidAddMembres.php');  
 

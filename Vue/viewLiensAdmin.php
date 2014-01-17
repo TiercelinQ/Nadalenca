@@ -1,18 +1,3 @@
-<script>
-function verif(i)
-{
-
-var x;
-var r=confirm("Confirmez vous la suppression ?");
-if (r==true)
-  {
-  location.href = './controlSupLiens.php?idL=' + i;
-  }
- 
-}
-</script>
-
-
 <h1>Liens</h1>
 <hr />
 <table border = "1">

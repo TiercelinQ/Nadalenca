@@ -6,6 +6,21 @@
 		<link rel="stylesheet" href="../style.css" />
 </head>
 
+<script>
+function verif(i)
+{
+
+var x;
+var r=confirm("Confirmez vous la suppression ?");
+if (r==true)
+  {
+  location.href = './controlSupLiens.php?idL=' + i;
+  }
+ 
+}
+</script>
+
+
 <?php
 include ("./config.php");
 include("./menu.php"); 

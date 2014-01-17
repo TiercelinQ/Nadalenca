@@ -1,16 +1,3 @@
-<script>
-function verif(i)
-{
-
-var x;
-var r=confirm("Confirmez vous la suppression du concert?");
-if (r==true)
-  {
-  location.href = './controlSupConcerts.php?id=' + i;
-  }
- 
-}
-</script>
 
 <h1>Visualisation et suppression des concerts</h1>
 <hr />
