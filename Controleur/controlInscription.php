@@ -11,7 +11,7 @@ function verifMDP() {
 
 mdp1 = document.forminscrip.mdp.value;
 mdp2 = document.forminscrip.mdpc.value;
-
+mdpn = document.forminscrip.mdpn.value;
 // si différentes :
 if ( mdp1 != mdp2 ) {
 window.alert('Vos deux mots de passe ne sont pas identiques');
@@ -19,7 +19,11 @@ return false;
 }
 
 // si identiques
-else {
+else if (mdpn != "nadalenca"){
+window.alert('Le mot de passe Nadalenca est faux');
+return false;
+}
+else{
 return true;
 }
 }
