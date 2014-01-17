@@ -4,9 +4,7 @@
 	<form enctype="multipart/form-data" method="post" action="../Controleur/controlAjoutFichier.php" >
 		<legend> Ajouter un morceau :</legend>
 		<fieldset>
-		<label>Nombres de fichiers audios :</label>
 		<input type="hidden" value="<?php echo $nbfa ?>" name="nbfa" /></br>
-		<label>Nombres de fichiers textes :</label>
 		<input type="hidden" value="<?php echo $nbft ?>" name="nbft" /></br>
 		<label>Nom du morceau :</label>
 		<input type="text" name="nomR" /></br> 
@@ -16,13 +14,13 @@
 		switch($nbfa)
 		{
 			case 1:
-				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"5000000\" /></br>";
+				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"100000000000000000000000000000000000000000\" /></br>";
 				echo "<input type=\"file\" name=\"audio1\" /></br>";
 				echo "types de destinaires(voix/genre) :";
 				echo "<input type=\"texte\" name=\"taudio1\" /></br>";
 				break;
 			case 2:
-				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"5000000\" /></br>";
+				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"10000000\" /></br>";
 				echo "<input type=\"file\" name=\"audio1\" /></br>";
 				echo "types de destinaires(voix/genre) :";
 				echo "<input type=\"texte\" name=\"taudio1\" /></br>";
@@ -31,7 +29,7 @@
 				echo "<input type=\"texte\" name=\"taudio2\" /></br>";
 				break;
 			case 3:
-				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"5000000\" /></br>";
+				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"10000000\" /></br>";
 				echo "<input type=\"file\" name=\"audio1\" /></br>";
 				echo "Types de destinaires(voix/genre) :";
 				echo "<input type=\"texte\" name=\"taudio1\" /></br>";
@@ -43,7 +41,7 @@
 				echo "<input type=\"texte\" name=\"taudio3\" /></br>";
 				break;
 			case 4:
-				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"5000000\" /></br>";
+				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"10000000\" /></br>";
 				echo "<input type=\"file\" name=\"audio1\" /></br>";
 				echo "Types de destinaires(voix/genre) :";
 				echo "<input type=\"texte\" name=\"taudio1\" /></br>";
@@ -58,7 +56,7 @@
 				echo "<input type=\"texte\" name=\"taudio4\" /></br>";
 				break;
 			case 5:
-				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"5000000\" /></br>";
+				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"10000000\" /></br>";
 				echo "<input type=\"file\" name=\"audio1\" /></br>";
 				echo "Types de destinaires(voix/genre) :";
 				echo "<input type=\"texte\" name=\"taudio1\" /></br>";
@@ -84,13 +82,11 @@
 		switch($nbft)
 		{
 			case 1:
-				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"5000000\" /></br>";
 				echo "<input type=\"file\" name=\"texte1\" /></br>";
 				echo "types de destinaires(voix/genre) :";
 				echo "<input type=\"texte\" name=\"ttexte1\" /></br>";
 				break;
 			case 2:
-				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"5000000\" /></br>";
 				echo "<input type=\"file\" name=\"texte1\" /></br>";
 				echo "types de destinaires(voix/genre) :";
 				echo "<input type=\"texte\" name=\"ttexte1\" /></br>";
@@ -99,7 +95,6 @@
 				echo "<input type=\"texte\" name=\"ttexte2\" /></br>";
 				break;
 			case 3:
-				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"5000000\" /></br>";
 				echo "<input type=\"file\" name=\"texte1\" /></br>";
 				echo "Types de destinaires(voix/genre) :";
 				echo "<input type=\"texte\" name=\"ttexte1\" /></br>";
@@ -111,7 +106,6 @@
 				echo "<input type=\"texte\" name=\"ttexte3\" /></br>";
 				break;
 			case 4:
-				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"5000000\" /></br>";
 				echo "<input type=\"file\" name=\"texte1\" /></br>";
 				echo "Types de destinaires(voix/genre) :";
 				echo "<input type=\"texte\" name=\"ttexte1\" /></br>";
@@ -126,7 +120,6 @@
 				echo "<input type=\"texte\" name=\"ttexte4\" /></br>";
 				break;
 			case 5:
-				echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"5000000\" /></br>";
 				echo "<input type=\"file\" name=\"texte1\" /></br>";
 				echo "Types de destinaires(voix/genre) :";
 				echo "<input type=\"texte\" name=\"ttexte1\" /></br>";

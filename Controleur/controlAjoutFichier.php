@@ -8,6 +8,9 @@
 <?php
 include("./menu.php");
 include("../Modele/Repertoire.php");
+var_dump($_POST);
+var_dump($_FILES);
+echo $_FILES['audio1']['error'];
 $nbfichau = $_POST['nbfa'];
 $nbfichtxt = $_POST['nbft'];
 $nom = $_POST['nomR'];
