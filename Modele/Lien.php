@@ -37,13 +37,13 @@ class Lien
 
 
 	//création d'un nouveau lien dans la base de données lien
-	public function create($description, $lien)
+	public function create()
 	{
 		$idL = null;
-		$this->description = addslashes($description);
-		$this->lien = $lien;
+		$description = addslashes($this->description);
+		$lien = $this->lien;
 
-			$req = "INSERT INTO lien (id, description, lien) VALUES ('$idL','$this->description','$this->lien')";
+			$req = "INSERT INTO lien (id, description, lien) VALUES ('$idL','$description','$lien')";
 			$res = mysql_query($req) or die ("Erreur insertion :  Classe Lien / Fonction create lien");
 	}
 

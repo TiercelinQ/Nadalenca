@@ -29,7 +29,7 @@
 						<ul id="sousMenu">
 							<li><a href="#">IMAGES</a></li>
 							<li><a href="#">MUSIQUES</a></li>
-							<li><a href="#">VIDEOS</a></li>
+							<li><a href="./controlVideo.php">VIDEOS</a></li>
 						</ul></li>
 					<li><a href="./controlProduction.php">PRODUCTIONS</a></li>
 					<li><a href="./controlAnnuaire.php">ANNUAIRE</a></li>

@@ -20,7 +20,7 @@ else
 	$lien = $_POST["lien"];
 	$description = $_POST["description"];
 	$liens = new lien($id, $description, $lien);
-	$liens->create($description, $lien);
+	$liens->create();
 
 	header('Location: ./controlLiensAdmin.php');
 }
