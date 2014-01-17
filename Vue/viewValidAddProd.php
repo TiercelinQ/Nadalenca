@@ -4,5 +4,5 @@
 <hr />
 	<p>Un nouveau produit a bien été ajouté.</p>
 	<p>Redirection vers le gestionnaire des produits.</p>
-	<?php header("Refresh: 3; URL=../Controleur/controlAddProduc.php"); ?>
+	<?php header("Refresh: 3; URL=../Controleur/controlProductionAdmin.php"); ?>
 		
