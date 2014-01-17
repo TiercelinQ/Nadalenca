@@ -318,6 +318,82 @@ h4
 	margin-top: -10px;
 }
 
+#container_message
+{
+	overflow:hidden; 
+	width:100%;
+	margin: 0;
+}
+
+.gauche_message, .milieu_message, .droite_message
+{
+	float: left;
+}
+
+.gauche_message
+{
+	width:33%;
+	background-color:#edef9c;
+	color: #cd1b1b;
+}
+
+.gauche_message p
+{
+	text-indent: 1em;
+	margin: 5px 0 5px 0;
+}
+
+.milieu_message
+{
+	width:33%;
+	background-color:#edef9c;
+	color: #cd1b1b;
+	margin-left: 4px;
+}
+
+.milieu_message p
+{
+	text-indent: 1em;
+	margin: 5px 0 5px 0;
+}
+
+.droite_message
+{
+	width:33%;
+	background-color:#edef9c;
+	color: #cd1b1b;
+	margin-left: 4px;
+}
+
+.droite_message p
+{
+	text-indent: 1em;
+	margin: 5px 0 5px 0;
+}
+
+.dessous_message
+{
+	width:100%;
+	background-color:#efda9c;
+	color: #cd1b1b;
+}
+
+.dessous_message p
+{
+	text-indent: 1em;
+	margin: 2em 0 0 0;
+	padding-top: 30px;
+	padding-bottom: 5px;
+}
+
+.suppr_message
+{
+	width: 33%;
+	color: white;
+	margin-bottom: -1em;
+	padding-bottom: -1em;
+}
+
 #footer
 {
 	width: 100%;
