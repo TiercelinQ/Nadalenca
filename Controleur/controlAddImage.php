@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<<<<<<< HEAD
 		<title>Images administrateur</title>
+=======
+		<title>Image</title>
+>>>>>>> Afficher mage beulej
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
 	</head>
