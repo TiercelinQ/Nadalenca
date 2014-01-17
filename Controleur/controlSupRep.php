@@ -10,10 +10,8 @@
 <?php
 	include("./menu.php");
 	include("../Modele/Repertoire.php");
-	
 	$id = $_GET['id'];
-	$rep = Repertoire::delete($id);
-	$rep = Repertoire::deletebdd($id);
+	$rep = Repertoire::suppressionMorceau($id);
 	if($rep == true)
 	{
 		include("../Vue/viewSupRep.php");

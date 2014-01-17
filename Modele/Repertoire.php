@@ -39,12 +39,6 @@ class Repertoire
 		$this->idT = $idT;
 	}
 	
-	public static function deletebdd($id)
-	{
-		$req = mysql_query("DELETE FROM repertoire WHERE idR = '$id'") or die("Erreur insertion / Classez Repertoire / Fonction delete");
-		return true;
-	}
-	
 	
 	public static function createRep($nom)
 	{
@@ -621,6 +615,133 @@ class Repertoire
 				break;
 		}
 	return $retour;	
+	}
+	
+	public static function suppressionMorceau($id)
+	{
+		$res = mysql_query("SELECT * FROM repertoire WHERE idr = '$id'")  or die("Erreur /suppressionMorceau / res");
+		$tuple = mysql_fetch_array($res);
+		$idA = $tuple['idA'];
+		$idT = $tuple['idT'];
+		$reqaudio = mysql_query("SELECT * FROM audio WHERE ida = '$idA'") or die ("Erreur / suppressionMorceau / reqaudio");
+		$tupleaudio = mysql_fetch_array($reqaudio);
+		$reqtexte = mysql_query("SELECT * FROM texte WHERE idt = '$idT'") or die ("Erreur / suppressionMorceau / reqtexte");
+		$tupletexte = mysql_fetch_array($reqtexte);
+		$retour = false;
+		
+		$target_pathaudio = "../Audio/";
+		$target_pathtexte = "../Texte/";
+		
+		switch($tupleaudio['nbfichier'])
+		{
+			case 1:
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich1']);
+				unlink($target_path);
+				var_dump( $tupleaudio['ida']);
+				var_dump( $tuple['idA']);
+				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$idA'") or die("Erreur / suppression / case 1a");
+				$retour = true;
+				break;
+			case 2:
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich1']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich2']);
+				unlink($target_path);
+				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$idA'") or die("Erreur / suppression / case 2");
+				$retour = true;
+				break;
+			case 3:
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich1']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich2']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich3']);
+				unlink($target_path);
+				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$idA'") or die("Erreur / suppression / case 3");
+				$retour = true;
+				break;
+			case 4:
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich1']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich2']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich3']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich4']);
+				unlink($target_path);
+				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$idA'") or die("Erreur / suppression / case 4");
+				$retour = true;
+				break;
+			case 5:
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich1']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich2']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich3']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich4']);
+				unlink($target_path);
+				$target_path = $target_pathaudio . basename($tupleaudio['nomfich5']);
+				unlink($target_path);
+				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$idA'") or die("Erreur / suppression / case 5");
+				$retour = true;
+				break;
+		}
+		switch($tupletexte['nbfichier'])
+		{
+			case 1:
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich1']);
+				unlink($target_path);
+				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idT'") or die("Erreur / suppression / case 1");
+				$retour = $retour & true;
+				break;
+			case 2:
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich1']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich2']);
+				unlink($target_path);
+				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idT'") or die("Erreur / suppression / case 2");
+				$retour = $retour & true;
+				break;
+			case 3:
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich1']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich2']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich3']);
+				unlink($target_path);
+				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idT'") or die("Erreur / suppression / case 3");
+				$retour = $retour & true;
+				break;
+			case 4:
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich1']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich2']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich3']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich4']);
+				unlink($target_path);
+				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idT'") or die("Erreur / suppression / case 4");
+				$retour = $retour & true;
+				break;
+			case 5:
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich1']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich2']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich3']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich4']);
+				unlink($target_path);
+				$target_path = $target_pathtexte . basename($tupletexte['nomfich5']);
+				unlink($target_path);
+				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idT'") or die("Erreur / suppression / case 5");
+				$retour = $retour & true;
+				break;
+		}
+		$delete = mysql_query("DELETE FROM repertoire WHERE idr='$id'") or die("Erreur / suppression / Final");
+		return $retour;
 	}
 	
 }
