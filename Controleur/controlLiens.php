@@ -7,13 +7,18 @@
 </head>
 
 <?php
-include ("./config.php");
-include("./menu.php"); 
+	//On inclut le fichier config pour accéder à la base de données
+	include ("./config.php");
+	//On inclut le menu en fonction de la session en cours
+	include("./menu.php"); 
 
-$req="SELECT * from lien"; // requete
-$res =mysql_query($req); // envoi de la requete
+	//Requête permettant d'afficher l'ensemble des tuples de la table lien
+	$req="SELECT * from lien";
+	//Execution de la requête
+	$res =mysql_query($req);
 
-include("../Vue/viewLiens.php");
-	
-include("./footer.php");
+	//On inclut la vue d'affichage de la page lien
+	include("../Vue/viewLiens.php");
+	//On inclut le footer
+	include("./footer.php");
 ?>

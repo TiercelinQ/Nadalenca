@@ -1,3 +1,4 @@
+<!-- On inclut le fichier config pour accéder à la base de données-->
 <?php include("config.php") ?>
 <!DOCTYPE html>
 <html>
@@ -8,7 +9,10 @@
 	</head>
 	
 <?php 
-include("menu.php");
-include("../Vue/viewHistoire.php");
-include("footer.php"); 
+	//On inclut le menu en fonction de la session en cous
+	include("menu.php");
+	//On inclut la vue d'affichage de la page histoire
+	include("../Vue/viewHistoire.php");
+	//On inclut le footer
+	include("footer.php"); 
 ?>

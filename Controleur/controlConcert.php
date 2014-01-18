@@ -7,17 +7,23 @@
 	</head>
 	
 <?php
+//On inclut le fichier config pour accéder à la base de données
 include ("./config.php");
+//On inclut le menu en fonction de la session en cours
 include("./menu.php"); 
-
-	$req="SELECT * from concert where dateC>now() order by dateC ASC "; // requête 
-	$res1 =mysql_query($req); // envoi de la requete
+	//Requête permettant d'afficher les concerts de la dateC jusqu'à la date de maintenant
+	$req="SELECT * from concert where dateC>now() order by dateC ASC ";
+	//On execute la requête
+	$res1 =mysql_query($req);
 	
-
-	$req="SELECT * from concert where dateC<now() order by dateC ASC "; // requête 
-	$res2 =mysql_query($req); // envoi de la requete
-		
+	//Requête permettant d'afficher les concerts de la date de maintenant jusqu'à la dateC
+	$req="SELECT * from concert where dateC<now() order by dateC ASC ";
+	//On execute la requête
+	$res2 =mysql_query($req);
+	
+	//On inclut la vue d'affichage des concerts
 	include ("../Vue/viewConcert.php");	
+	//On inclut le footer
 	require("./footer.php");
 ?>
 

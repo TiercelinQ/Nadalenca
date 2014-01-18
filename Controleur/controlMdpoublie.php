@@ -1,3 +1,4 @@
+<!-- On inclut le fichier config pour accéder à la base de données-->
 <?php include("config.php") ?>
 <!DOCTYPE html>
 <html>
@@ -8,7 +9,10 @@
 	</head>
 	
 <?php 
-include("menu.php");
-include("../Vue/viewMdpoublie.php");
-include("footer.php");
+	//On inclut le menu en fonction de la session en cours
+	include("menu.php");
+	//On affiche la vue de la page mot de passe oublié
+	include("../Vue/viewMdpoublie.php");
+	//On inclut le footer
+	include("footer.php");
 ?>

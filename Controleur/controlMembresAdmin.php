@@ -1,23 +1,28 @@
 <?php 
-//include ("../Modele/Utilisateur.php");
-//include("./menu.php");
-
+//On recupère le controleur des membres
 include("./controlMembres.php");
-if(isset($_POST['email'])) //sera vrai si au moins un moins un checkbox a Ã©tÃ© cochÃ©
+
+	if(isset($_POST['email'])) //sera vrai si au moins un moins un checkbox a été coché
 	{
-	foreach($_POST['email'] as $email) //ici Ã  chaque passage $admin contiendra la valeur de l'attribut value d'une des cases Ã  cocher
+		//ici a chaque passage $admin contiendra la valeur de l'attribut value d'une des cases a cocher
+		foreach($_POST['email'] as $email) 
 		{ 
-		Utilisateur::changerAdmin($email);
+			//création d'un constructeur utilisateur en rapport avec la fonction changerAdmin
+			Utilisateur::changerAdmin($email);
 		}
-		header("Location: ./controlMembresAdmin.php");
+		//Redirection vers le contrôleur de la gestion des membres en session admin
+			header("Location: ./controlMembresAdmin.php");
 	}
 	
-if(isset($_POST['idDelete'])) //sera vrai si au moins un moins un checkbox a Ã©tÃ© cochÃ©
+	if(isset($_POST['idDelete'])) //sera vrai si au moins un moins un checkbox a été coché
 	{
-	foreach($_POST['idDelete'] as $idDelete) //ici Ã  chaque passage $admin contiendra la valeur de l'attribut value d'une des cases Ã  cocher
+		//ici a chaque passage $admin contiendra la valeur de l'attribut value d'une des cases a cocher
+		foreach($_POST['idDelete'] as $idDelete) 
 		{ 
-		Utilisateur::delete($idDelete);
-		}	
+			//Création d'un constructeur en rapport avec la fonction delete
+			Utilisateur::delete($idDelete);
+		}
+		//Redirection vers le contrôleur de la gestions des membres en session admin
 		header("Location: ./controlMembresAdmin.php");
 	}
 ?>
