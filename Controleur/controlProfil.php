@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,23 +6,28 @@
    	 	<link rel="stylesheet" type="text/css" href="../style.css" />
     </head>
 
-
-
 <?php 
-include("./menu.php");
-include("config.php");
-//include("../Modele/Utilisateur.php");
+	//On inclut le menu en fonction de la session en cours
+	include("./menu.php");
+	//On inclut le fichier config pour accéder à la base de données
+	include("config.php");
 
+	//On vérifie que la session ne soit pas vide ou qu'il y a une session en cours
+	if ((!empty($_SESSION['login'])) || (isset($_SESSION['login'])))
+	{
+		//La valeur $email prend le contenu de ce qui est inscrit dans 'login'
+		$email = $_SESSION['login']; 
+		//Céation d'un constructeur en rapport avec la fonction getUtilisateurByEmail
+		$profil = Utilisateur::getUtilisateurByEmail($email);
+    	//On affiche la vue de validation du profil
+    	include('../Vue/viewValidProfil.php');
+	}
+	else
+	{
+    	//on inclut la vue d'afficha de la page d'erreur
+    	include('../Vue/viewErrorProfil.php');
+	}
 
-
-if ((!empty($_SESSION['login'])) || (isset($_SESSION['login']))) {
-	$email = $_SESSION['login']; 
-	$profil = Utilisateur::getUtilisateurByEmail($email);
-    include('../Vue/viewValidProfil.php'); //redirige vers une vue d'erreur
-}
-else
-{
-    include('../Vue/viewErrorProfil.php'); //redirige vers la vue
-}
-include("./footer.php"); 
+	//On inclut le footer
+	include("./footer.php"); 
 ?>
