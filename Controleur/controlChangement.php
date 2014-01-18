@@ -1,6 +1,8 @@
 <?php
+//On récupère la Class Utilisateur
 include ("../Modele/Utilisateur.php");
 
+//Toutes les variables récupèrent les contenus des cases qui leur sont attribuées
 $email = $_SESSION['login'];
 $id = $_POST['id'];
 $nom = $_POST['nom'];
@@ -17,18 +19,19 @@ $voix = $_POST['voix'];
 $statut =$_POST['statut'];
 
 
-
+//Création d'un constructeur en rapport à la fonction changementInfo
 $profil = Utilisateur::changementInfo($email, $id,$nom, $prenom, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix, $statut);
-
+//On vérifie que l'ancien mot de passe ne soit pas null, que l'ancien mot de passe correspond à celui du profil en cours et que le nouveau mot de passe contienne la même valeur que le mot de passe de confirmation
 if($mdpold != null &&($mdpold == $profil->getMdp() && $mdpnew == $mdpnewconf))
 {
+	//création d'un constructeur en rapport avec la fonctione changeMdp
 	$profil = Utilisateur::changeMdp($email, $mdpnew);
-
-	header("Location: ./controlProfil.php"); //redirige vers la vue
+	//Redirection vers la page du profil
+	header("Location: ./controlProfil.php");
 }
 else 
 {
-
-	header("Location: ./controlProfil.php");//redirige vers la vue
+	//Redirection vers la page du profil
+	header("Location: ./controlProfil.php");
 }
 ?>

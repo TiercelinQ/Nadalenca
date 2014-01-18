@@ -1,3 +1,4 @@
+<!-- On inclut le fichier config pour accéder à la base de données-->
 <?php include("config.php") ?>
 <!DOCTYPE html>
 <html>
@@ -8,5 +9,6 @@
 	</head>
 	
 <?php 
+	//On inclut la vue permettant d'ajouter un nouveau membre dans la base de données
 	include("../Vue/viewAddMembres.php");
 ?>

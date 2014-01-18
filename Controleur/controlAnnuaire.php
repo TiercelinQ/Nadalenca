@@ -6,22 +6,27 @@
 		<link rel="stylesheet" href="../style.css" />
 </head>
 <?php
+//On inclut le fichier config pour accéder à la base de données
 include ("./config.php");
+//On inclut le menu en fonction de la session en cours
 include("./menu.php"); 
 
+	//Requête affichant tous les tuples de la table utilisateur
+	$req="SELECT * from utilisateur";
+	//Execution de la requête précédente
+	$res =mysql_query($req);
 
-	$req="SELECT * from utilisateur"; // requete
-	$res =mysql_query($req); // envoi de la requete
-
+	//Si une sessio est en cours
 	if (isset($_SESSION['login']))
 	{
+		//On inclut la vue de l'annuaire des membres
 		include("../Vue/viewAnnuaire.php");
 	}
 	else 
 	{
+		//On inclut la vue d'erreur
 		include("../Vue/viewErrorMembre.php");
 	}
-
-		
+	//On inclut le footer
 	require("./footer.php");
 ?>

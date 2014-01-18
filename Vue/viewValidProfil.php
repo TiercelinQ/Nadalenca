@@ -30,6 +30,7 @@
    	</table>
 
   <h2>Pour modifier vos informations :</h2>
+  <hr />
     <form method="post" action="./controlChangement.php" >
       <fieldset>
 				<input type="hidden" name="id" value="<?php echo $profil->getId()?>"/>
