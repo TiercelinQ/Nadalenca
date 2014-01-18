@@ -225,7 +225,7 @@ INSERT INTO `repertoire` (`idr`, `nom`, `idA`, `idT`) VALUES
 CREATE TABLE IF NOT EXISTS `texte` (
   `idt` int(10) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
-  `nbfich` int(2) NOT NULL,
+  `nbfichier` int(2) NOT NULL,
   `nomfich1` varchar(255) NOT NULL,
   `dest1` varchar(255) NOT NULL,
   `nomfich2` varchar(255) NOT NULL,

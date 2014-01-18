@@ -33,7 +33,7 @@ while ($tuple = mysql_fetch_array($res))
 
 	}
 	echo "<tr>
-				<td> <a href=\"../Controleur/controlAjoutReper.php\">Ajouter un morceau au répertoire</a></td>
+				<td> <a href=\"../Controleur/controlAjoutRep.php\">Ajouter un morceau au répertoire</a></td>
 				<td></td>
 				<td></td>
 			</tr>

@@ -51,135 +51,22 @@ class Repertoire
 		$res = mysql_query("INSERT INTO repertoire(nom, idA, idT) VALUES('$nom', '$idaudio','$idtexte')") or die ("Erreur insertion 3");
 	}
 	
-	public static function createaudio1($nom, $nb, $audio1, $audio1tmp, $taudio1)
+	public static function createaudio($nom, $nb, $audio1, $audio1tmp, $taudio1)
 	{
 		$req = "INSERT INTO audio (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$audio1','$taudio1')";
 		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
 		$target_pathaudio = "../Audio/";
-		echo $target_pathaudio;
-		$target_path = $target_pathaudio . basename($audio1);
-		echo $target_path;
-		if(move_uploaded_file($audio1tmp, $target_path))
-		{ echo "OK"; } else { echo"KO";}
-	}
-	
-	public static function createaudio2($nom, $nb, $audio1, $audio1tmp, $taudio1, $audio2, $audio2tmp, $taudio2)
-	{
-		$req = "INSERT INTO audio (nom,nbfichier, nomfich1, dest1, nomfich2, dest2) VALUES ('$nom','$nb','$audio1','$taudio1','$audio2','$taudio2')";
-		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
-		$target_pathaudio = "../Audio/";
 		$target_path = $target_pathaudio . basename($audio1);
 		move_uploaded_file($audio1tmp, $target_path);
-		$target_path = $target_pathaudio . basename($audio2);
-		move_uploaded_file($audio2tmp, $target_path);
 	}
 	
-	public static function createaudio3($nom, $nb, $audio1, $audio1tmp, $taudio1, $audio2, $audio2tmp, $taudio2, $audio3, $audio3tmp, $taudio3)
+	public static function createtexte($nom, $nb, $texte1, $texte1tmp, $ttexte1)
 	{
-		$req = "INSERT INTO audio (nom,nbfichier, nomfich1, dest1, nomfich2, dest2, nomfich3, dest3) VALUES ('$nom','$nb','$audio1','$taudio1','$audio2','$taudio2','$audio3','$taudio3')";
-		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
-		$target_pathaudio = "../Audio/";
-		$target_path = $target_pathaudio . basename($audio1);
-		move_uploaded_file($audio1tmp, $target_path);
-		$target_path = $target_pathaudio . basename($audio2);
-		move_uploaded_file($audio2tmp, $target_path);
-		$target_path = $target_pathaudio . basename($audio3);
-		move_uploaded_file($audio3tmp, $target_path);
-	}
-	
-	public static function createaudio4($nom, $nb, $audio1, $audio1tmp, $taudio1, $audio2, $audio2tmp, $taudio2, $audio3, $audio3tmp, $taudio3, $audio4, $audio4tmp, $taudio4)
-	{
-		$req = "INSERT INTO audio (nom,nbfichier, nomfich1, dest1, nomfich2, dest2, nomfich3, dest3, nomfich4, dest4) VALUES ('$nom','$nb','$audio1','$taudio1','$audio2','$taudio2','$audio3','$taudio3','$audio4','$taudio4')";
-		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
-		$target_pathaudio = "../Audio/";
-		$target_path = $target_pathaudio . basename($audio1);
-		move_uploaded_file($audio1tmp, $target_path);
-		$target_path = $target_pathaudio . basename($audio2);
-		move_uploaded_file($audio2tmp, $target_path);
-		$target_path = $target_pathaudio . basename($audio3);
-		move_uploaded_file($audio3tmp, $target_path);
-		$target_path = $target_pathaudio . basename($audio4);
-	}
-	
-	public static function createaudio5($nom, $nb, $audio1, $audio1tmp, $taudio1, $audio2, $audio2tmp, $taudio2, $audio3, $audio3tmp, $taudio3, $audio4, $audio4tmp, $taudio4, $audio5, $audio5tmp, $taudio5)
-	{
-		$req = "INSERT INTO audio (nom,nbfichier, nomfich1, dest1, nomfich2, dest2, nomfich3, dest3, nomfich4, dest4, nomfich5, dest5) VALUES ('$nom','$nb','$audio1','$taudio1','$audio2','$taudio2','$audio3','$taudio3','$audio4','$taudio4','$audio5','$taudio5')";
-		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
-		$target_pathaudio = "../Audio/";
-		$target_path = $target_pathaudio . basename($audio1);
-		move_uploaded_file($audio1tmp, $target_path);
-		$target_path = $target_pathaudio . basename($audio2);
-		move_uploaded_file($audio2tmp, $target_path);
-		$target_path = $target_pathaudio . basename($audio3);
-		move_uploaded_file($audio3tmp, $target_path);
-		$target_path = $target_pathaudio . basename($audio4);
-		move_uploaded_file($audio4tmp, $target_path);
-		$target_path = $target_pathaudio . basename($audio5);
-		move_uploaded_file($audio5tmp, $target_path);
-	}
-	
-	public static function createtexte1($nom, $nb, $texte1, $texte1tmp, $ttexte1)
-	{
-		$req = "INSERT INTO texte (nom,nbfich, nomfich1, dest1) VALUES ('$nom','$nb','$texte1','$ttexte1')";
+		$req = "INSERT INTO texte (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$texte1','$ttexte1')";
 		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
 		$target_pathtexte = "../Texte/";
 		$target_path = $target_pathtexte . basename($texte1);
 		move_uploaded_file($texte1tmp, $target_path);
-	}
-	
-	public static function createtexte2($nom, $nb, $texte1, $texte1tmp, $ttexte1, $texte2, $texte2tmp, $ttexte2)
-	{
-		$req = "INSERT INTO texte (nom,nbfich, nomfich1, dest1, nomfich2, dest2) VALUES ('$nom','$nb','$texte1','$ttexte1','$texte2','$ttexte2')";
-		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
-		$target_pathtexte = "../Texte/";
-		$target_path = $target_pathtexte . basename($texte1);
-		move_uploaded_file($texte1tmp, $target_path);
-		$target_path = $target_pathtexte . basename($texte2);
-		move_uploaded_file($texte2tmp, $target_path);
-	}
-	
-	public static function createtexte3($nom, $nb, $texte1, $texte1tmp, $ttexte1, $texte2, $texte2tmp, $ttexte2, $texte3, $texte3tmp, $ttexte3)
-	{
-		$req = "INSERT INTO texte (nom,nbfich, nomfich1, dest1, nomfich2, dest2, nomfich3, dest3) VALUES ('$nom','$nb','$texte1','$ttexte1','$texte2','$ttexte2','$texte3','$ttexte3')";
-		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
-		$target_pathtexte = "../Texte/";
-		$target_path = $target_pathtexte . basename($texte1);
-		move_uploaded_file($texte1tmp, $target_path);
-		$target_path = $target_pathtexte . basename($texte2);
-		move_uploaded_file($texte2tmp, $target_path);
-		$target_path = $target_pathtexte . basename($texte3);
-		move_uploaded_file($texte3tmp, $target_path);
-	}
-	
-	public static function createtexte4($nom, $nb, $texte1, $texte1tmp, $ttexte1, $texte2, $texte2tmp, $ttexte2, $texte3, $texte3tmp, $ttexte3, $texte4, $texte4tmp, $ttexte4)
-	{
-		$req = "INSERT INTO texte (nom,nbfich, nomfich1, dest1, nomfich2, dest2, nomfich3, dest3, nomfich4, dest4) VALUES ('$nom','$nb','$texte1','$ttexte1','$texte2','$ttexte2','$texte3','$ttexte3','$texte4','$ttexte4')";
-		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
-		$target_pathtexte = "../Texte/";
-		$target_path = $target_pathtexte . basename($texte1);
-		move_uploaded_file($texte1tmp, $target_path);
-		$target_path = $target_pathtexte . basename($texte2);
-		move_uploaded_file($texte2tmp, $target_path);
-		$target_path = $target_pathtexte . basename($texte3);
-		move_uploaded_file($texte3tmp, $target_path);
-		$target_path = $target_pathtexte . basename($texte4);
-	}
-	
-	public static function createtexte5($nom, $nb, $texte1, $texte1tmp, $ttexte1, $texte2, $texte2tmp, $ttexte2, $texte3, $texte3tmp, $ttexte3, $texte4, $texte4tmp, $ttexte4, $texte5, $texte5tmp, $ttexte5)
-	{
-		$req = "INSERT INTO texte (nom,nbfich, nomfich1, dest1, nomfich2, dest2, nomfich3, dest3, nomfich4, dest4, nomfich5, dest5) VALUES ('$nom','$nb','$texte1','$ttexte1','$texte2','$ttexte2','$texte3','$ttexte3','$texte4','$ttexte4','$texte5','$ttexte5')";
-		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
-		$target_pathtexte = "../Texte/";
-		$target_path = $target_pathtexte . basename($texte1);
-		move_uploaded_file($texte1tmp, $target_path);
-		$target_path = $target_pathtexte . basename($texte2);
-		move_uploaded_file($texte2tmp, $target_path);
-		$target_path = $target_pathtexte . basename($texte3);
-		move_uploaded_file($texte3tmp, $target_path);
-		$target_path = $target_pathtexte . basename($texte4);
-		move_uploaded_file($texte4tmp, $target_path);
-		$target_path = $target_pathtexte . basename($texte5);
-		move_uploaded_file($texte5tmp, $target_path);
 	}
 	
 	public static function changementaudionb($id, $nb, $audio, $audiotmp, $audiodest)
@@ -621,11 +508,12 @@ class Repertoire
 	{
 		$res = mysql_query("SELECT * FROM repertoire WHERE idr = '$id'")  or die("Erreur /suppressionMorceau / res");
 		$tuple = mysql_fetch_array($res);
-		$idA = $tuple['idA'];
-		$idT = $tuple['idT'];
-		$reqaudio = mysql_query("SELECT * FROM audio WHERE ida = '$idA'") or die ("Erreur / suppressionMorceau / reqaudio");
+		$ida = $tuple['idA'];
+		$idt = $tuple['idT'];
+		$delete = mysql_query("DELETE FROM repertoire WHERE idr='$id'") or die("Erreur / suppression / Final");
+		$reqaudio = mysql_query("SELECT * FROM audio WHERE ida = '$ida'") or die ("Erreur / suppressionMorceau / reqaudio");
 		$tupleaudio = mysql_fetch_array($reqaudio);
-		$reqtexte = mysql_query("SELECT * FROM texte WHERE idt = '$idT'") or die ("Erreur / suppressionMorceau / reqtexte");
+		$reqtexte = mysql_query("SELECT * FROM texte WHERE idt = '$idt'") or die ("Erreur / suppressionMorceau / reqtexte");
 		$tupletexte = mysql_fetch_array($reqtexte);
 		$retour = false;
 		
@@ -637,9 +525,7 @@ class Repertoire
 			case 1:
 				$target_path = $target_pathaudio . basename($tupleaudio['nomfich1']);
 				unlink($target_path);
-				var_dump( $tupleaudio['ida']);
-				var_dump( $tuple['idA']);
-				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$idA'") or die("Erreur / suppression / case 1a");
+				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$ida'") or die("Erreur / suppression / case 1a");
 				$retour = true;
 				break;
 			case 2:
@@ -647,7 +533,7 @@ class Repertoire
 				unlink($target_path);
 				$target_path = $target_pathaudio . basename($tupleaudio['nomfich2']);
 				unlink($target_path);
-				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$idA'") or die("Erreur / suppression / case 2");
+				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$ida'") or die("Erreur / suppression / case 2");
 				$retour = true;
 				break;
 			case 3:
@@ -657,7 +543,7 @@ class Repertoire
 				unlink($target_path);
 				$target_path = $target_pathaudio . basename($tupleaudio['nomfich3']);
 				unlink($target_path);
-				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$idA'") or die("Erreur / suppression / case 3");
+				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$ida'") or die("Erreur / suppression / case 3");
 				$retour = true;
 				break;
 			case 4:
@@ -669,7 +555,7 @@ class Repertoire
 				unlink($target_path);
 				$target_path = $target_pathaudio . basename($tupleaudio['nomfich4']);
 				unlink($target_path);
-				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$idA'") or die("Erreur / suppression / case 4");
+				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$ida'") or die("Erreur / suppression / case 4");
 				$retour = true;
 				break;
 			case 5:
@@ -683,7 +569,7 @@ class Repertoire
 				unlink($target_path);
 				$target_path = $target_pathaudio . basename($tupleaudio['nomfich5']);
 				unlink($target_path);
-				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$idA'") or die("Erreur / suppression / case 5");
+				$reqdelete = mysql_query("DELETE FROM audio WHERE ida = '$ida'") or die("Erreur / suppression / case 5");
 				$retour = true;
 				break;
 		}
@@ -692,7 +578,7 @@ class Repertoire
 			case 1:
 				$target_path = $target_pathtexte . basename($tupletexte['nomfich1']);
 				unlink($target_path);
-				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idT'") or die("Erreur / suppression / case 1");
+				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idt'") or die("Erreur / suppression / case 1");
 				$retour = $retour & true;
 				break;
 			case 2:
@@ -700,7 +586,7 @@ class Repertoire
 				unlink($target_path);
 				$target_path = $target_pathtexte . basename($tupletexte['nomfich2']);
 				unlink($target_path);
-				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idT'") or die("Erreur / suppression / case 2");
+				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idt'") or die("Erreur / suppression / case 2");
 				$retour = $retour & true;
 				break;
 			case 3:
@@ -710,7 +596,7 @@ class Repertoire
 				unlink($target_path);
 				$target_path = $target_pathtexte . basename($tupletexte['nomfich3']);
 				unlink($target_path);
-				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idT'") or die("Erreur / suppression / case 3");
+				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idt'") or die("Erreur / suppression / case 3");
 				$retour = $retour & true;
 				break;
 			case 4:
@@ -722,7 +608,7 @@ class Repertoire
 				unlink($target_path);
 				$target_path = $target_pathtexte . basename($tupletexte['nomfich4']);
 				unlink($target_path);
-				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idT'") or die("Erreur / suppression / case 4");
+				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idt'") or die("Erreur / suppression / case 4");
 				$retour = $retour & true;
 				break;
 			case 5:
@@ -736,11 +622,10 @@ class Repertoire
 				unlink($target_path);
 				$target_path = $target_pathtexte . basename($tupletexte['nomfich5']);
 				unlink($target_path);
-				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idT'") or die("Erreur / suppression / case 5");
+				$reqdelete = mysql_query("DELETE FROM texte WHERE idt = '$idt'") or die("Erreur / suppression / case 5");
 				$retour = $retour & true;
 				break;
 		}
-		$delete = mysql_query("DELETE FROM repertoire WHERE idr='$id'") or die("Erreur / suppression / Final");
 		return $retour;
 	}
 	
