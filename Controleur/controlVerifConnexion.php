@@ -7,37 +7,50 @@
 	</head>
 
 <?php
-include("./menu.php");
-require("../config.php");
+	//On inclut le menu en fonction de la session en cours
+	include("./menu.php");
+	//On inclut le fichier config pour accéder à la base de données
+	require("../config.php");
 
+//Vérification si le mot de passe ou le email entrés sont bons
 if (!isset($_POST['mdp']) OR !isset($_POST['email']))
 {
+	//on inclut la page d'erreur de connexion
 	include('../Vue/viewErrorConnexion.php'); 
 }
+//Sinon on vérifie si le mot de passe OU l'email ne sont pas vides
 else if(empty($_POST['mdp']) OR empty($_POST['email']))
 {
+	//On inclut la page d'erreur de connexion
 	include('../Vue/viewErrorConnexion.php'); 
 }
 else
 {
-	//require("../Modele/Utilisateur.php");
-	
+	//La valeur $email prend le contenu récupéré	
 	$email = $_POST["email"];
+	//la valeur $mdp prend le contneu récupéré
 	$mdp = $_POST["mdp"];
-	
+	//Cration d'un constructeur en rapport avec la fonction connect
 	$id = Utilisateur::connect($email, $mdp);
 
+	//Si l'$id est null
 	if($id == null)
 	{
+		//on inclut la page d'erreur de connexion
 		include('../Vue/viewErrorConnexion.php'); 
 	}
-	else{
+	else
+	{
+		//Création de la session login avec $email
 		$_SESSION['login'] = $email;
+		//On vérifie si c'est un admin avec le constructeur en rapport avec la fonction isAdmin
 		$admin = Utilisateur::isAdmin($email);
+		//Création de la session Admin
 		$_SESSION['admin'] = $admin;
+		//On inclut la page de validation de connexion
 		include('../Vue/viewValidConnexion.php'); 
 	}
 }
-
+	//On inclut le footer
 	require("./footer.php");
 ?>

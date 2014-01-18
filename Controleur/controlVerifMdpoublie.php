@@ -7,35 +7,42 @@
 
 
 <?php
-include("./menu.php");
+	//on inclut le menu en fonction de la session en cours
+	include("./menu.php");
+	//On inclut le fichier config pour accéder à la base de données
 	require("../config.php");
-	//require("../Modele/Utilisateur.php");
 
+	//la valeur $email prend le contenu récupéré dans email
 	$email = $_POST["email"];
+	//Création d'un constructeur en rapport avec la fonction changeMdpoublie
 	$mdp = Utilisateur::changeMdpoublie($email);
 
+	//Si l'utilisateur existe
 	if(Utilisateur::Exist($email))
 	{				
+			//Préparation du sujet du mail
 			$sujet='Votre mot de passe Nadalenca';
-			
+			//Préparation du corps du mail
 			$corps="Vous avez demandé une réinitialisation de votre mot de passe pour le site Nadalenca, voici vos coordonnées : " .   "\r\n" .
 			"Votre email : " . $email .   "\r\n" .
 			"Votre mot de passe : " . $mdp . "\r\n" .
 			"Ce mot de passe est provisoire, merci de le modifier au plus vite ! " . "\r\n" .
 			"A bientôt sur votre site web ! Coordialement.";
-
+			//préparation de l'en-tête du mail
 			$headers = 'From: pochon.amaury@gmail.com' . "\r\n" .
 			'Reply-To: pochon.amaury@gmail.com' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
 			
+			//Envoie du mail
 			mail($email,$sujet,$corps,$headers);
-				
+			//On inclut la page de validation du mot de passe oublié
 			include('../Vue/viewValidMdpoublie.php'); 
 	}	
-	
 	else
 	{
+		//on inclut la page d'erreur du mot de passe oublié
 		include('../Vue/viewErrorMdpoublie.php'); 
 	}
-include("./footer.php");	
+	//on inclut le footer
+	include("./footer.php");	
 ?>	
