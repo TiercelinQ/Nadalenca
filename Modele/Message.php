@@ -83,6 +83,7 @@ class Message
 		mysql_query($req);
 	}
 	
+	//Récupération d'un message par son sujet
 	public static function getMessageBySujet($sujetM) 
 	{ //une fonction statique
 		$req = "SELECT * FROM message WHERE sujetM='$sujetM'";
@@ -99,7 +100,7 @@ class Message
 		//$util->id = $id;
 	}
 
-
+	//Vérification si un message existe par son idM
 	public static function existId($idM)
 	{
 		$req = mysql_query("SELECT count(*) FROM message WHERE idM = '$idM'");

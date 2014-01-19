@@ -31,7 +31,7 @@ class Video
 		return $this->descriptionV;
 	}
 
-
+	//Un constructeur
 	public function __construct ($idV, $titreV, $lienV, $descriptionV) 
 	{
 		$this->idV = null;
@@ -40,6 +40,7 @@ class Video
 		$this->descriptionV = $descriptionV;
 	}
 
+	//Ajout d'une vidéo dans la base de données
 	public function create()
 	{
 		$idV = NULL;
@@ -50,13 +51,14 @@ class Video
 		$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Video / Fonction insertion video")
 	}
 	
-
+	//Suppresion d'une vidéo dans la base de données par son idV
 	public function delete($idV)
 	{
 		$req = mysql_query("DELETE FROM video WHERE idV = '$idV'");
 		mysql_query($req);
 	}
 
+	//Vérification si une vidéo existe par son idV
 	public static function existId($idV)
 	{
 		$req = mysql_query("SELECT count(*) FROM video WHERE idV = '$idV'");

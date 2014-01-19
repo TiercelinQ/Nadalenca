@@ -39,7 +39,7 @@ class Repertoire
 		$this->idT = $idT;
 	}
 	
-	
+	//Ajout dans la pase de données d'un nouveau répertoire
 	public static function createRep($nom)
 	{
 		$ida = mysql_query("SELECT * FROM audio WHERE nom = '$nom'") or die("Erreur insertion 1");
@@ -51,6 +51,7 @@ class Repertoire
 		$res = mysql_query("INSERT INTO repertoire(nom, idA, idT) VALUES('$nom', '$idaudio','$idtexte')") or die ("Erreur insertion 3");
 	}
 	
+	//Ajout dans la base de données d'un nouveau fichier audio
 	public static function createaudio($nom, $nb, $audio1, $audio1tmp, $taudio1)
 	{
 		$req = "INSERT INTO audio (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$audio1','$taudio1')";
@@ -60,6 +61,7 @@ class Repertoire
 		move_uploaded_file($audio1tmp, $target_path);
 	}
 	
+	//Ajout dans la base de données d'un nouveau texte
 	public static function createtexte($nom, $nb, $texte1, $texte1tmp, $ttexte1)
 	{
 		$req = "INSERT INTO texte (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$texte1','$ttexte1')";
@@ -69,6 +71,7 @@ class Repertoire
 		move_uploaded_file($texte1tmp, $target_path);
 	}
 	
+	//
 	public static function changementaudionb($id, $nb, $audio, $audiotmp, $audiodest)
 	{
 		$res = mysql_query("SELECT * FROM audio WHERE ida = '$id'") or die ("Erreur / changementaudionb / res");

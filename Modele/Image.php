@@ -31,7 +31,7 @@ class Image
 		return $this->descriptionI;
 	}
 
-
+	//Un constructeur
 	public function __construct ($idI, $titreI, $nomI, $descriptionI) 
 	{
 		$this->idI = null;
@@ -40,6 +40,7 @@ class Image
 		$this->descriptionI = $descriptionI;
 	}
 
+	//Création par ajout dans la base de données dans la table image
 	public function create()
 	{
 		$idI= NULL;
@@ -50,13 +51,14 @@ class Image
 		$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Image / Fonction insertion image")
 	}
 	
-
+	//Suppression d'une image dans la base de données
 	public function delete($idI)
 	{
 		$req = mysql_query("DELETE FROM image WHERE idI = '$idI'");
 		mysql_query($req);
 	}
 
+	//Vérification si une image existe dans la base de données par son idI
 	public static function existId($idI)
 	{
 		$req = mysql_query("SELECT count(*) FROM image WHERE idI = '$idI'");

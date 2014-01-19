@@ -124,9 +124,6 @@ class Utilisateur
 			$numtelM = $this->numtelM;
 			$voix = $this->voix;
 
-			/*$dn2 = mysql_num_rows(mysql_query('SELECT id FROM utilisateur'));
-			$id=$dn2+1;*/
-
 			$req = "INSERT INTO utilisateur VALUES ('$id','$nom','$prenom','$email','$mdp','$statut','$admin','$adresseP','$codeP','$ville','$numtelF','$numtelM','$voix')";
 			$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Utilisateur / Fonction Insertion nouveau membre")
 		}
@@ -136,15 +133,12 @@ class Utilisateur
 		}
 	}
 	
-		
-
 	//vérification si un utilisateur existe déjà ou non dans la base de donnée
 	public static function Exist($email)
 	{
 		$req = "SELECT * FROM utilisateur WHERE email='$email'";
 		$res = mysql_query($req) or die ("Erreur insertion: Classe Utilisateur / Fonction Exist");
-		return (mysql_num_rows($res) != 0);
-			
+		return (mysql_num_rows($res) != 0);		
 	}
 	
 	//suppression d'un utilisateur dans la base de donnée
@@ -171,6 +165,7 @@ class Utilisateur
 		}		
 	}
 
+	//Vérification si l'utilisateur est un admin
 	public static function isAdmin($email)
 	{
 		$req = "SELECT admin FROM utilisateur WHERE email ='$email'";
@@ -179,7 +174,7 @@ class Utilisateur
 		return($tuple['admin']);
 	}
 	
-	
+	//Récupération des données d'un utilisateur par son email
 	public static function getUtilisateurByEmail($email) 
 	{ //une fonction statique
 		$req = "SELECT * FROM utilisateur WHERE email='$email'";
@@ -194,6 +189,7 @@ class Utilisateur
 		return new Utilisateur($tuple['id'], $tuple['nom'], $tuple['prenom'], $email, $tuple['mdp'], $tuple['statut'], $tuple['admin'], $tuple['adresseP'], $tuple['codeP'], $tuple['ville'], $tuple['numtelF'], $tuple['numtelM'], $tuple['voix']);
 	}
 	
+	//Récupération des données d'un utilisateur par son id
 	public static function getUtilisateurByID($id)
 	{//une fonction statique
 		$req ="SELECT * FROM utilisateur WHERE id='$id'";
@@ -208,7 +204,7 @@ class Utilisateur
 		return new Utilisateur($id, $tuple['nom'], $tuple['prenom'], $tuple['email'], $tuple['mdp'], $tuple['statut'], $tuple['admin'], $tuple['adresseP'], $tuple['codeP'], $tuple['ville'], $tuple['numtelF'], $tuple['numtelM'], $tuple['voix']);		
 	}
 
-
+	//Récupération des données d'un utilisateur
 	public static function getUtilisateur()
 	{
 		$req="SELECT * from utilisateur";
@@ -220,6 +216,7 @@ class Utilisateur
 		}
 	}
 
+	//Permet la modification du mot de passe d'un utilisateur
     public static function changeMdp($email, $mdp)
     {//Une fonction qui change le mot de passe
         $req = "UPDATE utilisateur SET mdp = '$mdp' WHERE email ='$email'";
@@ -230,7 +227,8 @@ class Utilisateur
 		return new Utilisateur($tuple['id'], $tuple['nom'], $tuple['prenom'], $email, $tuple['mdp'], $tuple['statut'], $tuple['admin'], $tuple['adresseP'], $tuple['codeP'], $tuple['ville'], $tuple['numtelF'], $tuple['numtelM'], $tuple['voix']);
 		
     }        
-        
+     
+     //Permet de modifier les informations d'un profil utilisateur   
     public static function changementInfo($email, $id,$nom, $prenom, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix, $statut)
     {//Une fonction qui change les informations de l'utilisateur    
         $req = "SELECT * FROM utilisateur WHERE email='$email'";
@@ -295,8 +293,7 @@ class Utilisateur
         return new Utilisateur($tuple['id'], $tuple['nom'], $tuple['prenom'], $email, $tuple['mdp'], $tuple['statut'], $tuple['admin'], $tuple['adresseP'], $tuple['codeP'], $tuple['ville'], $tuple['numtelF'], $tuple['numtelM'], $tuple['voix']);
     }
             
-
-
+    //Permet de récupérer le mot de passe d'un utilisateur
 	public static function changeMdpoublie($email)
 	{
         $req = "SELECT mdp FROM utilisateur WHERE email ='$email'";
@@ -305,19 +302,21 @@ class Utilisateur
 		return($tuple['mdp']);
     }
 	
+	//Vérifie si un utilisateur est un admin par son email
 	public static function getAdminByEmail ($email)
 	{
-	$req = "Select admin From utilisateur where email='$email'";
-	$res = mysql_query($req);
-	$tuple = mysql_fetch_array($res);
-	return($tuple['admin']);
+		$req = "Select admin From utilisateur where email='$email'";
+		$res = mysql_query($req);
+		$tuple = mysql_fetch_array($res);
+		return($tuple['admin']);
 	}
 	
+	//Permet de changer le statut d'un utilisateur en admin ou l'inverse
 	public static function changerAdmin($email)
 	{
-	$a=1-Utilisateur::getAdminByEmail($email);
-	$req = "UPDATE utilisateur SET admin = '$a' WHERE email ='$email'";
-    $res = mysql_query($req);
+		$a=1-Utilisateur::getAdminByEmail($email);
+		$req = "UPDATE utilisateur SET admin = '$a' WHERE email ='$email'";
+    	$res = mysql_query($req);
 	}
 }
 ?>

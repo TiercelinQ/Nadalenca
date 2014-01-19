@@ -54,6 +54,7 @@ class Lien
 		mysql_query($req);
 	}
 
+	//Vérification si un lien existe déjà dans la base de données par son id
 	public static function exist($id)
 	{
 		$req = mysql_query("SELECT count(*) FROM lien WHERE id = '$id'");

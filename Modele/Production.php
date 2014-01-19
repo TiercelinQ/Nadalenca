@@ -32,9 +32,7 @@ class Production
 		return $this->prixP;
 	}
 
-	
-
-
+	//Un constructeur
 	public function __construct ($idP, $nomP, $descriptionP, $prixP, $imageP) 
 	{
 		$this->idP = null;
@@ -44,6 +42,7 @@ class Production
 		$this->imageP =$imageP;
 	}
 
+	//Ajout d'un produit dans la base de données
 	public function create()
 	{
 		$idP = NULL;
@@ -55,13 +54,14 @@ class Production
 		$res = mysql_query($req) or die(mysql_error()); //("Erreur insertion :  Classe Production / Fonction insertion production")
 	}
 	
-
+	//Supression d'un produit par son idP
 	public function delete($idP)
 	{
 		$req = mysql_query("DELETE FROM production WHERE idP = '$idP'");
 		mysql_query($req);
 	}
 
+	//Vérification si un produit existe dans la base de données par son idP
 	public static function existId($idP)
 	{
 		$req = mysql_query("SELECT count(*) FROM production WHERE idP = '$idP'");
