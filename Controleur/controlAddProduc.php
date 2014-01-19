@@ -61,7 +61,7 @@ else
 	$prixP = $_POST["prixP"];
      //La valeur $imageP prend la concaténation du nom ainsi que de son extension
 	$imageP = $nom .'.'.$extension_upload;
-     //Création d'un constructeur production
+     //Création d'un nouveau produit
 	$production = new production($idP, $nomP, $descriptionP, $prixP, $imageP);
      //Ajout d'une production dans la base de données
 	$production->create();

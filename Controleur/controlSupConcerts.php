@@ -7,10 +7,10 @@
 	{
 		//la valeur $id prend ce qui a été récupéré
 		$id = $_GET['id'];
-		//Vérification l'existence du concert en fonction de l'id
+		//Vérification l'existence du concert avec l'appel de la fonction existId de la classe Concert
 		if(Concert::existId($id))
 		{
-			//Création d'un constructeur en rapport à la fonction delete
+			//Appel de la fonction delete de la classe Concert
 			Concert::delete($id);
 			//Redirection vers la page d'ajout d'un concert
 			header("Location:./controlAddConcert.php");

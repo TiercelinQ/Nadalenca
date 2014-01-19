@@ -14,10 +14,10 @@
 
 	//la valeur $email prend le contenu récupéré dans email
 	$email = $_POST["email"];
-	//Création d'un constructeur en rapport avec la fonction changeMdpoublie
+	//Appel de la fonction changeMdpoublie de la classe Utilisateur
 	$mdp = Utilisateur::changeMdpoublie($email);
 
-	//Si l'utilisateur existe
+	//Si l'utilisateur existe en appelant la fonction Exist de la classe Utilisateur
 	if(Utilisateur::Exist($email))
 	{				
 			//Préparation du sujet du mail

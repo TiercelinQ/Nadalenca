@@ -7,7 +7,7 @@ include("./controlMembres.php");
 		//ici a chaque passage $admin contiendra la valeur de l'attribut value d'une des cases a cocher
 		foreach($_POST['email'] as $email) 
 		{ 
-			//création d'un constructeur utilisateur en rapport avec la fonction changerAdmin
+			//Appel de la fonctione changerAdmin de la classe Utilisateur
 			Utilisateur::changerAdmin($email);
 		}
 		//Redirection vers le contrôleur de la gestion des membres en session admin
@@ -19,7 +19,7 @@ include("./controlMembres.php");
 		//ici a chaque passage $admin contiendra la valeur de l'attribut value d'une des cases a cocher
 		foreach($_POST['idDelete'] as $idDelete) 
 		{ 
-			//Création d'un constructeur en rapport avec la fonction delete
+			//Appel de la fonction delete de la classe Utilisateur
 			Utilisateur::delete($idDelete);
 		}
 		//Redirection vers le contrôleur de la gestions des membres en session admin

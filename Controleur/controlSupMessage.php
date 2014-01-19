@@ -9,10 +9,10 @@
 		$idM = $_GET['idM'];
 		//On affiche $idM
 		echo $idM;
-		//On vérifie si le message existe en fonction de idM
+		//On vérifie si le message existe en appelant la fonction exist de la classe Message
 		if(Message::exist($idM))
 		{
-			//Création d'un constructeur en rapport avec la fonction delete
+			//Appel de la fonction delete de la classe Messag
 			Message::delete($idM);
 			//Redirection vers la page des messages reçus de la session admin
 			header("Location:./controlMessagesrecus.php");

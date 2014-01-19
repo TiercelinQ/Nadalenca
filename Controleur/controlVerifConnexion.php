@@ -30,7 +30,7 @@ else
 	$email = $_POST["email"];
 	//la valeur $mdp prend le contneu récupéré
 	$mdp = $_POST["mdp"];
-	//Cration d'un constructeur en rapport avec la fonction connect
+	//Appel de la fonction connect de la classe Utilisateur
 	$id = Utilisateur::connect($email, $mdp);
 
 	//Si l'$id est null
@@ -43,7 +43,7 @@ else
 	{
 		//Création de la session login avec $email
 		$_SESSION['login'] = $email;
-		//On vérifie si c'est un admin avec le constructeur en rapport avec la fonction isAdmin
+		//On vérifie si c'est un admin avec l'appel de la fonction isAdmin de la classe Utilisateur
 		$admin = Utilisateur::isAdmin($email);
 		//Création de la session Admin
 		$_SESSION['admin'] = $admin;

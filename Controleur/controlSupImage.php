@@ -7,10 +7,10 @@
 	{
 		//La valeur $idI prend ce qui a été récupéré
 		$idI = $_GET['idI'];
-		//Vérification si l'image existe en fonction de $idI
+		//Vérification si l'image existe avec l'appel de la fonction existId de la classe Image
 		if(Image::existId($idI))
 		{
-			//Création d'un constructeu en rapport avec la fonction delete
+			//Appel de la fonction delete de la classe Image
 			Image::delete($idI);
 			//Redirection vers la page d'ajout d'une image
 			header("Location:./controlAddImage.php");

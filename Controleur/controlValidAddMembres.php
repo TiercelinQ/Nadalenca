@@ -59,7 +59,7 @@ else if ($mdp != $mdpc)
 }
 else
 {
-	//On vérifie que l'utilisateur n'existe pas déjà
+	//On vérifie que l'utilisateur n'existe pas déjà avec la fonction Exist de la classe Utilisateur
 	if(!utilisateur::Exist($email))
 	{	
 
@@ -76,7 +76,7 @@ else
 		//On envoie un mail avec les identifiants au nouvel utilisateur						   
 		mail($email, 'Validation Inscription Nadalenca', $corp, $headers);
 		
-		//Création d'un constructeur Utilisateur
+		//Création d'un nouveau Utilisateur
 		$utilisateur = new utilisateur($id, $nom, $prenom, $email, $mdp, $statut, $admin, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix);
 		//Ajout d'un nouveau utilisateur
 		$utilisateur->create();

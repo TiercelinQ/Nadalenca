@@ -7,9 +7,14 @@
 </head>
 
 <?php
+
 	include("./menu.php");
+
 	include("../Modele/Repertoire.php");
+
 	$idR = $_GET['idr'];
+
 	include("../Vue/viewModificationMorceau.php");
+
 	include("./footer.php");
 ?>

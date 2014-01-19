@@ -7,10 +7,10 @@
 	{
 		//La valeur $idP prend ce qui a été récupéré
 		$idP = $_GET['idP'];
-		//Vérification si la production existe en fonction de $idP
+		//Vérification si la production existe en appelant la fonction existId de la classe Production
 		if(Production::existId($idP))
 		{
-			//Créatin d'un construction en rapport avec la fonction delete
+			//Appel de la fonction delete de la classe Production
 			Production::delete($idP);
 			//Redirection vers la page des productions de la session admin
 			header("Location:./controlProductionAdmin.php");

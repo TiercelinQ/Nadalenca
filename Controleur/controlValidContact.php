@@ -23,7 +23,7 @@ $messageM = htmlspecialchars($_POST["messageM"]);
 //Date prend la valeur de la date actuelle
 $dateM = date("d-m-y");
 
-	//Création d'un constructeur Message
+	//Création d'un nouveau message
 	$contact = new Message($idM, $nomM, $prenomM, $emailM, $sujetM, $messageM, $dateM);
 	//Ajout du mesage
 	$contact->create();

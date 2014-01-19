@@ -19,19 +19,19 @@
 				if ( mdp1 != mdp2 )
 				{
 					window.alert('Vos deux mots de passe ne sont pas identiques');	//pop up explicatif
-				return false;
+					return false;
 				}
 				// si identiques
 				// si nadalenca different
 				else if (mdpn != "nadalenca")
 				{
-				window.alert('Le mot de passe Nadalenca est faux');		//pop up explicatif
-				return false;
+					window.alert('Le mot de passe Nadalenca est faux');		//pop up explicatif
+					return false;
 				}
 				// si tous les mdp sont ok
 				else
 				{
-				return true;
+					return true;
 				}
 			}
 		</script> 

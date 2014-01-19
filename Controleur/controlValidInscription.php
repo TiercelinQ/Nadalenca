@@ -69,7 +69,7 @@ else if (empty($mdpn) OR $mdpn != $mdpNadalenca)
 }
 else
 {
-	//Vérification si l'utilisateur n'existe pas déjà avec son email
+	//Vérification si l'utilisateur n'existe pas déjà avec son email grâce à la fonction Exist de la classe Utilisateur
 	if(!utilisateur::Exist($email))
 	{	
 		//Préparation de l'en-tête du mail de confirmation
@@ -86,7 +86,7 @@ else
 		//Envoie du mail de confirmation
 		mail($email, 'Validation Inscription Nadalenca', $corp, $headers);
 
-		//Création d'un constructeur utilisateur
+		//Création d'un nouveau utilisateur
 		$utilisateur = new utilisateur($id, $nom, $prenom, $email, $mdp, $statut, $admin, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix);
 		//Ajout d'un utilisateur
 		$utilisateur->create();

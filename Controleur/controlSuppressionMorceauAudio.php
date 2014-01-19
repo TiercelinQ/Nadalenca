@@ -6,18 +6,23 @@
 		<link rel="stylesheet" href="../style.css" />
 </head>
 <?php
-include("./menu.php");
-include("../Modele/Repertoire.php");
-$id = $_GET["ida"];
-$nb = $_GET['nb'];
-$morceau = Repertoire::supprimeraudionb($id, $nb);
-if($morceau == true)
-{
-	include("../Vue/viewSuppresssionAudioMorceau.php");
-}
-else
-{
-	include("../Vue/viewSuppressionAudioMorceauErreur.php");
-}
-include("./footer.php");
+
+	include("./menu.php");
+	
+	include("../Modele/Repertoire.php");
+
+	$id = $_GET["ida"];
+	$nb = $_GET['nb'];
+
+	$morceau = Repertoire::supprimeraudionb($id, $nb);
+	
+	if($morceau == true)
+	{
+		include("../Vue/viewSuppresssionAudioMorceau.php");
+	}
+	else
+	{
+		include("../Vue/viewSuppressionAudioMorceauErreur.php");
+	}
+	include("./footer.php");
 ?>

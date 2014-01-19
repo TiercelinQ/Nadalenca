@@ -12,7 +12,7 @@
 				var r=confirm("Confirmez vous la suppression ?"); // pop up de demande avec oui/non
 				if (r==true)
   				{
-  				location.href = './controlSupLiens.php?idL=' + i;	// si la personne valide, redirection vers le controleur avec passage en GET de l'identifiant
+  					location.href = './controlSupLiens.php?idL=' + i;	// si la personne valide, redirection vers le controleur avec passage en GET de l'identifiant
   				}
  				// sinon rien ne se passe, la demande de suppression est annulée 
 			}

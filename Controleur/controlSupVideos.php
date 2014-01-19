@@ -7,10 +7,10 @@
 	{
 		//la valeur $idV prend le contenu qui a été récupéré	
 		$idV = $_GET['idV'];
-		//Vérification si la video existe par son idV
+		//Vérification si la video existe par appel de la fonction existId de la classe Video
 		if(Video::existId($idV))
 		{
-			//Création d'un constructeur en rapport à la fonction delete
+			//Appel de la fonction delete de la classe Video
 			Video::delete($idV);
 			//Redirection vers la page des videos de la session admin
 			header("Location:./controlVideosAdmin.php");

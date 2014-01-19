@@ -17,7 +17,7 @@
 	{
 		//La valeur $email prend le contenu de ce qui est inscrit dans 'login'
 		$email = $_SESSION['login']; 
-		//Céation d'un constructeur en rapport avec la fonction getUtilisateurByEmail
+		//Appel de la fonction getUtilisateurByEmail de la classe Utilisateur
 		$profil = Utilisateur::getUtilisateurByEmail($email);
     	//On affiche la vue de validation du profil
     	include('../Vue/viewValidProfil.php');

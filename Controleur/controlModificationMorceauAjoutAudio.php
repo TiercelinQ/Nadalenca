@@ -6,10 +6,16 @@
 		<link rel="stylesheet" href="../style.css" />
 </head>
 <?php
+
 	include("./menu.php");
+
 	include("../Modele/Repertoire.php");
+
 	$id = $_GET['ida'];
 	$nb = $_GET['nb'];
+
+
 	include("../Vue/viewModificationMorceauAjoutAudio.php");
+
 	include("./footer.php");
 ?>

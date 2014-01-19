@@ -7,11 +7,15 @@
 </head>
 
 <?php
+	
+	include("./menu.php");
+	
+	include("../Modele/Repertoire.php");
+	
+	$id = $_GET['idA'];
+	$nb = $_GET['nb'];
 
-include("./menu.php");
-include("../Modele/Repertoire.php");
-$id = $_GET['idA'];
-$nb = $_GET['nb'];
-include("../Vue/viewModificationMorceauAudio.php");
-include("./footer.php");
+	include("../Vue/viewModificationMorceauAudio.php");
+	
+	include("./footer.php");
 ?>

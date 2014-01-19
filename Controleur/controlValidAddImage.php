@@ -60,7 +60,7 @@ $extension = strrchr($_FILES['image']['name'], '.');
      //La valeur $id prend null car son attribut dans la table image s'auto-incrémente
 	$id=null;
 
-	//Création d'un nouveau constructeur image
+	//Création d'une nouvelle image
 	$image = new image($id, $titre, $nom .'.'.$extension_upload, $description);
      //Ajout d'une nouvelle image
 	$image->create();

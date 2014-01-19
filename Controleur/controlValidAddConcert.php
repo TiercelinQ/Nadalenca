@@ -26,7 +26,7 @@ $adresse = htmlspecialchars($_POST["adresse"]);
 $ville = htmlspecialchars($_POST["ville"]);
 $prix = htmlspecialchars($_POST["prix"]);
 
-	//Création d'un constructeur Concert
+	//Création d'un nouveau concert
 	$concert = new concert($id, $titre, $date, $heure, $minute, $lieu, $adresse, $ville, $prix);
 	//Ajout d'un nouveau concert dans la base de données
 	$concert->create();

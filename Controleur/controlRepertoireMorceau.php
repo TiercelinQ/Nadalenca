@@ -6,11 +6,15 @@
 		<link rel="stylesheet" href="../style.css" />
 </head>
 
-
 <?php
+
 	include("./menu.php");
+
 	include("./config.php");
+
 	$id = $_GET['idr'];
+
 	include("../Vue/viewRepertoireMorceau.php");
+
 	include("./footer.php");
 ?>

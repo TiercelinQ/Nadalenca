@@ -27,7 +27,7 @@ else
 	$lien = $_POST["lien"];
 	//La valeur $description prend le contenu entré dans la case "description"
 	$description = $_POST["description"];
-	//On crée un nouveau construction lien avec les informtions des variables $id, $lien, $description
+	//Création d'un nouveau lien
 	$liens = new lien($id, $description, $lien);
 	//On ajoute dans la base de données un nouveau lien
 	$liens->create();
