@@ -632,5 +632,75 @@ class Repertoire
 		return $retour;
 	}
 	
+	public static function ajoutFichierAudio($id, $nb, $audio, $audiotmp, $dest)
+	{
+		$target_pathaudio = "../Audio/";
+		$retour = false;
+		
+		switch($nb)
+		{
+			case 2:
+				$target_path = $target_pathaudio . basename($audio);
+				move_uploaded_file($audiotmp, $target_path);
+				$res = mysql_query("UPDATE audio SET nbfichier='$nb', nomfich2='$audio', dest2 ='$dest' WHERE ida ='$id'") or die ("Erreur / Fonction ajoutFichierAudio / 2");
+				$retour = true;
+				break;
+			case 3:
+				$target_path = $target_pathaudio . basename($audio);
+				move_uploaded_file($audiotmp, $target_path);
+				$res = mysql_query("UPDATE audio SET nbfichier='$nb', nomfich3='$audio', dest3 ='$dest' WHERE ida ='$id'") or die ("Erreur / Fonction ajoutFichierAudio / 3");
+				$retour = true;
+				break;
+			case 4:
+				$target_path = $target_pathaudio . basename($audio);
+				move_uploaded_file($audiotmp, $target_path);
+				$res = mysql_query("UPDATE audio SET nbfichier='$nb', nomfich4='$audio', dest4 ='$dest' WHERE ida ='$id'") or die ("Erreur / Fonction ajoutFichierAudio / 4");
+				$retour = true;
+				break;
+			case 5:
+				$target_path = $target_pathaudio . basename($audio);
+				move_uploaded_file($audiotmp, $target_path);
+				$res = mysql_query("UPDATE audio SET nbfichier='$nb', nomfich5='$audio', dest5 ='$dest' WHERE ida ='$id'") or die ("Erreur / Fonction ajoutFichierAudio / 5");
+				$retour = true;
+				break;
+		}
+		return $retour;
+	}
+	
+	public static function ajoutFichierTexte($id, $nb, $texte, $textetmp, $dest)
+	{
+		$target_pathtexte = "../Texte/";
+		$retour = false;
+		
+		switch($nb)
+		{
+			case 2:
+				$target_path = $target_pathtexte . basename($texte);
+				move_uploaded_file($textetmp, $target_path);
+				$res = mysql_query("UPDATE texte SET nbfichier='$nb', nomfich2='$texte', dest2 ='$dest' WHERE idt ='$id'") or die ("Erreur / Fonction ajoutFichiertexte / 2");
+				$retour = true;
+				break;
+			case 3:
+				$target_path = $target_pathtexte . basename($texte);
+				move_uploaded_file($textetmp, $target_path);
+				$res = mysql_query("UPDATE texte SET nbfichier='$nb', nomfich3='$texte', dest3 ='$dest' WHERE idt ='$id'") or die ("Erreur / Fonction ajoutFichiertexte / 3");
+				$retour = true;
+				break;
+			case 4:
+				$target_path = $target_pathtexte . basename($texte);
+				move_uploaded_file($textetmp, $target_path);
+				$res = mysql_query("UPDATE texte SET nbfichier='$nb', nomfich4='$texte', dest4 ='$dest' WHERE idt ='$id'") or die ("Erreur / Fonction ajoutFichiertexte / 4");
+				$retour = true;
+				break;
+			case 5:
+				$target_path = $target_pathtexte . basename($texte);
+				move_uploaded_file($textetmp, $target_path);
+				$res = mysql_query("UPDATE texte SET nbfichier='$nb', nomfich5='$texte', dest5 ='$dest' WHERE idt ='$id'") or die ("Erreur / Fonction ajoutFichiertexte / 5");
+				$retour = true;
+				break;
+		}
+		return $retour;
+	}
+	
 }
 ?>	

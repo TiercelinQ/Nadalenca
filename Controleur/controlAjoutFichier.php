@@ -8,8 +8,6 @@
 <?php
 include("./menu.php");
 include("../Modele/Repertoire.php");
-var_dump($_POST);
-var_dump($_FILES);
 $nom = $_POST['nomR'];
 $rep = Repertoire::createaudio($nom,1,$_FILES['audio1']['name'], $_FILES['audio1']['tmp_name'], $_POST['taudio1']);
 $rep = Repertoire::createtexte($nom,1,$_FILES['texte1']['name'], $_FILES['texte1']['tmp_name'], $_POST['ttexte1']);

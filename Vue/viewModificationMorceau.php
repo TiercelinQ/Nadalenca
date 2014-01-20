@@ -1,9 +1,10 @@
-<p>Nom :</p>
+<h1>Modification d'un morceau </h1>
+<hr/>
 
 <?php
 	$res = mysql_query("SELECT * FROM repertoire WHERE idr = '$idR'");
 	$tuple = mysql_fetch_array($res);
-	echo $tuple['nom'];
+	echo "Nom : ".$tuple['nom'];
 	$ida = $tuple['idA'];
 	$idt = $tuple['idT'];
 	$resaudio = mysql_query("SELECT * FROM audio WHERE ida = '$ida'") or die ("Erreur insertion, viewModificationMorceau, resaudio");
@@ -28,7 +29,7 @@
 			echo "<tr>
 					<td>".$tupleaudio['nomfich1']."</td>
 					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Supprimer </a></td>
+					<td>Ne peut pas être supprimé</td>
 				</tr>";
 			echo "<tr>
 					<td><a href="."../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=2 > Ajouter une piste audio </a></td>
@@ -135,7 +136,7 @@
 			echo "<tr>
 					<td>".$tupletexte['nomfich1']."</td>
 					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Supprimer </a></td>
+					<td>Ne peut pas être supprimé</td>
 				</tr>";
 			echo "<tr>
 					<td><a href="."../Controleur/controlModificationMorceauAjoutTexte.php?idt=".$tupletexte['idt']."&nb=2 > Ajouter un fichier texte </a></td>

@@ -15,43 +15,43 @@
 	{
 		case 1:
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich1']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest1'];
+			echo " pour  ".$tupleaudio['dest1']."</br>";
 			break;
 		case 2:
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich1']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest1'];
+			echo " pour  ".$tupleaudio['dest1']."</br>";
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich2']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest2'];
+			echo " pour  ".$tupleaudio['dest2']."</br>";
 			break;
 		case 3:
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich1']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest1'];
+			echo " pour  ".$tupleaudio['dest1']."</br>";
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich2']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest2'];
+			echo " pour  ".$tupleaudio['dest2']."</br>";
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich3']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest3'];
+			echo " pour  ".$tupleaudio['dest3']."</br>";
 			break;
 		case 4:
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich1']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest1'];
+			echo " pour  ".$tupleaudio['dest1']."</br>";
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich2']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest2'];
+			echo " pour  ".$tupleaudio['dest2']."</br>";
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich3']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest3'];
+			echo " pour  ".$tupleaudio['dest3']."</br>";
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich4']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest4'];
+			echo " pour  ".$tupleaudio['dest4']."</br>";
 			break;
 		case 5:
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich1']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest1'];
+			echo " pour  ".$tupleaudio['dest1']."</br>";
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich2']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest2'];
+			echo " pour  ".$tupleaudio['dest2']."</br>";
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich3']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest3'];
+			echo " pour  ".$tupleaudio['dest3']."</br>";
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich4']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest4'];
+			echo " pour  ".$tupleaudio['dest4']."</br>";
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich5']." controls >Veuillez mettre à jour votre navigateur !</audio>";
-			echo " pour  ".$tupleaudio['dest5'];
+			echo " pour  ".$tupleaudio['dest5']."</br>";
 			break;
 	}
 	?>
@@ -65,29 +65,29 @@
 	switch($i)
 	{
 		case 1:
-			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"." >"; echo $tupletexte['dest1']." </a>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"." >"; echo $tupletexte['dest1']." </a></br>";
 			break;
 		case 2:
-			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"."  >"; echo $tupletexte['dest1']. "</a>";
-			echo "<a href="."../Texte/".$tupletexte['nomfich2']." target="."$blank"."  >"; echo $tupletexte['dest2']."</a>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"."  >"; echo $tupletexte['dest1']. "</a></br>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich2']." target="."$blank"."  >"; echo $tupletexte['dest2']."</a></br>";
 			break;
 		case 3:
-			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"."  >"; echo $tupletexte['dest1']."</a>";
-			echo "<a href="."../Texte/".$tupletexte['nomfich2']." target="."$blank"."  >"; echo $tupletexte['dest2']."</a>";
-			echo "<a href="."../Texte/".$tupletexte['nomfich3']." target="."$blank"."  >"; echo $tupletexte['dest3']."</a>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"."  >"; echo $tupletexte['dest1']."</a></br>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich2']." target="."$blank"."  >"; echo $tupletexte['dest2']."</a></br>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich3']." target="."$blank"."  >"; echo $tupletexte['dest3']."</a></br>";
 			break;
 		case 4:
-			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"."  >"; echo $tupletexte['dest1']."</a>";
-			echo "<a href="."../Texte/".$tupletexte['nomfich2']." target="."$blank"."  >"; echo $tupletexte['dest2']."</a>";
-			echo "<a href="."../Texte/".$tupletexte['nomfich3']." target="."$blank"."  >"; echo $tupletexte['dest3']."</a>";
-			echo "<a href="."../Texte/".$tupletexte['nomfich4']." target="."$blank"."  >"; echo $tupletexte['dest4']."</a>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"."  >"; echo $tupletexte['dest1']."</a></br>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich2']." target="."$blank"."  >"; echo $tupletexte['dest2']."</a></br>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich3']." target="."$blank"."  >"; echo $tupletexte['dest3']."</a></br>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich4']." target="."$blank"."  >"; echo $tupletexte['dest4']."</a></br>";
 			break;
 		case 5:
-			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"."  >"; echo $tupletexte['dest1']."</a>";
-			echo "<a href="."../Texte/".$tupletexte['nomfich2']." target="."$blank"."  >"; echo $tupletexte['dest2']."</a>";
-			echo "<a href="."../Texte/".$tupletexte['nomfich3']." target="."$blank"."  >"; echo $tupletexte['dest3']."</a>";
-			echo "<a href="."../Texte/".$tupletexte['nomfich4']." target="."$blank"."  >"; echo $tupletexte['dest4']."</a>";
-			echo "<a href="."../Texte/".$tupletexte['nomfich5']." target="."$blank"."  >"; echo $tupletexte['dest5']."</a>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"."  >"; echo $tupletexte['dest1']."</a></br>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich2']." target="."$blank"."  >"; echo $tupletexte['dest2']."</a></br>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich3']." target="."$blank"."  >"; echo $tupletexte['dest3']."</a></br>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich4']." target="."$blank"."  >"; echo $tupletexte['dest4']."</a></br>";
+			echo "<a href="."../Texte/".$tupletexte['nomfich5']." target="."$blank"."  >"; echo $tupletexte['dest5']."</a></br>";
 			break;
 	}
 	?>
