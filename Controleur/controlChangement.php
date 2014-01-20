@@ -16,7 +16,7 @@ $ville = $_POST['ville'];
 $numtelF = $_POST['numtelF'];
 $numtelM = $_POST['numtelM'];
 $voix = $_POST['voix'];
-$statut =$_POST['statut'];
+$statut = $_POST['statut'];
 
 
 //Appel de la fonction changementInfo de la classe Utilsateur
