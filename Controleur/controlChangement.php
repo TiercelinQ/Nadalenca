@@ -2,7 +2,7 @@
 //On récupère la Class Utilisateur
 include ("../Modele/Utilisateur.php");
 
-//Toutes les variables récupèrent les contenus des cases qui leur sont attribuées
+//Toutes les variables récupèrent les contenus des cases qui leur sont attribués
 $email = $_SESSION['login'];
 $id = $_POST['id'];
 $nom = $_POST['nom'];

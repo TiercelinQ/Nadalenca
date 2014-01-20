@@ -31,10 +31,11 @@
   <hr />
     <form method="post" action="./controlChangement.php" >
       <fieldset>
-			<input type="hidden" name="id" value="<?php echo $profil->getId()?>"/>
+            <!--type hidden permet d'éviter de toucher les données de la base de donnée.-->
+            <input type="hidden" name="id" value="<?php echo $profil->getId()?>"/>
           <label>Nom :</label><input type="text" name="nom" value="<?php echo $profil->getNom()?>"/> <br />
           <label>Prénom :</label><input type="text" name="prenom" value="<?php echo $profil->getPrenom()?>"/><br />
-            <!--type hidden pour éviter de toucher à la base de donnée.-->
+            <!--type hidden permet d'éviter de toucher les données de la base de donnée.-->
             <input type="hidden" name="email" value="<?php echo $profil->getEmail()?>"/>
           <label>Ancien mot de passe :</label><input type="password" placeholder="Ex : licorne" name="mdpold"/><br />
           <label>Nouveau mot de passe :</label><input type="password" placeholder="Ex : licorne" name="mdpnew"/><br />
