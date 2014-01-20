@@ -10,7 +10,7 @@ include("./menu.php");
 include("../Modele/Repertoire.php");
 $nom = $_POST['nomR'];
 $rep = Repertoire::createaudio($nom,1,$_FILES['audio1']['name'], $_FILES['audio1']['tmp_name'], $_POST['taudio1']);
-$rep = Repertoire::createtexte($nom,1,$_FILES['texte1']['name'], $_FILES['texte1']['tmp_name'], $_POST['ttexte1']);
+$rep = Repertoire::createtexte($nom,1,$_FILES['texte1']['name'],$_FILES['texte1']['tmp_name'], $_POST['ttexte1']);
 $rep = Repertoire::createRep($nom);
 include("../Vue/viewAjoutFichierReussi.php");
 include("./footer.php");

@@ -52,38 +52,41 @@ class Repertoire
 	}
 	
 	//Ajout dans la base de données d'un nouveau fichier audio
-	public static function createaudio($nom, $nb, $audio1, $audio1tmp, $taudio1)
+	public static function createaudio($nom, $nb, $audioprec,$audiotmp, $dest)
 	{
-		$req = "INSERT INTO audio (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$audio1','$taudio1')";
+		$audio = md5($audioprec).".mp3";
+		$req = "INSERT INTO audio (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$audio','$dest')";
 		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
 		$target_pathaudio = "../Audio/";
-		$target_path = $target_pathaudio . basename($audio1);
-		move_uploaded_file($audio1tmp, $target_path);
+		$target_path = $target_pathaudio . $audio;
+		move_uploaded_file($audiotmp, $target_path);
 	}
 	
 	//Ajout dans la base de données d'un nouveau texte
-	public static function createtexte($nom, $nb, $texte1, $texte1tmp, $ttexte1)
+	public static function createtexte($nom, $nb, $texteprec,$textetmp, $dest)
 	{
-		$req = "INSERT INTO texte (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$texte1','$ttexte1')";
+		$texte = md5($texteprec).".pdf";
+		$req = "INSERT INTO texte (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$texte','$dest')";
 		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
 		$target_pathtexte = "../Texte/";
-		$target_path = $target_pathtexte . basename($texte1);
-		move_uploaded_file($texte1tmp, $target_path);
+		$target_path = $target_pathtexte . $texte;
+		move_uploaded_file($textetmp, $target_path);
 	}
 	
 	//
-	public static function changementaudionb($id, $nb, $audio, $audiotmp, $audiodest)
+	public static function changementaudionb($id, $nb, $audioprec,$audiotmp, $audiodest)
 	{
 		$res = mysql_query("SELECT * FROM audio WHERE ida = '$id'") or die ("Erreur / changementaudionb / res");
 		$tuple = mysql_fetch_array($res);
 		$target_pathaudio = "../Audio/";
+		$audio = md5($audioprec).".mp3";
 		
 		switch($nb)
 		{
 			case 1:
 				$target_path = $target_pathaudio . basename($tuple['nomfich1']);
 				unlink($target_path);
-				$target_path = $target_pathaudio . basename($audio);
+				$target_path = $target_pathaudio . $audio;
 				move_uploaded_file($audiotmp, $target_path);
 				$req = mysql_query("UPDATE audio SET nomfich1='$audio', dest1='$audiodest' WHERE ida='$id'") or die ("Erreur / changementaudionb / req 1");
 				$retour = true;
@@ -91,7 +94,7 @@ class Repertoire
 			case 2:
 				$target_path = $target_pathaudio . basename($tuple['nomfich2']);
 				unlink($target_path);
-				$target_path = $target_pathaudio . basename($audio);
+				$target_path = $target_pathaudio . $audio;
 				move_uploaded_file($audiotmp, $target_path);
 				$req = mysql_query("UPDATE audio SET nomfich2 = '$audio', dest2 = '$audiodest' WHERE ida = '$id'") or die ("Erreur / changementaudionb / req 2");
 				$retour = true;
@@ -99,7 +102,7 @@ class Repertoire
 			case 3:
 				$target_path = $target_pathaudio . basename($tuple['nomfich3']);
 				unlink($target_path);
-				$target_path = $target_pathaudio . basename($audio);
+				$target_path = $target_pathaudio . $audio;
 				move_uploaded_file($audiotmp, $target_path);
 				$req = mysql_query("UPDATE audio SET nomfich3 = '$audio', dest3 = '$audiodest' WHERE ida = '$id'") or die ("Erreur / changementaudionb / req 3");
 				$retour = true;
@@ -107,7 +110,7 @@ class Repertoire
 			case 4:
 				$target_path = $target_pathaudio . basename($tuple['nomfich4']);
 				unlink($target_path);
-				$target_path = $target_pathaudio . basename($audio);
+				$target_path = $target_pathaudio . $audio;
 				move_uploaded_file($audiotmp, $target_path);
 				$req = mysql_query("UPDATE audio SET nomfich4 = '$audio', dest4 = '$audiodest' WHERE ida = '$id'") or die ("Erreur / changementaudionb / req 4");
 				$retour = true;
@@ -115,7 +118,7 @@ class Repertoire
 			case 5:
 				$target_path = $target_pathaudio . basename($tuple['nomfich5']);
 				unlink($target_path);
-				$target_path = $target_pathaudio . basename($audio);
+				$target_path = $target_pathaudio . $audio;
 				move_uploaded_file($audiotmp, $target_path);
 				$req = mysql_query("UPDATE audio SET nomfich5 = '$audio', dest5 = '$audiodest' WHERE ida = '$id'") or die ("Erreur / changementaudionb / req 5");
 				$retour = true;
@@ -124,18 +127,19 @@ class Repertoire
 		return $retour;
 	}
 	
-	public static function changementtextenb($id, $nb, $texte, $textetmp, $textedest)
+	public static function changementtextenb($id, $nb, $texteprec,$textetmp, $textedest)
 	{
 		$res = mysql_query("SELECT * FROM texte WHERE idt = '$id'") or die ("Erreur / changementtextenb / res");
 		$tuple = mysql_fetch_array($res);
 		$target_pathtexte = "../Texte/";
+		$texte = md5($texteprec).".pdf";
 		
 		switch($nb)
 		{
 			case 1:
 				$target_path = $target_pathtexte . basename($tuple['nomfich1']);
 				unlink($target_path);
-				$target_path = $target_pathtexte . basename($texte);
+				$target_path = $target_pathtexte . $texte;
 				move_uploaded_file($textetmp, $target_path);
 				$req = mysql_query("UPDATE texte SET nomfich1='$texte', dest1='$textedest' WHERE idt='$id'") or die ("Erreur / changementtextenb / req 1");
 				$retour = true;
@@ -143,7 +147,7 @@ class Repertoire
 			case 2:
 				$target_path = $target_pathtexte . basename($tuple['nomfich2']);
 				unlink($target_path);
-				$target_path = $target_pathtexte . basename($texte);
+				$target_path = $target_pathtexte . $texte;
 				move_uploaded_file($textetmp, $target_path);
 				$req = mysql_query("UPDATE texte SET nomfich2 = '$texte', dest2 = '$textedest' WHERE idt = '$id'") or die ("Erreur / changementtextenb / req 2");
 				$retour = true;
@@ -151,7 +155,7 @@ class Repertoire
 			case 3:
 				$target_path = $target_pathtexte . basename($tuple['nomfich3']);
 				unlink($target_path);
-				$target_path = $target_pathtexte . basename($texte);
+				$target_path = $target_pathtexte . $texte;
 				move_uploaded_file($textetmp, $target_path);
 				$req = mysql_query("UPDATE texte SET nomfich3 = '$texte', dest3 = '$textedest' WHERE idt = '$id'") or die ("Erreur / changementtextenb / req 3");
 				$retour = true;
@@ -159,7 +163,7 @@ class Repertoire
 			case 4:
 				$target_path = $target_pathtexte . basename($tuple['nomfich4']);
 				unlink($target_path);
-				$target_path = $target_pathtexte . basename($texte);
+				$target_path = $target_pathtexte . $texte;
 				move_uploaded_file($textetmp, $target_path);
 				$req = mysql_query("UPDATE texte SET nomfich4 = '$texte', dest4 = '$textedest' WHERE idt = '$id'") or die ("Erreur / changementtextenb / req 4");
 				$retour = true;
@@ -167,7 +171,7 @@ class Repertoire
 			case 5:
 				$target_path = $target_pathtexte . basename($tuple['nomfich5']);
 				unlink($target_path);
-				$target_path = $target_pathtexte . basename($texte);
+				$target_path = $target_pathtexte . $texte;
 				move_uploaded_file($textetmp, $target_path);
 				$req = mysql_query("UPDATE texte SET nomfich5 = '$texte', dest5 = '$textedest' WHERE idt = '$id'") or die ("Erreur / changementtextenb / req 5");
 				$retour = true;
@@ -632,33 +636,34 @@ class Repertoire
 		return $retour;
 	}
 	
-	public static function ajoutFichierAudio($id, $nb, $audio, $audiotmp, $dest)
+	public static function ajoutFichierAudio($id, $nb, $audioprec,$audiotmp, $dest)
 	{
 		$target_pathaudio = "../Audio/";
 		$retour = false;
+		$audio = md5($audioprec).".mp3";
 		
 		switch($nb)
 		{
 			case 2:
-				$target_path = $target_pathaudio . basename($audio);
+				$target_path = $target_pathaudio . $audio;
 				move_uploaded_file($audiotmp, $target_path);
 				$res = mysql_query("UPDATE audio SET nbfichier='$nb', nomfich2='$audio', dest2 ='$dest' WHERE ida ='$id'") or die ("Erreur / Fonction ajoutFichierAudio / 2");
 				$retour = true;
 				break;
 			case 3:
-				$target_path = $target_pathaudio . basename($audio);
+				$target_path = $target_pathaudio . $audio;
 				move_uploaded_file($audiotmp, $target_path);
 				$res = mysql_query("UPDATE audio SET nbfichier='$nb', nomfich3='$audio', dest3 ='$dest' WHERE ida ='$id'") or die ("Erreur / Fonction ajoutFichierAudio / 3");
 				$retour = true;
 				break;
 			case 4:
-				$target_path = $target_pathaudio . basename($audio);
+				$target_path = $target_pathaudio . $audio;
 				move_uploaded_file($audiotmp, $target_path);
 				$res = mysql_query("UPDATE audio SET nbfichier='$nb', nomfich4='$audio', dest4 ='$dest' WHERE ida ='$id'") or die ("Erreur / Fonction ajoutFichierAudio / 4");
 				$retour = true;
 				break;
 			case 5:
-				$target_path = $target_pathaudio . basename($audio);
+				$target_path = $target_pathaudio . $audio;
 				move_uploaded_file($audiotmp, $target_path);
 				$res = mysql_query("UPDATE audio SET nbfichier='$nb', nomfich5='$audio', dest5 ='$dest' WHERE ida ='$id'") or die ("Erreur / Fonction ajoutFichierAudio / 5");
 				$retour = true;
@@ -667,33 +672,34 @@ class Repertoire
 		return $retour;
 	}
 	
-	public static function ajoutFichierTexte($id, $nb, $texte, $textetmp, $dest)
+	public static function ajoutFichierTexte($id, $nb, $texteprec,$textetmp , $dest)
 	{
 		$target_pathtexte = "../Texte/";
 		$retour = false;
+		$texte = md5($texteprec).".pdf";
 		
 		switch($nb)
 		{
 			case 2:
-				$target_path = $target_pathtexte . basename($texte);
+				$target_path = $target_pathtexte . $texte;
 				move_uploaded_file($textetmp, $target_path);
 				$res = mysql_query("UPDATE texte SET nbfichier='$nb', nomfich2='$texte', dest2 ='$dest' WHERE idt ='$id'") or die ("Erreur / Fonction ajoutFichiertexte / 2");
 				$retour = true;
 				break;
 			case 3:
-				$target_path = $target_pathtexte . basename($texte);
+				$target_path = $target_pathtexte . $texte;
 				move_uploaded_file($textetmp, $target_path);
 				$res = mysql_query("UPDATE texte SET nbfichier='$nb', nomfich3='$texte', dest3 ='$dest' WHERE idt ='$id'") or die ("Erreur / Fonction ajoutFichiertexte / 3");
 				$retour = true;
 				break;
 			case 4:
-				$target_path = $target_pathtexte . basename($texte);
+				$target_path = $target_pathtexte . $texte;
 				move_uploaded_file($textetmp, $target_path);
 				$res = mysql_query("UPDATE texte SET nbfichier='$nb', nomfich4='$texte', dest4 ='$dest' WHERE idt ='$id'") or die ("Erreur / Fonction ajoutFichiertexte / 4");
 				$retour = true;
 				break;
 			case 5:
-				$target_path = $target_pathtexte . basename($texte);
+				$target_path = $target_pathtexte . $texte;
 				move_uploaded_file($textetmp, $target_path);
 				$res = mysql_query("UPDATE texte SET nbfichier='$nb', nomfich5='$texte', dest5 ='$dest' WHERE idt ='$id'") or die ("Erreur / Fonction ajoutFichiertexte / 5");
 				$retour = true;

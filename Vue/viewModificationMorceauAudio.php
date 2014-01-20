@@ -1,3 +1,7 @@
+<h1>Modfication d'une piste audio</h1>
+<hr />
+
+
 <?php
 $req = mysql_query("SELECT * FROM audio WHERE ida = '$id'") or die ("Erreur / viewModificationMorceauAudio.php / req");
 $tupleaudio = mysql_fetch_array($req);

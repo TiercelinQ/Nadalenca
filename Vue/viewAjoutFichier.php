@@ -8,13 +8,13 @@
 		<label>Fichier Audio :</label></br>
 		<?php 	echo "<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"15000000\" /></br>";
 				echo "<input type=\"file\" name=\"audio1\" /></br>";
-				echo "types de destinaires(voix/genre) :";
+				echo "types de destinaires(Voix/Genre) :";
 				echo "<input type=\"texte\" name=\"taudio1\" /></br>";		
 		?> 
 		<label>Fichier texte : </label></br>
 		<?php
 				echo "<input type=\"file\" name=\"texte1\" /></br>";
-				echo "types de destinaires(voix/genre) :";
+				echo "types de fichier(Partitions, Paroles) :";
 				echo "<input type=\"texte\" name=\"ttexte1\" /></br>";
 		?>
 		

@@ -5,7 +5,7 @@
 	$tuple = mysql_fetch_array($res);
 	?>
 	<p> Nom du morceau : <?php echo $tuple['nom']; ?> </p>
-	<p> Pistes audios : </p>
+	<p> Pistes audio : </p>
 	<?php 
 	$idA = $tuple['idA'];
 	$resaudio = mysql_query("SELECT * FROM audio WHERE ida = '$idA'") or die ("Erreur insertion, viewRepertoireMorceau, resaudio");

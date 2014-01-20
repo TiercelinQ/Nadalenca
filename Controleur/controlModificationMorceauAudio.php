@@ -12,7 +12,7 @@
 	
 	include("../Modele/Repertoire.php");
 	
-	$id = $_GET['idA'];
+	$id = $_GET['ida'];
 	$nb = $_GET['nb'];
 
 	include("../Vue/viewModificationMorceauAudio.php");
