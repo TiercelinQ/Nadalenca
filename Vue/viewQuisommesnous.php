@@ -23,9 +23,9 @@
 	{ 	
 		echo "<tr>"
 				."<td>Vice-Président</td>"
-				."<td>".$tuple['prenom']."</td>"
-				."<td>".$tuple['nom']."</td>"
-				."<td>".$tuple['email']."</td>"	 
+				."<td>".$tuple1['prenom']."</td>"
+				."<td>".$tuple1['nom']."</td>"
+				."<td>".$tuple1['email']."</td>"	 
 			."</tr>";
 	}
 
@@ -33,9 +33,9 @@
 	{ 	
 		echo "<tr>"
 				."<td>Trésorier</td>"
-				."<td>".$tuple['prenom']."</td>"
-				."<td>".$tuple['nom']."</td>"
-				."<td>".$tuple['email']."</td>"	 
+				."<td>".$tuple2['prenom']."</td>"
+				."<td>".$tuple2['nom']."</td>"
+				."<td>".$tuple2['email']."</td>"	 
 			."</tr>";
 	}
 
@@ -43,9 +43,9 @@
 	{ 	
 		echo "<tr>"
 				."<td>Trésorier Adjoint</td>"
-				."<td>".$tuple['prenom']."</td>"
-				."<td>".$tuple['nom']."</td>"
-				."<td>".$tuple['email']."</td>"	 
+				."<td>".$tuple3['prenom']."</td>"
+				."<td>".$tuple3['nom']."</td>"
+				."<td>".$tuple3['email']."</td>"	 
 			."</tr>";
 	}
 
@@ -53,9 +53,9 @@
 	{ 	
 		echo "<tr>"
 				."<td>Secrétaire</td>"
-				."<td>".$tuple['prenom']."</td>"
-				."<td>".$tuple['nom']."</td>"
-				."<td>".$tuple['email']."</td>"	 
+				."<td>".$tuple4['prenom']."</td>"
+				."<td>".$tuple4['nom']."</td>"
+				."<td>".$tuple4['email']."</td>"	 
 			."</tr>";
 	}
 
@@ -63,14 +63,15 @@
 	{ 	
 		echo "<tr>"
 				."<td>Secrétaire Adjoint</td>"
-				."<td>".$tuple['prenom']."</td>"
-				."<td>".$tuple['nom']."</td>"
-				."<td>".$tuple['email']."</td>"	 
+				."<td>".$tuple5['prenom']."</td>"
+				."<td>".$tuple5['nom']."</td>"
+				."<td>".$tuple5['email']."</td>"	 
 			."</tr>";
 	}
-
-
 		echo "</table><br/>";
 ?>
+
+<h2>Nadalenca est le chœur polyphonique Occitan de Montpellier</h2>
+
 	
 	
