@@ -3,13 +3,13 @@
 
 	<table border = "1">
 		<tr>
-			<td>Nom</td>
-			<td>Prénom</td>
-			<td>Adresse Email</td>
-			<td>Mot de Passe</td>
-			<td>Admin</td>
-			<td>ChangerStatut</td>
-			<td>Supprimer membre</td>
+			<th>Nom</th>
+			<th>Prénom</th>
+			<th>Adresse Email</th>
+			<th>Mot de Passe</th>
+			<th>Admin</th>
+			<th>ChangerStatut</th>
+			<th>Supprimer membre</th>
 
 	<form action='controlMembresAdmin.php' method='post'>	
 <?php

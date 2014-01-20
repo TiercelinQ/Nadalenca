@@ -4,13 +4,13 @@
 <h3>Concerts futurs :</h3>
 	<table border = "1">
 		<tr>
-			<td>Titre Concert</td>
-			<td>Date</td>
-			<td>Heure</td>
-			<td>Lieu</td>
-			<td>Adresse</td>
-			<td>Ville</td>		
-			<td>Prix</td>		
+			<th>Titre Concert</th>
+			<th>Date</th>
+			<th>Heure</th>
+			<th>Lieu</th>
+			<th>Adresse</th>
+			<th>Ville</th>		
+			<th>Prix</th>		
 <?php
 	while ($tuple1 = mysql_fetch_array($res1))
 	{ 	
@@ -30,13 +30,13 @@
 <h3>Concerts passés de Nadalenca :</h3>
 		<table border = "1">
 			<tr>
-				<td>Titre Concert</td>
-				<td>Date</td>
-				<td>Heure</td>
-				<td>Lieu</td>
-				<td>Adresse</td>
-				<td>Ville</td>
-				<td>Prix</td>	
+				<th>Titre Concert</th>
+				<th>Date</th>
+				<th>Heure</th>
+				<th>Lieu</th>
+				<th>Adresse</th>
+				<th>Ville</th>
+				<th>Prix</th>	
 					
 	<?php 
 	while ($tuple2 = mysql_fetch_array($res2))

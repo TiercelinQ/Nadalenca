@@ -3,9 +3,9 @@
 
 <table border = "1">
 	<tr>
-		<td>Titre</td>
-		<td>Description</td>
-		<td>Supprimer</td>
+		<th>Titre</th>
+		<th>Description</th>
+		<th>Supprimer</th>
 			<?php
 	while ($tuple = mysql_fetch_array($res))
 	{ 	
@@ -32,6 +32,6 @@
      <input type="submit" name="submit" value="Envoyer" />  
 </form>
 
-<br />
+<br /><br />
 
 <a href="./controlAdministrateur.php">Retour au panneau d'administration</a>

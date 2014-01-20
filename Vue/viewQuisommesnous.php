@@ -68,8 +68,8 @@
 				."<td>".$tuple5['email']."</td>"	 
 			."</tr>";
 	}
-		echo "</table><br/>";
 ?>
+	</table><br/>
 
 <h2>Nadalenca est le chœur polyphonique Occitan de Montpellier</h2>
 

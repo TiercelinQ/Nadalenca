@@ -10,7 +10,7 @@
 <?php
 $res = mysql_query("SELECT * FROM repertoire") or die ("Erreur insertion, repertoire.php, affichage de tout" );
 
-	echo "<table>
+	echo "<table border ='1'>
 			<caption>Liste des morceaux :</caption>
 			
 			<thead>

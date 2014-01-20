@@ -11,7 +11,7 @@
 $res = mysql_query("SELECT * FROM repertoire") or die ("Erreur insertion, repertoire.php, affichage de tout" );
 
 echo "<h3>Liste des morceaux</h3>
-		<table>	
+		<table border='1'>	
 			<tr>
 				<th>Nom </th>
 			</tr> ";

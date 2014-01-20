@@ -15,15 +15,15 @@
 				<th>Type de voix</th>
 			</tr>
    	 	<tr>
-				<th><?php echo $profil->getNom();?></th>
-   	 		<th><?php echo $profil->getPrenom();?></th>
-   	 		<th><?php echo $profil->getEmail();?></th>
-				<th><?php echo $profil->getAdresseP();?></th>
-				<th><?php echo $profil->getCodeP();?></th>
-				<th><?php echo $profil->getVille();?></th>
-				<th><?php echo $profil->getnumtelF();?></th>
-				<th><?php echo $profil->getnumtelM();?></th>
-				<th><?php echo $profil->getVoix();?></th>
+				<td><?php echo $profil->getNom();?></td>
+   	 		<td><?php echo $profil->getPrenom();?></td>
+   	 		<td><?php echo $profil->getEmail();?></td>
+				<td><?php echo $profil->getAdresseP();?></td>
+				<td><?php echo $profil->getCodeP();?></td>
+				<td><?php echo $profil->getVille();?></td>
+				<td><?php echo $profil->getnumtelF();?></td>
+				<td><?php echo $profil->getnumtelM();?></td>
+				<td><?php echo $profil->getVoix();?></td>
 			</tr>
    	</table>
 
@@ -31,9 +31,10 @@
   <hr />
     <form method="post" action="./controlChangement.php" >
       <fieldset>
-				<input type="hidden" name="id" value="<?php echo $profil->getId()?>"/>
+			<input type="hidden" name="id" value="<?php echo $profil->getId()?>"/>
           <label>Nom :</label><input type="text" name="nom" value="<?php echo $profil->getNom()?>"/> <br />
           <label>Prénom :</label><input type="text" name="prenom" value="<?php echo $profil->getPrenom()?>"/><br />
+            <!--type hidden pour éviter de toucher à la base de donnée.-->
             <input type="hidden" name="email" value="<?php echo $profil->getEmail()?>"/>
           <label>Ancien mot de passe :</label><input type="password" placeholder="Ex : licorne" name="mdpold"/><br />
           <label>Nouveau mot de passe :</label><input type="password" placeholder="Ex : licorne" name="mdpnew"/><br />

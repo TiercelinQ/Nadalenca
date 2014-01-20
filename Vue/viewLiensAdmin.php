@@ -2,9 +2,9 @@
 <hr />
 <table border = "1">
 		<tr>
-		<td>Description</td>
-			<td>Supprimer</td>
-			<?php
+		<th>Description</th>
+		<th>Supprimer</th>
+<?php
 	while ($tuple = mysql_fetch_array($res))
 	{ 	
 		$i = $tuple['id'];
@@ -34,5 +34,7 @@
 			<input type="submit" value="Ajouter">	<br />
 	</fieldset>
 </form>
+
+<br />
 
 <a href="../Controleur/controlAdministrateur.php">Retour au panneau d'administration</a>

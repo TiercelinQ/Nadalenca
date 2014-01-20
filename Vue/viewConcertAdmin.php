@@ -3,14 +3,14 @@
 
 	<table border = "1">
 		<tr>
-			<td>Titre Concert</td>
-			<td>Date</td>
-			<td>Heure</td>
-			<td>Lieu</td>
-			<td>Adresse</td>
-			<td>Ville</td>
-			<td>Prix</td>						
-			<td>Supprimer</td>		
+			<th>Titre Concert</th>
+			<th>Date</th>
+			<th>Heure</th>
+			<th>Lieu</th>
+			<th>Adresse</th>
+			<th>Ville</th>
+			<th>Prix</th>						
+			<th>Supprimer</th>		
 <?php
 include("../Modele/Concert.php");
 	while ($tuple = mysql_fetch_array($restot))

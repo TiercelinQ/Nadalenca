@@ -3,11 +3,11 @@
 
 	<table border = "1">
 		<tr>
-			<td>Nom</td>
-			<td>Prénom</td>
-			<td>Email</td>
-			<td>N° de téléphone fixe</td>
-			<td>N° de téléphone mobile</td>
+			<th>Nom</th>
+			<th>Prénom</th>
+			<th>Email</th>
+			<th>N° de téléphone fixe</th>
+			<th>N° de téléphone mobile</th>
 		</tr>
 	<?php
 	while ($tuple = mysql_fetch_array($res))
