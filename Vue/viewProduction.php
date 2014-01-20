@@ -8,7 +8,7 @@ include("../Modele/Production.php");
 	{ ?>	
 	<div id="container_production">
 		<div class="gauche_production">
-			<p>Nom : <?php echo "$tuple[nomP]"; ?><p>
+			<p>Nom : <?php echo "$tuple[nomP]"; ?></p>
 		</div>
 
 		<div class="image_production">
