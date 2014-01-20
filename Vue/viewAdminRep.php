@@ -26,10 +26,10 @@ $res = mysql_query("SELECT * FROM repertoire") or die ("Erreur insertion, repert
 while ($tuple = mysql_fetch_array($res))
 	{
 	echo " <tr> 
-				<td>" .$tuple['nom']."</td>
-				<td>"; echo "<a href="."../Controleur/controlModifierRepertoire.php?idr=".$tuple['idr']."> Modifier</a></td>
-				<td>"; echo "<a href="."../Controleur/controlSupRep.php?id=".$tuple['idr']."> Supprimer</a></td>
-			<tr>";
+				<td><a href=\"../Controleur/controlRepertoireMorceau.php?idr=".$tuple['idr']." \" target=\"_blank\" >".$tuple['nom']."</a></td>
+				<td><a href=\"../Controleur/controlModifierRepertoire.php?idr=".$tuple['idr']."\" > Modifier</a></td>
+				<td><a href=\"../Controleur/controlSupRep.php?id=".$tuple['idr']."\" > Supprimer</a></td>
+			</tr>";
 
 	}
 	echo "<tr>
