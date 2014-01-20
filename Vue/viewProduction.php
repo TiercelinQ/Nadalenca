@@ -6,28 +6,26 @@
 include("../Modele/Production.php");
 	while ($tuple = mysql_fetch_array($res))
 	{ ?>	
-	<div id="container">
-		<div class="gauche">
-			<p>Produit : <?php echo "$tuple[nomP]"; ?><p>
+	<div id="container_production">
+		<div class="gauche_production">
+			<p>Nom : <?php echo "$tuple[nomP]"; ?><p>
 		</div>
 
-		<div class="milieu">
+		<div class="image_production">
+			<p><?php  echo"<img src=\"../Images/" . $tuple['imageP'] . "\"/>"?></p>
+		</div>
+
+		<div class="droite_production"> <!--nom temporaire pour citer l'incrustation de l'image dans la description -->
+			<?php echo "$tuple[descriptionP]"; ?>
+		</div>
+
+		<div class="dessous_production">
 			<p>Prix : <?php echo "$tuple[prixP]"; ?></p>
-		</div>
-
-		<div class="image"> <!--nom temporaire pour citer l'incrustation de l'image dans la description -->
-			<p>Image : <?php  echo"<img src=\"../Images/" . $tuple['imageP'] . "\"/>"?>;</p>
-		</div>
-
-		<div class="dessous">
-			<p>Description : <?php echo "$tuple[descriptionP]"; ?></p>
 		</div>
 	</div>
 <?php
 	} 
 		?>
 <br />
-
-	</div>
 
 
