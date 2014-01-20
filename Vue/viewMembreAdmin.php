@@ -3,15 +3,7 @@
 
 	<table border = "1">
 		<tr>
-<<<<<<< HEAD
-			<th>Nom</th>
-			<th>Prénom</th>
-			<th>Adresse Email</th>
-			<th>Mot de Passe</th>
-			<th>Admin</th>
-			<th>ChangerStatut</th>
-			<th>Supprimer membre</th>
-=======
+
 			<td>Nom</td>
 			<td>Prénom</td>
 			<td>Adresse Email</td>
@@ -22,7 +14,7 @@
 			<td>Statut</td>
 			<td>Changer Statut</td>
 			
->>>>>>> changement de place du changement de statut beulej
+
 
 	<form action='controlMembresAdmin.php' method='post'>	
 <?php
