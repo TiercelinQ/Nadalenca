@@ -11,6 +11,9 @@
 		if(Image::existId($idI))
 		{
 			//Appel de la fonction delete de la classe Image
+			$nom = Image::getNomById($idI);
+			$chemin = "../Images/".$nom;
+			unlink($chemin);
 			Image::delete($idI);
 			//Redirection vers la page d'ajout d'une image
 			header("Location:./controlAddImage.php");

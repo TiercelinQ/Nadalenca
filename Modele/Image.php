@@ -52,7 +52,7 @@ class Image
 	}
 	
 	//Suppression d'une image dans la base de données
-	public function delete($idI)
+	public static function delete($idI)
 	{
 		$req = mysql_query("DELETE FROM image WHERE idI = '$idI'");
 		mysql_query($req);
@@ -64,6 +64,14 @@ class Image
 		$req = mysql_query("SELECT count(*) FROM image WHERE idI = '$idI'");
 		$itsOk=mysql_fetch_row ($req);
 		return($itsOk[0] !=0);
+	}
+	
+	public static function getNomById($idI)
+	{
+		$req = "SELECT nomI FROM image WHERE idI='$idI'";
+		$res = mysql_query($req) or die(mysql_error());
+		$tuple = mysql_fetch_array($res);
+		return($tuple['nomI']);
 	}
 
 	}
