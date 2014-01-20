@@ -115,7 +115,7 @@ class Utilisateur
 			$nom = addslashes(htmlspecialchars($this->nom));
 			$prenom = addslashes(htmlspecialchars($this->prenom));
 			$mdp = $this->mdp;
-			$statut = $this->statut;
+			$statut = addcslashes(htmlspecialchars($this->statut));
 			$admin = $this->admin;
 			$adresseP = addslashes(htmlspecialchars($this->adresseP));
 			$codeP = $this->codeP;

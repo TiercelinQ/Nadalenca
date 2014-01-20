@@ -13,7 +13,6 @@
 				<th>N° de téléphone fixe</th>
 				<th>N° de téléphone mobile</th>
 				<th>Type de voix</th>
-				<th>Statut</th>
 			</tr>
    	 	<tr>
 				<th><?php echo $profil->getNom();?></th>
@@ -25,7 +24,6 @@
 				<th><?php echo $profil->getnumtelF();?></th>
 				<th><?php echo $profil->getnumtelM();?></th>
 				<th><?php echo $profil->getVoix();?></th>
-				<th><?php echo $profil->getStatut();?></th>
 			</tr>
    	</table>
 
@@ -52,14 +50,14 @@
               <option value="tenor" <?php if ($profil->getVoix() =="tenor") {echo "selected";} ?> > Tenor
               </select><br /> 
           <label>Statut :</label><select name="statut" type ="hidden">
-              <option value="Adhérent" <?php if ($profil->getStatut() =="Adhérent") {echo "selected";} ?> > Adhérent
+              <option value="President" <?php if ($profil->getStatut() =="President") {echo "selected";} ?> > Président
+              <option value="Vice-President" <?php if ($profil->getStatut() =="Vice-President") {echo "selected";} ?> > Vice-Président  
+              <option value="Tresorier" <?php if ($profil->getStatut() =="Tresorier") {echo "selected";} ?> > Trésorier
+              <option value="Tresorier adjoint" <?php if ($profil->getStatut() =="Tresorier adjoint") {echo "selected";} ?> > Trésorier adjoint
+              <option value="Secretaire" <?php if ($profil->getStatut() =="Secretaire") {echo "selected";} ?> > Secrétaire
+              <option value="Secretaire adjoint" <?php if ($profil->getStatut() =="Secretaire adjoint") {echo "selected";} ?> > Secrétaire adjoint
               <option value="Membre du conseil d'administration" <?php if ($profil->getStatut() =="Membre du conseil d'administration") {echo "selected";} ?> > Membre du conseil d'administration
-    					<option value="Secrétaire" <?php if ($profil->getStatut() =="Secrétaire") {echo "selected";} ?> > Secrétaire
-              <option value="Secrétaire adjoint" <?php if ($profil->getStatut() =="Secrétaire adjoint") {echo "selected";} ?> > Secrétaire adjoint
-              <option value="Trésorier" <?php if ($profil->getStatut() =="Trésorier") {echo "selected";} ?> > Trésorier
-              <option value="Trésorier adjoint" <?php if ($profil->getStatut() =="Trésorier adjoint") {echo "selected";} ?> > Trésorier adjoint
-              <option value="Président" <?php if ($profil->getStatut() =="Président") {echo "selected";} ?> > Président
-              <option value="Vice-Président" <?php if ($profil->getStatut() =="Vice-Président") {echo "selected";} ?> > Vice-Président	
+              <option value="Adherent" <?php if ($profil->getStatut() =="Adherent") {echo "selected";} ?> > Adhérent
 				      </select><br />
             <input type="submit" value="Modifier" />
           </fieldset>
