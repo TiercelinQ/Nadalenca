@@ -1,4 +1,4 @@
-<h1>Gestion des répertoires</h1>
+<h1>Gestion du répertoires</h1>
 <hr />
 
 <form method="post" action="./controlAdminRep.php">
