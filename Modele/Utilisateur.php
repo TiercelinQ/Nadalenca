@@ -318,6 +318,13 @@ class Utilisateur
 		$req = "UPDATE utilisateur SET admin = '$a' WHERE email ='$email'";
     	$res = mysql_query($req);
 	}
+	
+	Public static function changerStatut($email, $statut)
+	{
+		$req = "UPDATE utilisateur SET statut = '$statut' WHERE email = '$email'";
+		$res = mysql_query;
+	}
+	
 }
 ?>
 

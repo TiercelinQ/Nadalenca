@@ -9,7 +9,7 @@
 			<td>Adresse Email</td>
 			<td>Mot de Passe</td>
 			<td>Admin</td>
-			<td>ChangerStatutAdmin</td>
+			<td>Changer Statut Admin</td>
 			<td>Supprimer membre</td>
 			<td>Statut</td>
 			<td>Changer Statut</td>
