@@ -64,3 +64,5 @@ switch($nb)
 		break;
 }
 ?>
+</br>
+<a href="../Controleur/controlRepAdmin.php">Retour</a>

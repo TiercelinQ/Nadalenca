@@ -22,7 +22,6 @@
 	$res = mysql_query("SELECT * FROM repertoire WHERE idA ='$id'") or die ("Erreur /controlModifAjouttexte / res");
 	$tuple = mysql_fetch_array($res);
 	$idr = $tuple['idr'];
-
 	if($morceau == true)
 	{
 		include("../Vue/viewModicationMorAudio.php");

@@ -93,4 +93,4 @@
 	?>
 	<br /><br />
 
-	<a href="../Controleur/controlRepertoire.php">Retour au répertoire</a>
+	<a href="../Controleur/controlRepertoire.php">Retour</a>

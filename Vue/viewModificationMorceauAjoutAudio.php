@@ -32,3 +32,5 @@
 ?>
 	<input type="submit" value="Ajouter" />
 </form>
+</br>
+<a href="../Controleur/controlRepAdmin.php">Retour</a>

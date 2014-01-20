@@ -22,4 +22,5 @@
 		</fieldset>
 	</form>
 	<p>Les fichiers audios et textes ne doivent pas comprendrent d'espaces dans leur nom (Ex : mon fichier.extension n'est pas bon, mon_fichier.extension, et monfichier.extension sont bons.)</p>
-	
+	</br>
+	<a href="../Controleur/controlRepAdmin.php">Retour</a>
