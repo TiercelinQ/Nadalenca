@@ -3,6 +3,7 @@
 
 	<table border = "1">
 		<tr>
+<<<<<<< HEAD
 			<th>Nom</th>
 			<th>Prénom</th>
 			<th>Adresse Email</th>
@@ -10,6 +11,18 @@
 			<th>Admin</th>
 			<th>ChangerStatut</th>
 			<th>Supprimer membre</th>
+=======
+			<td>Nom</td>
+			<td>Prénom</td>
+			<td>Adresse Email</td>
+			<td>Mot de Passe</td>
+			<td>Admin</td>
+			<td>ChangerStatutAdmin</td>
+			<td>Supprimer membre</td>
+			<td>Statut</td>
+			<td>Changer Statut</td>
+			
+>>>>>>> changement de place du changement de statut beulej
 
 	<form action='controlMembresAdmin.php' method='post'>	
 <?php
@@ -23,6 +36,17 @@
 			."<td>".$tuple['admin']."</td>"
 			."<td>"."<input type='checkbox' name='email[]' value='$tuple[email]'/>"."<br /></td>" 
 			."<td>"."<input type='checkbox' name='idDelete[]' value='$tuple[id]'/>"."<br /></td>"
+			."<td>".$tuple['statut']."</td>" 
+			."<td>"."<select name='statut' type ='hidden'>
+			 <option value=\"President\" if(".$profil->getStatut() ."'==President') {";echo 'selected'."}  > Président
+              <option value=\"Vice-President\" if (".$profil->getStatut() ."'==Vice-President') {";echo 'selected'."}  > Vice-Président  
+              <option value=\"Tresorier\" if (".$profil->getStatut() ."'==Tresorier') {";echo 'selected'."} > Trésorier
+              <option value=\"Tresorier adjoint\"  if (".$profil->getStatut() ."'==Tresorier adjoint') {";echo 'selected'."} > Trésorier adjoint
+              <option value=\"Secretaire\"  if (".$profil->getStatut() ."'==Secretaire') {";echo 'selected'."} > Secrétaire
+              <option value=\"Secretaire adjoint\"  if (".$profil->getStatut() ."'==Secretaire adjoint') {";echo 'selected'."} > Secrétaire adjoint
+              <option value=\"Membre du conseil d'administration\" if (".$profil->getStatut() ."'==Membre du conseil d'administration') {";echo 'selected'."} > Membre du conseil d'administration
+              <option value=\"Adherent\"  if (".$profil->getStatut() ."'==Adherent') {";echo 'selected'."} > Adhérent
+				      </select>"."</td>"
 			."</tr>";
 			
 	}
