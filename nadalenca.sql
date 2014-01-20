@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.0.4
 -- http://www.phpmyadmin.net
 --
@@ -243,7 +243,7 @@ CREATE TABLE IF NOT EXISTS `texte` (
 -- Contenu de la table `texte`
 --
 
-INSERT INTO `texte` (`idt`, `nom`, `nbfich`, `nomfich1`, `dest1`, `nomfich2`, `dest2`, `nomfich3`, `dest3`, `nomfich4`, `dest4`, `nomfich5`, `dest5`) VALUES
+INSERT INTO `texte` (`idt`, `nom`, `nbfichier`, `nomfich1`, `dest1`, `nomfich2`, `dest2`, `nomfich3`, `dest3`, `nomfich4`, `dest4`, `nomfich5`, `dest5`) VALUES
 (1, 'cecila', 1, 'Cecila.pdf', 'partition', '', '', '', '', '', '', '', ''),
 (2, 'cecila', 1, 'Cecila.pdf', 'partition', '', '', '', '', '', '', '', ''),
 (3, 'cecila', 1, 'Cecila.pdf', 'partition', '', '', '', '', '', '', '', ''),
