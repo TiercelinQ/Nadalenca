@@ -252,6 +252,50 @@ a:hover
 	color:#cd1b1b;
 }
 
+table {
+	vertical-align: middle;
+	margin: auto;
+	padding : auto;
+
+	vertical-align: middle;
+	background-color: #f2f2f2;
+    border:none;
+    border-collapse:collapse;
+    border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+
+}
+
+td, th {
+	padding: 5px;
+	border:none;
+	border-collapse:collapse;
+	color: #333;
+	text-align: center;
+}
+
+th {
+
+	font-size: 15px;
+	line-height: 20px;
+
+	background-color:#cd1b1b;
+	color: #edef9c;
+
+}
+td {
+	line-height: 20px;
+	font-size: 14px;
+	border-bottom: 2px solid #f6f4ca;
+	border-top: 2px solid #f6f4ca;
+	background-color:#edef9c;
+	color: #cd1b1b;
+}
+
+
+
+/*
 table
 { 
 	margin: 0;
@@ -276,6 +320,7 @@ th
 	background-color:#cd1b1b;
 	color: #edef9c;
 }
+*/
 
 h4
 {

@@ -1,7 +1,7 @@
 	<h1>Productions</h1>
 	<hr />
 
-	<h3>Voici les différentes productions que l'association Nadalenca a produit.</h3>
+	<h3>Voici les différentes produits que l'association Nadalenca propose.</h3>
 <?php
 include("../Modele/Production.php");
 	while ($tuple = mysql_fetch_array($res))
