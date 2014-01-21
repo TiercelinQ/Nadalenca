@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Ven 17 Janvier 2014 à 15:43
+-- Généré le: Mar 21 Janvier 2014 à 13:55
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -45,34 +45,6 @@ CREATE TABLE IF NOT EXISTS `audio` (
   PRIMARY KEY (`ida`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
---
--- Contenu de la table `audio`
---
-
-INSERT INTO `audio` (`ida`, `nom`, `nbfichier`, `nomfich1`, `dest1`, `nomfich2`, `dest2`, `nomfich3`, `dest3`, `nomfich4`, `dest4`, `nomfich5`, `dest5`) VALUES
-(1, 'Cecila', 2, '', '', '', '', '', '', '', '', '', ''),
-(2, 'Cecila', 2, '', '', '', '', '', '', '', '', '', ''),
-(3, 'Cecila', 2, '', '', '', '', '', '', '', '', '', ''),
-(4, 'cecila', 1, '', '', '', '', '', '', '', '', '', ''),
-(5, 'cecila', 1, '', '', '', '', '', '', '', '', '', ''),
-(6, 'cecila', 1, '', '', '', '', '', '', '', '', '', ''),
-(7, 'cecila', 1, '', '', '', '', '', '', '', '', '', ''),
-(8, 'cecila', 1, '', '', '', '', '', '', '', '', '', ''),
-(9, 'cecila', 1, 'CECILA-alti.mp3', 'alto', '', '', '', '', '', '', '', ''),
-(10, 'cecila', 1, 'CECILA-alti.mp3', 'alto', '', '', '', '', '', '', '', ''),
-(11, 'cecila', 1, 'CECILA-alti.mp3', 'alto', '', '', '', '', '', '', '', ''),
-(12, 'cecila', 1, 'CECILA-alti.mp3', 'alto', '', '', '', '', '', '', '', ''),
-(13, 'cecila', 1, 'CECILA-alti.mp3', 'alto', '', '', '', '', '', '', '', ''),
-(14, 'cecila', 1, 'CECILA-alti.mp3', 'alto', '', '', '', '', '', '', '', ''),
-(15, 'cecila', 1, 'CECILA-alti.mp3', 'alto', '', '', '', '', '', '', '', ''),
-(16, 'cecila', 1, 'CECILA-alti.mp3', 'alto', '', '', '', '', '', '', '', ''),
-(17, 'cancon', 1, 'CANCONH1.mp3', 'hommes', '', '', '', '', '', '', '', ''),
-(18, 'A Media Nioch', 1, 'a_media_nioch_tenor.mp3', 'Tenor', '', '', '', '', '', '', '', ''),
-(19, 'A Media Nioch', 1, 'a_media_nioch_tenor.mp3', 'Tenor', '', '', '', '', '', '', '', ''),
-(20, 'A Media Nioch', 1, 'a_media_nioch_tenor.mp3', 'Tenor', '', '', '', '', '', '', '', ''),
-(21, 'A Media Nioch', 1, 'a_media_nioch_tenor.mp3', 'Tenor', '', '', '', '', '', '', '', ''),
-(22, 'A Media Nioch', 1, 'a_media_nioch_tenor.mp3', 'Tenor', '', '', '', '', '', '', '', '');
-
 -- --------------------------------------------------------
 
 --
@@ -90,18 +62,15 @@ CREATE TABLE IF NOT EXISTS `concert` (
   `dateC` date NOT NULL,
   `prixC` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Contenu de la table `concert`
 --
 
 INSERT INTO `concert` (`id`, `titreC`, `heureC`, `minuteC`, `lieuC`, `adresseC`, `villeC`, `dateC`, `prixC`) VALUES
-(1, 'Joyeux Noel', 20, 30, 'Mairie de Montpellier', '55 avenue des choux blancs', 'Montpellier', '2014-02-26', ''),
-(5, 'Test', 19, 30, 'Test', 'Test adresse', 'Test Ville', '1987-12-03', '15â‚¬'),
-(6, 'pÃ¢ques noÃªl noÃ«l', 19, 30, 'Test', 'Test adresse', 'Milhaud', '1987-12-03', '1000'),
-(7, 'pÃ¢ques noÃªl noÃ«l', 19, 30, 'coÃ§ou', 'Test adresse', 'Milhaud', '1987-12-03', '1000'),
-(8, 'pÃ¢ques noÃªl''noÃ«l', 19, 30, 'sal''ut', 'Test adresse', 'Milhaud', '1987-12-03', '1000');
+(10, 'Concert de NoÃ«l', 20, 30, 'Salle municipale', '9 rue du concert', 'Montpellier', '2013-12-20', '8â‚¬'),
+(11, 'Concert de rentrÃ©e', 19, 0, 'Salle municipale', '10 avenue Jean JaurÃ¨s', 'Vendargues', '2014-01-05', '10â‚¬');
 
 -- --------------------------------------------------------
 
@@ -115,14 +84,14 @@ CREATE TABLE IF NOT EXISTS `image` (
   `nomI` varchar(255) NOT NULL,
   `descriptionI` varchar(255) NOT NULL,
   PRIMARY KEY (`idI`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Contenu de la table `image`
 --
 
 INSERT INTO `image` (`idI`, `titreI`, `nomI`, `descriptionI`) VALUES
-(15, 'Notre chorale', 'c2ae0986f7c35b9309d92e7b8bf9031a.jpg', 'Notre chorale lors de notre derniere rencontre');
+(16, 'Notre chorale', 'e154164f683eff22cb92de59265512e9.jpg', 'Photo de notre chorale lors de la derniÃ¨re rencontre');
 
 -- --------------------------------------------------------
 
@@ -136,14 +105,14 @@ CREATE TABLE IF NOT EXISTS `lien` (
   `description` text NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `lien`
 --
 
 INSERT INTO `lien` (`id`, `lien`, `description`) VALUES
-(8, 'http://google.com', 'google');
+(10, 'http://maisondeschoeurs.free.fr/association.htm', 'La Maison des ChÅ“urs de Montpellier');
 
 -- --------------------------------------------------------
 
@@ -160,16 +129,14 @@ CREATE TABLE IF NOT EXISTS `message` (
   `messageM` varchar(255) NOT NULL,
   `dateM` varchar(30) NOT NULL,
   PRIMARY KEY (`idM`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Contenu de la table `message`
 --
 
 INSERT INTO `message` (`idM`, `nomM`, `prenomM`, `emailM`, `sujetM`, `messageM`, `dateM`) VALUES
-(4, 'tiercelin', 'quentin', 'q.tiercelin@gmail.com', 'test3', 'test', '19-12-13'),
-(8, 'A', 'D', 'mo@fdfz.fr', 'Test', 'test', '17-01-14'),
-(9, 'lol000Ã dÃ Ã zÃ d@@Ã &lt;&lt;&gt;&lt;', 'test', 'EMAIL@Mail.fr', '$i = &quot;coucou&quot;; echo $i;', '$i = &quot;coucou&quot;; echo $i;', '17-01-14');
+(11, 'Pochon', 'Amaury', 'pochon.amaury@gmail.com', 'Contact', 'Bonjour, je fais parti de la chorale et je souhaite m''inscrire. Pouvez vous me communiquez le mot de passe pour l''inscription ?', '21-01-14');
 
 -- --------------------------------------------------------
 
@@ -184,14 +151,14 @@ CREATE TABLE IF NOT EXISTS `production` (
   `descriptionP` varchar(255) NOT NULL,
   `prixP` varchar(255) NOT NULL,
   PRIMARY KEY (`idP`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
 
 --
 -- Contenu de la table `production`
 --
 
 INSERT INTO `production` (`idP`, `nomP`, `imageP`, `descriptionP`, `prixP`) VALUES
-(32, 'CD Nadalenca', 'e712dbd71305b3d8451ceae0b95b4786.jpg', 'CD de nos musiques', '20â‚¬');
+(33, 'Notre CD', '2df053ccc9c5926d55637d6ca74fbe4e.jpg', 'Notre dernier CD', '15â‚¬');
 
 -- --------------------------------------------------------
 
@@ -208,13 +175,6 @@ CREATE TABLE IF NOT EXISTS `repertoire` (
   KEY `idA` (`idA`),
   KEY `idT` (`idT`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Contenu de la table `repertoire`
---
-
-INSERT INTO `repertoire` (`idr`, `nom`, `idA`, `idT`) VALUES
-(2, 'A Media Nioch', 18, 7);
 
 -- --------------------------------------------------------
 
@@ -238,23 +198,6 @@ CREATE TABLE IF NOT EXISTS `texte` (
   `dest5` varchar(255) NOT NULL,
   PRIMARY KEY (`idt`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
-
---
--- Contenu de la table `texte`
---
-
-INSERT INTO `texte` (`idt`, `nom`, `nbfichier`, `nomfich1`, `dest1`, `nomfich2`, `dest2`, `nomfich3`, `dest3`, `nomfich4`, `dest4`, `nomfich5`, `dest5`) VALUES
-(1, 'cecila', 1, 'Cecila.pdf', 'partition', '', '', '', '', '', '', '', ''),
-(2, 'cecila', 1, 'Cecila.pdf', 'partition', '', '', '', '', '', '', '', ''),
-(3, 'cecila', 1, 'Cecila.pdf', 'partition', '', '', '', '', '', '', '', ''),
-(4, 'cecila', 1, 'Cecila.pdf', 'partition', '', '', '', '', '', '', '', ''),
-(5, 'cecila', 1, 'Cecila.pdf', 'partition', '', '', '', '', '', '', '', ''),
-(6, 'cancon', 1, 'CanÃ§on.pdf', 'paroles', '', '', '', '', '', '', '', ''),
-(7, 'A Media Nioch', 1, 'A_mieja_nioch.pdf', 'Partition', '', '', '', '', '', '', '', ''),
-(8, 'A Media Nioch', 1, 'A_mieja_nioch.pdf', 'Partition', '', '', '', '', '', '', '', ''),
-(9, 'A Media Nioch', 1, 'A_mieja_nioch.pdf', 'Partition', '', '', '', '', '', '', '', ''),
-(10, 'A Media Nioch', 1, 'A_mieja_nioch.pdf', 'Partition', '', '', '', '', '', '', '', ''),
-(11, 'A Media Nioch', 1, 'A_mieja_nioch.pdf', 'Partition', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -285,10 +228,8 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `email`, `mdp`, `statut`, `admin`, `adresseP`, `codeP`, `ville`, `numtelF`, `numtelM`, `voix`) VALUES
-(1, 'Tiercelin', 'Quentin', 'q.tiercelin@gmail.com', 'licorne', '', 1, '20, avenue du Docteur Pezet', '34090', 'Montpellier', '04.99.23.93.98', '06.50.80.66.77', 'voix'),
-(2, 'Beule', 'JÃ©rÃ©my', 'androalphas@hotmail.fr', 'licorne', '', 1, '', '', '', '', '', 'voix'),
-(3, 'Bex-Chauvet', 'Olivier', 'fullofwrath@hotmail.fr', 'lilo', 'PrÃ©sident', 1, '114 rue du ponay', '34090', 'Montpellier', '04.22.33.44.55', '06.22.33.44.55', 'voix2'),
-(6, 'Pochon', 'Amaury', 'momoamo@hotmail.fr', 'test', '', 1, '', '', '', '', '', '');
+(1, 'admin', 'admin', 'admin@mail.com', 'admin', '', 1, '', '', '', '', '', ''),
+(2, 'membre', 'lambda', 'membre@mail.com', 'membre', '', 0, '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -302,14 +243,14 @@ CREATE TABLE IF NOT EXISTS `video` (
   `lienV` varchar(255) NOT NULL,
   `descriptionV` varchar(255) NOT NULL,
   PRIMARY KEY (`idV`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `video`
 --
 
 INSERT INTO `video` (`idV`, `titreV`, `lienV`, `descriptionV`) VALUES
-(3, 'Natal', 'uly36ELJVDQ', 'Musique Natal par la chorale Nadalenca');
+(4, 'VidÃ©o de l''extrait Masiti', 'WvHl5OpBiQM', 'Le chant Masiti lors de notre derniÃ¨re reprÃ©sentation');
 
 --
 -- Contraintes pour les tables exportées
