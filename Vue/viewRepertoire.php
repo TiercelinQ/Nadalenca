@@ -3,7 +3,7 @@
 
 	<form method="post" action="./controlRepertoireRecherche.php">
 		<fieldset>
-			<label>Recherche :</label><input type="text" placeholder="Ex : Nadalet" name="recherche"><br /><! Fonction de recherche dans le répertoire>
+			<label>Recherche :</label><input type="text" placeholder="Ex : Nadalet" name="recherche"><br /><!-- Fonction de recherche dans le répertoire-->
 				<input type="submit" value="Ok" /><br />
 		</fieldset>
 	</form>

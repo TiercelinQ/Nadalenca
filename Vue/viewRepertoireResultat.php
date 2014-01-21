@@ -9,7 +9,7 @@ if($nb_resultats > 1) { echo ' morceaux'; } else { echo ' morceau'; } // on vér
 <?php
 			while ($tuple = mysql_fetch_array($res))
 			{
-		?>	<! On affiche les resulatat possible>
+		?>	<!-- On affiche les resulatat possible-->
 			
 				<li><a href="../Controleur/controlRepertoireMorceau.php?idr=<?php echo $tuple['idr']; ?>"><?php echo $tuple['nom']; ?></a></li>
 			</br>
