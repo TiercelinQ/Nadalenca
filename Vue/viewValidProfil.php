@@ -51,6 +51,7 @@
               <option value="soprano" <?php if ($profil->getVoix() =="soprano") {echo "selected";} ?> > Soprano
               <option value="tenor" <?php if ($profil->getVoix() =="tenor") {echo "selected";} ?> > Tenor
               </select><br /> 
+              <input type="hidden" name="statut" value="<?php echo $profil->getStatut()?>"/>
             <input type="submit" value="Modifier" />
           </fieldset>
         </form>

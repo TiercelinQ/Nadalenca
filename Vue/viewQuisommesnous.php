@@ -4,10 +4,10 @@
 <h3>Membres du bureau de l'association Nadalenca :</h3>
 	<table border = "1">
 		<tr>
-			<td>Statut</td>
-			<td>Prénom</td>
-			<td>Nom</td>
-			<td>Email</td>
+			<th>Statut</th>
+			<th>Prénom</th>
+			<th>Nom</th>
+			<th>Email</th>
 <?php
 	while ($tuple = mysql_fetch_array($res))
 	{ 	

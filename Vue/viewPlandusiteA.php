@@ -10,7 +10,6 @@
 		<li>Multimédia
 			<ul>
 				<li><a href="#">Images</a></li>
-				<li><a href="#">Musiques</a></li>
 				<li><a href="#">Vidéos</a></li>
 			</ul></li>
 		<li><a href="../Controleur/controlProduction.php">Productions</a></li>
@@ -26,12 +25,8 @@
 				<li><a href="../Controleur/controlMembresAdmin.php">Gestion des membres</a></li>
 				<li><a href="#">Gestion des répertoires</a></li>
 				<li><a href="../Controleur/controlAddConcert.php">Gestion des Concerts</a></li>
-				<li>Gestion des multimédias
-					<ul>
-						<li><a href="#">Images</a></li>
-						<li><a href="#">Musiques</a></li>
-						<li><a href="#">Vidéos</a></li>
-					</ul></li>
+				<li><a href="../Controleur/controlAddImage.php">Gestion des Images</a></li>
+				<li><a href="../Controleur/controlVideosAdmin.php">Gestion des Vidéos</a></li>
 				<li><a href="#">Gestion des production</a></li>
 			</ul></li>
 		<li><a href="../Controleur/controlQuisommesnous.php">Qui sommes nous ?</a></li>
