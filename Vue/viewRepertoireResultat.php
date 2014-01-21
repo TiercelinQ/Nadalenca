@@ -5,12 +5,12 @@
 if($nb_resultats > 1) { echo ' morceaux'; } else { echo ' morceau'; } // on vérifie le nombre de résultats pour orthographier correctement. 
 	?>
 		correspondant a votre critère :<br/>
-		<br/>
+		<br/><ul>
 <?php
 			while ($tuple = mysql_fetch_array($res))
 			{
-		?>	
-			<ul>
+		?>	<! On affiche les resulatat possible>
+			
 				<li><a href="../Controleur/controlRepertoireMorceau.php?idr=<?php echo $tuple['idr']; ?>"><?php echo $tuple['nom']; ?></a></li>
 			</br>
 		<?php

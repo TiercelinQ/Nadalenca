@@ -7,14 +7,14 @@
 </head>
 
 <?php
-
+	//On inclue le menu
 	include("./menu.php");
-
-	include("./config.php");
-
+	//On inclue le modele
+	include("../Modele/Repertoire.php");
+	//On récupere la donnée passé en parametre
 	$id = $_GET['idr'];
-
+	//On inclue la vue du Morceau
 	include("../Vue/viewRepertoireMorceau.php");
-
+	//On inclue le pied de page
 	include("./footer.php");
 ?>

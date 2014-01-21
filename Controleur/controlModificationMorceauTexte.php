@@ -7,16 +7,16 @@
 </head>
 
 <?php
-	
+	//On inclue le menu
 	include("./menu.php");
-	
+	//On inclue le modèle
 	include("../Modele/Repertoire.php");
-
+	//On récupère les informations passés dans le lien
 	$id = $_GET['idt'];
 	$nb = $_GET['nb'];
-	
+	//On inclue la vue contenant le formulaire de changement de fichier texte
 	include("../Vue/viewModificationMorceauTexte.php");
-	
+	//On inclue le pied de page
 	include("./footer.php");
 
 ?>

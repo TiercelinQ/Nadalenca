@@ -6,11 +6,14 @@
 		<link rel="stylesheet" href="../style.css" />
 </head>
 <?php
+	//On inclue le menu
 	include("./menu.php");
+	//On inclue le modele
 	include("../Modele/Repertoire.php");
+	//On récupere les données passés en parametre avec ici le nb qui represente le numéro du fichier ajouté
 	$id = $_POST['id'];
 	$nb = $_POST['nb'];
-	
+	//On fait un appel de fonction en fonction du numéro de ficher ajouté
 	switch($nb)
 	{
 		case 2:
@@ -29,6 +32,7 @@
 	$res = mysql_query("SELECT * FROM repertoire WHERE idT ='$id'") or die ("Erreur /controlModifAjouttexte / res");
 	$tuple = mysql_fetch_array($res);
 	$idr = $tuple['idr'];
+	//On inclue les differentes vues en fonction du resultat de ajoutFichierTexte
 	if($rep ==true)
 	{
 		include("../Vue/viewModifMorAjoutTexte.php");
@@ -37,5 +41,6 @@
 	{
 		include("../Vue/viewModifMorAjoutTexteErr.php");
 	}
+	//On inclue le pied de page
 	include("./footer.php");
 ?>

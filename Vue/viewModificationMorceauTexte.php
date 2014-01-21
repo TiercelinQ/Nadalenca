@@ -2,9 +2,11 @@
 <hr />
 
 <?php
+//Requête pour aller chercher la liste des fichiers textes
 $req = mysql_query("SELECT * FROM texte WHERE idt = '$id'") or die ("Erreur / viewModificationMorceauTexte.php / req");
 $tupletexte = mysql_fetch_array($req);
 
+//Input qui depends de qu'elle fichier est modifier
 switch($nb)
 {
 	case 1:

@@ -2,16 +2,20 @@
 <hr/>
 
 <?php
+	//Requête pour récupérer les ids de audio et textes
 	$res = mysql_query("SELECT * FROM repertoire WHERE idr = '$idR'");
 	$tuple = mysql_fetch_array($res);
-	echo "Nom : ".$tuple['nom'];
+	echo "Nom : ".$tuple['nom']; // Affichage du nom
+	//On recupère les ids audio et textes dans les variables $ida et $idt
 	$ida = $tuple['idA'];
 	$idt = $tuple['idT'];
+	//On recupère la liste des fichiers via ses requêtes.
 	$resaudio = mysql_query("SELECT * FROM audio WHERE ida = '$ida'") or die ("Erreur insertion, viewModificationMorceau, resaudio");
 	$tupleaudio = mysql_fetch_array($resaudio);
 	$restexte = mysql_query("SELECT * FROM texte WHERE idt = '$idt'") or die ("Erreur insertion / view ModificationMorceau, restexte");
 	$tupletexte = mysql_fetch_array($restexte);
 	
+	//Affichage sous forme de tableau
 	echo "<table>
 			<thead>
 				<tr>
@@ -27,7 +31,7 @@
 					<td></td>
 				</tr>";
 					
-	
+	//Affichage en fonction du nombre de fichier avec les appels aux différentes fonctions possibles
 	switch($tupleaudio['nbfichier'])
 	{
 		case 1:
@@ -106,7 +110,8 @@
 					<td><a href="."../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=5 > Ajouter une piste audio </a></td>
 					<td></td>
 					<td></td>
-				</tr>";			break;
+				</tr>";			
+			break;
 		case 5:
 			echo "<tr>
 					<td>".$tupleaudio['dest1']."</td>
@@ -145,6 +150,8 @@
 			<td></td>
 			<td></td>
 		</tr>";
+		
+	//Affichage des différents fichiers textes avec leur fonction respectifs
 	switch($tupletexte['nbfichier'])
 	{
 		case 1:

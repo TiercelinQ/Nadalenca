@@ -8,22 +8,22 @@
 <?php
 	//On inclue le menu
 	include ("./menu.php");
-	//On inclue le modele
+	// On inclue le modele
 	include ("../Modele/Repertoire.php");
-	//On récupere la donnée passé en paramètre et on utilise le htmlspecialchars pour prendre en charge les differents signes spéciaux comme "ç" ou "é"
+	//On utilise htmlspecialchars pour que les signe spéciaux soit pris en compte comme "ç" ou "é"
 	$nom = htmlspecialchars($_POST['recherche']);
-	//On fait la requête de recherche en utilisant le mot clé LIKE
+	//Requête de recherche avec le mot clé LIKE
 	$req = "SELECT * FROM repertoire WHERE nom LIKE '%$nom%' ORDER BY idr DESC";
 	$res = mysql_query($req) or die ("Erreur insertion, Controleur Repertoire, Fonction Recherche" );
 	$nb_resultats = mysql_num_rows($res);
-	//On inclue les vues en fonction du résultat de la requête
+	//Affichage des résultats en fonction du $nb_resultats
 	if($nb_resultats != 0)
 	{
-		include("../Vue/viewRepertoireResultat.php");
+		include("../Vue/viewAdminRepertoireResultat.php");
 	}
 	else
 	{
-		include("../Vue/viewRepertoireNoresult.php");
+		include("../Vue/viewAdminRepertoireNoresult.php");
 	}
 	//On inclue le pied de page
 	include("./footer.php");

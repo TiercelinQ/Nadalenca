@@ -3,13 +3,14 @@
 
 <form method="post" action="./controlAdminRep.php">
 	<fieldset>
-		<label>Recherche :</label><input type="text" placeholder="Ex : Nadalet" name="recherche"><br />
+		<label>Recherche :</label><input type="text" placeholder="Ex : Nadalet" name="recherche"><br /><! Fonction de recherche dans le répertoire>
 		<input type="submit" value="Ok" />
 		</fieldset>
 	</form>
 <?php
+//Requête qui prend toute la table repertoire de la base de données 
 $res = mysql_query("SELECT * FROM repertoire") or die ("Erreur insertion, repertoire.php, affichage de tout" );
-
+	//Debut de l'affichage
 	echo "<table border ='1'>
 			<caption>Liste des morceaux :</caption>
 			
@@ -22,7 +23,7 @@ $res = mysql_query("SELECT * FROM repertoire") or die ("Erreur insertion, repert
 			</thead>
 			
 			<tbody> ";
-
+//Affichage des noms ainsi que des fonctions possibles sur ces fichiers
 while ($tuple = mysql_fetch_array($res))
 	{
 	echo " <tr> 

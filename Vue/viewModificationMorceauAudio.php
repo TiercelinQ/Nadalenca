@@ -3,9 +3,11 @@
 
 
 <?php
+//Requête pour aller chercher la listes des fichiers
 $req = mysql_query("SELECT * FROM audio WHERE ida = '$id'") or die ("Erreur / viewModificationMorceauAudio.php / req");
 $tupleaudio = mysql_fetch_array($req);
 
+//Input de fichier differents en fonction du numéro du fichier qui est changé
 switch($nb)
 {
 	case 1:

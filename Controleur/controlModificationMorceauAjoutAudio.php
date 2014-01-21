@@ -6,15 +6,14 @@
 		<link rel="stylesheet" href="../style.css" />
 </head>
 <?php
-
+	//On inclue le menu
 	include("./menu.php");
-
+	//On inclue le modèle
 	include("../Modele/Repertoire.php");
-
+	//On récupère les informations passés dans le lien
 	$id = $_GET['ida'];
 	$nb = $_GET['nb'];
-
-
+	//On inclue la vue qui mène au formulaire d'ajout de fichier audio
 	include("../Vue/viewModificationMorceauAjoutAudio.php");
 
 	include("./footer.php");

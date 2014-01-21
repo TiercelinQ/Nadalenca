@@ -1,16 +1,19 @@
 <h1>Morceau</h1>
 <hr />
 	<?php
+	//Requête pour aller chercher les id audio et textes
 	$res = mysql_query("SELECT * FROM repertoire WHERE idr = '$id'") or die ("Erreur insertion, viewRepertoireMorceau, res");
 	$tuple = mysql_fetch_array($res);
 	?>
 	<p> Nom du morceau : <?php echo $tuple['nom']; ?> </p>
 	<p> Pistes audio : </p>
 	<?php 
+	//Requête pour aller chercher la liste des pistes audio
 	$idA = $tuple['idA'];
 	$resaudio = mysql_query("SELECT * FROM audio WHERE ida = '$idA'") or die ("Erreur insertion, viewRepertoireMorceau, resaudio");
 	$tupleaudio = mysql_fetch_array($resaudio);
 	$i = $tupleaudio['nbfichier'];
+	//Affichage des pistes audios en fonction du nombre de pistes
 	switch($i)
 	{
 		case 1:
@@ -57,11 +60,13 @@
 	?>
 	<p> Fichiers textes (au format PDF) :</p>
 	<?php
+	//Requête pour aller chercher la liste des fichiers textes
 	$idT = $tuple['idT'];
 	$restexte = mysql_query("SELECT * FROM texte WHERE idt = '$idT'") or die ("Erreur insertion, viewRepertoireMorceau, restexte");
 	$tupletexte = mysql_fetch_array($restexte);
 	$i = $tupletexte['nbfichier'];
 	$blank = "_blank";
+	//affichage des fichiers textes en fonction du nombre de fichier
 	switch($i)
 	{
 		case 1:
@@ -91,6 +96,6 @@
 			break;
 	}
 	?>
-	<br /><br />
+	</br>
 
 	<a href="../Controleur/controlRepertoire.php">Retour</a>

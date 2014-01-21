@@ -8,15 +8,15 @@
 
 
 <?php
-
+	//On inclue le menu
 	include("./menu.php");
-
+	//On inclue le modele
 	include("../Modele/Repertoire.php");
-
+	//On récupere la donnée passé en parametre
 	$id = $_GET['id'];
-
+	//On fait appel à la fonction suppressionMorceau qui supprime tous les fichiers d'un morceau puis toutes les informations le concernant dans la base de données
 	$rep = Repertoire::suppressionMorceau($id);
-
+	//On inclue les differentes vues en focntion du résultat de la fonction suppressionMorceau qui renvoie un boolean
 	if($rep == true)
 	{
 		include("../Vue/viewSupRep.php");
@@ -25,6 +25,6 @@
 	{
 		include("../Vue/viewSupRepErreur.php");
 	}
+	//On inclue le pied de page
 	include("./footer.php");
-	
 ?>
