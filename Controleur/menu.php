@@ -33,7 +33,7 @@
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a></li>
 					<li><a href="./controlRepertoire.php">REPERTOIRE</a></li>
-					<li><a href="#">MULTIMEDIA</a>
+					<li><a>MULTIMEDIA</a>
 						<ul id="sousMenu">
 							<li><a href="./controlImage.php">IMAGES</a></li>
 							<li><a href="./controlVideo.php">VIDEOS</a></li>

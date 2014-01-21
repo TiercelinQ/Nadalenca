@@ -7,28 +7,29 @@ include("../Modele/Production.php");
 	$i = $tuple['idP'];
 	 ?>	
 
-	<div id="container">
-		<div class="gauche">
-			<p>Produit : <?php echo "$tuple[nomP]"; ?><p>
+	<div id="container_production_admin">
+		<div class="gauche_production">
+			<p>Nom : <?php echo "$tuple[nomP]"; ?><p>
 		</div>
 
-		<div class="milieu">
-			<p>Prix : <?php echo "$tuple[prixP]"; ?></p>
+		<div class="image_production_admin">
+			<p><?php  echo"<img src=\"../Images/" . $tuple['imageP'] . "\"/ width=\"70\" height=\"50\">"?></p>
 		</div>
 
-		<div class="image"> <!--nom temporaire pour citer l'incrustation de l'image dans la description -->
-			<p>Aperçu : <?php  echo"<img src=\"../Images/" . $tuple['imageP'] . "\"/ width=\"70\" height=\"50\">"?></p>
-		</div>
-
-		<div class="dessous">
+		<div class="droite_production_admin">
 			<p>Description : <?php echo "$tuple[descriptionP]"; ?></p>
 		</div>
 
-		<div class="suppr">
-			<p> <?php echo"<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Produit'/>
-        </button></td></tr>"; ?></p>
+		<div class="dessous_production_admin">
+			<p>Prix : <?php echo "$tuple[prixP]"; ?></p>
 		</div>	
 	</div>
+
+		<div class="suppr_message">
+			<p> <?php echo"<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Produit'/>
+        </button></td></tr>"; ?></p>
+		</div>
+
 <?php
 	} 
 		?>
