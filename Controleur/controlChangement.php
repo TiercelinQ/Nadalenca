@@ -5,18 +5,18 @@ include ("../Modele/Utilisateur.php");
 //Toutes les variables récupèrent les contenus des cases qui leur sont attribués
 $email = $_SESSION['login'];
 $id = $_POST['id'];
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
+$nom = addslashes(htmlspecialchars($_POST['nom']));
+$prenom = addslashes(htmlspecialchars($_POST['prenom']));
 $mdpold = $_POST['mdpold'];
 $mdpnew = $_POST['mdpnew'];
 $mdpnewconf = $_POST['mdpnewconf'];
-$adresseP = $_POST['adresseP'];
-$codeP = $_POST['codeP'];
-$ville = $_POST['ville'];
-$numtelF = $_POST['numtelF'];
-$numtelM = $_POST['numtelM'];
+$adresseP = addslashes(htmlspecialchars($_POST['adresseP']));
+$codeP = addslashes(htmlspecialchars($_POST['codeP']));
+$ville = addslashes(htmlspecialchars($_POST['ville']));
+$numtelF = addslashes(htmlspecialchars($_POST['numtelF']));
+$numtelM = addslashes(htmlspecialchars($_POST['numtelM']));
 $voix = $_POST['voix'];
-$statut = $_POST['statut'];
+$statut = addslashes(htmlspecialchars($_POST['statut']));
 
 
 //Appel de la fonction changementInfo de la classe Utilsateur

@@ -251,13 +251,13 @@ class Utilisateur
 		if($tuple['prenom'] != $prenom)
 		{
 			$req1 = "UPDATE utilisateur SET prenom='$prenom' WHERE email ='$email'";
-			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeAdresse");
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changePrenom");
 		}
 		
         if($tuple['adresseP'] != $adresseP)
         {
             $req1 = "UPDATE utilisateur SET adresseP ='$adresseP' WHERE email ='$email'";
-			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeAdresse");
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changeNom");
         }
         
 		if($tuple['codeP'] != $codeP)
