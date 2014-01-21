@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 21 Janvier 2014 à 13:55
+-- Généré le: Mar 21 Janvier 2014 à 14:03
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -43,7 +43,15 @@ CREATE TABLE IF NOT EXISTS `audio` (
   `nomfich5` varchar(255) NOT NULL,
   `dest5` varchar(255) NOT NULL,
   PRIMARY KEY (`ida`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+
+--
+-- Contenu de la table `audio`
+--
+
+INSERT INTO `audio` (`ida`, `nom`, `nbfichier`, `nomfich1`, `dest1`, `nomfich2`, `dest2`, `nomfich3`, `dest3`, `nomfich4`, `dest4`, `nomfich5`, `dest5`) VALUES
+(23, 'A media nioch', 1, '22e1e855ff0b2df453f432f6591ed72f.mp3', 'Tenor', '', '', '', '', '', '', '', ''),
+(24, 'Cecila', 4, '74e1d087111c172c750d086103783ee2.mp3', 'Alto', '47c2a9a36ef12c0df9f91a9743c286b1.mp3', 'Basse', 'e338603e2ea747627127149f363ca90d.mp3', 'Soprano', '000565ca3d7d7fc223c808275c34ac0d.mp3', 'Tenor', '', '');
 
 -- --------------------------------------------------------
 
@@ -70,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `concert` (
 
 INSERT INTO `concert` (`id`, `titreC`, `heureC`, `minuteC`, `lieuC`, `adresseC`, `villeC`, `dateC`, `prixC`) VALUES
 (10, 'Concert de NoÃ«l', 20, 30, 'Salle municipale', '9 rue du concert', 'Montpellier', '2013-12-20', '8â‚¬'),
-(11, 'Concert de rentrÃ©e', 19, 0, 'Salle municipale', '10 avenue Jean JaurÃ¨s', 'Vendargues', '2014-01-05', '10â‚¬');
+(11, 'Concert de rentrÃ©e', 19, 0, 'Salle municipale', '10 avenue Jean JaurÃ¨s', 'Vendargues', '2014-02-05', '10â‚¬');
 
 -- --------------------------------------------------------
 
@@ -174,7 +182,15 @@ CREATE TABLE IF NOT EXISTS `repertoire` (
   PRIMARY KEY (`idr`),
   KEY `idA` (`idA`),
   KEY `idT` (`idT`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `repertoire`
+--
+
+INSERT INTO `repertoire` (`idr`, `nom`, `idA`, `idT`) VALUES
+(3, 'A media nioch', 23, 12),
+(4, 'Cecila', 24, 13);
 
 -- --------------------------------------------------------
 
@@ -197,7 +213,15 @@ CREATE TABLE IF NOT EXISTS `texte` (
   `nomfich5` varchar(255) NOT NULL,
   `dest5` varchar(255) NOT NULL,
   PRIMARY KEY (`idt`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+--
+-- Contenu de la table `texte`
+--
+
+INSERT INTO `texte` (`idt`, `nom`, `nbfichier`, `nomfich1`, `dest1`, `nomfich2`, `dest2`, `nomfich3`, `dest3`, `nomfich4`, `dest4`, `nomfich5`, `dest5`) VALUES
+(12, 'A media nioch', 1, 'a4013db5084219fad501dc54d4fae5e9.pdf', 'Partitions', '', '', '', '', '', '', '', ''),
+(13, 'Cecila', 1, '18216bfbf04d0d82500238566edcdde9.pdf', 'Partition', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
