@@ -41,7 +41,7 @@ class Lien
 	{
 		$idL = null;
 		$description = addslashes(htmlspecialchars($this->description));
-		$lien = $this->lien;
+		$lien = addslashes(htmlspecialchars($this->lien));
 
 			$req = "INSERT INTO lien (id, description, lien) VALUES ('$idL','$description','$lien')";
 			$res = mysql_query($req) or die ("Erreur insertion :  Classe Lien / Fonction create lien");
