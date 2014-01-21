@@ -11,7 +11,7 @@
 	//On inclue le modele
 	include("../Modele/Repertoire.php");
 	//On récupere le nom passé en paramètre
-	$nom = $_POST['nomR'];
+	$nom = addslashes(htmlspecialchars($_POST['nomR']));
 	//On fait appel à la fonction createaudio qui déplace le fichier sur le serveur et crée un nouveau tuple dans la base de données
 	$rep = Repertoire::createaudio($nom,1,$_FILES['audio1']['name'], $_FILES['audio1']['tmp_name'], $_POST['taudio1']);
 	//On fait appel à la fonction createtexte qui déplace le fichier sur le serveur et crée un nouveau tuple dans la base de données
