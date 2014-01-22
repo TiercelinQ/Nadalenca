@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `message` (
 --
 
 INSERT INTO `message` (`idM`, `nomM`, `prenomM`, `emailM`, `sujetM`, `messageM`, `dateM`) VALUES
-(11, 'Pochon', 'Amaury', 'pochon.amaury@gmail.com', 'Contact', 'Bonjour, je fais parti de la chorale et je souhaite m''inscrire. Pouvez vous me communiquez le mot de passe pour l''inscription ?', '21-01-14');
+(11, 'Pochon', 'Amaury', 'pochon.amaury@gmail.com', 'Contact', 'Bonjour, je fais partie de la chorale et je souhaite m''inscrire. Pouvez vous me communiquer le mot de passe pour l''inscription ?', '21-01-14');
 
 -- --------------------------------------------------------
 
