@@ -16,8 +16,7 @@ $ville = addslashes(htmlspecialchars($_POST['ville']));
 $numtelF = addslashes(htmlspecialchars($_POST['numtelF']));
 $numtelM = addslashes(htmlspecialchars($_POST['numtelM']));
 $voix = $_POST['voix'];
-$statut = addslashes(htmlspecialchars($_POST['statut']));
-
+$statut = $_POST['statut'];
 
 //Appel de la fonction changementInfo de la classe Utilsateur
 $profil = Utilisateur::changementInfo($email, $id, $nom, $prenom, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix, $statut);
