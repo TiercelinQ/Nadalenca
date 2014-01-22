@@ -10,8 +10,16 @@
 	include("./menu.php");
 	//On inclut le fichier config pour accéder à la base de données
 	include("./config.php");
-	//On inclut la vue de la page administration
-	include("../Vue/viewAdministration.php");
+	if(isset($_SESSION['login']) && isset($_SESSION['admin']) && $_SESSION['admin'] != 0)
+	{
+		//On inclut la vue de la page administration
+		include("../Vue/viewAdministration.php");
+	}
+	else
+	{
+		//On affiche la vue erreur
+		include("../Vue/viewErrorMembre.php");
+	}
 	//On inclut le footer
 	include("./footer.php");
 ?>

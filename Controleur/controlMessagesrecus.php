@@ -29,9 +29,17 @@
 	$req="SELECT * from message order by dateM ASC ";
 	//Execution de la requête
 	$res =mysql_query($req);
-
-	//On inclut la vue d'affichage des messages reçus en session admins
-	include("../Vue/viewMessagesrecus2.php");
+	//Contrôle permettant d'atteindre la page si la session en cours est une session administrateur
+	if(isset($_SESSION['login']) && isset($_SESSION['admin']) && $_SESSION['admin'] != 0)
+	{
+		//On inclut la vue d'ajout d'une image dans la session administrateur
+		include("../Vue/viewMessagesrecus2.php");
+	}
+	else
+	{ 
+		//Sinon on affiche la vue des images d'une session normale
+		include("../Vue/viewErrorCoAdmin.php");
+	}
 	//On inclut le footer
 	include("./footer.php");
 ?>

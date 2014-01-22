@@ -11,8 +11,20 @@
 	include("./menu.php");
 	//On inclut le fichier config pour accéder à la base de données
 	include("./config.php");
-	//On affiche la vue de la page de gestion des répertoires en session admin
-	include("../Vue/viewAdminRep.php");
+	if(isset($_SESSION['login']) && isset($_SESSION['admin']) && $_SESSION['admin'] != 0)
+	{
+		//On affiche la vue de la page de gestion des répertoires en session admin
+		include("../Vue/viewAdminRep.php");
+	}
+	else if(isset($_SESSION['login']))
+	{
+		include("../Vue/viewRepertoire.php");	
+	}
+	else
+	{ 
+		//Sinon on affiche la vue des images d'une session normale
+		include("../Vue/viewErrorCoAdmin.php");
+	}
 	//On inclut le footer
 	include("./footer.php");
 ?>
