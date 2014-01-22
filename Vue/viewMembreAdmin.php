@@ -30,14 +30,14 @@
 			."<td>"."<input type='checkbox' name='idDelete[]' value='$tuple[id]'/>"."<br /></td>"
 			."<td>".$tuple['statut']."</td>" 
 			."<td>"."<select name='statut' type ='hidden'>
-			 <option value=\"President\" if(".$profil->getStatut() ." == 'President') {";echo 'selected'."}  > Président
-              <option value=\"Vice-President\" if (".$profil->getStatut() ." == 'Vice-President') {";echo 'selected'."}  > Vice-Président  
-              <option value=\"Tresorier\" if (".$profil->getStatut() ." == 'Tresorier') {";echo 'selected'."} > Trésorier
-              <option value=\"Tresorier adjoint\"  if (".$profil->getStatut() ." == 'Tresorier adjoint') {";echo 'selected'."} > Trésorier adjoint
-              <option value=\"Secretaire\"  if (".$profil->getStatut() ." == 'Secretaire') {";echo 'selected'."} > Secrétaire
-              <option value=\"Secretaire adjoint\"  if (".$profil->getStatut() ." == 'Secretaire adjoint') {";echo 'selected'."} > Secrétaire adjoint
-              <option value=\"Membre du conseil d'administration\" if (".$profil->getStatut() ." == 'Membre du conseil d'administration') {";echo 'selected'."} > Membre du conseil d'administration
-              <option value=\"Adherent\"  if (".$profil->getStatut() ." == 'Adherent') {";echo 'selected'."} > Adhérent
+			 <option value=\"President\" if(".$tuple['statut']." == 'President') {";echo 'selected'."}  > Président
+              <option value=\"Vice-President\" if (".$tuple['statut']." == 'Vice-President') {";echo 'selected'."}  > Vice-Président  
+              <option value=\"Tresorier\" if (".$tuple['statut']." == 'Tresorier') {";echo 'selected'."} > Trésorier
+              <option value=\"Tresorier adjoint\"  if (".$tuple['statut']." == 'Tresorier adjoint') {";echo 'selected'."} > Trésorier adjoint
+              <option value=\"Secretaire\"  if (".$tuple['statut']." == 'Secretaire') {";echo 'selected'."} > Secrétaire
+              <option value=\"Secretaire adjoint\"  if (".$tuple['statut']." == 'Secretaire adjoint') {";echo 'selected'."} > Secrétaire adjoint
+              <option value=\"Membre du conseil d'administration\" if (".$tuple['statut']." == 'Membre du conseil d'administration') {";echo 'selected'."} > Membre du conseil d'administration
+              <option value=\"Adherent\"  if (".$tuple['statut']." == 'Adherent') {";echo 'selected'."} > Adhérent
 				      </select>"."</td>"
 			."</tr>";
 			

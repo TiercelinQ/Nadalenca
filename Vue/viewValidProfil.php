@@ -13,6 +13,7 @@
 				<th>N° de téléphone fixe</th>
 				<th>N° de téléphone mobile</th>
 				<th>Type de voix</th>
+        <th>Statut</th>
 			</tr>
    	 	<tr>
 				<td><?php echo $profil->getNom();?></td>
@@ -24,6 +25,7 @@
 				<td><?php echo $profil->getnumtelF();?></td>
 				<td><?php echo $profil->getnumtelM();?></td>
 				<td><?php echo $profil->getVoix();?></td>
+        <td><?php echo $profil->getStatut();?></td>
 			</tr>
    	</table>
 
@@ -51,7 +53,7 @@
               <option value="soprano" <?php if ($profil->getVoix() =="soprano") {echo "selected";} ?> > Soprano
               <option value="tenor" <?php if ($profil->getVoix() =="tenor") {echo "selected";} ?> > Tenor
               </select><br /> 
-              <input type="hidden" name="statut" value="<?php echo $profil->getStatut()?>"/>
+              <input type="hidden" name="statut" value="<?php echo $profil->getStatut()?>"/><br />
             <input type="submit" value="Modifier" />
           </fieldset>
         </form>
