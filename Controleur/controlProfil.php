@@ -25,7 +25,7 @@
 	else
 	{
     	//on inclut la vue d'afficha de la page d'erreur
-    	include('../Vue/viewErrorProfil.php');
+    	include('../Vue/viewErrorMembre.php');
 	}
 
 	//On inclut le footer
