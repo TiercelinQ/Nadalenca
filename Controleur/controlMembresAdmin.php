@@ -26,13 +26,13 @@ include("./controlMembres.php");
 		header("Location: ./controlMembresAdmin.php");
 	}
 	
-	if(isset($_POST['statut'])) //sera vrai si au moins un moins un checkbox a été coché
+	if(isset($_POST['statut'])) //sera vrai si au moins un statut a été changé
 	{
 		//ici a chaque passage $admin contiendra la valeur de l'attribut value d'une des cases a cocher
 		foreach($_POST['statut'] as $statut) 
 		{ 
 			//Appel de la fonction delete de la classe Utilisateur
-			Utilisateur::changerStatut($statut);
+			Utilisateur::changerStatut($email, $statut);
 		}
 		//Redirection vers le contrôleur de la gestions des membres en session admin
 		header("Location: ./controlMembresAdmin.php");

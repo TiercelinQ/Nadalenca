@@ -319,7 +319,7 @@ class Utilisateur
     	$res = mysql_query($req);
 	}
 	
-	Public static function changerStatut($email, $statut)
+	public static function changerStatut($email, $statut)
 	{
 		$req = "UPDATE utilisateur SET statut = '$statut' WHERE email = '$email'";
 		$res = mysql_query;
