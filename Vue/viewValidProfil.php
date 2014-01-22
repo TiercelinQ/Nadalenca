@@ -48,10 +48,10 @@
           <label>Numéro de téléphone fixe :</label><input type="int" name="numtelF" value="<?php echo $profil->getNumtelF()?>"/><br />
           <label>Numéro de téléphone portable :</label><input type="int" name="numtelM" value="<?php echo $profil->getNumtelM()?>"/> <br />
           <label>Type de voix :</label><select name="voix">
-              <option value="Alto" <?php if ($profil->getVoix() =="Alto") {echo "selected";} ?> > Alto 
-              <option value="Basse" <?php if ($profil->getVoix() =="Basse") {echo "selected";} ?> > Basse
-              <option value="Soprano" <?php if ($profil->getVoix() =="Soprano") {echo "selected";} ?> > Soprano
-              <option value="Tenor" <?php if ($profil->getVoix() =="Tenor") {echo "selected";} ?> > Tenor
+              <option value="Alto" <?php if ($profil->getVoix() == "Alto") {echo "selected";} ?> > Alto 
+              <option value="Basse" <?php if ($profil->getVoix() == "Basse") {echo "selected";} ?> > Basse
+              <option value="Soprano" <?php if ($profil->getVoix() == "Soprano") {echo "selected";} ?> > Soprano
+              <option value="Tenor" <?php if ($profil->getVoix() == "Tenor") {echo "selected";} ?> > Tenor
               </select><br /> 
           <label>Statut :</label><select name="statut">
               <option value="President" <?php if ($profil->getStatut() == "President") {echo "selected";} ?> > Président 

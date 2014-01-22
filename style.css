@@ -60,7 +60,18 @@ img
 #menu_vis li
 {
 	float: left;
-	width: 150px;
+	width: 128.5px;
+}
+
+#menu_vis li a
+{
+	display:block;
+ 	color:#e5f24a;
+ 	background-color:#cd1b1b;
+	margin:0;
+ 	padding:5px 5px;
+ 	border:0;
+ 	text-decoration:none;	
 }
 
 #menu_vis li a:link, #menu_vis li a:visited 
@@ -84,6 +95,33 @@ img
  	border:0;
  	text-decoration:none;
 }
+
+#menu_vis #sousMenu
+{
+ 	list-style-type:none; 
+ 	margin:0;
+	padding:0;
+	display:none;
+	position: absolute;
+}
+
+#menu_vis #sousMenu li a:link, #menu_mem #sousMenu li a:visited
+{
+ 	color:#e5f24a;
+ 	margin:0;
+ 	border:0;
+ 	text-decoration:none;
+	background-color:#cd1b1b;
+}
+
+#menu_vis #sousMenu li a:hover
+{
+	background-color:#edef9c;
+	color:#cd1b1b;
+	text-decoration:none;
+}
+
+#menu_vis li:hover #sousMenu {display:block;}
 
 #menu_mem
 {

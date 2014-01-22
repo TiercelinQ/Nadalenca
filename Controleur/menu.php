@@ -55,6 +55,11 @@
 				<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 				<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 				<li><a href="./controlConcert.php">CONCERT</a></li>
+				<li><a>MULTIMEDIA</a>
+					<ul id="sousMenu">
+						<li><a href="./controlImage.php">IMAGES</a></li>
+						<li><a href="./controlVideo.php">VIDEOS</a></li>
+					</ul></li>
 				<li><a href="./controlProduction.php">PRODUCTIONS</a></li>
 				<li><a href="./controlInscription.php">INSCRIPTION</a></li>
 				<li><a href="./controlConnexion.php">CONNEXION</a></li>
