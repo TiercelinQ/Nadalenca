@@ -29,7 +29,7 @@
 			$rep = Repertoire::ajoutFichierAudio($id, $nb, $_FILES['audio5']['name'], $_FILES['audio5']['tmp_name'], $_POST['taudio5']);
 			break;
 	}
-	$res = mysql_query("SELECT * FROM repertoire WHERE idT ='$id'") or die ("Erreur /controlModifAjouttexte / res");
+	$res = mysql_query("SELECT * FROM repertoire WHERE idA ='$id'") or die ("Erreur /controlModifAjouttexte / res");
 	$tuple = mysql_fetch_array($res);
 	$idr = $tuple['idr'];
 	//On inclue les differentes vues en fonction du résultat ajoutFichierAudio qui renvoie un boolean

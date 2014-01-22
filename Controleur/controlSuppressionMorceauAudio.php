@@ -18,14 +18,14 @@
 	$res = mysql_query("SELECT * FROM repertoire WHERE idA ='$id'") or die ("Erreur /controlSuppressionMorceauAudio/ res");
 	$tuple = mysql_fetch_array($res);
 	$idr = $tuple['idr'];
-	//On inclue les vues en fonction du résultat de supprimeraudionb qui renvoie un boolena
+	//On inclue les vues en fonction du résultat de supprimeraudionb qui renvoie un boolean
 	if($morceau == true)
 	{
 		include("../Vue/viewSuppresssionAudioMorceau.php");
 	}
 	else
 	{
-		include("../Vue/viewSuppressionAudioMorceauErreur.php");
+		include("../Vue/viewSuppresssionAudioMorceauErreur.php");
 	}
 	//On inclue le pied de page
 	include("./footer.php");

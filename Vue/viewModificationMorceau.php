@@ -37,11 +37,11 @@
 		case 1:
 			echo "<tr>
 					<td>".$tupleaudio['dest1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Modifier </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1\" > Modifier </a></td>
 					<td>Ne peut pas être supprimé</td>
 				</tr>";
 			echo "<tr>
-					<td><a href="."../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=2 > Ajouter une piste audio </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=2\" > Ajouter une piste audio </a></td>
 					<td></td>
 					<td></td>
 				</tr>";
@@ -49,16 +49,16 @@
 		case 2:
 			echo "<tr>
 					<td>".$tupleaudio['dest1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 \" > Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 \" > Supprimer </a></td>
 				</tr>";			
 			echo "<tr>
 					<td>".$tupleaudio['dest2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 > Modifier</a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 \"> Modifier</a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
-					<td><a href="."../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=3 > Ajouter une piste audio </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=3\" > Ajouter une piste audio </a></td>
 					<td></td>
 					<td></td>
 				</tr>";
@@ -66,21 +66,21 @@
 		case 3:
 			echo "<tr>
 					<td>".$tupleaudio['dest1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 \" > Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 \"> Supprimer </a></td>
 				</tr>";			
 			echo "<tr>
 					<td>".$tupleaudio['dest2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 > Modifier</a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 \" > Modifier</a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 \" > Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupleaudio['dest3']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 > Modifier</a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 \" > Modifier</a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
-					<td><a href="."../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=4 > Ajouter une piste audio </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=4 \"> Ajouter une piste audio </a></td>
 					<td></td>
 					<td></td>
 				</tr>";			
@@ -88,26 +88,26 @@
 		case 4:
 			echo "<tr>
 					<td>".$tupleaudio['dest1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 \" > Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 \" > Supprimer </a></td>
 				</tr>";			
 			echo "<tr>
 					<td>".$tupleaudio['dest2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 \" > Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupleaudio['dest2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 \" > Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupleaudio['dest4']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=4 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=4 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=4 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=4 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
-					<td><a href="."../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=5 > Ajouter une piste audio </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=5 \"> Ajouter une piste audio </a></td>
 					<td></td>
 					<td></td>
 				</tr>";			
@@ -115,28 +115,28 @@
 		case 5:
 			echo "<tr>
 					<td>".$tupleaudio['dest1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 \" > Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=1 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupleaudio['dest2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 \" > Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=2 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupleaudio['dest3']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 \" > Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=3 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupleaudio['dest4']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=4 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=4 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=4 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=4 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupleaudio['dest5']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=5 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=5 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=5 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauAudio.php?ida=".$tupleaudio['ida']."&nb=5 \"> Supprimer </a></td>
 				</tr>";
 			break;
 	}
@@ -157,11 +157,11 @@
 		case 1:
 			echo "<tr>
 					<td>".$tupletexte['dest1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 \"> Modifier </a></td>
 					<td>Ne peut pas être supprimé</td>
 				</tr>";
 			echo "<tr>
-					<td><a href="."../Controleur/controlModificationMorceauAjoutTexte.php?idt=".$tupletexte['idt']."&nb=2 > Ajouter un fichier texte </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutTexte.php?idt=".$tupletexte['idt']."&nb=2 \"> Ajouter un fichier texte </a></td>
 					<td></td>
 					<td></td>
 				</tr>";
@@ -169,16 +169,16 @@
 		case 2:
 			echo "<tr>
 					<td>".$tupletexte['dest1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 \"> Supprimer </a></td>
 				</tr>";			
 			echo "<tr>
 					<td>".$tupletexte['dest2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
-					<td><a href="."../Controleur/controlModificationMorceauAjoutTexte.php?idt=".$tupletexte['idt']."&nb=3 > Ajouter un fichier texte </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutTexte.php?idt=".$tupletexte['idt']."&nb=3 \"> Ajouter un fichier texte </a></td>
 					<td></td>
 					<td></td>
 				</tr>";
@@ -186,21 +186,21 @@
 		case 3:
 			echo "<tr>
 					<td>".$tupletexte['dest1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 \"> Supprimer </a></td>
 				</tr>";			
 			echo "<tr>
 					<td>".$tupletexte['dest2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Modifier</a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 \"> Modifier</a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['dest3']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 > Modifier</a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 \"> Modifier</a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
-					<td><a href="."../Controleur/controlModificationMorceauAjoutTexte.php?idt=".$tupletexte['idt']."&nb=4 > Ajouter un fichier texte </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutTexte.php?idt=".$tupletexte['idt']."&nb=4 \"> Ajouter un fichier texte </a></td>
 					<td></td>
 					<td></td>
 				</tr>";			
@@ -208,26 +208,26 @@
 		case 4:
 			echo "<tr>
 					<td>".$tupletexte['dest1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 \"> Supprimer </a></td>
 				</tr>";			
 			echo "<tr>
 					<td>".$tupletexte['dest2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['dest2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['dest4']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
-					<td><a href="."../Controleur/controlModificationMorceauAjoutTexte.php?idt=".$tupletexte['idt']."&nb=5 > Ajouter un fichier texte </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutTexte.php?idt=".$tupletexte['idt']."&nb=5 \"> Ajouter un fichier texte </a></td>
 					<td></td>
 					<td></td>
 				</tr>";			
@@ -235,28 +235,28 @@
 		case 5:
 			echo "<tr>
 					<td>".$tupletexte['dest1']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=1 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['dest2']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=2 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['dest3']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=3 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['dest4']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=4 \"> Supprimer </a></td>
 				</tr>";
 			echo "<tr>
 					<td>".$tupletexte['dest5']."</td>
-					<td><a href="."../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=5 > Modifier </a></td>
-					<td><a href="."../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=5 > Supprimer </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauTexte.php?idt=".$tupletexte['idt']."&nb=5 \"> Modifier </a></td>
+					<td><a href=\"../Controleur/controlSuppressionMorceauTexte.php?idt=".$tupletexte['idt']."&nb=5 \"> Supprimer </a></td>
 				</tr>";
 			break;
 	}
