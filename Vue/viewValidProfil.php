@@ -48,10 +48,20 @@
           <label>Numéro de téléphone fixe :</label><input type="int" name="numtelF" value="<?php echo $profil->getNumtelF()?>"/><br />
           <label>Numéro de téléphone portable :</label><input type="int" name="numtelM" value="<?php echo $profil->getNumtelM()?>"/> <br />
           <label>Type de voix :</label><select name="voix">
-              <option value="alto" <?php if ($profil->getVoix() =="alto") {echo "selected";} ?> > Alto 
-              <option value="basse" <?php if ($profil->getVoix() =="basse") {echo "selected";} ?> > Basse
-              <option value="soprano" <?php if ($profil->getVoix() =="soprano") {echo "selected";} ?> > Soprano
-              <option value="tenor" <?php if ($profil->getVoix() =="tenor") {echo "selected";} ?> > Tenor
+              <option value="Alto" <?php if ($profil->getVoix() =="Alto") {echo "selected";} ?> > Alto 
+              <option value="Basse" <?php if ($profil->getVoix() =="Basse") {echo "selected";} ?> > Basse
+              <option value="Soprano" <?php if ($profil->getVoix() =="Soprano") {echo "selected";} ?> > Soprano
+              <option value="Tenor" <?php if ($profil->getVoix() =="Tenor") {echo "selected";} ?> > Tenor
+              </select><br /> 
+          <label>Statut :</label><select name="statut">
+              <option value="President" <?php if ($profil->getStatut() == "President") {echo "selected";} ?> > Président 
+              <option value="Vice-President" <?php if ($profil->getStatut() == "Vice-President") {echo "selected";} ?> > Vice-Président
+              <option value="Tresorier" <?php if ($profil->getStatut() == "Tresorier") {echo "selected";} ?> > Trésorier
+              <option value="Tresorier Adjoint" <?php if ($profil->getStatut() == "Tresorier Adjoint") {echo "selected";} ?> > Trésorier Adjoint
+              <option value="Secretariat" <?php if ($profil->getStatut() == "Secretariat") {echo "selected";} ?> > Secrétariat
+              <option value="Secretariat Adjoint" <?php if ($profil->getStatut() == "Secretariat Adjoint") {echo "selected";} ?> > Secrétariat Adjoint
+              <option value="Membre du Conseil d'Administration" <?php if ($profil->getStatut() == "Membre du Conseil d'Administration") {echo "selected";} ?> > Membre du Conseil d'Administration
+              <option value="Adherent" <?php if ($profil->getStatut() == "Adherent") {echo "selected";} ?> > Adhérent
               </select><br /> 
               <input type="hidden" name="statut" value="<?php echo $profil->getStatut()?>"/><br />
             <input type="submit" value="Modifier" />
