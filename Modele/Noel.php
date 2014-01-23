@@ -56,20 +56,20 @@ class Noel
 	}
 	
 	//suppression d'un message dans la base de donnée message
-	public static function delete($idM)
+	public static function delete($idN)
 	{
 		$req = mysql_query("DELETE FROM noel WHERE idN = '$idN'");
 		mysql_query($req);
 	}
 	
 
-	/*//Vérification si un message existe par son idM
-	public static function existId($idM)
+	//Vérification si un message existe par son idN
+	public static function existId($idN)
 	{
-		$req = mysql_query("SELECT count(*) FROM message WHERE idM = '$idM'");
+		$req = mysql_query("SELECT count(*) FROM noel WHERE idN = '$idN'");
 		$itsOk=mysql_fetch_row ($req);
 		return($itsOk[0] !=0);
-		} */
+		} 
 }
 
 

@@ -37,7 +37,7 @@ include("./menu.php");
 
 
 		//On inclut la vue de la gestion des concerts en session administrateur
-	//include("../Vue/viewNoelAdmin.php");
+	include("../Vue/viewNoelAdmin.php");
 	//On inclut la vue de l'ajout d'un concert en session administrateur
 	include("../Vue/viewAddNoel.php");
 	}
