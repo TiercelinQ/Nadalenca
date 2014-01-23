@@ -33,7 +33,7 @@
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a>
 						<ul id="sousMenu">
-							<li><a href="#">NOËL OCCITAN</a></li>
+							<li><a href="../controlNoel.php">NOËL OCCITAN</a></li>
 						</ul></li>
 					<li><a href="./controlRepertoire.php">REPERTOIRE</a></li>
 					<li><a>MULTIMEDIA</a>
@@ -59,7 +59,7 @@
 				<li><a href="./controlHistoire.php">HISTOIRE</a></li>
 				<li><a href="./controlConcert.php">CONCERT</a>
 					<ul id="sousMenu">
-							<li><a href="#">NOËL OCCITAN</a></li>
+							<li><a href="../controlNoel.php">NOËL OCCITAN</a></li>
 					</ul></li>
 				<li><a>MULTIMEDIA</a>
 					<ul id="sousMenu">
