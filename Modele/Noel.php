@@ -2,7 +2,7 @@
 
 include ("../config.php");
 
-class Message
+class Noel
 {
 	private $idN;
 	private $lieuNn;
@@ -51,14 +51,14 @@ class Message
 			$dateFinN = $this->dateFinN;
 
 
-			$req = "INSERT INTO Noel (idN, lieuN, dateDebN, dateFinN)";
-			$res = mysql_query($req) or die ("Erreur insertion :  Classe Noel / Fonction insertion message");
+			$req = "INSERT INTO noel (idN, lieuN, dateDebN, dateFinN) VALUES ('$idN','$lieuN','$dateDebN','$dateFinN')";
+			$res = mysql_query($req) or die(mysql_error()); //die ("Erreur insertion :  Classe Noel / Fonction insertion message");
 	}
 	
 	//suppression d'un message dans la base de donnée message
 	public static function delete($idM)
 	{
-		$req = mysql_query("DELETE FROM message WHERE idN = '$idN'");
+		$req = mysql_query("DELETE FROM noel WHERE idN = '$idN'");
 		mysql_query($req);
 	}
 	
