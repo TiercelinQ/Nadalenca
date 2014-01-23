@@ -272,7 +272,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `email`, `mdp`, `statut`, `admin`, `adresseP`, `codeP`, `ville`, `numtelF`, `numtelM`, `voix`) VALUES
 (1, 'admin', 'admin', 'admin@mail.com', 'admin', 'Membre du Conseil d''Administration', 1, '', '', '', '', '', ''),
-(2, 'membre', 'lambda', 'membre@mail.com', 'membre', 'Tresorier', 0, '', '', '', '', '', ''),
+(2, 'membre', 'lambda', 'membre@mail.com', 'membre', 'Tresorier', 0, '', '', '', '', '', '');
 
 
 -- --------------------------------------------------------

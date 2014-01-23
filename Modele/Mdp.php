@@ -34,9 +34,9 @@ class Mdp
 	}
 
 	//suppression d'un mdp dans la base de donnée mdp
-	public static function delete($mdpInscri)
+	public static function update($mdpInscri)
 	{
-		$req = mysql_query("DELETE FROM mdp WHERE mdpInscri = '$mdpInscri'");
+		$req = mysql_query("UPDATE mdp SET mdpInscri = '$mdpInscri' WHERE id = 1 ");
 		mysql_query($req);
 	}
 
