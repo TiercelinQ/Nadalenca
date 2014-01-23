@@ -237,6 +237,8 @@ h2
 {
 	text-align: center;
 	color: #cd1b1b;
+	margin-top: 2em;
+	padding-top: 1em;
 }
 
 h4
@@ -298,6 +300,14 @@ a:hover
 {
 	text-decoration: underline;
 	color:#cd1b1b;
+}
+
+#saviezvous
+{
+	margin-top: 2em;
+	border: 1px solid #cd1b1b;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 table 

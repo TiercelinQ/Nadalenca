@@ -11,8 +11,8 @@
 			<th>Admin</th>
 			<th>Changer Statut Admin</th>
 			<th>Supprimer membre</th>
-			<!--<th>Statut</th>-->
-			<!--<th>Changer Statut</th>-->
+			<th>Statut</th>
+			<th>Changer Statut</th>
 			
 
 
@@ -28,7 +28,7 @@
 			."<td>".$tuple['admin']."</td>"
 			."<td>"."<input type='checkbox' name='email[]' value='$tuple[email]'/>"."<br /></td>" 
 			."<td>"."<input type='checkbox' name='idDelete[]' value='$tuple[id]'/>"."<br /></td>"
-			/*."<td>".$tuple['statut']."</td>" 
+			."<td>".$tuple['statut']."</td>" 
 			."<td>"."<select name='statut'>
 			 <option value=\"President\" if (".$tuple['statut']." == \"President\") {";echo "selected"."}  > Président
               <option value=\"Vice-President\" if (".$tuple['statut']." == \"Vice-President\") {";echo "selected"."}  > Vice-Président  
@@ -38,7 +38,7 @@
               <option value=\"Secretaire Adjoint\"  if (".$tuple['statut']." == \"Secretaire Adjoint\") {";echo "selected"."} > Secrétaire Adjoint
               <option value=\"Membre du Conseil d'Administration\" if (".$tuple['statut']." == \"Membre du Conseil d'Administration\") {";echo "selected"."} > Membre du conseil d'administration
               <option value=\"Adherent\"  if (".$tuple['statut']." == \"Adherent\") {";echo "selected"."} > Adhérent
-				      </select>"."</td>"*/
+				      </select>"."</td>"
 			."</tr>";
 			
 	}

@@ -63,6 +63,7 @@
               <option value="Secretariat" <?php if ($profil->getStatut() == "Secretariat") {echo "selected";} ?> > Secrétariat
               <option value="Secretariat Adjoint" <?php if ($profil->getStatut() == "Secretariat Adjoint") {echo "selected";} ?> > Secrétariat Adjoint
               <option value="Membre du Conseil d'Administration" <?php if ($profil->getStatut() == "Membre du Conseil d'Administration") {echo "selected";} ?> > Membre du Conseil d'Administration
+              <option value="Chef de Choeur" <?php if ($profil->getStatut() == "Chef de Choeur") {echo "selected";} ?> > Chef de Choeur
               <option value="Adherent" <?php if ($profil->getStatut() == "Adherent") {echo "selected";} ?> > Adhérent
             </select><br /> 
             <input type="submit" value="Modifier" />
