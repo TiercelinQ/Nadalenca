@@ -17,7 +17,7 @@
 			{?>
 				<!--Sinon affiche ce footer précis -->
 				<ul id="footer">
-					<li><a href="#">Qui sommes nous ?</a></li> | 
+					<li><a href="./controlQuisommesnous.php">Qui sommes nous ?</a></li> | 
 					<li><a href="./controlContact.php">Nous contacter</a></li> | 
 					<li><a href="./controlPlandusite.php">Plan du site</a></li> | 
 					<li><a href="controlLiens.php">Liens</a></li>
