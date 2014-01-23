@@ -18,7 +18,7 @@ include("../Modele/Mdp.php");
 <h2>Nouveau mot de passe</h2>
 <hr />
 
-<form method="POST" action="./controlValidMdpInscri.php">
+<form method="POST" action="./controlValidMdpInscri.php" onSubmit="return verif();">
 	<fieldset>
 			<input type="text" name="mdpI" required><br />
 			<input type="submit" value="Envoyer"><br />

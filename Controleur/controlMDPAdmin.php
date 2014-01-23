@@ -5,15 +5,11 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../style.css" />
 	<script>
-		function verif(i)	// passage de l'identifiant du mdp
+		function verif()	// passage de l'identifiant du mdp
 		{
-			// fonction JavaScript de confirmation de modification de mdp
+			// fonction JavaScript de confirmation de modification de mdpI
 			var r=confirm("Confirmez vous la modification du mot de passe ?");	// pop up de demande avec oui/non
-			if (r==true)
-  			{
-  				location.href = './controlModifMDP.php?id=' + i;	
-  				// si la personne valide, redirection vers le controleur avec passage en GET de l'identifiant
-  			}
+			return r;
  			// sinon rien ne se passe, la demande de suppression est annulée 
 		}
 	</script>
