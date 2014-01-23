@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 23 Janvier 2014 à 09:25
+-- Généré le: Jeu 23 Janvier 2014 à 14:03
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -168,6 +168,27 @@ INSERT INTO `message` (`idM`, `nomM`, `prenomM`, `emailM`, `sujetM`, `messageM`,
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `noel`
+--
+
+CREATE TABLE IF NOT EXISTS `noel` (
+  `idN` int(10) NOT NULL AUTO_INCREMENT,
+  `lieuN` varchar(20) NOT NULL,
+  `dateDebN` int(10) NOT NULL,
+  `dateFinN` int(10) NOT NULL,
+  PRIMARY KEY (`idN`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `noel`
+--
+
+INSERT INTO `noel` (`idN`, `lieuN`, `dateDebN`, `dateFinN`) VALUES
+(1, 'Eglise ST Mathieu', 1990, 1996);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `production`
 --
 
@@ -273,7 +294,6 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `email`, `mdp`, `statut`, `admin`, `adresseP`, `codeP`, `ville`, `numtelF`, `numtelM`, `voix`) VALUES
 (1, 'admin', 'admin', 'admin@mail.com', 'admin', 'Membre du Conseil d''Administration', 1, '', '', '', '', '', ''),
 (2, 'membre', 'lambda', 'membre@mail.com', 'membre', 'Tresorier', 0, '', '', '', '', '', '');
-
 
 -- --------------------------------------------------------
 
