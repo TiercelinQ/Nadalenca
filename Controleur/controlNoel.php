@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Noel Occitan</title>
+		<title>Noël Occitan</title>
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
 	</head>

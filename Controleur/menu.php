@@ -37,7 +37,7 @@
 					<li><a href="./controlHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a>
 						<ul id="sousMenu">
-							<li><a href="../controlNoel.php">NOËL OCCITAN</a></li>
+							<li><a href="./controlNoel.php">NOËL OCCITAN</a></li>
 						</ul></li>
 					<li><a href="./controlRepertoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
 					<li><a>MULTIMEDIA</a>
@@ -63,7 +63,7 @@
 				<li><a href="./controlHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">HISTOIRE</a></li>
 				<li><a href="./controlConcert.php">CONCERT</a>
 						<ul id="sousMenu">
-							<li><a href="../controlNoel.php">NOËL OCCITAN</a></li>
+							<li><a href="./controlNoel.php">NOËL OCCITAN</a></li>
 						</ul></li>
 				<li><a href="./controlRepertoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
 				<li><a>MULTIMEDIA</a>
