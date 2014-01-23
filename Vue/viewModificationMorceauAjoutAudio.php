@@ -9,6 +9,11 @@
 	//Input different en fonction du numéro du ficher qui est ajouté
 	switch($nb)
 	{
+		case 1:
+			echo "<input type=\"file\" name=\"audio1\" /> </br>";
+			echo "types de destinaires(voix/genre) :";
+			echo "<input type=\"texte\" name=\"taudio1\" /></br>";	
+			break;
 		case 2:
 			echo "<input type=\"file\" name=\"audio2\" /> </br>";
 			echo "types de destinaires(voix/genre) :";

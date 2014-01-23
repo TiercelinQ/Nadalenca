@@ -34,6 +34,13 @@
 	//Affichage en fonction du nombre de fichier avec les appels aux différentes fonctions possibles
 	switch($tupleaudio['nbfichier'])
 	{
+		case 0:
+			echo "<tr>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutAudio.php?ida=".$tupleaudio['ida']."&nb=1\" > Ajouter une piste audio </a></td>
+					<td></td>
+					<td></td>
+				</tr>";
+			break;
 		case 1:
 			echo "<tr>
 					<td>".$tupleaudio['dest1']."</td>
@@ -154,6 +161,13 @@
 	//Affichage des différents fichiers textes avec leur fonction respectifs
 	switch($tupletexte['nbfichier'])
 	{
+		case 0:
+			echo "<tr>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutTexte.php?ida=".$tupletexte['idt']."&nb=1\" > Ajouter une piste audio </a></td>
+					<td></td>
+					<td></td>
+				</tr>";
+			break;
 		case 1:
 			echo "<tr>
 					<td>".$tupletexte['dest1']."</td>

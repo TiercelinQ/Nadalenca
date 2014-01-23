@@ -686,18 +686,25 @@ class Repertoire
 	Fonction qui ajoute un fichier audio un morceau, elle prends en parametre l'id du tuple audion le numéro du fichier ajouté, le nom du fichier, le nom temporaire
 	ainsi que le destinataire du fichier
 	*/
-	public static function ajoutFichierAudio($id, $nb, $audioprec,$audiotmp, $dest)
+	public static function ajoutFichierAudio($id, $nb, $audioprec,$audiotmp, $dest, $extension)
 	{
 		//Chemin d'accès audio
 		$target_pathaudio = "../Audio/";
 		//Retour mis à faux
 		$retour = false;
 		//Utilisation du md5 pour éviter les doublon sur le serveur
-		$audio = md5($audioprec).".mp3";
+		$audio = md5($audioprec).$extension;
 		
 		//En fonction du numéro du fichier 
 		switch($nb)
 		{
+			case 2:
+				$target_path = $target_pathaudio . $audio;//Chemin d'acces du fichier à envoyé sur le serveur
+				move_uploaded_file($audiotmp, $target_path);//Envoie du fichier sur le serveur
+				$res = mysql_query("UPDATE audio SET nbfichier='$nb', nomfich1='$audio', dest1='$dest' WHERE ida ='$id'") or die ("Erreur / Fonction ajoutFichierAudio / 2");
+				//Mise à jour de la table audio avec une nouvelle valeur ajouté
+				$retour = true;//retour mis à vrai, si tout se passe bien
+				break;
 			case 2:
 				$target_path = $target_pathaudio . $audio;//Chemin d'acces du fichier à envoyé sur le serveur
 				move_uploaded_file($audiotmp, $target_path);//Envoie du fichier sur le serveur
@@ -731,18 +738,26 @@ class Repertoire
 	Fonction ajoutFichierTexte, ajoute un fichier texte, elle prends en parametre l'identifiant du tuple dans le table texte, le numéro du fichier ajouté, 
 	le nom du fichier, son nom temporaire et le type de fichier
 	*/
-	public static function ajoutFichierTexte($id, $nb, $texteprec,$textetmp , $dest)
+	public static function ajoutFichierTexte($id, $nb, $texteprec,$textetmp , $dest, $extension)
 	{
 		//Chemin d'accès de texte
 		$target_pathtexte = "../Texte/";
 		//Retour initialisé à faux
 		$retour = false;
 		//nom du fichier texte passé au md5 pour éviter les doublon
-		$texte = md5($texteprec).".pdf";
+		$texte = md5($texteprec).$extension;
 		
 		//En fonction du numéro du fichier ajouté
 		switch($nb)
 		{
+			case 1:
+				$target_path = $target_pathtexte . $texte;//Chemin d'accès du nouveau fichier
+				move_uploaded_file($textetmp, $target_path);//Envoie du fichier au serveur
+				$res = mysql_query("UPDATE texte SET nbfichier='$nb', nomfich1='$texte', dest1 ='$dest' WHERE idt ='$id'") or die ("Erreur / Fonction ajoutFichiertexte / 1");
+				//Mise à jour de la base de données avec les valeurs ajoutés
+				$retour = true;
+				//retour passe à vrai si tout s'est bien passé
+				break;
 			case 2:
 				$target_path = $target_pathtexte . $texte;//Chemin d'accès du nouveau fichier
 				move_uploaded_file($textetmp, $target_path);//Envoie du fichier au serveur
