@@ -1,4 +1,4 @@
-<h2>Recrutement</h2>  
+<h1>Recrutement</h1>  
 <hr />
 
 <p>Le chœur polyphonique Occitan « Nadalenca » recrute des nouveaux choristes. 
@@ -36,26 +36,26 @@ enregistrements MP3 transmis à chaque choriste.</p>
 <form method="post" action="./controlValidRecrut.php">
     <fieldset>
       <h3>Veuillez remplir ce formulaire pour pouvoir être recruté.</h3>
-      <label>Nom</label><input type="text" name="nomR" required/> <br />
-      <label>Prénom</label><input type="text" name="prenomR" required/> <br />
-      <label>Expérience</label>
-         <select name="expeR"> 
-     	<option value="Non" selected>Non</option>
-		<option value="Soprano">Soprano</option>
-		<option value="Alto">Alto</option>
-		<option value="Tenor">Tenor</option>
-		<option value="Basse">Basse</option>
-		</select>  <br />
-      <label>Maîtrise de l'occitan</label>
-      <select name="occR"> 
-     	<option value="Aucune" selected>Aucune</option>
-		<option value="Rudiments">Rudiments</option>
-		<option value="Courant">Courant</option>
-		</select>  <br />
-      <label>Téléphone</label><input type="text"  name="telR" required/> <br />
-      <label>Portable</label><input type="text"  name="portableR" required/> <br />
-      <label>Email</label><input type="email"  name="emailR" required/> <br />
-      <label>Observation</label>
+      <label>Nom : </label><input type="text" name="nomR" required/> <br />
+      <label>Prénom : </label><input type="text" name="prenomR" required/> <br />
+      <label>Expérience : </label>
+        <select name="expeR"> 
+     	    <option value="Non" selected>Non</option>
+		      <option value="Soprano">Soprano</option>
+		      <option value="Alto">Alto</option>
+		      <option value="Tenor">Tenor</option>
+		      <option value="Basse">Basse</option>
+		    </select>  <br />
+      <label>Maîtrise de l'occitan : </label>
+        <select name="occR"> 
+     	    <option value="Aucune" selected>Aucune</option>
+		      <option value="Rudiments">Rudiments</option>
+		      <option value="Courant">Courant</option>
+		    </select>  <br />
+      <label>N° de téléphone fixe : </label><input type="text"  name="telR" required/> <br />
+      <label>N° de téléphone mobile : </label><input type="text"  name="portableR" required/> <br />
+      <label>Email : </label><input type="email"  name="emailR" required/> <br />
+      <label>Observation : </label>
         <textarea rows="3" cols="50" type="text" name="obsR"></textarea> <br/>
       <input type="submit" value="Envoyer" />
     </fieldset>
