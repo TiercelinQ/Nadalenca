@@ -8,7 +8,7 @@ include("../Modele/Production.php");
 	{ ?>	
 	<div id="container_production">
 		<div class="gauche_production">
-			<p>Nom : <?php echo "$tuple[nomP]"; ?></p>
+			<p><strong>Nom : </strong><?php echo "$tuple[nomP]"; ?></p>
 		</div>
 
 		<div class="image_production">
@@ -16,11 +16,11 @@ include("../Modele/Production.php");
 		</div>
 
 		<div class="droite_production"> <!--nom temporaire pour citer l'incrustation de l'image dans la description -->
-			<?php echo "$tuple[descriptionP]"; ?>
+			<p><strong>Description : </strong><br /><?php echo "$tuple[descriptionP]"; ?></p>
 		</div>
 
 		<div class="dessous_production">
-			<p>Prix : <?php echo "$tuple[prixP]"; ?></p>
+			<p><strong>Prix : </strong><?php echo "$tuple[prixP]"; ?></p>
 		</div>
 	</div>
 <?php

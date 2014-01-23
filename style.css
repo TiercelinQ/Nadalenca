@@ -533,7 +533,15 @@ h4
 	margin-top: -1em;
 	padding:0;
 	background-color:#edef9c;
+}
+
+.gauche_production p
+{
 	color:#cd1b1b;
+	margin: 0;
+	margin-top: 1em;
+	height: 30px;
+	padding-top:10px;
 }
 
 .image_production
@@ -564,10 +572,11 @@ h4
 
 .dessous_production
 {
-	width:100%;
+	width:15%;
 	height: 100%;
 	background-color:#edef9c;
 	color:#cd1b1b;
+	margin:0;
 	margin-top: 27em;
 	margin-bottom: -1em;
 }
