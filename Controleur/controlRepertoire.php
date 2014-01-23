@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,7 +13,6 @@
 	include("./menu.php");
 	//On inclut le fichier config pour accéder à la base de données
 	include("./config.php");
-	$
 	if (isset($_SESSION['login']))
 	{
 	//On affiche la vue de la page répertoire
