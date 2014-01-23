@@ -27,13 +27,15 @@
 //On inclut le menu dans le controleur d'ajout d'un noel occitan
 include("./menu.php");
 
-	if(isset($_SESSION['login']) && isset($_SESSION['admin']) && $_SESSION['admin'] != 0)
-	{
-
 	//Requête SQL permettant d'afficher les concerts du plus vieux au plus récents
 	$req="SELECT * from noel order by dateDebN ASC ";
 	//On exécute la requête
-	$restot =mysql_query($req);
+	$res =mysql_query($req);
+
+	if(isset($_SESSION['login']) && isset($_SESSION['admin']) && $_SESSION['admin'] != 0)
+	{
+
+	
 
 
 		//On inclut la vue de la gestion des concerts en session administrateur
@@ -43,10 +45,6 @@ include("./menu.php");
 	}
 	else
 	{ 		
-	//Requête permettant d'afficher les concerts de la dateC jusqu'à la date de maintenant
-	$req="SELECT * from noel order by dateDebN ASC ";
-	//On execute la requête
-	$res =mysql_query($req);
 	//Sinon, on affiche la vue des productions d'une session normale
 	include("../Vue/viewNoel.php");
 	}

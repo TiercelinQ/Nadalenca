@@ -212,6 +212,26 @@ INSERT INTO `production` (`idP`, `nomP`, `imageP`, `descriptionP`, `prixP`) VALU
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `recrutement`
+--
+
+CREATE TABLE IF NOT EXISTS `recrutement` (
+  `idR` int(11) NOT NULL AUTO_INCREMENT,
+  `nomR` varchar(255) NOT NULL,
+  `prenomR` varchar(255) NOT NULL,
+  `expeR` varchar(255) NOT NULL,
+  `occR` varchar(255) NOT NULL,
+  `telR` varchar(255) NOT NULL,
+  `portableR` varchar(255) NOT NULL,
+  `emailR` varchar(255) NOT NULL,
+  `obsR` varchar(255) NOT NULL,
+  PRIMARY KEY (`idR`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `repertoire`
 --
 

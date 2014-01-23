@@ -1,6 +1,7 @@
 <ul>
 					
 	<?php
+	include("../Modele/Noel.php");
 	while ($tuple = mysql_fetch_array($res))
 	{ 
 
