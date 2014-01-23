@@ -5,7 +5,7 @@
 		« NADALENCA » trouve son origine dans le mot « Nadal » qui signifie Noël. 
 		Sous l’impulsion de Jean ROUQUETTE, prêtre et écrivain Occitan (Joan LARZAC), 
 		Hugues BRUNET a rassemblé dès 1982 quelques choristes amateurs pour chanter des Nadalets (Chants traditionnels de Noël en Occitan) 
-		et maintenir vivante la tradition du <a href="#" target="_blank">Noël Occitan</a>. 
+		et maintenir vivante la tradition du <a href="../Controleur/controlNoel.php" target="_blank">Noël Occitan</a>. 
 		</p>
 		
 		<p>
