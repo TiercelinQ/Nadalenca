@@ -1,2 +1,2 @@
-<?php header('Location: ./Controleur/controlAccueil.php'); ?>
+<?php header('Location: ./Controleur/controlAccueil.php?lang=fr'); ?>
 

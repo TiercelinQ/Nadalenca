@@ -35,7 +35,10 @@
 				<ul id="menu_mem">
 					<li><a href="./controlAccueil.php?lang=<?php echo $_SESSION['langue']; ?>">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">HISTOIRE</a></li>
-					<li><a href="./controlConcert.php">CONCERT</a></li>
+					<li><a href="./controlConcert.php">CONCERT</a>
+						<ul id="sousMenu">
+							<li><a href="../controlNoel.php">NOËL OCCITAN</a></li>
+						</ul></li>
 					<li><a href="./controlRepertoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
 					<li><a>MULTIMEDIA</a>
 						<ul id="sousMenu">
@@ -58,7 +61,10 @@
 			<ul id="menu_vis">
 				<li><a href="./controlAccueil.php?lang=<?php echo $_SESSION['langue']; ?>">ACCUEIL</a></li>
 				<li><a href="./controlHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">HISTOIRE</a></li>
-				<li><a href="./controlConcert.php">CONCERT</a></li>
+				<li><a href="./controlConcert.php">CONCERT</a>
+						<ul id="sousMenu">
+							<li><a href="../controlNoel.php">NOËL OCCITAN</a></li>
+						</ul></li>
 				<li><a href="./controlRepertoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
 				<li><a>MULTIMEDIA</a>
 					<ul id="sousMenu">
