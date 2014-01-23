@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 21 Janvier 2014 à 14:03
+-- Généré le: Jeu 23 Janvier 2014 à 09:25
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   `nomI` varchar(255) NOT NULL,
   `descriptionI` varchar(255) NOT NULL,
   PRIMARY KEY (`idI`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Contenu de la table `image`
@@ -125,6 +125,25 @@ INSERT INTO `lien` (`id`, `lien`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `mdp`
+--
+
+CREATE TABLE IF NOT EXISTS `mdp` (
+  `mdpInscri` varchar(255) NOT NULL,
+  `id` int(2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `mdp`
+--
+
+INSERT INTO `mdp` (`mdpInscri`, `id`) VALUES
+('nadalenca', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `message`
 --
 
@@ -137,14 +156,14 @@ CREATE TABLE IF NOT EXISTS `message` (
   `messageM` varchar(255) NOT NULL,
   `dateM` varchar(30) NOT NULL,
   PRIMARY KEY (`idM`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Contenu de la table `message`
 --
 
 INSERT INTO `message` (`idM`, `nomM`, `prenomM`, `emailM`, `sujetM`, `messageM`, `dateM`) VALUES
-(11, 'Pochon', 'Amaury', 'pochon.amaury@gmail.com', 'Contact', 'Bonjour, je fais partie de la chorale et je souhaite m''inscrire. Pouvez vous me communiquer le mot de passe pour l''inscription ?', '21-01-14');
+(11, 'Pochon', 'Amaury', 'pochon.amaury@gmail.com', 'Contact', 'Bonjour, je fais parti de la chorale et je souhaite m''inscrire. Pouvez vous me communiquez le mot de passe pour l''inscription ?', '21-01-14');
 
 -- --------------------------------------------------------
 
@@ -245,15 +264,16 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `voix` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id`, `nom`, `prenom`, `email`, `mdp`, `statut`, `admin`, `adresseP`, `codeP`, `ville`, `numtelF`, `numtelM`, `voix`) VALUES
-(1, 'admin', 'admin', 'admin@mail.com', 'admin', '', 1, '', '', '', '', '', ''),
-(2, 'membre', 'lambda', 'membre@mail.com', 'membre', '', 0, '', '', '', '', '', '');
+(1, 'admin', 'admin', 'admin@mail.com', 'admin', 'Membre du Conseil d''Administration', 1, '', '', '', '', '', ''),
+(2, 'membre', 'lambda', 'membre@mail.com', 'membre', 'Tresorier', 0, '', '', '', '', '', ''),
+
 
 -- --------------------------------------------------------
 

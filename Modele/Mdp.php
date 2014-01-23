@@ -24,7 +24,7 @@ class Mdp
 	}
 
 
-	//création d'un nouveau lien dans la base de données lien
+	//création d'un nouveau mdp dans la base de données mdp
 	public function create()
 	{
 		$mdpInscri = addslashes(htmlspecialchars($this->mdpInscri));
@@ -33,14 +33,14 @@ class Mdp
 			$res = mysql_query($req) or die ("Erreur insertion :  Classe MDP inscri / Fonction create MDP inscri");
 	}
 
-	//suppression d'un lien dans la base de donnée lien
+	//suppression d'un mdp dans la base de donnée mdp
 	public static function delete($mdpInscri)
 	{
 		$req = mysql_query("DELETE FROM mdp WHERE mdpInscri = '$mdpInscri'");
 		mysql_query($req);
 	}
 
-	//Vérification si un lien existe déjà dans la base de données par son id
+	//Vérification si un mdp existe déjà dans la base de données par son id
 	public static function exist($mdpInscri)
 	{
 		$req = mysql_query("SELECT count(*) FROM mdp WHERE mdpInscri = '$mdpInscri'");
