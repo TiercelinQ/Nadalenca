@@ -31,7 +31,10 @@
 				<ul id="menu_mem">
 					<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php">HISTOIRE</a></li>
-					<li><a href="./controlConcert.php">CONCERT</a></li>
+					<li><a href="./controlConcert.php">CONCERT</a>
+						<ul id="sousMenu">
+							<li><a href="#">NOËL OCCITAN</a></li>
+						</ul></li>
 					<li><a href="./controlRepertoire.php">REPERTOIRE</a></li>
 					<li><a>MULTIMEDIA</a>
 						<ul id="sousMenu">
@@ -43,7 +46,7 @@
 					<li><a href="./controlProfil.php">PROFIL</a></li>
 					<li><a href="./deconnexion.php">DECONNEXION</a></li>
 				</ul>
-				<h4>Bonjour <?php echo ($profil->getPrenom());?></h4>
+					<h4>Bonjour <?php echo ($profil->getPrenom());?></h4>
 			<div id="contenu">
 									
 	<?php
@@ -54,14 +57,20 @@
 			<ul id="menu_vis">
 				<li><a href="./controlAccueil.php">ACCUEIL</a></li>
 				<li><a href="./controlHistoire.php">HISTOIRE</a></li>
-				<li><a href="./controlConcert.php">CONCERT</a></li>
+				<li><a href="./controlConcert.php">CONCERT</a>
+					<ul id="sousMenu">
+							<li><a href="#">NOËL OCCITAN</a></li>
+					</ul></li>
 				<li><a>MULTIMEDIA</a>
 					<ul id="sousMenu">
 						<li><a href="./controlImage.php">IMAGES</a></li>
 						<li><a href="./controlVideo.php">VIDEOS</a></li>
 					</ul></li>
 				<li><a href="./controlProduction.php">PRODUCTIONS</a></li>
-				<li><a href="./controlInscription.php">INSCRIPTION</a></li>
+				<li><a href="./controlInscription.php">INSCRIPTION</a>
+					<ul id="sousMenu">
+							<li><a href="#">RECRUTEMENT</a></li>
+						</ul></li>
 				<li><a href="./controlConnexion.php">CONNEXION</a></li>
 			</ul>
 		<div id="contenu">
