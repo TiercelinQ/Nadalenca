@@ -40,22 +40,21 @@ enregistrements MP3 transmis à chaque choriste.</p>
       <label>Prénom</label><input type="text" name="prenomR" required/> <br />
       <label>Expérience</label>
          <select name="expeR"> 
-     	<option value="non" selected>Non</option>
-		<option value="soprano">Soprano</option>
-		<option value="alto">Alto</option>
-		<option value="tenor">Tenor</option>
-		<option value="basse">Basse</option>
+     	<option value="Non" selected>Non</option>
+		<option value="Soprano">Soprano</option>
+		<option value="Alto">Alto</option>
+		<option value="Tenor">Tenor</option>
+		<option value="Basse">Basse</option>
 		</select>  <br />
       <label>Maîtrise de l'occitan</label>
       <select name="occR"> 
-     	<option value="aucune" selected>Aucune</option>
-		<option value="rudiments">Rudiments</option>
-		<option value="courant">Courant</option>
+     	<option value="Aucune" selected>Aucune</option>
+		<option value="Rudiments">Rudiments</option>
+		<option value="Courant">Courant</option>
 		</select>  <br />
       <label>Téléphone</label><input type="text"  name="telR" required/> <br />
       <label>Portable</label><input type="text"  name="portableR" required/> <br />
       <label>Email</label><input type="email"  name="emailR" required/> <br />
-      <label>Sujet du message</label><input type="text" name="sujetM" required/><br />
       <label>Observation</label>
         <textarea rows="3" cols="50" type="text" name="obsR"></textarea> <br/>
       <input type="submit" value="Envoyer" />
