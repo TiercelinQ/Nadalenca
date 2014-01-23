@@ -1,7 +1,7 @@
 	<h1>Benvenguda</h1>
 	<hr />
 	
-		<img src="../Images/LogoMaquette1.png" alt="nadalenca" title="Association Nadalenca"/>
+		<img src="../Images/LogoMaquette1.png" alt="nadalenca" title="Association Nadalenca" heigth="300" width="300"/>
 
 	<span id="accueil">
 		<h3>« Nadalenca » es lo còr polifonic occitan de Montpelhièr</h3>
