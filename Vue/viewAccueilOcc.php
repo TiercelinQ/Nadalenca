@@ -1,4 +1,4 @@
-	<h1>Bienvenue</h1>
+	<h1>Benvenguda</h1>
 	<hr />
 	
 		<img src="../Images/LogoMaquette1.png" alt="nadalenca" title="Association Nadalenca"/>

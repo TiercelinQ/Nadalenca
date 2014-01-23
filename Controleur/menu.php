@@ -39,7 +39,7 @@
 						<ul id="sousMenu">
 							<li><a href="./controlNoel.php">NOËL OCCITAN</a></li>
 						</ul></li>
-					<li><a href="./controlRepertoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
+					<li><a href="./controlRepertoireHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
 					<li><a>MULTIMEDIA</a>
 						<ul id="sousMenu">
 							<li><a href="./controlImage.php">IMAGES</a></li>
@@ -65,7 +65,7 @@
 						<ul id="sousMenu">
 							<li><a href="./controlNoel.php">NOËL OCCITAN</a></li>
 						</ul></li>
-				<li><a href="./controlRepertoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
+				<li><a href="./controlRepertoireHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
 				<li><a>MULTIMEDIA</a>
 					<ul id="sousMenu">
 						<li><a href="./controlImage.php">IMAGES</a></li>
