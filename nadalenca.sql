@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 23 Janvier 2014 à 15:17
+-- Généré le: Jeu 23 Janvier 2014 à 16:25
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -184,7 +184,6 @@ CREATE TABLE IF NOT EXISTS `noel` (
 --
 
 INSERT INTO `noel` (`idN`, `lieuN`, `dateDebN`, `dateFinN`) VALUES
-(1, 'Eglise ST Mathieu', 1990, 1996),
 (2, 'Chapelle du CollÃ¨ge', 1997, 1998);
 
 -- --------------------------------------------------------
@@ -197,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `production` (
   `idP` int(10) NOT NULL AUTO_INCREMENT,
   `nomP` varchar(255) NOT NULL,
   `imageP` varchar(255) NOT NULL,
-  `descriptionP` varchar(500) NOT NULL,
+  `descriptionP` varchar(255) NOT NULL,
   `prixP` varchar(255) NOT NULL,
   PRIMARY KEY (`idP`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
@@ -226,8 +225,14 @@ CREATE TABLE IF NOT EXISTS `recrutement` (
   `emailR` varchar(255) NOT NULL,
   `obsR` varchar(255) NOT NULL,
   PRIMARY KEY (`idR`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
+--
+-- Contenu de la table `recrutement`
+--
+
+INSERT INTO `recrutement` (`idR`, `nomR`, `prenomR`, `expeR`, `occR`, `telR`, `portableR`, `emailR`, `obsR`) VALUES
+(2, 'Pochon', 'Amaury', 'Non', 'Aucune', '', '', 'momoamo@hotmail.fr', '');
 
 -- --------------------------------------------------------
 
