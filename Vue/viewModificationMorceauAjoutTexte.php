@@ -9,6 +9,11 @@
 	//Input different en fonction du numéro du ficher qui est ajouté
 	switch($nb)
 	{
+		case 1:
+			echo "<input type=\"file\" name=\"texte1\" /> </br>";
+			echo "types de fichier (Partition/Paroles) :";
+			echo "<input type=\"texte\" name=\"ttexte1\" /></br>";	
+			break;
 		case 2:
 			echo "<input type=\"file\" name=\"texte2\" /> </br>";
 			echo "types de fichier (Partition/Paroles) :";

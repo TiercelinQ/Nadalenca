@@ -16,6 +16,9 @@
 	//Affichage des pistes audios en fonction du nombre de pistes
 	switch($i)
 	{
+		case 0:
+			echo "Il n'y a pas de piste audio";
+			break;
 		case 1:
 			echo "<audio src="."../Audio/".$tupleaudio['nomfich1']." controls >Veuillez mettre à jour votre navigateur !</audio>";
 			echo " pour  ".$tupleaudio['dest1']."</br>";
@@ -69,6 +72,9 @@
 	//affichage des fichiers textes en fonction du nombre de fichier
 	switch($i)
 	{
+		case 0:
+			echo "Il n'y a pas de fichier texte";
+			break;
 		case 1:
 			echo "<a href="."../Texte/".$tupletexte['nomfich1']." target="."$blank"." >"; echo $tupletexte['dest1']." </a></br>";
 			break;

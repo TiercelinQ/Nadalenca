@@ -11,8 +11,16 @@
 <?php 
 	//On inclut le menu en fonction de la session en cous
 	include("menu.php");
-	//On inclut la vue d'affichage de la page histoire
-	include("../Vue/viewHistoire.php");
+	$lang = $_GET['lang'];
+	if($lang == "fr")
+	{
+		//On inclut la vue d'affichage de la page histoire
+		include("../Vue/viewHistoire.php");
+	}
+	else
+	{
+		include("../Vue/viewHistoireOcc.php");
+	}
 	//On inclut le footer
 	include("footer.php"); 
 ?>

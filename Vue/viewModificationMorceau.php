@@ -163,7 +163,7 @@
 	{
 		case 0:
 			echo "<tr>
-					<td><a href=\"../Controleur/controlModificationMorceauAjoutTexte.php?ida=".$tupletexte['idt']."&nb=1\" > Ajouter une piste audio </a></td>
+					<td><a href=\"../Controleur/controlModificationMorceauAjoutTexte.php?idt=".$tupletexte['idt']."&nb=1\" > Ajouter un fichier texte </a></td>
 					<td></td>
 					<td></td>
 				</tr>";

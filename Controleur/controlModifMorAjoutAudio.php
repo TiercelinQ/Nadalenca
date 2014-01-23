@@ -40,7 +40,7 @@
 	}
 	//On fait les appels en fonction du numéro du fichier qui est envoyé en paramètre
 	else 
-	{	$extensions_valides = array( 'mp3');
+	{	$extensions_valides = array( 'mp3','aac', 'ogg', 'wav');
 		//1. strrchr renvoie l'extension avec le point (« . »).
 		//2. substr(chaine,1) ignore le premier caractère de chaine.
 		//3. strtolower met l'extension en minuscules
@@ -63,7 +63,6 @@
 				$extension_upload = strtolower(  substr(  strrchr($_FILES['audio5']['name'], '.')  ,1)  );
 				break;
 		}
-		
 		if(!(in_array($extension_upload,$extensions_valides)))
 		{	
 			include("../Vue/viewModifMorAjoutAudioExt.php");

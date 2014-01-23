@@ -52,32 +52,48 @@ class Repertoire
 	}
 	
 	//Ajout dans la base de données d'un nouveau fichier audio
-	public static function createaudio($nom, $nb, $audioprec,$audiotmp, $dest)
+	public static function createaudio($nom, $nb, $audioprec,$audiotmp, $dest, $extension)
 	{
-		$audio = md5($audioprec).".mp3";
-		$req = "INSERT INTO audio (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$audio','$dest')";
-		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
-		$target_pathaudio = "../Audio/";
-		$target_path = $target_pathaudio . $audio;
-		move_uploaded_file($audiotmp, $target_path);
+		if($nb == 1)
+		{
+			$target_pathaudio = "../Audio/";
+			$target_path = $target_pathaudio . $audio;
+			move_uploaded_file($audiotmp, $target_path);
+			$audio = md5($audioprec).".".$extension;
+			$req = "INSERT INTO audio (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$audio','$dest')";
+			$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
+		}
+		else
+		{
+			$req = "INSERT INTO audio (nom,nbfichier) VALUES ('$nom','$nb')";
+			$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
+		}
 	}
 	
 	//Ajout dans la base de données d'un nouveau texte
-	public static function createtexte($nom, $nb, $texteprec,$textetmp, $dest)
+	public static function createtexte($nom, $nb, $texteprec,$textetmp, $dest, $extension)
 	{
-		$texte = md5($texteprec).".pdf";
-		$req = "INSERT INTO texte (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$texte','$dest')";
-		$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
-		$target_pathtexte = "../Texte/";
-		$target_path = $target_pathtexte . $texte;
-		move_uploaded_file($textetmp, $target_path);
+		if($nb == 1)
+		{
+			$target_pathtexte = "../Texte/";
+			$target_path = $target_pathtexte . $texte;
+			move_uploaded_file($textetmp, $target_path);
+			$texte = md5($texteprec).".".$extension;
+			$req = "INSERT INTO texte (nom,nbfichier, nomfich1, dest1) VALUES ('$nom','$nb','$texte','$dest')";
+			$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
+		}
+		else
+		{
+			$req = "INSERT INTO texte (nom,nbfichier) VALUES ('$nom','$nb')";
+			$res = mysql_query($req) or die ("Erreur insertion :  Classe Repertoire / Fonction insertion repertoire");
+		}
 	}
 	
 	/*
 	Fonction changementaudionb, qui prends en parametre l'id du tuple de la base de données, le numéro du fichier qui doit être changé, le nom du fichier à
 	envoyé sur le serveur, le nom temporaire du fichier, ainsi que le destinataire du fichier
 	*/
-	public static function changementaudionb($id, $nb, $audioprec,$audiotmp, $audiodest)
+	public static function changementaudionb($id, $nb, $audioprec,$audiotmp, $audiodest, $extension)
 	{
 		//Elle va chercher le tuple dans la base de données qui correspond à l'id passé en parametre
 		$res = mysql_query("SELECT * FROM audio WHERE ida = '$id'") or die ("Erreur / changementaudionb / res");
@@ -85,7 +101,7 @@ class Repertoire
 		//Chemin d'accès du fichier audio sur le serveur
 		$target_pathaudio = "../Audio/";
 		//On crypte le nom du fichier pour éviter d'avoir des doublons sur le serveur
-		$audio = md5($audioprec).".mp3";
+		$audio = md5($audioprec).".".$extension;
 		$retour = false;
 		
 		//On modifie les fichiers en fonction du numéro du fichier qui change.
@@ -142,7 +158,7 @@ class Repertoire
 	Fonction changementtextenb, qui prends en parametre l'id du tuple de la base de données, le numéro du fichier qui doit être changé, le nom du fichier à
 	envoyé sur le serveur, le nom temporaire du fichier, ainsi que le destinataire du fichier
 	*/
-	public static function changementtextenb($id, $nb, $texteprec,$textetmp, $textedest)
+	public static function changementtextenb($id, $nb, $texteprec,$textetmp, $textedest, $extension)
 	{
 		//Elle va chercher le tuple dans la base de données qui correspond à l'id passé en parametre
 		$res = mysql_query("SELECT * FROM texte WHERE idt = '$id'") or die ("Erreur / changementtextenb / res");
@@ -150,7 +166,7 @@ class Repertoire
 		//Chemin d'accès du fichier texte sur le serveur
 		$target_pathtexte = "../Texte/";
 		//On crypte le nom du fichier pour éviter d'avoir des doublons sur le serveur
-		$texte = md5($texteprec).".pdf";
+		$texte = md5($texteprec).".".$extension;
 		//On modifie les fichiers en fonction du numéro du fichier qui change.
 		$retour = false;
 		
@@ -693,12 +709,11 @@ class Repertoire
 		//Retour mis à faux
 		$retour = false;
 		//Utilisation du md5 pour éviter les doublon sur le serveur
-		$audio = md5($audioprec).$extension;
-		
+		$audio = md5($audioprec).".".$extension;
 		//En fonction du numéro du fichier 
 		switch($nb)
 		{
-			case 2:
+			case 1:
 				$target_path = $target_pathaudio . $audio;//Chemin d'acces du fichier à envoyé sur le serveur
 				move_uploaded_file($audiotmp, $target_path);//Envoie du fichier sur le serveur
 				$res = mysql_query("UPDATE audio SET nbfichier='$nb', nomfich1='$audio', dest1='$dest' WHERE ida ='$id'") or die ("Erreur / Fonction ajoutFichierAudio / 2");
@@ -745,7 +760,7 @@ class Repertoire
 		//Retour initialisé à faux
 		$retour = false;
 		//nom du fichier texte passé au md5 pour éviter les doublon
-		$texte = md5($texteprec).$extension;
+		$texte = md5($texteprec).".".$extension;
 		
 		//En fonction du numéro du fichier ajouté
 		switch($nb)
