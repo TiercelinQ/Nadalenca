@@ -15,7 +15,7 @@
 			var r=confirm("Confirmez vous la suppression du Noel Occitan?"); // pop up de demande avec oui/non
 			if (r==true)
   			{
-  			location.href = './controlSupNoel.php?id=' + i;	
+  			location.href = './controlSupNoel.php?idN=' + i;	
   			// si la personne valide, redirection vers le controleur avec passage en GET de l'identifiant
   			}
   		// sinon rien ne se passe, la demande de suppression est annulée 

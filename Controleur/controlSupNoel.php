@@ -3,15 +3,15 @@
 	include ("../Modele/Noel.php");
 	
 	//Vérification de ce qui a été récupérer dans id
-	if(isset($_GET['id']))
+	if(isset($_GET['idN']))
 	{
 		//la valeur $id prend ce qui a été récupéré
-		$id = $_GET['id'];
+		$idN = $_GET['idN'];
 		//Vérification l'existence du concert avec l'appel de la fonction existId de la classe Concert
-		if(Noel::existId($id))
+		if(Noel::existId($idN))
 		{
 			//Appel de la fonction delete de la classe Concert
-			Noel::delete($id);
+			Noel::delete($idN);
 			//Redirection vers la page d'ajout d'un concert
 			header("Location:./controlAddNoel.php");
 		}
