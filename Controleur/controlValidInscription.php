@@ -11,6 +11,9 @@
 	//On inclut le menu en fonction de la session en cours
 	include("./menu.php");
 
+	//On inclut le modele pour la verification du mdp d'inscription
+	include("../Modele/Mdp.php");
+
 //Les vaiables ci-dessous prennent les valeurs qui leur sont attribuées
 $id=null;
 $nom = $_POST["nom"];
@@ -29,7 +32,7 @@ $statut = null;
 $voix = null;
 	
 //mot de passe de vérification pour permettre l'inscription.
-$mdpNadalenca = 'nadalenca';
+$mdpInscri = Mdp::getMdpById(1);;
 
 //Si le nom est vide
 if(empty($nom))
@@ -62,10 +65,10 @@ else if ($mdp != $mdpc)
 	include('../Vue/viewErrorInscription.php');  
 }
 //Sinon si le mot de passe nadalenca est vide ou qu'il ne correspond pas au mot de passe de sécurité nadalenca
-else if (empty($mdpn) OR $mdpn != $mdpNadalenca)
+else if (empty($mdpn) OR $mdpn != $mdpInscri)
 {
 	//on inclut la page d'erreur d'inscription
-	include('../Vue/viewErrorInscription.php'); 
+	include('../Vue/viewErrorInscriptionMDPinscri.php'); 
 }
 else
 {
