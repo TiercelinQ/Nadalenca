@@ -52,8 +52,8 @@ enregistrements MP3 transmis à chaque choriste.</p>
 		      <option value="Rudiments">Rudiments</option>
 		      <option value="Courant">Courant</option>
 		    </select>  <br />
-      <label>N° de téléphone fixe : </label><input type="text"  name="telR" required/> <br />
-      <label>N° de téléphone mobile : </label><input type="text"  name="portableR" required/> <br />
+      <label>N° de téléphone fixe : </label><input type="text"  name="telR"/> <br />
+      <label>N° de téléphone mobile : </label><input type="text"  name="portableR" /> <br />
       <label>Email : </label><input type="email"  name="emailR" required/> <br />
       <label>Observation : </label>
         <textarea rows="3" cols="50" type="text" name="obsR"></textarea> <br/>
