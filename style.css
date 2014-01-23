@@ -4,7 +4,6 @@ html
 	font-family: sans-serif;
 	font-size: small;
 	background:url(./Images/fond.png) #f4f5c8 repeat-x fixed; 
-	/*background-color: #f4f5c8;*/
 }
 
 #drapeau
@@ -353,34 +352,6 @@ td
 	background-color:#edef9c;
 	color: #cd1b1b;
 }
-
-
-/*
-table
-{ 
-	margin: 0;
-	padding : 0;
-	margin : 10px auto auto auto; 
-	border: 0;
-	vertical-align: middle;
-} 
-
-td
-{
-	font-weight: bold;
-	text-align: center;
-	background-color:#edef9c;
-	color: #cd1b1b;
-}
-
-th
-{
-	font-weight: bold;
-	text-align: center;
-	background-color:#cd1b1b;
-	color: #edef9c;
-}
-*/
 
 h4
 {

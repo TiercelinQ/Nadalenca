@@ -1,5 +1,5 @@
-<title>Profil de <?php echo ($profil->getPrenom());?></title>
-      <h1>Profil de <?php echo $profil->getPrenom();?></h1>
+<title>Profil de <?php echo (strtoupper($profil->getPrenom()));?></title>
+      <h1>Profil de <?php echo (strtoupper($profil->getPrenom()));?></h1>
 			<hr />
            
 		<table border="1">

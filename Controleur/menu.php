@@ -72,7 +72,10 @@
 						<li><a href="./controlVideo.php">VIDEOS</a></li>
 					</ul></li>
 				<li><a href="./controlProduction.php">PRODUCTIONS</a></li>
-				<li><a href="./controlInscription.php">INSCRIPTION</a></li>
+				<li><a href="./controlInscription.php">INSCRIPTION</a>
+					<ul id="sousMenu">
+						<li><a href="#.php">RECRUTEMENT</a></li>
+					</ul></li>
 				<li><a href="./controlConnexion.php">CONNEXION</a></li>
 			</ul>
 		<div id="contenu">
