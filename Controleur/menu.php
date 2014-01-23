@@ -56,8 +56,8 @@
 	{?>	
 		<!-- Affichage du menu s'il n'y a pas de session en cours-->
 			<ul id="menu_vis">
-				<li><a href="./controlAccueil.php">ACCUEIL</a></li>
-				<li><a href="./controlHistoire.php">HISTOIRE</a></li>
+				<li><a href="./controlAccueil.php?lang=<?php echo $_SESSION['langue']; ?>">ACCUEIL</a></li>
+				<li><a href="./controlHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">HISTOIRE</a></li>
 				<li><a href="./controlConcert.php">CONCERT</a></li>
 				<li><a href="./controlRepertoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
 				<li><a>MULTIMEDIA</a>
