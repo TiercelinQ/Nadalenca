@@ -19,7 +19,7 @@ par un apprentissage plus ludique. Bien sur un intérêt pour la langue Occitane
 régionale renforcent le plaisir de chanter à « Nadalenca ».</p>
 <p>La cotisation annuelle 2013 est fixée à 130€ , comprenant l’adhésion à l’association, les 
 photocopies et supports CD audio de travail, et l’inscription aux cours de technique voc
-Pour faire acte de candidature, vous pouvez remplir directement le Formulaire ci-joint.</p>
+Pour faire acte de candidature, vous pouvez remplir directement le formulaire en base de page.</p>
 
 
 <h2>Répétitions</h2>
@@ -30,5 +30,34 @@ Pour faire acte de candidature, vous pouvez remplir directement le Formulaire ci
 des Etats Généraux , 34000 Montpellier.</p>
 <p>Cours de technique vocale assurés par un professeur de chant <a href=http://philippe.vialard.free.fr>Philippe VIALARD</a> un 
 Mercredi sur deux de 20H00 à 21H00 juste avant la répétition.</p>
-</p>L’apprentissage des partitions se fait par pupitre avec le chef de choeur et à des 
+<p>L’apprentissage des partitions se fait par pupitre avec le chef de choeur et à des 
 enregistrements MP3 transmis à chaque choriste.</p>
+
+<form method="post" action="./controlValidRecrut.php">
+    <fieldset>
+      <h3>Veuillez remplir ce formulaire pour pouvoir être recruté.</h3>
+      <label>Nom</label><input type="text" name="nomR" required/> <br />
+      <label>Prénom</label><input type="text" name="prenomR" required/> <br />
+      <label>Expérience</label>
+         <select name="expeR"> 
+     	<option value="non" selected>Non</option>
+		<option value="soprano">Soprano</option>
+		<option value="alto">Alto</option>
+		<option value="tenor">Tenor</option>
+		<option value="basse">Basse</option>
+		</select>  <br />
+      <label>Maîtrise de l'occitan</label>
+      <select name="occR"> 
+     	<option value="aucune" selected>Aucune</option>
+		<option value="rudiments">Rudiments</option>
+		<option value="courant">Courant</option>
+		</select>  <br />
+      <label>Téléphone</label><input type="text"  name="telR" required/> <br />
+      <label>Portable</label><input type="text"  name="portableR" required/> <br />
+      <label>Email</label><input type="email"  name="emailR" required/> <br />
+      <label>Sujet du message</label><input type="text" name="sujetM" required/><br />
+      <label>Observation</label>
+        <textarea rows="3" cols="50" type="text" name="obsR"></textarea> <br/>
+      <input type="submit" value="Envoyer" />
+    </fieldset>
+  </form>
