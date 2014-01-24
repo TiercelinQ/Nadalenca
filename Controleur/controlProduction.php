@@ -1,5 +1,3 @@
-<!--On inclut le fichier config pour accéder à la base de données-->
-<?php include("config.php") ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,6 +7,9 @@
 	</head>
 	
 <?php
+	//On inclut le fichier config pour accéder à la base de données
+	include("config.php")
+	
 	//On inclut le menu en fonction de la session en cours
 	include("menu.php");
 
