@@ -7,8 +7,8 @@
 
 			<ul id="drapeau">
 				<!-- Affichage des images servant d'icones pour passer d'une langue à une autre-->
-				<li><a href="./controlAccueil.php?lang=fr"><img src="../Images/drapfr.png" title="Site de l'Association Nadalenca en français" alt="drapeau_fr"/></a></li>
-				<li><a href="./controlAccueil.php?lang=occ"><img src="../Images/drapoc.png" title="Site de l'Association Nadalenca en occitan" alt="occitan_fr"/></a></li>
+				<li><a href="./controlAccueil.php?lang=fr"><img src="../Images/DrapFR.png" title="Site de l'Association Nadalenca en français" alt="drapeau_fr"/></a></li>
+				<li><a href="./controlAccueil.php?lang=occ"><img src="../Images/DrapOC.png" title="Site de l'Association Nadalenca en occitan" alt="occitan_fr"/></a></li>
 			</ul>
 		</div>
 
