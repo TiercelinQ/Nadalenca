@@ -4,6 +4,7 @@
 		<title>Membres</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../style.css" />
+		<link rel="icon" type="image/png" href="../Images/favicon.png" />
 </head>
 <?php
 //On inclut le fichier config pour accéder à la base de données

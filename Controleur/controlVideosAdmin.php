@@ -4,6 +4,7 @@
 		<title>Gestion des vidéos</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../style.css" />
+		<link rel="icon" type="image/png" href="../Images/favicon.png" />
 	<script>
 		function verif(i)	// passage de l'identifiant de la video cliquée
 		{

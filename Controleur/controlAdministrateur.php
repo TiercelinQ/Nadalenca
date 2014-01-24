@@ -4,6 +4,7 @@
 		<title>Panneau d'Administrateur</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="../style.css" />
+		<link rel="icon" type="image/png" href="../Images/favicon.png" />
 </head>
 <?php
 	//On inclut le menu en fonction de la session en cours
