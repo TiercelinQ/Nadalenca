@@ -11,7 +11,7 @@
 	include("./menu.php");
 	//On inclut le fichier config pour accéder à la base de données
 	require("../config.php");
-
+	if(!empty($_POST["email"])){
 	//la valeur $email prend le contenu récupéré dans email
 	$email = $_POST["email"];
 	//Appel de la fonction changeMdpoublie de la classe Utilisateur
@@ -38,6 +38,7 @@
 			//On inclut la page de validation du mot de passe oublié
 			include('../Vue/viewValidMdpoublie.php'); 
 	}	
+	}
 	else
 	{
 		//on inclut la page d'erreur du mot de passe oublié
