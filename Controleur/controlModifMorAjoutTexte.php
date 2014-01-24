@@ -45,7 +45,7 @@
 		//On fait un appel de fonction en fonction du numéro de ficher ajouté
 		else
 		{
-			$extensions_valides = array( 'pdf', 'doc');
+			$extensions_valides = array( 'pdf', 'doc', 'docx', 'odt');
 			//1. strrchr renvoie l'extension avec le point (« . »).
 			//2. substr(chaine,1) ignore le premier caractère de chaine.
 			//3. strtolower met l'extension en minuscules

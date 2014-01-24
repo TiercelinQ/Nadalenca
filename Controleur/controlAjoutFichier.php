@@ -26,11 +26,11 @@
 		{
 			//On fait appel à la fonction createaudio qui déplace le fichier sur le serveur et crée un nouveau tuple dans la base de données
 			$extension = strtolower(  substr(  strrchr($_FILES['audio1']['name'], '.')  ,1)  );
-			$rep = Repertoire::createaudio($nom,1,$_FILES['audio1']['name'], $_FILES['audio1']['tmp_name'], $_POST['taudio1']);
+			$rep = Repertoire::createaudio($nom,1,$_FILES['audio1']['name'], $_FILES['audio1']['tmp_name'], $_POST['taudio1'], $extension);
 		}
 		if($_FILES['texte1']['error'] == 4)
 		{
-			//On fait appel à la fonction createaudio qui déplace le fichier sur le serveur et crée un nouveau tuple dans la base de données
+			//On fait appel à la fonction createtexte qui déplace le fichier sur le serveur et crée un nouveau tuple dans la base de données
 			$extension = "null";
 			$rep = Repertoire::createtexte($nom,0,"null","null","null", $extension);
 		}
@@ -38,7 +38,7 @@
 		{
 			//On fait appel à la fonction createtexte qui déplace le fichier sur le serveur et crée un nouveau tuple dans la base de données
 			$extension = strtolower(  substr(  strrchr($_FILES['texte1']['name'], '.')  ,1)  );
-			$rep = Repertoire::createtexte($nom,$nbt,$_FILES['texte1']['name'],$_FILES['texte1']['tmp_name'], $_POST['ttexte1']);
+			$rep = Repertoire::createtexte($nom,$nbt,$_FILES['texte1']['name'],$_FILES['texte1']['tmp_name'], $_POST['ttexte1'], $extension);
 		}
 		//On fait appel à la fonction createRep qui crée un nouveau tuple dans le base de données.
 		$rep = Repertoire::createRep($nom);

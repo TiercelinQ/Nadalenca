@@ -24,7 +24,7 @@
 			$idr = $tuple['idr'];
 			if($_FILES['texte']['error']!=4)
 			{
-				$extensions_valides = array( 'pdf', 'doc');
+				$extensions_valides = array( 'pdf', 'doc', 'docx', 'odt');
 				//On récupère l'extension du fichier
 				$extension = strtolower(  substr(  strrchr($_FILES['texte']['name'], '.')  ,1)  );
 				//Si l'extension n'est pas pris en charge, on envoie vers un page d'erreur qui redirige vers la page du morceau
