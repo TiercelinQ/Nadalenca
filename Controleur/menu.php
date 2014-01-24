@@ -1,6 +1,3 @@
-	<!-- Affichage de l'image servant de favicon-->
-	<link rel="icon" type="image/png" href="../Images/favicon.png" />
-
 	<body>
 
 	<div id="page">
