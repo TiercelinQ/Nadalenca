@@ -28,7 +28,7 @@ Pour faire acte de candidature, vous pouvez remplir directement le formulaire en
 
 <p>Répétition hebdomadaire (en général le Mercredi soir) à la Maison de l’Occitanie , 117 rue 
 des Etats Généraux , 34000 Montpellier.</p>
-<p>Cours de technique vocale assurés par un professeur de chant <a href=http://philippe.vialard.free.fr>Philippe VIALARD</a> un 
+<p>Cours de technique vocale assurés par un professeur de chant <a href="http://philippe.vialard.free.fr" target="_blank">Philippe VIALARD</a> un 
 Mercredi sur deux de 20H00 à 21H00 juste avant la répétition.</p>
 <p>L’apprentissage des partitions se fait par pupitre avec le chef de choeur et à des 
 enregistrements MP3 transmis à chaque choriste.</p>

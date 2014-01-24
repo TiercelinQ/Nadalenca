@@ -15,6 +15,7 @@
 			</ul></li>
 		<li><a href="../Controleur/controlProduction.php">Productions</a></li>
 		<li><a href="../Controleur/controlInscription.php">Inscription</a></li>
+			<ul><li><a href="../Controleur/controlRecrutement.php">Recrutement</a></li></ul>
 		<li><a href="../Controleur/controlConnexion.php">Connexion</a></li>
 	</ul>
 <h5>Pied de page :</h5>
