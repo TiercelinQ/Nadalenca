@@ -42,7 +42,7 @@ class Noel
 
 	}
 	
-	//création d'un nouveau message dans la base de données message
+	//création d'un nouveau noel occitan dans la base de données noel
 	public function create()
 	{
 			$idN = $this->idN;
@@ -52,10 +52,10 @@ class Noel
 
 
 			$req = "INSERT INTO noel (idN, lieuN, dateDebN, dateFinN) VALUES ('$idN','$lieuN','$dateDebN','$dateFinN')";
-			$res = mysql_query($req) or die(mysql_error()); //die ("Erreur insertion :  Classe Noel / Fonction insertion message");
+			$res = mysql_query($req) or die(mysql_error()); //die ("Erreur insertion :  Classe Noel / Fonction insertion noel occitan");
 	}
 	
-	//suppression d'un message dans la base de donnée message
+	//suppression d'un noel occitan dans la base de donnée noel
 	public static function delete($idN)
 	{
 		$req = mysql_query("DELETE FROM noel WHERE idN = '$idN'");
@@ -63,7 +63,7 @@ class Noel
 	}
 	
 
-	//Vérification si un message existe par son idN
+	//Vérification si un noel occitan existe par son idN
 	public static function existId($idN)
 	{
 		$req = mysql_query("SELECT count(*) FROM noel WHERE idN = '$idN'");
@@ -71,8 +71,6 @@ class Noel
 		return($itsOk[0] !=0);
 		} 
 }
-
-
 
 ?>
 
