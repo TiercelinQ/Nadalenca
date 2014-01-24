@@ -3,7 +3,8 @@ html
 	text-align: justify;
 	font-family: sans-serif;
 	font-size: small;
-	background:url(./Images/fond.png) #f4f5c8 repeat-x fixed; 
+	/*background:url(./Images/fond.png) #f4f5c8 repeat-x fixed; */
+	background-color: #f4f5c8;
 }
 
 #drapeau
