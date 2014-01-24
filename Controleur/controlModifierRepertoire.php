@@ -22,7 +22,7 @@
 	else
 	{
 		//Sinon, on renvoie vers la page d'accueil
-		header('Location : ../index.php');
+		header('Location:../index.php');
 	}
 	//On inclue le pied de page
 	include("./footer.php");

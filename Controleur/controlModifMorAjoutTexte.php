@@ -105,7 +105,7 @@
 	else
 	{
 		//Sinon, on renvoie à la page d'acceuil
-		header('Location: ../index.php');
+		header('Location:../index.php');
 	}
 	//On inclue le pied de page
 	include("./footer.php");
