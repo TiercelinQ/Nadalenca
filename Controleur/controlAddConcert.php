@@ -33,7 +33,7 @@ include("./menu.php");
 	{
 
 	//Requête SQL permettant d'afficher les noels occitan du plus vieux au plus récents
-	$req="SELECT * from Concert order by dateC ASC ";
+	$req="SELECT * from concert order by dateC ASC ";
 	//On exécute la requête
 	$restot =mysql_query($req);
 
