@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 23 Janvier 2014 à 16:25
+-- Généré le: Ven 24 Janvier 2014 à 16:40
 -- Version du serveur: 5.6.12-log
 -- Version de PHP: 5.4.12
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `concert` (
   `dateC` date NOT NULL,
   `prixC` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Contenu de la table `concert`
@@ -79,6 +79,29 @@ CREATE TABLE IF NOT EXISTS `concert` (
 INSERT INTO `concert` (`id`, `titreC`, `heureC`, `minuteC`, `lieuC`, `adresseC`, `villeC`, `dateC`, `prixC`) VALUES
 (10, 'Concert de NoÃ«l', 20, 30, 'Salle municipale', '9 rue du concert', 'Montpellier', '2013-12-20', '8â‚¬'),
 (11, 'Concert de rentrÃ©e', 19, 0, 'Salle municipale', '10 avenue Jean JaurÃ¨s', 'Vendargues', '2014-02-05', '10â‚¬');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `contact`
+--
+
+CREATE TABLE IF NOT EXISTS `contact` (
+  `idC` int(10) NOT NULL AUTO_INCREMENT,
+  `siegeSocialC` varchar(150) NOT NULL,
+  `telfC` varchar(20) NOT NULL,
+  `telmC` varchar(20) NOT NULL,
+  `adressePostalC` varchar(150) NOT NULL,
+  `email` varchar(10) NOT NULL,
+  PRIMARY KEY (`idC`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `contact`
+--
+
+INSERT INTO `contact` (`idC`, `siegeSocialC`, `telfC`, `telmC`, `adressePostalC`, `email`) VALUES
+(1, 'Chez Gérard Blanc, 13 Esplanade de l’Europe - 34000 MONTPELLIER', '04.67.65.23.15', '06.88.67.27.14', 'Chez Gérard Blanc, 13 Esplanade de l’Europe - 34000 MONTPELLIER', 'nadalenca@');
 
 -- --------------------------------------------------------
 
@@ -92,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   `nomI` varchar(255) NOT NULL,
   `descriptionI` varchar(255) NOT NULL,
   PRIMARY KEY (`idI`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Contenu de la table `image`
@@ -156,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   `messageM` varchar(255) NOT NULL,
   `dateM` varchar(30) NOT NULL,
   PRIMARY KEY (`idM`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Contenu de la table `message`
@@ -177,14 +200,17 @@ CREATE TABLE IF NOT EXISTS `noel` (
   `dateDebN` int(10) NOT NULL,
   `dateFinN` int(10) NOT NULL,
   PRIMARY KEY (`idN`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `noel`
 --
 
 INSERT INTO `noel` (`idN`, `lieuN`, `dateDebN`, `dateFinN`) VALUES
-(2, 'Chapelle du CollÃ¨ge', 1997, 1998);
+(1, 'Eglise ST Mathieu', 1990, 1996),
+(2, 'Chapelle du CollÃ¨ge', 1997, 1998),
+(3, 'Eglise ST Mathieu', 1999, 2003),
+(4, 'Chapelle des pÃ©nite', 2004, 2005);
 
 -- --------------------------------------------------------
 
@@ -196,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `production` (
   `idP` int(10) NOT NULL AUTO_INCREMENT,
   `nomP` varchar(255) NOT NULL,
   `imageP` varchar(255) NOT NULL,
-  `descriptionP` varchar(500) NOT NULL,
+  `descriptionP` varchar(255) NOT NULL,
   `prixP` varchar(255) NOT NULL,
   PRIMARY KEY (`idP`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
@@ -207,32 +233,6 @@ CREATE TABLE IF NOT EXISTS `production` (
 
 INSERT INTO `production` (`idP`, `nomP`, `imageP`, `descriptionP`, `prixP`) VALUES
 (33, 'Notre CD', '2df053ccc9c5926d55637d6ca74fbe4e.jpg', 'Notre dernier CD', '15â‚¬');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `recrutement`
---
-
-CREATE TABLE IF NOT EXISTS `recrutement` (
-  `idR` int(11) NOT NULL AUTO_INCREMENT,
-  `nomR` varchar(255) NOT NULL,
-  `prenomR` varchar(255) NOT NULL,
-  `expeR` varchar(255) NOT NULL,
-  `occR` varchar(255) NOT NULL,
-  `telR` varchar(255) NOT NULL,
-  `portableR` varchar(255) NOT NULL,
-  `emailR` varchar(255) NOT NULL,
-  `obsR` varchar(255) NOT NULL,
-  PRIMARY KEY (`idR`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Contenu de la table `recrutement`
---
-
-INSERT INTO `recrutement` (`idR`, `nomR`, `prenomR`, `expeR`, `occR`, `telR`, `portableR`, `emailR`, `obsR`) VALUES
-(2, 'Pochon', 'Amaury', 'Non', 'Aucune', '', '', 'momoamo@hotmail.fr', '');
 
 -- --------------------------------------------------------
 
@@ -311,7 +311,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `voix` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Contenu de la table `utilisateur`

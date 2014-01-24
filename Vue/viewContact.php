@@ -14,16 +14,16 @@
 
 <h3>Siège social</h3>
 
-<p>NADALENCA – </p> <?php $tuple['siegeSocialC']; //Chez Gérard Blanc, 13 Esplanade de l’Europe - 34000 MONTPELLIER  ?>
-<p>Tél :</p> <?php $tuple['telfC'];  //04.67.65.23.15 ?>
-<p>Portable :</p><?php $tuple['telfm'];  // 06.88.67.27.14. ?>
+<p>NADALENCA –  <?php echo " $tuple[siegeSocialC]"; //Chez Gérard Blanc, 13 Esplanade de l’Europe - 34000 MONTPELLIER  ?></p>
+<p>Tél : <?php echo " $tuple[telfC]";  //04.67.65.23.15 ?></p>
+<p>Portable :<?php echo" $tuple[telmC]";  // 06.88.67.27.14. ?></p>
 
 <h3>Adresse postale</h3>
 
-<p>NADALENCA</p> <?php  $tuple['adressePostalC']; //  chez Gérard Blanc, 13 Esplanade de l’Europe - 34000 MONTPELLIER?>
+<p>NADALENCA – <?php  echo"$tuple[adressePostalC]"; //  chez Gérard Blanc, 13 Esplanade de l’Europe - 34000 MONTPELLIER?> </p>
 
 <h3>Internet</h3>
-<p>Courriel :</p> <?php $tuple['email']; //  nadalenca@free.fr?>
+<p>Courriel : <?php echo"$tuple[email]"; //  nadalenca@free.fr?></p>
 <p>Site internet : <a href="#">ASSOCIATION NADALENCA</a></p><br />
 
 
