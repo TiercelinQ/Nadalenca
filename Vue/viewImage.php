@@ -1,4 +1,4 @@
-<h1>Image</h1>
+<h1>Images</h1>
 <hr />
 
 		<ul>
