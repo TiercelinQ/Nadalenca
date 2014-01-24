@@ -1,5 +1,3 @@
-<!--On inclus le fichier config pour accéder à la base de données-->
-<?php include("config.php") ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,6 +7,8 @@
 	</head>
 	
 <?php 
+//On inclus le fichier config pour accéder à la base de données
+include("config.php");
 //On inclut le menu dans le controleur
 include("menu.php");
 //On inclut la vue pour afficher la page d'accueil au niveau de son contenu
