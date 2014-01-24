@@ -11,7 +11,7 @@
 	//On inclue le modele
 	include ("../Modele/Repertoire.php");
 	//On vérifie que l'administrateur soir connecté
-	if(isset($_SESSION['login']) && isset($_SESSION['admin']) && $_SESSION['admin'] != 0)
+	if(isset($_SESSION['login']))
 	{
 		//On récupere la donnée passé en paramètre et on utilise le htmlspecialchars pour prendre en charge les differents signes spéciaux comme "ç" ou "é"
 		$nom = htmlspecialchars($_POST['recherche']);

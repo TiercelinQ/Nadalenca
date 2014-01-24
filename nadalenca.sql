@@ -196,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `production` (
   `idP` int(10) NOT NULL AUTO_INCREMENT,
   `nomP` varchar(255) NOT NULL,
   `imageP` varchar(255) NOT NULL,
-  `descriptionP` varchar(255) NOT NULL,
+  `descriptionP` varchar(500) NOT NULL,
   `prixP` varchar(255) NOT NULL,
   PRIMARY KEY (`idP`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
