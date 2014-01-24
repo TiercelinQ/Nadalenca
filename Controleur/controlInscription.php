@@ -5,6 +5,7 @@
 		<title>Inscription</title>
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
+			<link rel="icon" type="image/png" href="../Images/favicon.png" />
 
 		<script>
 			function verifMDP()
