@@ -28,7 +28,7 @@
 	include("./menu.php"); 
 
 	//Requête permettant d'afficher l'ensemble des tuples de la table production
-	$req="SELECT * from Production";
+	$req="SELECT * from production";
 	//Execution de la requête
 	$res =mysql_query($req);
 
