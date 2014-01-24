@@ -14,16 +14,16 @@
 
 <h3>Siège social</h3>
 
-<p>NADALENCA – </p> <?php $tuple = mysql_fetch_array($res); $tuple['siegeSocialC']; //Chez Gérard Blanc, 13 Esplanade de l’Europe - 34000 MONTPELLIER  ?>
-<p>Tél :</p> <?php $tuple = mysql_fetch_array($res); $tuple['telfC'];  //04.67.65.23.15 ?>
-<p>Portable :</p><?php $tuple = mysql_fetch_array($res); $tuple['telfm'];  // 06.88.67.27.14.<?
+<p>NADALENCA – </p> <?php $tuple['siegeSocialC']; //Chez Gérard Blanc, 13 Esplanade de l’Europe - 34000 MONTPELLIER  ?>
+<p>Tél :</p> <?php $tuple['telfC'];  //04.67.65.23.15 ?>
+<p>Portable :</p><?php $tuple['telfm'];  // 06.88.67.27.14. ?>
 
 <h3>Adresse postale</h3>
 
-<p>NADALENCA</p> <?php $tuple = mysql_fetch_array($res); $tuple['adressePostalC']; //  chez Gérard Blanc, 13 Esplanade de l’Europe - 34000 MONTPELLIER?>
+<p>NADALENCA</p> <?php  $tuple['adressePostalC']; //  chez Gérard Blanc, 13 Esplanade de l’Europe - 34000 MONTPELLIER?>
 
 <h3>Internet</h3>
-<p>Courriel :</p> <?php $tuple = mysql_fetch_array($res); $tuple['email']; //  nadalenca@free.fr?>
+<p>Courriel :</p> <?php $tuple['email']; //  nadalenca@free.fr?>
 <p>Site internet : <a href="#">ASSOCIATION NADALENCA</a></p><br />
 
 

@@ -13,9 +13,10 @@ include ("./config.php");
 //On inclut le menu en fonction de la session en cours
 include("./menu.php"); 
 	//Requête permettant d'afficher les informations de contact
-	$req="SELECT * from contact order";
+	$req="SELECT * FROM contact";
 	//On execute la requête
 	$res =mysql_query($req);
+	$tuple = mysql_fetch_array($res);
 	
 	//On inclut la vue d'affichage des concerts
 	include ("../Vue/viewContact.php");	
