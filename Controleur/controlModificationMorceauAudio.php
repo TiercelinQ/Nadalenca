@@ -11,11 +11,20 @@
 	include("./menu.php");
 	//On inclue le modèle
 	include("../Modele/Repertoire.php");
-	//On récupère les informations passés dans le lien
-	$id = $_GET['ida'];
-	$nb = $_GET['nb'];
-	//On inclue la vue contenant le formulaire de changement de fichier audio
-	include("../Vue/viewModificationMorceauAudio.php");
+	//On vérifie que l'administrateur soir connecté
+	if(isset($_SESSION['login']) && isset($_SESSION['admin']) && $_SESSION['admin'] != 0)
+	{
+		//On récupère les informations passés dans le lien
+		$id = $_GET['ida'];
+		$nb = $_GET['nb'];
+		//On inclue la vue contenant le formulaire de changement de fichier audio
+		include("../Vue/viewModificationMorceauAudio.php");
+	}
+	else
+	{
+		//Sinon, on renvoie sur la page d'accueil
+		header('Location : ../index.php');
+	}
 	//On inclue le pied de page
 	include("./footer.php");
 ?>
