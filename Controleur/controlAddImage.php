@@ -6,6 +6,7 @@
 		<title>Images administrateur</title>
 			<meta charset="utf-8" />
 			<link rel="stylesheet" href="../style.css" />
+			<link rel="icon" type="image/png" href="../Images/favicon.png" />
 	
 	<!-- Script permettant la suppresion d'une image via une petite fenetre pop-up -->
 	<script>
