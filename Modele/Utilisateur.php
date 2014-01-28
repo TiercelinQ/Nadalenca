@@ -228,7 +228,7 @@ class Utilisateur
 		
     }        
      
-     //Permet de modifier les informations d'un profil utilisateur   
+    //Permet de modifier les informations d'un profil utilisateur   
     public static function changementInfo($email, $id,$nom, $prenom, $adresseP, $codeP, $ville, $numtelF, $numtelM, $voix, $statut)
     {//Une fonction qui change les informations de l'utilisateur    
         $req = "SELECT * FROM utilisateur WHERE email='$email'";

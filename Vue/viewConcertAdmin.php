@@ -10,6 +10,7 @@
 			<th>Adresse</th>
 			<th>Ville</th>
 			<th>Prix</th>						
+			<th>Modifier</th>
 			<th>Supprimer</th>		
 <?php
 include("../Modele/Concert.php");
@@ -24,7 +25,8 @@ include("../Modele/Concert.php");
 				."<td>".$tuple['lieuC']."</td>"
 				."<td>".$tuple['adresseC']."</td>"
 				."<td>".$tuple['villeC']."</td>"
-				."<td>".$tuple['prixC']."</td>";
+				."<td>".$tuple['prixC']."€</td>"
+				."<td><a href=\"./controlConcertTitre.php?id=".$tuple['id']."\">Modifier</a></td>";
 			echo "<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Concerts'/>
         </button></td></tr>";
 

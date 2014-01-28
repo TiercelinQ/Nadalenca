@@ -114,9 +114,9 @@ class Concert
 		return($itsOk[0] !=0);
 	}
 	
-	/*public static function getConcertByTitre($titreC) 
+	public static function getConcertByTitre($id) 
 	{ //une fonction statique
-		$req = "SELECT * FROM concert WHERE titreC='$titreC'";
+		$req = "SELECT * FROM concert WHERE id='$id'";
 		$res = mysql_query($req) or die ("Erreur insertion : Classe Concert / Fonction getUtilisateurByTitre ");
 		
 		if (mysql_num_rows($res) == 0)
@@ -125,9 +125,59 @@ class Concert
 		}
 
 		$tuple = mysql_fetch_array($res);
-		return new Concert($tuple['id'], $titreC, $tuple['dateC'] $tuple['heureC'], $tuple['minuteC'], $tuple['lieuC'], $tuple['adresseC'], $tuple['villeC']);
-		//$util->id = $id;
-	}*/
+		return new Concert($tuple['id'], $tuple['titreC'], $tuple['dateC'], $tuple['heureC'], $tuple['minuteC'], $tuple['lieuC'], $tuple['adresseC'], $tuple['villeC'], $tuple['prixC']);
+	}
+
+    public static function modifConcert($id, $titreC, $dateC, $heureC, $minuteC, $lieuC, $adresseC, $villeC, $prixC)
+    {//Une fonction qui change les informations de l'utilisateur    
+        $req = "SELECT * FROM concert WHERE titreC='$titreC'";
+        $res = mysql_query($req) or die ("Erreur insertion : Classe Concert / Fonction modifConcert Debut ");
+        $tuple = mysql_fetch_array($res);
+            
+		if($tuple['dateC'] != $dateC) 
+		{
+			$req1 = "UPDATE concert SET dateC='$dateC' WHERE titreC ='$titreC'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Concert / Fonction changeDate");
+		}
+		
+		if($tuple['heureC'] != $heureC)
+		{
+			$req1 = "UPDATE concert SET heureC='$heureC' WHERE titreC ='$titreC'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Concert / Fonction changeHeure");
+		}
+		
+        if($tuple['minuteC'] != $minuteC)
+        {
+            $req1 = "UPDATE concert SET minuteC ='$minuteC' WHERE titreC ='$titreC'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Concert / Fonction changeMinutE");
+        }
+        
+		if($tuple['lieuC'] != $lieuC)
+		{
+			$req1 = "UPDATE concert SET lieuC ='$lieuC' WHERE titreC ='$titreC'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe concert / Fonction changeLieu");
+		}
+		
+		if($tuple['adresseC'] != $adresseC)
+		{
+			$req1 = "UPDATE concert SET adresseC ='$adresseC' WHERE titreC ='$titreC'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Concert / Fonction changeAdresse");
+		}
+		
+        if($tuple['villeC'] != $villeC)
+        {
+            $req1 = "UPDATE concert SET villeC = '$villeC' WHERE titreC ='$titreC'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Concert / Fonction changeVille");
+        }
+            
+        if($tuple['prixC'] != $prixC)
+        {
+            $req1 = "UPDATE concert SET prixC = '$prixC' WHERE titreC ='$titreC'";
+			$res = mysql_query($req1) or die("Erreur insertion : Classe Utilisateur / Fonction changenPrix");
+        }
+
+		return new Concert($tuple['id'], $tuple['titreC'], $tuple['dateC'], $tuple['heureC'], $tuple['minuteC'], $tuple['lieuC'], $tuple['adresseC'], $tuple['villeC'], $tuple['prixC']);
+    }
 
 }
 
