@@ -97,7 +97,7 @@ img
  	text-decoration:none;
 }
 
-#menu_vis #sousMenu
+#menu_vis .sousMenu
 {
  	list-style-type:none; 
  	margin:0;
@@ -106,7 +106,7 @@ img
 	position: absolute;
 }
 
-#menu_vis #sousMenu li a:link, #menu_mem #sousMenu li a:visited
+#menu_vis .sousMenu li a:link, #menu_mem .sousMenu li a:visited
 {
  	color:#e5f24a;
  	margin:0;
@@ -115,14 +115,14 @@ img
 	background-color:#cd1b1b;
 }
 
-#menu_vis #sousMenu li a:hover
+#menu_vis .sousMenu li a:hover
 {
 	background-color:#edef9c;
 	color:#cd1b1b;
 	text-decoration:none;
 }
 
-#menu_vis li:hover #sousMenu {display:block;}
+#menu_vis li:hover .sousMenu {display:block;}
 
 #menu_mem
 {
@@ -173,7 +173,7 @@ img
  	text-decoration:none;
 }
 
-#menu_mem #sousMenu
+#menu_mem .sousMenu_mem
 {
  	list-style-type:none; 
  	margin:0;
@@ -182,7 +182,7 @@ img
 	position: absolute;
 }
 
-#menu_mem #sousMenu li a:link, #menu_mem #sousMenu li a:visited
+#menu_mem .sousMenu_mem li a:link, #menu_mem .sousMenu_mem li a:visited
 {
  	color:#e5f24a;
  	margin:0;
@@ -191,14 +191,14 @@ img
 	background-color:#cd1b1b;
 }
 
-#menu_mem #sousMenu li a:hover
+#menu_mem .sousMenu_mem li a:hover
 {
 	background-color:#edef9c;
 	color:#cd1b1b;
 	text-decoration:none;
 }
 
-#menu_mem li:hover #sousMenu {display:block;}
+#menu_mem li:hover .sousMenu_mem {display:block;}
 
 #corps
 {
@@ -263,12 +263,8 @@ hr
 
 #accueil
 {
-	text-align: center;
-}
-
-#accueil
-{
 	color:#cd1b1b;
+	text-align: center;
 }
 
 fieldset

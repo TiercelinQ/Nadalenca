@@ -5,8 +5,10 @@
 	<ul>
 		<li><a href="../Controleur/controlAccueil.php?lang=fr">Accueil</a></li>
 		<li><a href="../Controleur/controlHistoire.php?lang=fr">Histoire</a></li>
-		<li><a href="../Controleur/controlConcert.php">Concert</a></li>
-			<ul><li><a href="../Controleur/controlNoel.php">Noël Occitan</a></li></ul>
+		<li><a href="../Controleur/controlConcert.php">Concert</a>
+			<ul>
+				<li><a href="../Controleur/controlNoel.php">Noël Occitan</a></li>
+			</ul></li>
 		<li><a href="../Controleur/controlRepertoireHistoire.php?lang=fr">Répertoire</a></li>
 		<li><span id="multimedia">Multimédia</span>
 			<ul>
@@ -14,8 +16,10 @@
 				<li><a href="../Controleur/controlVideo.php">Vidéos</a></li>
 			</ul></li>
 		<li><a href="../Controleur/controlProduction.php">Productions</a></li>
-		<li><a href="../Controleur/controlInscription.php">Inscription</a></li>
-			<ul><li><a href="../Controleur/controlRecrutement.php">Recrutement</a></li></ul>
+		<li><a href="../Controleur/controlInscription.php">Inscription</a>
+			<ul>
+				<li><a href="../Controleur/controlRecrutement.php">Recrutement</a></li>
+			</ul></li>
 		<li><a href="../Controleur/controlConnexion.php">Connexion</a></li>
 	</ul>
 <h5>Pied de page :</h5>

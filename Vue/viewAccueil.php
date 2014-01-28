@@ -1,11 +1,9 @@
 	<h1>Bienvenue</h1>
 	<hr />
 	
-		<img src="../Images/LogoMaquette1.png" alt="nadalenca" title="Association Nadalenca" heigth="300" width="300"/>
+		<img src="../Images/LogoMaquette1.png" alt="nadalenca" title="Association Nadalenca"/>
 
-	<span id="accueil">
-		<h3>« Nadalenca » est le chœur polyphonique Occitan de Montpellier</h3>
-	</span>
+		<h3 id="accueil">« Nadalenca » est le chœur polyphonique Occitan de Montpellier</h3>
 
 	<p>Composé d’une trentaine de choristes placés , le choeur interprète des oeuvres polyphoniques tirées du répertoire Occitan : Nadalets et chants traditionnels, ainsi que des oeuvres classiques adaptées en Occitan.</p>
 

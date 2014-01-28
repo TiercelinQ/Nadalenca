@@ -33,12 +33,12 @@
 					<li><a href="./controlAccueil.php?lang=<?php echo $_SESSION['langue']; ?>">ACCUEIL</a></li>
 					<li><a href="./controlHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">HISTOIRE</a></li>
 					<li><a href="./controlConcert.php">CONCERT</a>
-						<ul id="sousMenu">
+						<ul class="sousMenu_mem">
 							<li><a href="./controlNoel.php">NOËL OCCITAN</a></li>
 						</ul></li>
 					<li><a href="./controlRepertoireHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
 					<li><a>MULTIMEDIA</a>
-						<ul id="sousMenu">
+						<ul class="sousMenu_mem">
 							<li><a href="./controlImage.php">IMAGES</a></li>
 							<li><a href="./controlVideo.php">VIDEOS</a></li>
 						</ul></li>
@@ -59,18 +59,18 @@
 				<li><a href="./controlAccueil.php?lang=<?php echo $_SESSION['langue']; ?>">ACCUEIL</a></li>
 				<li><a href="./controlHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">HISTOIRE</a></li>
 				<li><a href="./controlConcert.php">CONCERT</a>
-						<ul id="sousMenu">
+						<ul class="sousMenu">
 							<li><a href="./controlNoel.php">NOËL OCCITAN</a></li>
 						</ul></li>
 				<li><a href="./controlRepertoireHistoire.php?lang=<?php echo $_SESSION['langue']; ?>">REPERTOIRE</a></li>
 				<li><a>MULTIMEDIA</a>
-					<ul id="sousMenu">
+					<ul class="sousMenu">
 						<li><a href="./controlImage.php">IMAGES</a></li>
 						<li><a href="./controlVideo.php">VIDEOS</a></li>
 					</ul></li>
 				<li><a href="./controlProduction.php">PRODUCTIONS</a></li>
 				<li><a href="./controlInscription.php">INSCRIPTION</a>
-					<ul id="sousMenu">
+					<ul class="sousMenu">
 						<li><a href="./controlRecrutement.php">RECRUTEMENT</a></li>
 					</ul></li>
 				<li><a href="./controlConnexion.php">CONNEXION</a></li>
