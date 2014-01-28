@@ -2,14 +2,16 @@
 <hr />
 <table border = "1">
 		<tr>
-		<th>Description</th>
-		<th>Supprimer</th>
+			<th>Description</th>
+			<th>Modifier</th>
+			<th>Supprimer</th>
 <?php
 	while ($tuple = mysql_fetch_array($res))
 	{ 	
 		$i = $tuple['id'];
 		echo "<tr><td><a href="; 
 		echo $tuple['lien'] . ">" .  $tuple['description']. "</a></td>";
+		echo "<td><a href=\"./controlLienDescription.php?id=".$tuple['id']."\">Modifier</a></td>";
 		echo "<td><button type=" . " \"button\" " . "onclick= \"verif($i)\" " . "><img src='../Images/remove.png'  alt='Image Suppression Lien'/>
         </button></td></tr>";
       
